@@ -2,7 +2,6 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +25,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: 'black',
     fontSize: '18px'
-  }
+  },
+  outerImg: {
+    backgroundImage: `url(${"../images/Vector.png"})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'center',
+    textAlign: "center",
+    height: "130px",
+  },
+  innerImage: {
+    position: "relative",
+    top: "25px",
+  },
 }));
 
 export default function Cards(props) {
@@ -40,10 +50,9 @@ export default function Cards(props) {
           <CardHeader className={classes.title}
             title={card.title}
           />
-          {/* <CardMedia
-            className={classes.media}
-            image="/static/images/cards/paella.jpg"
-          /> */}
+          <div className={classes.outerImg}>
+            <img alt="Image1" src="../images/Group.png"></img>
+          </div>
           <CardContent>
             <p className={classes.contents}>
               {card.contents}
