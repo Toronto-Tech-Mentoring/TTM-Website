@@ -6,9 +6,14 @@ import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display:'inline-block',
     maxWidth: '350px',
     maxHeight:'360px',
-    borderRadius:'30px'
+    borderRadius:'30px',
+    margin: '0px 25px',
+    [theme.breakpoints.down('md')]: {
+      margin: '50px 15px',
+    },
   },
   media: {
     height: 0,
@@ -18,7 +23,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Poppins',
     textAlign: 'center',
     color: '#873FE2',
-    fontSize: '18px'
+    fontSize: '18px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '22px',
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: '18px',
+    },
   },
   contents: {
     fontFamily: 'Poppins',
