@@ -1,7 +1,6 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import background1 from '../images/about-us/background1.png';
 import background2 from '../images/about-us/background2.png';
@@ -30,14 +29,16 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: 'Poppins',
+    marginTop:'30px',
     textAlign: 'center',
     color: '#873FE2',
-    fontSize: '14px',
+    fontSize: '20px',
     [theme.breakpoints.down('lg')]: {
-      fontSize: '22px',
+      fontSize: '18px',
     },
     [theme.breakpoints.down('md')]: {
         fontSize: '18px',
+        fontWeight:600,
     },
   },
   contents: {
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
     fontSize: '16px',
     lineHeight: '31px',
+    margin:'0px auto 50px auto',
   },
   imgDiv: {
     // backgroundImage: `url(${"../images/Vector.png"})`,
@@ -66,9 +68,7 @@ export default function Cards(props) {
   return (
     <div>
       <Card className={classes.root}>
-          <CardHeader className={classes.title}
-            title="Client-determined goals"
-          />
+          <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{backgroundImage: `url(${background1}`}}>
             <img className={classes.innerImage} style={{top: '35px'}} alt="skill_development" src={pic1} />
           </div>
@@ -79,9 +79,7 @@ export default function Cards(props) {
           </CardContent>
         </Card>
         <Card className={classes.root}>
-          <CardHeader className={classes.title}
-            title="One-on-one skills development"
-          />
+          <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{backgroundImage: `url(${background2}`}}>
             <img className={classes.innerImage} style={{top: '15px', zIndex: '3', left: '60px'}} alt="skill_development" src={pic2} />
             <img className={classes.innerImage} style={{top: '25px', zIndex: '2', right: '55px'}} alt="shiny" src={shiny2} />
@@ -93,9 +91,7 @@ export default function Cards(props) {
           </CardContent>
         </Card>
         <Card className={classes.root}>
-          <CardHeader className={classes.title}
-            title='Wrap-around supports'
-          />
+          <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{backgroundImage: `url(${background3}`}}>
             <img className={classes.innerImage} style={{top: '30px', zIndex: '3', left: '60px'}} alt="supports" src={pic3} />
             <img className={classes.innerImage} style={{top: '33px', zIndex: '2', right: '60px'}} alt="shiny" src={shiny3} />
