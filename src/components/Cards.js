@@ -2,8 +2,15 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import background1 from '../images/about-us/background1.png';
+import background2 from '../images/about-us/background2.png';
+import background3 from '../images/about-us/background3.png';
+import pic1 from '../images/about-us/pic1.png';
+import pic2 from '../images/about-us/pic2.png';
+import pic3 from '../images/about-us/pic3.png';
+import shiny2 from '../images/about-us/shiny2.png';
+import shiny3 from '../images/about-us/shiny3.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight:'360px',
     borderRadius:'30px',
     margin: '0px 25px',
+    marginTop: '-5px',
     [theme.breakpoints.down('md')]: {
       margin: '25px 15px',
     },
@@ -24,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Poppins',
     textAlign: 'center',
     color: '#873FE2',
-    fontSize: '18px',
+    fontSize: '14px',
     [theme.breakpoints.down('lg')]: {
       fontSize: '22px',
     },
@@ -36,32 +44,68 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Poppins',
     textAlign: 'center',
     color: 'black',
-    fontSize: '18px'
-  }
+    fontSize: '16px',
+    lineHeight: '31px',
+  },
+  imgDiv: {
+    // backgroundImage: `url(${"../images/Vector.png"})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'center',
+    textAlign: "center",
+    height: "130px",
+    // marginTop: "20px"
+  },
+  innerImage: {
+    position: "relative",
+  },
 }));
 
 export default function Cards(props) {
   const classes = useStyles();
-  const { cardContents } = props;
 
   return (
     <div>
-      {cardContents.map((card) => (
-        <Card className={classes.root}>
+      <Card className={classes.root}>
           <CardHeader className={classes.title}
-            title={card.title}
+            title="Client-determined goals"
           />
-          {/* <CardMedia
-            className={classes.media}
-            image="/static/images/cards/paella.jpg"
-          /> */}
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background1}`}}>
+            <img className={classes.innerImage} style={{top: '35px'}} alt="skill_development" src={pic1} />
+          </div>
           <CardContent>
             <p className={classes.contents}>
-              {card.contents}
+              We support the client in setting their own career, entrepreneurial or personal.
             </p>
           </CardContent>
         </Card>
-      ))}
+        <Card className={classes.root}>
+          <CardHeader className={classes.title}
+            title="One-on-one skills development"
+          />
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background2}`}}>
+            <img className={classes.innerImage} style={{top: '15px', zIndex: '3', left: '60px'}} alt="skill_development" src={pic2} />
+            <img className={classes.innerImage} style={{top: '25px', zIndex: '2', right: '55px'}} alt="shiny" src={shiny2} />
+          </div>
+          <CardContent>
+            <p className={classes.contents}>
+             We do this through a tailored, project-based approach that meets unique goals and needs.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={classes.root}>
+          <CardHeader className={classes.title}
+            title='Wrap-around supports'
+          />
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background3}`}}>
+            <img className={classes.innerImage} style={{top: '30px', zIndex: '3', left: '60px'}} alt="supports" src={pic3} />
+            <img className={classes.innerImage} style={{top: '33px', zIndex: '2', right: '60px'}} alt="shiny" src={shiny3} />
+          </div>
+          <CardContent>
+            <p className={classes.contents}>
+             We have strategic partnerships with community organizations to provide additional support.
+            </p>
+          </CardContent>
+        </Card>
     </div>
 
   );
