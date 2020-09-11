@@ -28,7 +28,7 @@ export default function Home() {
         container
         justify="center"
         alignItems="center"
-        style={{ backgroundColor: '#4529AE', minHeight: '762px' }}
+        style={{ backgroundColor: '#4529AE', minHeight: '762px', textAlign:'center' }}
       >
         <Grid item xs={12}>
           <TextWithTitle />

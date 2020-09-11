@@ -5,7 +5,13 @@ const useStyles = makeStyles((theme) => ({
     divStyle: {
         textAlign: 'center',
         width: '684px',
-        margin: '0 auto'
+        margin: '0 auto',
+        [theme.breakpoints.down('md')]: {
+            width: '80%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            margin: '10px 15px',
+        },
     },
     title: {
         fontFamily: 'Josefin Sans',
@@ -16,11 +22,14 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         fontSize: '18px',
         color: 'white',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '16px',
-        },
+        marginTop: '15px',
         [theme.breakpoints.down('md')]: {
+            fontSize: '16px',
+            marginTop: '8px',
+        },
+        [theme.breakpoints.down('sm')]: {
             fontSize: '14px',
+            marginTop: '8px',
         },
     }
 }));

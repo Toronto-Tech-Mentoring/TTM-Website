@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius:'30px',
     margin: '0px 25px',
     [theme.breakpoints.down('md')]: {
-      margin: '50px 15px',
+      margin: '25px 15px',
     },
   },
   media: {
