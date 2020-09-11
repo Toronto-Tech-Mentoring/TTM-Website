@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Cards from '../components/Cards';
+import TextWithTitle from '../components/TextWithTitle';
 
 export default function Home() {
   const testing = [{
@@ -22,6 +23,7 @@ export default function Home() {
       <p>What a world.</p>
       <img src="https://source.unsplash.com/random/400x200" alt="" />
       <Cards cardContents={testing} />
+      <TextWithTitle />
     </div>
   )
 }
