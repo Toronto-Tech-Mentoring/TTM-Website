@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
-    divStyle:{
+const useStyles = makeStyles((theme) => ({
+    divStyle: {
         textAlign: 'center',
-        width:'684px',
+        width: '684px',
+        margin: '0 auto'
     },
     title: {
         fontFamily: 'Josefin Sans',
@@ -14,9 +15,15 @@ const useStyles = makeStyles({
     contents: {
         fontFamily: 'Poppins',
         fontSize: '18px',
-        color: 'white'
+        color: 'white',
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '16px',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '14px',
+        },
     }
-});
+}));
 
 export default function TextWithTitle() {
     const classes = useStyles();
