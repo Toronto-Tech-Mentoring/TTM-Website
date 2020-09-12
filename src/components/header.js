@@ -1,5 +1,6 @@
 import React from "react"
+import Navbar from "./Navbar/NavTabs"
 
-export default function Header(props) {
-  return <h1>{props.headerText}</h1>
+export default function Header() {
+  return <Navbar/>
 }

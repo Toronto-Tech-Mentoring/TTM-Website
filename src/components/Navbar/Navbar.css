@@ -1,0 +1,43 @@
+        * {
+            margin: 0px!important;
+            padding: 0px!important;
+            box-sizing: border-box!important;
+        }
+        
+        .navbar {
+            position: sticky;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            height: 80px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding-left: 50px!important;
+            padding-right: 50px!important;
+        }
+        
+        .nav-right {
+            width: fit-content;
+            height: 80px;
+        }
+        
+        .nav-tabs {
+            width: fit-content;
+            height: 80px;
+            border: none;
+            margin-right: 0px!important;
+        }
+        
+        .nav-link {
+            width: 104px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 80px;
+            border: none;
+        }
+        
+        .active {
+            box-shadow: 0px 2px 0px purple;
+            line-height: 78px;
+            color: purple;
+        }
