@@ -6,14 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     divStyle: {
         textAlign: 'center',
-        width: '55%',
+        // width: '100%',
         margin: '0 auto',
-        [theme.breakpoints.down('md')]: {
-            width: '80%',
-        },
-        [theme.breakpoints.down('sm')]: {
-            margin: '10px 15px',
-        },
     },
     title: {
         fontFamily: 'Josefin Sans',
@@ -25,13 +19,16 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         color: 'white',
         marginTop: '15px',
+        padding: '0 90px',
         [theme.breakpoints.down('md')]: {
             fontSize: '16px',
             marginTop: '8px',
+            padding: '0 50px',
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '14px',
             marginTop: '8px',
+            padding: '0 40px',
         },
     }
 }));
