@@ -63,95 +63,46 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Cards(props) {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return ( <
-        div >
-        <
-        Card className = { classes.root } >
-        <
-        p className = { classes.title } > Client - determined goals < /p> <
-        div className = { classes.imgDiv }
-        style = {
-            { backgroundImage: `url(${background1}` }
-        } >
-        <
-        img className = { classes.innerImage }
-        style = {
-            { top: '35px' }
-        }
-        alt = "skill_development"
-        src = { pic1 }
-        /> < /
-        div > <
-        CardContent >
-        <
-        p className = { classes.contents } >
-        We support the client in setting their own career, entrepreneurial or personal. <
-        /p> < /
-        CardContent > <
-        /Card> <
-        Card className = { classes.root } >
-        <
-        p className = { classes.title } > One - on - one skills development < /p> <
-        div className = { classes.imgDiv }
-        style = {
-            { backgroundImage: `url(${background2}` }
-        } >
-        <
-        img className = { classes.innerImage }
-        style = {
-            { top: '15px', zIndex: '3', left: '60px' }
-        }
-        alt = "skill_development"
-        src = { pic2 }
-        /> <
-        img className = { classes.innerImage }
-        style = {
-            { top: '25px', zIndex: '2', right: '55px' }
-        }
-        alt = "shiny"
-        src = { shiny2 }
-        /> < /
-        div > <
-        CardContent >
-        <
-        p className = { classes.contents } >
-        We do this through a tailored, project - based approach that meets unique goals and needs. <
-            /p> < /
-        CardContent > <
-        /Card> <
-        Card className = { classes.root } >
-        <
-        p className = { classes.title } > Wrap - around supports < /p> <
-        div className = { classes.imgDiv }
-        style = {
-            { backgroundImage: `url(${background3}` }
-        } >
-        <
-        img className = { classes.innerImage }
-        style = {
-            { top: '30px', zIndex: '3', left: '60px' }
-        }
-        alt = "supports"
-        src = { pic3 }
-        /> <
-        img className = { classes.innerImage }
-        style = {
-            { top: '33px', zIndex: '2', right: '60px' }
-        }
-        alt = "shiny"
-        src = { shiny3 }
-        /> < /
-        div > <
-        CardContent >
-        <
-        p className = { classes.contents } >
-        We have strategic partnerships with community organizations to provide additional support. <
-        /p> < /
-        CardContent > <
-        /Card> < /
-        div >
+  return (
+    <div>
+      <Card className={classes.root}>
+          <p className={classes.title}>Client-determined goals</p>
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background1}`}}>
+            <img className={classes.innerImage} style={{top: '35px'}} alt="skill_development" src={pic1} />
+          </div>
+          <CardContent>
+            <p className={classes.contents}>
+              We support the client in setting their own career, entrepreneurial or personal.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={classes.root}>
+          <p className={classes.title}>One-on-one skills development</p>
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background2}`}}>
+            <img className={classes.innerImage} style={{top: '15px', zIndex: '3', left: '60px'}} alt="skill_development" src={pic2} />
+            <img className={classes.innerImage} style={{top: '25px', zIndex: '2', right: '55px'}} alt="shiny" src={shiny2} />
+          </div>
+          <CardContent>
+            <p className={classes.contents}>
+             We do this through a tailored, project-based approach that meets unique goals and needs.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={classes.root}>
+          <p className={classes.title}>Wrap-around supports</p>
+          <div className={classes.imgDiv} style={{backgroundImage: `url(${background3}`}}>
+            <img className={classes.innerImage} style={{top: '30px', zIndex: '3', left: '60px'}} alt="supports" src={pic3} />
+            <img className={classes.innerImage} style={{top: '33px', zIndex: '2', right: '60px'}} alt="shiny" src={shiny3} />
+          </div>
+          <CardContent>
+            <p className={classes.contents}>
+             We have strategic partnerships with community organizations to provide additional support.
+            </p>
+          </CardContent>
+        </Card>
+    </div>
 
-    );
+  );
 }
