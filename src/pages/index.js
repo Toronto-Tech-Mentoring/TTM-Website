@@ -1,14 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import HowAreWeDifferentSection from '../components/HowAreWeDifferentSection'
+import Container from "../components/container"
 
-export default function Home() {
+export default function About() {
   return (
-    <div style={{ color: `purple` }}>
-      <Link to="/contact/">Contact</Link>
-      <h1>Hello Gatsby! sadsadsadasd</h1>
-      <p>What a world.</p>
-      <HowAreWeDifferentSection />
+    <div style={{ color: `teal` }}>
+      <Container/>
     </div>
   )
 }
