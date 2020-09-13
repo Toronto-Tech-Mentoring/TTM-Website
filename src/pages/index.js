@@ -1,10 +1,12 @@
 import React from "react"
-import Container from "../components/container"
+import { MainLayout } from "../layout";
+import { HowAreWeDifferentSection } from "../components/Home";
 
-export default function About() {
+export default function Home() {
   return (
-    <div style={{ color: `teal` }}>
-      <Container/>
-    </div>
+    <MainLayout>
+      <p>This is Home (About-us) page</p>
+      <HowAreWeDifferentSection />
+    </MainLayout>
   )
 }
