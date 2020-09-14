@@ -136,25 +136,24 @@ export default function Footer() {
 
     return (
         <footer>
-            {/* <div className={classes.copyrightDiv}>
-                <span>&copy; 2020 Toronto Tech Mentoring</span>
-            </div> */}
-            {/* <Hidden smDown> */}
             <div className={classes.iconDiv}>
                 <ul className={classes.iconUl}>
                     <li className={classes.iconLi}>
-                        <Avatar className={classes.iconAvatar}>
-                            <InstagramIcon />
-                        </Avatar>
+                        <a href="https://www.instagram.com/">
+                            <Avatar className={classes.iconAvatar}>
+                                <InstagramIcon />
+                            </Avatar>
+                        </a>
                     </li>
                     <li className={classes.iconLi}>
-                        <Avatar className={classes.iconAvatar}>
-                            <TwitterIcon />
-                        </Avatar>
+                        <a href="https://twitter.com/?lang=en">
+                            <Avatar className={classes.iconAvatar}>
+                                <TwitterIcon />
+                            </Avatar>
+                        </a>
                     </li>
                 </ul>
             </div>
-            {/* </Hidden> */}
             <div className={classes.footerLinks}>
                 <ul className={classes.footerUl}>
                     {renderLinks()}
@@ -165,14 +164,18 @@ export default function Footer() {
                 <Hidden smUp>
                     <ul className={classes.iconUl}>
                         <li className={classes.iconLi}>
-                            <Avatar className={classes.iconAvatar}>
-                                <InstagramIcon />
-                            </Avatar>
+                            <a href="https://www.instagram.com/">
+                                <Avatar className={classes.iconAvatar}>
+                                    <InstagramIcon />
+                                </Avatar>
+                            </a>
                         </li>
                         <li className={classes.iconLi}>
-                            <Avatar className={classes.iconAvatar}>
-                                <TwitterIcon />
-                            </Avatar>
+                            <a href="https://twitter.com/?lang=en">
+                                <Avatar className={classes.iconAvatar}>
+                                    <TwitterIcon />
+                                </Avatar>
+                            </a>
                         </li>
                     </ul>
                 </Hidden>
