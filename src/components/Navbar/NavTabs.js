@@ -18,7 +18,7 @@ function NavTabs() {
   },{
     id: 'partners',
     path: '/partners/',
-    title: 'partner',
+    title: 'Partner',
   },{
     id: 'sponsors',
     path: '/sponsors/',
