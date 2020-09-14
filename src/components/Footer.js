@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "gatsby";
 import Avatar from '@material-ui/core/Avatar';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import InstagramIcon from '@material-ui/icons/Instagram';
+// import TwitterIcon from '@material-ui/icons/Twitter';
 
 const styles = {
     footer: {
