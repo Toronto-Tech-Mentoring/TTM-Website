@@ -9,8 +9,8 @@ export default function Home() {
       <Link to="/contact/">Contact</Link>
       <h1>Hello Gatsby! sadsadsadasd</h1>
       <p>What a world.</p>
-      <HowAreWeDifferentSection />
       <LeftAnchoredBubbleText/>
+      <HowAreWeDifferentSection />
     </div>
   )
 }
