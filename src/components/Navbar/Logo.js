@@ -1,5 +1,5 @@
 import React from "react"
-import LogoTtm from "../../images/logo-ttm.png"
+import LogoTtm from "../../images/navbar/logo-ttm.png"
 import './Navbar.css'
 
 
