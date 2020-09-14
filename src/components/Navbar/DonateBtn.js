@@ -1,7 +1,10 @@
 import React from "react"
+import Confetti from "react-dom-confetti"
 import styled from "styled-components"
 import HeartWhite from "../../images/navbar/heart-white.png"
 import HeartPurple from "../../images/navbar/heart-purple.png"
+import posed from "react-pose"
+
 
 // The style components were used as an easy way to change the button color on hover
 const StyledButton = styled.button`
@@ -22,12 +25,50 @@ const StyledButton = styled.button`
   }
 `
 
+
+const config = {
+  angle: "90",
+  spread: "360",
+  startVelocity: "25",
+  elementCount: "50",
+  dragFriction: "0.17",
+  duration: "1500",
+  stagger: "2",
+  width: "15px",
+  height: "15px",
+  perspective: "499px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+}
+
+const PopAnimation = posed.img({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.5,
+  },
+  press: {
+    scale: 1.1,
+  },
+  attention: {
+    scale: 1.8,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 0,
+    },
+  },
+})
+
 class HeartChangeState extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { imgSrc: HeartWhite }
+    this.state = {confetti:false, imgSrc: HeartWhite }
     this.handleMouseOver = this.handleMouseOver.bind(this)
     this.handleMouseOut = this.handleMouseOut.bind(this)
+    this.handleOnClick = this.handleOnClick.bind(this)
   }
 
   handleMouseOver() {
@@ -35,7 +76,11 @@ class HeartChangeState extends React.Component {
   }
 
   handleMouseOut() {
-    this.setState({ imgSrc: HeartWhite })
+    this.setState({confetti: false, imgSrc: HeartWhite })
+  }
+
+  handleOnClick(){
+    this.setState({confetti: true})
   }
 
   // The mouse over events need to be placed on the button tag to update the heart as well
@@ -44,11 +89,16 @@ class HeartChangeState extends React.Component {
       <StyledButton
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        onFocus={this.handleMouseOut}
+        onClick={this.handleOnClick}
       >
         Donate
-        {/* update the state of the heart image to change colours */}
-        <img className="heartIcon" src={this.state.imgSrc} alt="heart color" />
+        <PopAnimation
+          className="heartIcon"
+          src={this.state.imgSrc}
+          alt="heart color"
+          onClick={this.handleOnClick}
+        />
+        <Confetti active={this.state.confetti} config={config} />
       </StyledButton>
     )
   }
