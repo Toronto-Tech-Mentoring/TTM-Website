@@ -39,7 +39,6 @@ export default function HowAreWeDifferentSection() {
     return ( 
     <Grid container justify = "center"
         alignItems = "center"
-        spacing = { 4 }
         style = {
             { backgroundColor: '#4529AE', textAlign: 'center', minHeight: '600px' }
         } 
