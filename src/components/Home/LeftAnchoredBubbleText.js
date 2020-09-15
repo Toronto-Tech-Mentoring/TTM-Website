@@ -1,9 +1,5 @@
 import React from "react"
 
-// TODO ITEMS
-// - Josephin sans font and other fonts need to be packaged in build
-// - wrapping/sizing of text as per figma
-
 const cssHeaderText = {
     fontFamily: 'Josefin Sans',
     fontStyle: 'normal',
