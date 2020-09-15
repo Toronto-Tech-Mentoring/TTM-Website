@@ -108,6 +108,5 @@ export default function Cards() {
         </Card>
       </Grid>
     </>
-
   );
 }
