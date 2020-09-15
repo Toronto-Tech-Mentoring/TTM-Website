@@ -6,7 +6,6 @@ import DonateBtn from "./DonateBtn"
 import Logo from  "./Logo"
 
 function NavTabs() {
-  let path = window.location.pathname;
   const listItems = [{
     id: 'client',
     path: '/client/',
@@ -33,13 +32,14 @@ function NavTabs() {
     title: 'Contact',
   }]
 
-  const renderListItems = (path) => {
+  const renderListItems = () => {
     return listItems.map(item => (
       <li className="nav-item">
         <Link
           to={item.path}
           id={item.id}
-          className={path === item.path ? "nav-link active" : "nav-link"}
+          className='nav-link'
+          activeStyle={{ color: '#873FE2', lineHeight:'78px', boxShadow:"0px 2px 0px #873FE2" }}
         >
           {item.title}
         </Link>
@@ -51,7 +51,7 @@ function NavTabs() {
       <div className="navbar">
             <Logo/>
             <ul className="nav nav-tabs float-right text-dark">
-              {renderListItems(path)}
+              {renderListItems()}
               <DonateBtn/>
             </ul>
        </div>  
