@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 // import { Link } from "gatsby"
 import Nav from "./Navbar/NavTabs"
-import Home from "./Home/Home"
+// import Home from "./Home/Home"
 import Client from "./Client/Client"
 import Sponsors from "./Sponsors/Sponsors"
 import Partners from "./Partners/Partners"
@@ -16,7 +16,7 @@ export default function Container() {
       <div>
         <Switch>
           <Route exact path={"/"}>
-            <Home/>
+            {/* <Home/> */}
           </Route>
           <Route exact path={"/client/"}>
             <Client/>
