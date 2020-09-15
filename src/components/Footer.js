@@ -31,11 +31,11 @@ const useStyles = makeStyles((theme) => ({
     },
     iconUl: {
         display: 'inline-block',
-        paddingRight: '80px',
+        paddingRight: '40px',
         height: '100%',
         marginBottom: '15px',
         [theme.breakpoints.down('sm')]: {
-            paddingLeft: '3vw',
+            paddingLeft: 'calc(( 100% - 187px - 274px - 180px ) * 0.2)',
             paddingRight: '0px'
         },
     },
@@ -55,35 +55,37 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         fontSize: '16px',
         textDecoration: 'none',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '12px',
+        },
     },
     footerLinks: {
         float: 'right',
         [theme.breakpoints.down('xs')]: {
-            float: 'left'
+            float: 'left',
+            paddingRight:'calc(100% - 317px)'
         },
     },
     copyrightDiv: {
         float: 'left',
-        paddingLeft: '100px',
+        paddingLeft: 'calc(( 100% - 218px - 345px - 180px ) * 0.2)',
         fontFamily: 'Poppins',
         alignItems: 'center',
-        fontSize: '16px',
         paddingTop: '20px',
         [theme.breakpoints.down('md')]: {
             paddingLeft: '10px',
         },
         [theme.breakpoints.down('xs')]: {
             paddingLeft: '20px',
-            fontSize: '14px',
             margin: '0px',
-            paddingTop: '5px',
+            paddingTop: '10px',
         },
     },
     iconLi: {
         display: 'inline-block',
         padding: '12px 10px 0px 10px',
         [theme.breakpoints.down('xs')]: {
-            padding: '12px 2px 0px 2px',
+            padding: '10px 3px 0px 3px',
         },
     },
     iconDiv: {
@@ -110,10 +112,14 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     copyright:{
+        fontSize: '16px',
+        [theme.breakpoints.down('md')]: {
+            fontSize:'12px',
+        },
         [theme.breakpoints.down('xs')]: {
             position:'relative',
             bottom:'8px',
-            fontSize:'15px'
+            fontSize:'12px'
         },
     }
 }));
