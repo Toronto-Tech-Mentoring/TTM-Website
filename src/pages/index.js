@@ -7,7 +7,7 @@ import LeftAnchoredBubbleText from '../components/Home/LeftAnchoredBubbleText'
 export default function Home(){
   return (
     <MainLayout>
-      <LeftAnchoredBubbleText/>
+      {/* <LeftAnchoredBubbleText/> */}
       <CitySVG2 />  
       {/* @Hanlin and @Saint -> The line of code is the back city SVG.
         Feel free to use it or replace it with your own. 
