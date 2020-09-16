@@ -18,9 +18,18 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Josefin Sans',
         fontWeight: 600,
-        fontSize: '30px',
+        fontSize: '32px',
         lineHeight: '57px',
         padding: '0px 20px',
+        // Tablet Above to Laptop/ Desktop
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '28px',
+        },
+ 
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '18px',
+        },
     },
     yearTag: {
         position: 'relative',
@@ -32,29 +41,82 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '25px',
         color: 'white',
         borderStyle: 'none',
+  
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+ 
     },
     pinStyle: {
         display: 'inline-block',
         height: 300,
+          // Tablet Above to Laptop/ Desktop
+ 
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            height: 200,
+        },
     },
     eventTitle: {
         fontFamily: 'Josefin Sans',
         fontWeight: 600,
-        fontSize: '25px',
+        fontSize: '28px',
         lineHeight: '44px',
         textAlign: 'left',
+ 
+        // Tablet Above to Laptop/ Desktop
+
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '25px',
+        },
+ 
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '16px',
+        },
     },
     eventContent: {
         position: 'relative',
         fontFamily: 'Poppins',
         fontSize: '15px',
         lineHeight: '31px',
-        width: '70%',
-        zIndex: 3
+        width: '80%', 
+        zIndex: 3,
+        [theme.breakpoints.between('sm', 'md')]: {
+            fontSize: '16px',
+        },
+ 
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '12px',
+        },
     },
     center: {
         textAlign: 'center',
-        marginBottom: '50px',
+    },
+    pic: {
+        display: 'inline-block',
+        width: '200px',
+ 
+        // Tablet Above to Laptop/ Desktop
+        [theme.breakpoints.between('sm', 'md')]: {
+            width: '40%',
+            marginRight: '30px',
+        },
+ 
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            width: '30%',
+            marginRight: '30px',
+        },
+    },
+    firstPic: {
+        display: 'inline-block',
+        marginRight: '30px',
+    },
+
+    gridContainer: {
+        marginTop: '50px',  
     },
 }));
 
@@ -63,7 +125,8 @@ const styles = {
         zIndex: 1,
         position: 'relative',
         bottom: '50px'
-    }
+    },
+   
 }
 export default function TimelineSection() {
     const classes = useStyles();
@@ -79,37 +142,36 @@ export default function TimelineSection() {
                 <span className={classes.title}>See how we’ve grown!</span>
                 <img alt="title decoration right" src={titleRight} />
             </Grid>
-            <Grid container item xs={12}>
-                <Grid item xs={6} md={4} lg={3} className={classes.center}>
+            <Grid className={classes.gridContainer} container item xs={12}>
+                <Grid item xs={2} md={3} lg={3} className={classes.center}>
                     <span className={classes.yearTag}>2017</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
-                <Grid container item xs={6} md={8} lg={9}>
+                <Grid container item xs={10} md={9} lg={9}>
                     <span className={classes.eventTitle}>Research and program development</span>
                     <p className={classes.eventContent}>Toronto Tech Mentoring was born out of the Civic Tech Toronto space. Civic Tech is a movement that focuses on developing and harnessing technology for the betterment of civic life.</p>
-                    <Grid item xs={12}>
+                    <div>
                         {/* <img style={styles.bg} alt="purple bubble" src={bg1} /> */}
-                        <img style={{marginRight:'50px', zIndex:3, position:'relative'}} src={pic1}  />
-                        <img src={pic1} />
-                    </Grid>
+                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic1}/>
+                        <img className={classes.pic} src={pic1} />
+                    </div>
                 </Grid>
             </Grid>
-            <Grid container xs={12}>
+            {/* <Grid style={styles.gridContainer} container xs={12}>
                 <Grid item xs={6} md={4} lg={3} className={classes.center}>
                     <span className={classes.yearTag}>2018</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
-                <Grid item xs={6} md={8} lg={9}>
+                <Grid container item xs={6} md={8} lg={9}>
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
-                    <Grid item xs={12}>
-                        {/* <img style={styles.bg} alt="purple bubble" src={bg1} /> */}
-                        <img style={{marginRight:'50px'}} src={pic3}/>
-                        <img src={pic3} />
-                    </Grid>
+                    <div>
+                        <img className={classes.firstPic} src={pic3}/>
+                        <img className={classes.secondPic} src={pic3} />
+                    </div>
                 </Grid>
-            </Grid>
-            <Grid container xs={12}>
+            </Grid> */}
+            {/* <Grid style={styles.gridContainer} container xs={12}>
                 <Grid item xs={6} md={4} lg={3} className={classes.center}>
                     <span className={classes.yearTag}>2019</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
@@ -118,12 +180,12 @@ export default function TimelineSection() {
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
                     <Grid item xs={12}>
-                        {/* <img style={styles.bg} alt="purple bubble" src={bg1} /> */}
+                       
                         <img style={{marginRight:'50px', zIndex:3, position:'relative'}} src="https://via.placeholder.com/243x175"/>
                         <img src="https://via.placeholder.com/243x175"/>
                     </Grid>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </Grid>
     )
 };
