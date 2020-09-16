@@ -100,10 +100,14 @@ export default function TimelineSection() {
                     <span className={classes.yearTag}>2018</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
-                <Grid item xs={6} md={8} lg={9}>
+                <Grid container item xs={6} md={8} lg={9}>
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
-                    <img alt="blue bubble" src={bg2} />
+                    <Grid item xs={12}>
+                        {/* <img alt="blue bubble" src={bg2} /> */}
+                        <img style={{marginRight:'50px', zIndex:3, position:'relative'}} src="https://via.placeholder.com/243x175"/>
+                        <img src="https://via.placeholder.com/243x175"/>
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid item xs={12}>
