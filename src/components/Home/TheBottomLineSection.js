@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import people from '../../images/about-us/bottom-line/people.svg';
 import titleRight from '../../images/about-us/bottom-line/titleRight.svg';
-import titleLeft from '../../images//about-us/bottom-line/titleLeft.svg';
-import contentLeft from '../../images//about-us/bottom-line/contentLeft.svg';
-import contentRight from '../../images//about-us/bottom-line/contentRight.svg';
+import titleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
+import contentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
+import contentRight from '../../images/about-us/bottom-line/contentRight.svg';
 import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
