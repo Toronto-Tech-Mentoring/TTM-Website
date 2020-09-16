@@ -1,14 +1,18 @@
 import React from "react"
 import { MainLayout } from "../layout";
 import { HowAreWeDifferentSection, TheBottomLineSection, OurRootsSection, TimelineSection } from "../components/Home";
-import { CitySVG } from "../components/SVG";
+import { CitySVG, CitySVG2 } from "../components/SVG";
+import LeftAnchoredBubbleText from '../components/Home/LeftAnchoredBubbleText'
 
-export default function Home() {
+export default function Home(){
   return (
     <MainLayout>
-      <p>This is Home (About-us) page</p>
-      <CitySVG />
-      <HowAreWeDifferentSection />
+      <LeftAnchoredBubbleText/>
+      <CitySVG2 />  
+      {/* @Hanlin and @Saint -> The line of code is the back city SVG.
+        Feel free to use it or replace it with your own. 
+       */}
+      <HowAreWeDifferentSection /> 
       <TheBottomLineSection />
       <OurRootsSection />
       <TimelineSection />

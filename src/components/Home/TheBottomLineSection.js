@@ -75,9 +75,10 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 auto'
     },
     people: {
-        width: '100%',
+        width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
+            // width: '100%'
         },
     },
     hideTitleStyle: {
@@ -108,7 +109,7 @@ export default function TheBottomLineSection() {
             className={classes.root}
             justify="center"
             alignItems="center">
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={6}>
                 <div className={classes.textBox}>
                     <div>
                         <img className={classes.hideTitleStyle} alt="title decoration left" src={titleLeft} />
@@ -124,7 +125,7 @@ export default function TheBottomLineSection() {
                     </Hidden>
                 </div>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={6}>
                 <img className={classes.people} alt="people" src={people} />
                 <Hidden mdUp>
                     <p className={classes.question}>Not sure if you qualify?</p>

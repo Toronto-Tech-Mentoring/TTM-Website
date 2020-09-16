@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contents: {
         color: '#FFFFFF',
-        marginBottom: '50px',
+        marginBottom: '-20px',
         fontWeight: 'normal',
         fontSize: '18px',
         lineHeight: '31px',
@@ -79,9 +79,7 @@ export default function HowAreWeDifferentSection() {
                 <p className={classes.contents} > The Accelerator Project has a unique approach to education and upskilling. In our core program, we pair young people with tech mentors in the Toronto area to empower them to reach their own goals. </p> 
             </div> 
         </Grid> 
-        {/* <Grid item xs={12}> */}
-            <Cards />
-        {/* </Grid>  */}
+        <Cards />
     </Grid>
     )
 };
