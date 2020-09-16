@@ -62,7 +62,6 @@ const useStyles = makeStyles({
 
 
 function NavTabs() {
-  let path = window.location.pathname;
   const listItems = [{
     id: 'client',
     path: '/client/',
@@ -89,13 +88,21 @@ function NavTabs() {
     title: 'Contact',
   }]
 
-  const renderListItems = (path) => {
+  /** @function renderListItems */
+  // This function takes in a list of object "listItems", 
+  // loop through each item and for each item, 
+  // render a <li></li> that represents a tab on a navbar.
+  /** @function
+   * @name renderListItems */
+
+  const renderListItems = () => {
     return listItems.map(item => (
       <li className={classes.navitem}>
         <Link
           to={item.path}
           id={item.id}
-          className={path === item.path ? classes.navlink + " "+ classes.active  : classes.navlink}
+          className={classes.navlink}
+          activeStyle={{ color: '#873FE2', lineHeight:'78px', boxShadow:"0px 2px 0px #873FE2" }}
         >
           {item.title}
         </Link>
@@ -106,13 +113,13 @@ function NavTabs() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.navbar}>
-            <Logo/>
+        <div className={classes.navbar}>
+            <Logo/>           
             <ul className={classes.navtabs}>
-              {renderListItems(path)}
+              {renderListItems()}
               <DonateBtn/>
             </ul>
-      </div> 
+        </div> 
       </div>
     );
   }
