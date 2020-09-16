@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '28px',
         },
- 
+
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
             fontSize: '18px',
@@ -41,17 +41,31 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '25px',
         color: 'white',
         borderStyle: 'none',
-  
+        fontFamily: 'Futura',
+
         [theme.breakpoints.down('sm')]: {
             display: 'none',
         },
- 
+    },
+    yearTagSm: {
+        padding: '5px 25px',
+        fontSize: '14px',
+        backgroundColor: '#873FE2',
+        borderRadius: '300px',
+        color: 'white',
+        borderStyle: 'none',
+        fontFamily: 'Futura',
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+            marginRight: 'calc(100% - 82px)'
+        },
     },
     pinStyle: {
         display: 'inline-block',
         height: 300,
-          // Tablet Above to Laptop/ Desktop
- 
+        // Tablet Above to Laptop/ Desktop
+
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
             height: 200,
@@ -63,29 +77,30 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '28px',
         lineHeight: '44px',
         textAlign: 'left',
- 
+
         // Tablet Above to Laptop/ Desktop
 
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '25px',
         },
- 
+
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
-            fontSize: '16px',
+            fontSize: '14px',
         },
     },
     eventContent: {
+        marginTop:'0px',
         position: 'relative',
         fontFamily: 'Poppins',
         fontSize: '15px',
         lineHeight: '31px',
-        width: '80%', 
+        width: '80%',
         zIndex: 3,
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '16px',
         },
- 
+
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
             fontSize: '12px',
@@ -96,18 +111,17 @@ const useStyles = makeStyles((theme) => ({
     },
     pic: {
         display: 'inline-block',
-        width: '200px',
- 
+        width: '350px',
+        borderRadius:'10px',
+
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
-            width: '40%',
-            marginRight: '30px',
+            width: '47%',
         },
- 
+
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
-            width: '30%',
-            marginRight: '30px',
+            width: '35%',
         },
     },
     firstPic: {
@@ -116,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     gridContainer: {
-        marginTop: '50px',  
+        marginTop: '50px',
     },
 }));
 
@@ -126,7 +140,7 @@ const styles = {
         position: 'relative',
         bottom: '50px'
     },
-   
+
 }
 export default function TimelineSection() {
     const classes = useStyles();
@@ -148,44 +162,46 @@ export default function TimelineSection() {
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
                 <Grid container item xs={10} md={9} lg={9}>
+                    <span className={classes.yearTagSm}>2017</span>
                     <span className={classes.eventTitle}>Research and program development</span>
                     <p className={classes.eventContent}>Toronto Tech Mentoring was born out of the Civic Tech Toronto space. Civic Tech is a movement that focuses on developing and harnessing technology for the betterment of civic life.</p>
                     <div>
                         {/* <img style={styles.bg} alt="purple bubble" src={bg1} /> */}
-                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic1}/>
+                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic1} />
                         <img className={classes.pic} src={pic1} />
                     </div>
                 </Grid>
             </Grid>
-            {/* <Grid style={styles.gridContainer} container xs={12}>
-                <Grid item xs={6} md={4} lg={3} className={classes.center}>
+            <Grid className={classes.gridContainer} container xs={12}>
+                <Grid item xs={2} md={3} lg={3} className={classes.center}>
                     <span className={classes.yearTag}>2018</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
-                <Grid container item xs={6} md={8} lg={9}>
+                <Grid container item xs={10} md={9} lg={9}>
+                    <span className={classes.yearTagSm}>2018</span>
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
                     <div>
-                        <img className={classes.firstPic} src={pic3}/>
-                        <img className={classes.secondPic} src={pic3} />
+                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic2} />
+                        <img className={classes.pic} src={pic3} />
                     </div>
                 </Grid>
-            </Grid> */}
-            {/* <Grid style={styles.gridContainer} container xs={12}>
-                <Grid item xs={6} md={4} lg={3} className={classes.center}>
+            </Grid>
+            <Grid className={classes.gridContainer} container xs={12}>
+                <Grid item xs={2} md={3} lg={3} className={classes.center}>
                     <span className={classes.yearTag}>2019</span>
                     <img className={classes.pinStyle} alt="pin" src={pin} />
                 </Grid>
-                <Grid item xs={6} md={8} lg={9}>
+                <Grid item xs={10} md={9} lg={9}>
+                    <span className={classes.yearTagSm}>2019</span>
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
                     <Grid item xs={12}>
-                       
-                        <img style={{marginRight:'50px', zIndex:3, position:'relative'}} src="https://via.placeholder.com/243x175"/>
-                        <img src="https://via.placeholder.com/243x175"/>
+                        <img className={`${classes.firstPic} ${classes.pic}`} src="https://via.placeholder.com/243x175" />
+                        <img className={classes.pic} src="https://via.placeholder.com/243x175" />
                     </Grid>
                 </Grid>
-            </Grid> */}
+            </Grid>
         </Grid>
     )
 };
