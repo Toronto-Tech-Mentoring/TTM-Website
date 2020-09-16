@@ -75,9 +75,10 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 auto'
     },
     people: {
-        width: '100%',
+        width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
+            // width: '100%'
         },
     },
     hideTitleStyle: {
