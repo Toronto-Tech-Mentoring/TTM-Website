@@ -10,56 +10,26 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 auto',
     },
     title: {
-        color: '#FFFFFF',
-        paddingTop: '40px',
-        fontWeight: '600',
-        fontSize: '28px',
-        lineHeight: '44px',
         fontFamily: 'Josefin Sans',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '28px',
-            lineHeight: '44px',
-        },
-        // Tablet Above to Laptop/ Desktop
-        [theme.breakpoints.between('sm', 'md')]: {
-            fontSize: '24px',
-            lineHeight: '41px',
-        },
-
-        // Tablet below to Mobile
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '20px',
-            lineHeight: '32px',
-        },
+        fontSize: '28px',
+        color: 'white'
     },
     contents: {
-        color: '#FFFFFF',
-        marginBottom: '-20px',
-        fontWeight: 'normal',
-        fontSize: '18px',
-        lineHeight: '31px',
         fontFamily: 'Poppins',
-
-        // Desktop up
-        [theme.breakpoints.up('md')]: {
-           padding: '0 300px 50px 300px',
-           fontSize: '16px',
-           lineHeight: '27px',
-       },
-
-       // Tablet Above to Laptop/ Desktop
-       [theme.breakpoints.between('sm', 'md')]: {
-           padding: '0 200px 50px 200px',
-           fontSize: '16px',
-           lineHeight: '27px',
-       },
-
-       // Tablet below to Mobile
-       [theme.breakpoints.down('sm')]: {
-           padding: '0 50px 50px 50px',
-           fontSize: '14px',
-           lineHeight: '24px',
-       },
+        fontSize: '18px',
+        color: 'white',
+        marginTop: '15px',
+        padding: '0 90px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '16px',
+            marginTop: '8px',
+            padding: '0 50px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '14px',
+            marginTop: '8px',
+            padding: '0 40px',
+        },
     }
 }));
 
@@ -70,16 +40,18 @@ export default function HowAreWeDifferentSection() {
     <Grid container justify = "center"
         alignItems = "center"
         style = {
-            { backgroundColor: '#4529AE', textAlign: 'center', minHeight: '600px', paddingBottom:'50px' }
+            { backgroundColor: '#4529AE', textAlign: 'center', minHeight: '600px' }
         } 
     >
         <Grid item xs={12}>
-            <div className={classes.divStyle}>
-                <p className={classes.title}> How are we different?</p> 
-                <p className={classes.contents} > The Accelerator Project has a unique approach to education and upskilling. In our core program, we pair young people with tech mentors in the Toronto area to empower them to reach their own goals. </p> 
+            <div className={ classes.divStyle }>
+                <p className={ classes.title } > How are we different ? </p> 
+                <p className={ classes.contents } > The Accelerator Project has a unique approach to education and upskilling.In our core program, we pair young people with tech mentors in the Toronto area to empower them to reach their own goals. </p> 
             </div> 
         </Grid> 
-        <Cards />
+        <Grid item xs = { 12 } >
+            <Cards />
+        </Grid> 
     </Grid>
     )
 };
