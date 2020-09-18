@@ -17,6 +17,9 @@ const StyledButton = styled.button`
   color: #fff;
   padding-left: 32px;
   padding-right: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
 
   &:hover {
