@@ -8,8 +8,9 @@ import bg1 from '../../images/about-us/timeline/2017bg.svg';
 import bg2 from '../../images/about-us/timeline/2018bg.svg';
 import bg3 from '../../images/about-us/timeline/2019bg.svg';
 import pic1 from '../../images/about-us/timeline/pic1.svg';
-import pic2 from '../../images/about-us/timeline/pic2.svg';
+import pic2 from '../../images/about-us/timeline/pic2.png';
 import pic3 from '../../images/about-us/timeline/pic3.svg';
+import { DriveEtaOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -79,7 +80,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
 
         // Tablet Above to Laptop/ Desktop
-
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '25px',
         },
@@ -90,13 +90,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     eventContent: {
-        marginTop:'0px',
+        marginTop: '0px',
         position: 'relative',
         fontFamily: 'Poppins',
         fontSize: '15px',
         lineHeight: '31px',
         width: '80%',
-        zIndex: 3,
+        zIndex: 2,
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '16px',
         },
@@ -112,7 +112,9 @@ const useStyles = makeStyles((theme) => ({
     pic: {
         display: 'inline-block',
         width: '350px',
-        borderRadius:'10px',
+        borderRadius: '10px',
+        position: 'relative',
+        // zIndex: 2,
 
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
@@ -127,21 +129,71 @@ const useStyles = makeStyles((theme) => ({
     firstPic: {
         display: 'inline-block',
         marginRight: '30px',
+        position: 'relative',
+        // zIndex: 2
     },
 
     gridContainer: {
         marginTop: '50px',
     },
-}));
+    testing: {
+        display: 'inline-block',
+        position: 'absolute',
+        marginRight: '30px',
+        left: '350px',
+        width: '350px',
+        zIndex: 2,
+        // Tablet Above to Laptop/ Desktop
+        [theme.breakpoints.between('sm', 'md')]: {
+            width: '40%',
+        },
 
-const styles = {
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            width: '30%',
+        },
+    },
     bg: {
         zIndex: 1,
         position: 'relative',
-        bottom: '50px'
-    },
+        bottom: '50px',
+        height: '370px',
+        // Tablet Above to Laptop/ Desktop
+        [theme.breakpoints.between('sm', 'md')]: {
+            width: '40%',
+        },
 
-}
+        // Tablet below to Mobile
+        [theme.breakpoints.down('sm')]: {
+            width: '30%',
+        },
+    },
+    bg2: {
+        zIndex: 1,
+        position: 'absolute',
+        // float:'right',
+        right: '0',
+        height: '209px',
+        top: '20px'
+        // width: '1050%',
+
+
+        // // Tablet Above to Laptop/ Desktop
+        // [theme.breakpoints.between('sm', 'md')]: {
+        //     left: '180px',
+        //     height: '65%',
+        //     top: '-2%',
+        // },
+
+        // // Tablet below to Mobile
+        // [theme.breakpoints.down('sm')]: {
+        //     left: '180px',
+        //     height: '40%',
+        //     top: '-40px',
+        // },
+    },
+}));
+
 export default function TimelineSection() {
     const classes = useStyles();
 
@@ -166,8 +218,9 @@ export default function TimelineSection() {
                     <span className={classes.eventTitle}>Research and program development</span>
                     <p className={classes.eventContent}>Toronto Tech Mentoring was born out of the Civic Tech Toronto space. Civic Tech is a movement that focuses on developing and harnessing technology for the betterment of civic life.</p>
                     <div>
-                        {/* <img style={styles.bg} alt="purple bubble" src={bg1} /> */}
-                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic1} />
+                        <img className={classes.bg} alt="purple bubble" src={bg1} />
+                        <img className={classes.testing} src={pic1} />
+                        {/* <img className={`${classes.firstPic} ${classes.pic}`} src={pic1} /> */}
                         <img className={classes.pic} src={pic1} />
                     </div>
                 </Grid>
@@ -182,8 +235,20 @@ export default function TimelineSection() {
                     <span className={classes.eventTitle}>Pilot testing and refinement</span>
                     <p className={classes.eventContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet nisi tristique viverra at ac elit.</p>
                     <div>
-                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic2} />
-                        <img className={classes.pic} src={pic3} />
+                        {/* <img className={`${classes.firstPic} ${classes.pic}`} src={pic2} /> */}
+                        {/* <img className={classes.pic} src={pic3} /> */}
+                        {/* <div style={{backgroundImage: `url(${bg2})`}}>
+                            <img className={classes.pic} src={pic3} />
+                        </div> */}
+
+                        {/* <img className={classes.bg2} alt="blue bubble" src={bg2} /> */}
+                    </div>
+                    <div>
+                        <img style={{ marginRight: '30px' }} src="https://via.placeholder.com/243x175" />
+                        <div style={{ position: 'relative', display: 'inline-block' }}>
+                            <img alt="orange bubble" src="https://via.placeholder.com/243x175" />
+                            <img className={classes.bg2} alt="blue bubble" src={bg2} />
+                        </div>
                     </div>
                 </Grid>
             </Grid>
@@ -199,6 +264,7 @@ export default function TimelineSection() {
                     <Grid item xs={12}>
                         <img className={`${classes.firstPic} ${classes.pic}`} src="https://via.placeholder.com/243x175" />
                         <img className={classes.pic} src="https://via.placeholder.com/243x175" />
+                        <img className={classes.bg} alt="orange bubble" src={bg3} />
                     </Grid>
                 </Grid>
             </Grid>
