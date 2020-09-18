@@ -1,5 +1,5 @@
 import React from "react"
-import LogoTtm from "../../images/navbar/logo-ttm.png"
+import LogoTtm from "../../images/navbar/logo-ttm.svg"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
