@@ -40,7 +40,7 @@ const useStyles = makeStyles({
   navitem: {
             marginBottom: "-1px"
   },
-  
+
       navlink: {
             width: "104px",
             fontSize: "16px",
@@ -56,7 +56,7 @@ const useStyles = makeStyles({
             lineHeight: "80px",
             color: "#873FE2!important"
         }
-        
+
 });
 
 
@@ -89,11 +89,13 @@ function NavTabs() {
   }]
 
   /** @function renderListItems */
-  // This function takes in a list of object "listItems", 
-  // loop through each item and for each item, 
+  // This function takes in a list of object "listItems",
+  // loop through each item and for each item,
   // render a <li></li> that represents a tab on a navbar.
   /** @function
    * @name renderListItems */
+
+  const classes = useStyles();
 
   const renderListItems = () => {
     return listItems.map(item => (
@@ -109,18 +111,18 @@ function NavTabs() {
       </li>
     ))
   }
-  
-  const classes = useStyles();
+
   return (
     <div className={classes.root}>
         <div className={classes.navbar}>
-            <Logo/>           
+            <Logo/>
             <ul className={classes.navtabs}>
               {renderListItems()}
               <DonateBtn/>
             </ul>
-        </div> 
+        </div>
       </div>
     );
   }
+  
 export default NavTabs;
