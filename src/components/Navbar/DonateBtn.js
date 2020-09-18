@@ -15,6 +15,9 @@ const StyledButton = styled.button`
   height: 48px;
   margin: 8px;
   color: #fff;
+  padding-left: 32px;
+  padding-right: 32px;
+
 
   &:hover {
     background: #ffff;
@@ -24,7 +27,13 @@ const StyledButton = styled.button`
     color: #873fe2;
   }
 `
-
+const StyledText = styled.p`
+  display: inline-block;
+  font-size: 18px;
+  height: fit-content;
+  margin: auto;
+  float: left;
+`
 
 const config = {
   angle: "90",
@@ -91,12 +100,12 @@ class HeartChangeState extends React.Component {
         onMouseOut={this.handleMouseOut}
         onClick={this.handleOnClick}
       >
-        Donate
+        <StyledText>Donate</StyledText>
         <PopAnimation
-          className="heartIcon"
           src={this.state.imgSrc}
           alt="heart color"
           onClick={this.handleOnClick}
+          style={{width:"17px", float:"right"}}
         />
         <Confetti active={this.state.confetti} config={config} />
       </StyledButton>

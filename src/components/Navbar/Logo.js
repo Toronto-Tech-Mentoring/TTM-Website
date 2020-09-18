@@ -19,7 +19,8 @@ const useStyles = makeStyles({
   text: {
     display: "inline",
     fontSize: "20px",
-    margin: "10px"
+    margin: "10px",
+    fontFamilly: "Poppins"
   },
 });
 export default function Logo() {
