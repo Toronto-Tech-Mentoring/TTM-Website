@@ -1,10 +1,11 @@
 import React from "react"
 import { MainLayout } from "../../layout";
+import PageBody from "../../components/Contact"
 
 export default function ContactPage() {
   return (
     <MainLayout>
-      <p>This is Contact Page</p>
+      <PageBody/>
     </MainLayout>
   )
 }
