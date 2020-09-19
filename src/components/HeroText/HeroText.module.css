@@ -18,6 +18,22 @@
   font-family: 'Poppins';
   size: 18px;
 }
+.f {
+  position: absolute;
+left: 36em;
+top: 9.5em;
+
+}
+.left{
+  position: absolute;
+  left: -2.7em;
+  top:-1em;
+}
+.right{
+  position: absolute;
+  left: 42em;
+  top:10em;
+}
 @media screen and (max-width: 35em) {
   .bodyText {
     width: 20em;
