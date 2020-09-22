@@ -4,7 +4,6 @@ import HowAreWeDifferentSection from './HowAreWeDifferentSection';
 import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
 import TimelineSection from './TimelineSection';
-import LeftAnchoredBubbleText from './LeftAnchoredBubbleText'
 import {
   SkylineHeader as SkylineHeaderSVG,
   SkylineFooter as SkylineFooterSVG,
