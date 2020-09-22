@@ -3,7 +3,10 @@ import { MainLayout } from "../layout";
 import AboutUs from "../components/AboutUs"
 
 
-export default function Home(){
+import LeftAnchoredBubbleText from "../components/Home/LeftAnchoredBubbleText"
+import HeroText from "../components/HeroText/HeroText"
+
+export default function Home() {
   return (
     <MainLayout>
       <AboutUs/>
