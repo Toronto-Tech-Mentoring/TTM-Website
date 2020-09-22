@@ -1,0 +1,51 @@
+.position {
+  position: absolute;
+  top: 10em;
+  left: 15em;
+}
+.hero {
+  display: inline;
+  font-size: 2.25em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.bodyText {
+  /* max-width: 35rem; */
+  line-height: 1.8;
+  word-wrap: break-word;
+  width: 700px;
+  font-size: 1.125em;
+  font-family: 'Poppins';
+  size: 18px;
+}
+.f {
+  position: absolute;
+left: 36em;
+top: 9.5em;
+
+}
+.left{
+  position: absolute;
+  left: -2.7em;
+  top:-1em;
+}
+.right{
+  position: absolute;
+  left: 42em;
+  top:10em;
+}
+@media screen and (max-width: 35em) {
+  .bodyText {
+    width: 20em;
+  }
+}
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleLeft {
+}
+.titleRight {
+}
