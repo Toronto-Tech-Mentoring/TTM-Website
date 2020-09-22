@@ -26,7 +26,7 @@ const useStyles = makeStyles({
             alignItems: "center",
             justifyContent: "space-between",
             fontFamily: 'Poppins'
-        },
+        }, 
   navtabs: {
             width: "fit-content",
             height: "80px",
