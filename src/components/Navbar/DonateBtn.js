@@ -1,20 +1,24 @@
 import React from "react"
 import Confetti from "react-dom-confetti"
 import styled from "styled-components"
-import HeartWhite from "../../images/navbar/heart-white.png"
-import HeartPurple from "../../images/navbar/heart-purple.png"
-import posed from "react-pose"
+import HeartWhite from "../../images/navbar/heart-white.svg"
+import HeartPurple from "../../images/navbar/heart-purple.svg"
 
 
 // The style components were used as an easy way to change the button color on hover
 const StyledButton = styled.button`
   background: #873fe2;
-  border-radius: 24px;
-  border-style: none;
+  border-radius: 300px;
+  border-style: solid;
+  border-color: #873fe2;
   width: 156px;
   height: 48px;
   margin: 8px;
   color: #fff;
+  padding-left: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   &:hover {
     background: #ffff;
@@ -24,7 +28,26 @@ const StyledButton = styled.button`
     color: #873fe2;
   }
 `
+const StyledText = styled.p`
+  display: inline-block;
+  font-size: 18px;
+  height: fit-content;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding-right: 8px;
+  float: left;
+`
 
+const StyledImg = styled.img`
+    width: 17px;
+    float: left;
+    transition: transform 300ms ease-in-out;
+
+    ${StyledButton}:hover &{
+      transform: scale(1.5)
+    }
+`
 
 const config = {
   angle: "90",
@@ -40,29 +63,7 @@ const config = {
   colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
 }
 
-const PopAnimation = posed.img({
-  hoverable: true,
-  pressable: true,
-  init: {
-    scale: 1,
-  },
-  hover: {
-    scale: 1.5,
-  },
-  press: {
-    scale: 1.1,
-  },
-  attention: {
-    scale: 1.8,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 0,
-    },
-  },
-})
-
-class HeartChangeState extends React.Component {
+class DonateBtn extends React.Component {
   constructor(props) {
     super(props)
     this.state = {confetti:false, imgSrc: HeartWhite }
@@ -72,16 +73,17 @@ class HeartChangeState extends React.Component {
   }
 
   handleMouseOver() {
-    this.setState({ imgSrc: HeartPurple })
+    this.setState({imgSrc: HeartPurple , buttonHovered:true})
   }
 
   handleMouseOut() {
-    this.setState({confetti: false, imgSrc: HeartWhite })
+    this.setState({confetti: false, imgSrc: HeartWhite, buttonHovered: false})
   }
 
   handleOnClick(){
     this.setState({confetti: true})
   }
+
 
   // The mouse over events need to be placed on the button tag to update the heart as well
   render() {
@@ -91,9 +93,8 @@ class HeartChangeState extends React.Component {
         onMouseOut={this.handleMouseOut}
         onClick={this.handleOnClick}
       >
-        Donate
-        <PopAnimation
-          className="heartIcon"
+        <StyledText>Donate</StyledText>
+        <StyledImg
           src={this.state.imgSrc}
           alt="heart color"
           onClick={this.handleOnClick}
@@ -104,4 +105,4 @@ class HeartChangeState extends React.Component {
   }
 }
 
-export default HeartChangeState
+export default DonateBtn
