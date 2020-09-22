@@ -1,10 +1,11 @@
 import React from "react"
 import { MainLayout } from "../../layout";
+import PageBody from "../../components/Partners"
 
-export default function PartnerPage() {
+export default function PartnersPage() {
   return (
     <MainLayout>
-      <p>This is Partner Page</p>
+      <PageBody/>
     </MainLayout>
   )
 }
