@@ -13,7 +13,7 @@ import HeroText from "../HeroText/HeroText"
 
 export default function AboutUs() {
   return (
-    <MainLayout>
+    <div>
       {/* <LeftAnchoredBubbleText/> */}
       <SkylineHeaderSVG />
       <HeroText
@@ -25,6 +25,6 @@ export default function AboutUs() {
       <OurRootsSection />
       <TimelineSection />
       <SkylineFooterSVG />
-    </MainLayout>
+    </div>
   )
 }
