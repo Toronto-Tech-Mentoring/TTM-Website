@@ -24,8 +24,7 @@ const useStyles = makeStyles({
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            justifyContent: "space-between",
-            fontFamily: 'Poppins'
+            justifyContent: "space-between"
         },
   navtabs: {
             width: "fit-content",
