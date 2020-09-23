@@ -11,7 +11,6 @@ import {
   SkylineFooter as SkylineFooterSVG,
 } from "../components/SkylineSVG"
 
-import LeftAnchoredBubbleText from "../components/Home/LeftAnchoredBubbleText"
 import HeroText from "../components/HeroText/HeroText"
 
 export default function Home() {
