@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // ** You don't have to implement every single breakpoints. 
 // ** If you don't need certain breakpoints, just delete the code ** //
 
-// Documentation: https://material-ui.com/customization/breakpoints
+// Documentation: https://material-ui.com/customization/breakpoints.
 
 const useStyles = makeStyles((theme) => ({
     sampleClass: {
