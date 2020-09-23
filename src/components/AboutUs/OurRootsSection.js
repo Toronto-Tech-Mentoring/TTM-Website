@@ -10,14 +10,15 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         paddingTop: '40px',
         fontWeight: '600',
-        fontSize: '28px',
-        lineHeight: '44px',
+        lineHeight: '60px',
         fontFamily: 'Josefin Sans',
-        // Desktop up
-        [theme.breakpoints.up('md')]: {
-            fontSize: '28px',
-            lineHeight: '44px',
+
+        // Large screen
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '50px',
+            // lineHeight: '27px',
         },
+ 
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '24px',
@@ -34,29 +35,43 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         marginBottom: '50px',
         fontWeight: 'normal',
-        fontSize: '18px',
-        lineHeight: '31px',
+        lineHeight: '30px',
         fontFamily: 'Poppins',
-
-        // Desktop up
-        [theme.breakpoints.up('md')]: {
-            padding: '0 300px 50px 300px',
-            fontSize: '16px',
-            lineHeight: '27px',
+        marginTop: '-20px', 
+ 
+        // Large screen up
+        [theme.breakpoints.up('xl')]: {
+            padding: '0 950px 50px 950px',
+            fontSize: '25px',
         },
 
-        // Tablet Above to Laptop/ Desktop
+        // Tablet Above to Desktop to large screen
+        [theme.breakpoints.between('lg', 'xl')]: {
+            padding: '0 700px 50px 700px',
+            fontSize: '20px', 
+        },  
+
+        // Tablet Above to Desktop to large screen
+        [theme.breakpoints.between('md', 'lg')]: {
+            padding: '0 350px 50px 350px',
+            fontSize: '18px',  
+        },  
+        // Tablet Above to Laptop/ Desktop 
         [theme.breakpoints.between('sm', 'md')]: {
             padding: '0 200px 50px 200px',
             fontSize: '16px',
-            lineHeight: '27px',
         },
 
         // Tablet below to Mobile
-        [theme.breakpoints.down('sm')]: {
-            padding: '0 50px 50px 50px',
+        [theme.breakpoints.between('xs', 'sm')]: {
+            padding: '0 100px 50px 100px',
             fontSize: '14px',
-            lineHeight: '24px',
+            // lineHeight: '24px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0 20px 50px 20px',
+            fontSize: '12px',
+            // lineHeight: '24px',
         },
     }
 }));
