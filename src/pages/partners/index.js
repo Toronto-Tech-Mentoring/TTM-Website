@@ -5,7 +5,7 @@ import PageBody from "../../components/Partners"
 export default function PartnersPage() {
   return (
     <MainLayout>
-      <PageBody/>
+      <PageBody />
     </MainLayout>
   )
 }

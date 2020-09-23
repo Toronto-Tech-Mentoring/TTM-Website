@@ -5,7 +5,7 @@ import PageBody from "../../components/Volunteer"
 export default function VolunteerPage() {
   return (
     <MainLayout>
-      <PageBody/>
+      <PageBody />
     </MainLayout>
   )
 }

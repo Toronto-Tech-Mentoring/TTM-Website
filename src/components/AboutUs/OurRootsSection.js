@@ -10,15 +10,14 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         paddingTop: '40px',
         fontWeight: '600',
-        lineHeight: '60px',
+        fontSize: '28px',
+        lineHeight: '44px',
         fontFamily: 'Josefin Sans',
-
-        // Large screen
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '50px',
-            // lineHeight: '27px',
+        // Desktop up
+        [theme.breakpoints.up('md')]: {
+            fontSize: '28px',
+            lineHeight: '44px',
         },
- 
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '24px',
@@ -35,33 +34,29 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         marginBottom: '50px',
         fontWeight: 'normal',
-        lineHeight: '30px',
+        fontSize: '18px',
+        lineHeight: '31px',
         fontFamily: 'Poppins',
-        marginTop: '-20px', 
- 
-        // Large screen up
-        [theme.breakpoints.up('xl')]: {
-            padding: '0 850px 50px 850px',
-            fontSize: '25px',
-            lineHeight: '50px',
+
+        // Desktop up
+        [theme.breakpoints.up('md')]: {
+            padding: '0 300px 50px 300px',
+            fontSize: '16px',
+            lineHeight: '27px',
         },
 
-        // Tablet Above to Desktop to large screen
-        [theme.breakpoints.between('md', 'lg')]: {
-            padding: '0 300px 50px 300px',
-            fontSize: '18px',
-        },  
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
             padding: '0 200px 50px 200px',
             fontSize: '16px',
+            lineHeight: '27px',
         },
 
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
             padding: '0 50px 50px 50px',
             fontSize: '14px',
-            // lineHeight: '24px',
+            lineHeight: '24px',
         },
     }
 }));
