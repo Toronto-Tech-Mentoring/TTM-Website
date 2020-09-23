@@ -10,8 +10,7 @@ import {
 } from "../SkylineSVG"
 import HeroText from "../HeroText/HeroText"
 
-
-export default function AboutUs() {
+export default function Home() {
   return (
     <div>
       {/* <LeftAnchoredBubbleText/> */}

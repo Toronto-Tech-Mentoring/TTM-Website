@@ -5,7 +5,7 @@ import PageBody from "../../components/Sponsors"
 export default function SponsorsPage() {
   return (
     <MainLayout>
-      <PageBody/>
+      <PageBody />
     </MainLayout>
   )
 }

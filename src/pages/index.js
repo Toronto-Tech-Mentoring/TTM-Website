@@ -1,11 +1,11 @@
 import React from "react"
 import { MainLayout } from "../layout";
-import AboutUs from "../components/AboutUs"
+import PageBody from "../components/AboutUs";
 
 export default function Home() {
   return (
     <MainLayout>
-      <AboutUs/>
+      <PageBody/>
     </MainLayout>
   )
 }
