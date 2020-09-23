@@ -54,12 +54,20 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'normal',
         fontFamily: 'Poppins',
         
-        // Desktop up
+        // Large screen up
         [theme.breakpoints.up('xl')]: {
             padding: '0 850px 50px 850px',
             fontSize: '27px',
             lineHeight: '50px',
         }, 
+
+         // Desktop to Large Screen
+        [theme.breakpoints.between('lg', 'xl')]: {
+            padding: '0 500px 50px 500px',
+            fontSize: '20px',
+            lineHeight: '40px',
+        },
+ 
 
         // Laptop to Dekstop
         [theme.breakpoints.between('md', 'lg')]: {
