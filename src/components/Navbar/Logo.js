@@ -1,5 +1,5 @@
 import React from "react"
-import LogoTtm from "../../images/navbar/logo-ttm.png"
+import LogoTtm from "../../images/navbar/logo-ttm.svg"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
@@ -19,7 +19,8 @@ const useStyles = makeStyles({
   text: {
     display: "inline",
     fontSize: "20px",
-    margin: "10px"
+    margin: "10px",
+    fontFamilly: "Poppins"
   },
 });
 export default function Logo() {

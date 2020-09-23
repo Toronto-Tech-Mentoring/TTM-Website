@@ -1,6 +1,6 @@
 import React from "react";
-import ComputerSVG from '../SVG/ComputerSVG';
-import HandsSvg from '../SVG/HandsSVG';
+import ComputerSVG from '../WhyTechSVG/ComputerSVG';
+import HandsSvg from '../WhyTechSVG/HandsSVG';
 
 const cssHeaderText = {
     fontFamily: 'Josefin Sans',
