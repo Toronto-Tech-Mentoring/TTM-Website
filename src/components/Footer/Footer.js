@@ -176,13 +176,6 @@ export default function Footer() {
             <div className={classes.iconDiv}>
                 <ul className={classes.iconUl}>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/">
-                            <Avatar className={classes.iconAvatar}>
-                                <InstagramIcon />
-                            </Avatar>
-                        </a>
-                    </li>
-                    <li className={classes.iconLi}>
                         <a href="https://www.instagram.com/civictechto">
                             <Avatar className={classes.iconAvatar}>
                                 <InstagramIcon />
@@ -207,13 +200,7 @@ export default function Footer() {
                 <span className={classes.copyright}>&copy; 2020 Toronto Tech Mentoring</span>
                 <Hidden smUp>
                     <ul className={classes.iconUl}>
-                        <li className={classes.iconLi}>
-                            <a href="https://www.instagram.com/">
-                                <Avatar className={classes.iconAvatar}>
-                                    <InstagramIcon />
-                                </Avatar>
-                            </a>
-                        </li>
+                    
                         <li className={classes.iconLi}>
                             <a href="https://www.instagram.com/civictechto">
                                 <Avatar className={classes.iconAvatar}>
