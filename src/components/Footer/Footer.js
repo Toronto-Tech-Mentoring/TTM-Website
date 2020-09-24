@@ -183,14 +183,14 @@ export default function Footer() {
                         </a>
                     </li>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/civictechto/?hl=en">
+                        <a href="https://www.instagram.com/civictechto">
                             <Avatar className={classes.iconAvatar}>
                                 <InstagramIcon />
                             </Avatar>
                         </a>
                     </li>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/civictechto/?hl=en">
+                        <a href="https://twitter.com/CivicTechTO">
                             <Avatar className={classes.iconAvatar}>
                                 <TwitterIcon />
                             </Avatar>
@@ -215,14 +215,14 @@ export default function Footer() {
                             </a>
                         </li>
                         <li className={classes.iconLi}>
-                            <a href="https://www.instagram.com/civictechto/?hl=en">
+                            <a href="https://www.instagram.com/civictechto">
                                 <Avatar className={classes.iconAvatar}>
                                     <InstagramIcon />
                                 </Avatar>
                             </a>
                         </li>
                         <li className={classes.iconLi}>
-                            <a href="https://twitter.com/CivicTechTO?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                            <a href="https://twitter.com/CivicTechTO">
                                 <Avatar className={classes.iconAvatar}>
                                     <TwitterIcon />
                                 </Avatar>
