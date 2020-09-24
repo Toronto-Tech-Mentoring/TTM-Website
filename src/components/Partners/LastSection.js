@@ -38,32 +38,12 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '5px',
     },
     logo1: {
-        // Screen size: Tablet To Laptop
-        [theme.breakpoints.between('sm', 'md')]: {
- 
-        },
-
-        // Screen size: Mobile to Tablet
-        [theme.breakpoints.between('xs', 'sm')]: {
-     
-        },   
-
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
             width: '60px',
         },  
     },
     logo2: {
-        // Screen size: Tablet To Laptop
-        [theme.breakpoints.between('sm', 'md')]: {
-
-        },
-
-        // Screen size: Mobile to Tablet
-        [theme.breakpoints.between('xs', 'sm')]: {
-
-        },   
-
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
             width: '90px',
