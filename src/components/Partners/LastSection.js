@@ -2,20 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Logo from '../../images/delivery-partner/our-partner/logo.svg';
+import Logo2 from '../../images/delivery-partner/our-partner/logo2.svg';
 
 const useStyles = makeStyles((theme) => ({ 
     root: {
       flexGrow: 1,
       paddingBottom: '100px',
-      textAlign: 'center',
+    //   textAlign: 'center',
     },
     paper: { 
-        padding: theme.spacing(2),
-        paddingTop: '20px',
-        height: '70px', 
-        // width: 'auto',
-        background: '#FFFFFF',
-        border: "1px solid #C4C4C4",
+        background: '#FFFFFF',  
+        border: "1px solid #C4C4C4",    
         boxSizing: "border-box",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         fontFamily: 'Poppins',
@@ -25,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             cursor: 'pointer',
         },
+    
     }, 
     title: { 
         color: '#000000',
@@ -35,6 +34,72 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         fontSize: '28px',
     },   
+    logo: {
+        paddingTop: '5px',
+    },
+    logo1: {
+        // Screen size: Tablet To Laptop
+        [theme.breakpoints.between('sm', 'md')]: {
+ 
+        },
+
+        // Screen size: Mobile to Tablet
+        [theme.breakpoints.between('xs', 'sm')]: {
+     
+        },   
+
+        // Screen size: Mobile below
+        [theme.breakpoints.down('xs')]: {
+            width: '60px',
+        },  
+    },
+    logo2: {
+        // Screen size: Tablet To Laptop
+        [theme.breakpoints.between('sm', 'md')]: {
+
+        },
+
+        // Screen size: Mobile to Tablet
+        [theme.breakpoints.between('xs', 'sm')]: {
+
+        },   
+
+        // Screen size: Mobile below
+        [theme.breakpoints.down('xs')]: {
+            width: '90px',
+        },  
+    },
+    text1: {        
+        position: 'relative',
+        bottom: '25px',
+        left: '35px',
+        fontSize: '15px',
+
+
+        //  // Screen size: Mobile to Tablet
+        [theme.breakpoints.between('xs', 'sm')]: {
+            fontSize: '13px',
+        }, 
+ 
+    
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '11px',
+        },   
+    },   
+    text2: {
+        position: 'relative',
+        bottom: '25px',
+        left: '10px',
+        fontSize: '15px',
+        // // Screen size: Mobile to Tablet
+        [theme.breakpoints.between('xs', 'sm')]: {
+            fontSize: '12px',
+        },
+
+        [theme.breakpoints.down('xs')]: { 
+            fontSize: '11px',
+        },   
+    }  
 }));
 
 export default function LastSection() {
@@ -43,13 +108,19 @@ export default function LastSection() {
         <div className={classes.root}>
             <p className={classes.title}>Our Partners</p>
             <Grid container justify="center" spacing={3}>
-                <Grid item xs={8} sm={4} md={3} lg={2} xl={2}> 
-                    <div className={classes.paper}>Civic Tech Toronto</div>
-                </Grid>  
-                <Grid item xs={8} sm={4} md={3} lg={2} xl={2}>
-                    <div className={classes.paper}>The Sprott House</div>
-                </Grid>  
+                <Grid item xs={7} sm={5} md={4} lg={3} xl={2}> 
+                    <div className={classes.paper}>
+                        <img className={`${classes.logo} ${classes.logo1}`} src={Logo} />    
+                        <span className={classes.text1}>Civic Tech Toronto</span>
+                    </div>         
+                </Grid>        
+                <Grid item xs={7} sm={5} md={4} lg={3} xl={2}> 
+                    <div className={classes.paper}>
+                        <img className={`${classes.logo} ${classes.logo2}`} src={Logo2} />    
+                        <span className={classes.text2}>The Sprott House</span>
+                    </div>       
+                </Grid>        
             </Grid> 
-        </div>
+        </div> 
     ); 
 }; 
