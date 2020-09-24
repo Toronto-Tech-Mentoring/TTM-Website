@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
             alignItems: "center",
             justifyContent: "space-between",
             fontFamily: 'Poppins'
-        }, 
+        },
   navtabs: {
             width: "fit-content",
             height: "80px",
@@ -132,7 +132,10 @@ function NavTabs() {
     window.addEventListener("keydown", handleFirstTab)
   }
 
-  window.addEventListener("keydown", handleFirstTab)
+  useEffect(() => {
+    window.addEventListener("keydown", handleFirstTab)
+
+  },);
 
 
   return (
