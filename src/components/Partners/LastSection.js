@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Logo from '../../images/delivery-partner/our-partner/logo.svg';
 import Logo2 from '../../images/delivery-partner/our-partner/logo2.svg';
