@@ -8,12 +8,18 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        custom:{
-          families: ['Josefin Sans, Poppins'],
-          urls: ["/fonts/fonts.css"],
-        },
+        fonts: [
+          {
+            family: `Josefin Sans`,
+            variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+          },
+          {
+            family: `Poppins`,
+            variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+          },
+        ],
       },
     },
   ],
