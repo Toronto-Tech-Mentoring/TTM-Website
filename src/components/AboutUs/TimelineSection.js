@@ -1,12 +1,10 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
 import titleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import titleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import pin from '../../images/about-us/timeline/pin.svg';
-import bg1 from '../../images/about-us/timeline/2017bg.svg';
-import bg2 from '../../images/about-us/timeline/2018bg.svg';
-import bg3 from '../../images/about-us/timeline/2019bg.svg';
 import pic1 from '../../images/about-us/timeline/pic1.svg';
 import pic3 from '../../images/about-us/timeline/pic3.svg';
 import { DriveEtaOutlined } from "@material-ui/icons";

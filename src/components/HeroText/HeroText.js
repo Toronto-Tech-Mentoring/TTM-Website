@@ -10,12 +10,15 @@ export default function HeroText(props) {
   return (
     <div className={styles.position}>
       {/* <CheetoLeft /> */}
+      <img className={styles.left} alt="cheetoLeft" src={cheetoLeft} />
+
       <div className="heroContainer">
         <h1 className={styles.hero}>{props.heroText}</h1>
-        <p className={styles.bodyText}>{props.heroBodyText}</p>
-        <img className={styles.f} alt="rainbow heart" src={rainbowHeart} />
-        <img className = {styles.right} alt="cheetoRight" src={cheetoRight} />
-        <img className = {styles.left} alt="cheetoLeft" src={cheetoLeft} />
+        <p className={styles.bodyText}>
+          {props.heroBodyText}
+          <img className={styles.f} alt="rainbow heart" src={rainbowHeart} />
+        </p>
+        <img className={styles.right} alt="cheetoRight" src={cheetoRight} />
       </div>
       {/* <CheetoRight /> */}
     </div>

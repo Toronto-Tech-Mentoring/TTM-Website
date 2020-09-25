@@ -176,21 +176,14 @@ export default function Footer() {
             <div className={classes.iconDiv}>
                 <ul className={classes.iconUl}>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/civictechto">
                             <Avatar className={classes.iconAvatar}>
                                 <InstagramIcon />
                             </Avatar>
                         </a>
                     </li>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/civictechto/?hl=en">
-                            <Avatar className={classes.iconAvatar}>
-                                <InstagramIcon />
-                            </Avatar>
-                        </a>
-                    </li>
-                    <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/civictechto/?hl=en">
+                        <a href="https://twitter.com/CivicTechTO">
                             <Avatar className={classes.iconAvatar}>
                                 <TwitterIcon />
                             </Avatar>
@@ -207,22 +200,16 @@ export default function Footer() {
                 <span className={classes.copyright}>&copy; 2020 Toronto Tech Mentoring</span>
                 <Hidden smUp>
                     <ul className={classes.iconUl}>
+                    
                         <li className={classes.iconLi}>
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/civictechto">
                                 <Avatar className={classes.iconAvatar}>
                                     <InstagramIcon />
                                 </Avatar>
                             </a>
                         </li>
                         <li className={classes.iconLi}>
-                            <a href="https://www.instagram.com/civictechto/?hl=en">
-                                <Avatar className={classes.iconAvatar}>
-                                    <InstagramIcon />
-                                </Avatar>
-                            </a>
-                        </li>
-                        <li className={classes.iconLi}>
-                            <a href="https://twitter.com/CivicTechTO?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                            <a href="https://twitter.com/CivicTechTO">
                                 <Avatar className={classes.iconAvatar}>
                                     <TwitterIcon />
                                 </Avatar>
