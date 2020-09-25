@@ -40,30 +40,31 @@ const useStyles = makeStyles((theme) => ({
     logo1: {
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
-            width: '60px',
+            width: '40px',
         },  
     },
     logo2: {
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
-            width: '90px',
+            width: '60px',
         },  
-    },
+    }, 
     text1: {        
         position: 'relative',
         bottom: '25px',
         left: '35px',
         fontSize: '15px',
 
-
+ 
         //  // Screen size: Mobile to Tablet
         [theme.breakpoints.between('xs', 'sm')]: {
             fontSize: '13px',
         }, 
  
-    
         [theme.breakpoints.down('xs')]: {
-            fontSize: '11px',
+            fontSize: '8px',
+            bottom: '15px',
+            left: '30px',
         },   
     },   
     text2: {
@@ -73,11 +74,13 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '15px',
         // // Screen size: Mobile to Tablet
         [theme.breakpoints.between('xs', 'sm')]: {
-            fontSize: '12px',
+            fontSize: '11px',
+            bottom: '15px',
         },
 
         [theme.breakpoints.down('xs')]: { 
-            fontSize: '11px',
+            fontSize: '8px',
+            bottom: '15px',
         },   
     }  
 }));
