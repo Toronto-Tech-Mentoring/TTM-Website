@@ -1,5 +1,5 @@
 import React from "react"
-import { MainLayout } from "../../layout";
+
 import HowAreWeDifferentSection from './HowAreWeDifferentSection';
 import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
@@ -9,10 +9,11 @@ import {
   SkylineFooter as SkylineFooterSVG,
 } from "../SkylineSVG"
 import HeroText from "../HeroText/HeroText"
+import ClientSideRender from "../../utils/ClientRendering"
 
 export default function Home() {
   return (
-    <div>
+    <ClientSideRender>
       {/* <LeftAnchoredBubbleText/> */}
       <SkylineHeaderSVG />
       <HeroText
@@ -24,6 +25,6 @@ export default function Home() {
       <OurRootsSection />
       <TimelineSection />
       <SkylineFooterSVG />
-    </div>
+    </ClientSideRender>
   )
 }
