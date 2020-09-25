@@ -10,7 +10,7 @@ export default function Partners() {
       </p>
 
       <PartnerCards />
-    <LastSection />
+      <LastSection />
     </div>
   )
 }

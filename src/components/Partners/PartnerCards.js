@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
             lineHeight: '24px',
             padding: '0px',
         },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '12px',
+            lineHeight: '20px',
+        },
     },
     imgDiv: {
         backgroundRepeat: `no-repeat`,
@@ -157,8 +161,8 @@ export default function Cards() {
             <Grid item xs={12}>
                 <p className={`${classes.titleSpacing}  ${classes.text}`}>We currently partner with organizations that are:</p>
             </Grid>
-            <Grid item xl={2}></Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+            <Grid item md={1.5} lg={1.5} xl={2}></Grid>
+            <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg1}`} style={{ backgroundImage: `url(${background1}` }}>
                         <img className={classes.help} alt="helping each other" src={helping} />
@@ -170,7 +174,7 @@ export default function Cards() {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+            <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg2}`} style={{ backgroundImage: `url(${background2}` }}>
                         <img className={classes.house} alt="house and tree" src={house} />
@@ -182,7 +186,7 @@ export default function Cards() {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+            <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg3}`} style={{ backgroundImage: `url(${background3}` }}>
                         <img className={classes.training} alt="training support" src={training} />
@@ -194,7 +198,7 @@ export default function Cards() {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xl={2}></Grid>
+            <Grid item md={1.5} lg={1.5} xl={2}></Grid>
             <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
                 <p className={classes.text}>Are you part of an organization that could benefit from partnering with us?</p>
             </Grid>
