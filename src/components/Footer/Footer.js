@@ -19,7 +19,12 @@ const useStyles = makeStyles((theme) => ({
     footerUl: {
         display: 'inline-block',
         paddingRight: '80px',
-        paddingTop: '20px',
+        marginTop: '20px',
+
+        [theme.breakpoints.up('lg')]: {
+            paddingRight: '100px',
+            fontSize:'22px',
+        },
         [theme.breakpoints.down('md')]: {
             paddingRight: '10px',
         },
@@ -33,7 +38,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         paddingRight: '40px',
         height: '100%',
-        marginBottom: '15px',
+        marginTop:'0px',
+        marginBottom: '10px',
+        [theme.breakpoints.up('lg')]: {
+            paddingRight: '80px',
+        },
         [theme.breakpoints.down('sm')]: {
             paddingLeft: 'calc(( 100% - 187px - 274px - 180px ) * 0.2)',
             paddingRight: '0px'
@@ -72,8 +81,13 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         alignItems: 'center',
         paddingTop: '20px',
+
+        [theme.breakpoints.up('lg')]: {
+            paddingRight: '140px',
+            fontSize:'22px'
+        },
         [theme.breakpoints.down('md')]: {
-            paddingLeft: '10px',
+            paddingLeft: '25px',
         },
         [theme.breakpoints.down('xs')]: {
             paddingLeft: '20px',
@@ -162,21 +176,14 @@ export default function Footer() {
             <div className={classes.iconDiv}>
                 <ul className={classes.iconUl}>
                     <li className={classes.iconLi}>
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/civictechto">
                             <Avatar className={classes.iconAvatar}>
                                 <InstagramIcon />
                             </Avatar>
                         </a>
                     </li>
                     <li className={classes.iconLi}>
-                        <a href="#">
-                            <Avatar className={classes.iconAvatar}>
-                                <InstagramIcon />
-                            </Avatar>
-                        </a>
-                    </li>
-                    <li className={classes.iconLi}>
-                        <a href="https://twitter.com/?lang=en">
+                        <a href="https://twitter.com/CivicTechTO">
                             <Avatar className={classes.iconAvatar}>
                                 <TwitterIcon />
                             </Avatar>
@@ -193,22 +200,16 @@ export default function Footer() {
                 <span className={classes.copyright}>&copy; 2020 Toronto Tech Mentoring</span>
                 <Hidden smUp>
                     <ul className={classes.iconUl}>
+                    
                         <li className={classes.iconLi}>
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/civictechto">
                                 <Avatar className={classes.iconAvatar}>
                                     <InstagramIcon />
                                 </Avatar>
                             </a>
                         </li>
                         <li className={classes.iconLi}>
-                            <a href="#">
-                                <Avatar className={classes.iconAvatar}>
-                                    <InstagramIcon />
-                                </Avatar>
-                            </a>
-                        </li>
-                        <li className={classes.iconLi}>
-                            <a href="https://twitter.com/?lang=en">
+                            <a href="https://twitter.com/CivicTechTO">
                                 <Avatar className={classes.iconAvatar}>
                                     <TwitterIcon />
                                 </Avatar>
