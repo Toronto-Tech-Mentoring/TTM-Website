@@ -75,7 +75,6 @@ const useStyles = makeStyles((theme) => ({
         // // Screen size: Mobile to Tablet
         [theme.breakpoints.between('xs', 'sm')]: {
             fontSize: '11px',
-            bottom: '15px',
         },
 
         [theme.breakpoints.down('xs')]: { 
