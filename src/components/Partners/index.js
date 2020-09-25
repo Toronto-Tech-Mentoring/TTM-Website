@@ -1,5 +1,6 @@
 import React from "react";
 import PartnerCards from './PartnerCards';
+import LastSection from "./LastSection";
 
 export default function Partners() {
   return (
@@ -9,6 +10,7 @@ export default function Partners() {
       </p>
 
       <PartnerCards />
+    <LastSection />
     </div>
   )
 }

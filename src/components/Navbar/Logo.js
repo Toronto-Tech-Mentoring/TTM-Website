@@ -1,7 +1,9 @@
 import React from "react"
-import LogoTtm from "../../images/navbar/logo-ttm.svg"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
+import LogoTtm from "../../images/navbar/logo-ttm.svg"
+
 const useStyles = makeStyles({
   root: {
     height: "80px",
@@ -11,7 +13,7 @@ const useStyles = makeStyles({
   },
   logo: {
     component: "img",
-    alt: "TTM logo", 
+    alt: "TTM logo",
     width: "48",
     height: "auto",
     lineHeight: "80px"
@@ -23,6 +25,7 @@ const useStyles = makeStyles({
     fontFamilly: "Poppins"
   },
 });
+
 export default function Logo() {
   const classes = useStyles();
   return (
