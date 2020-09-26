@@ -11,10 +11,13 @@ const StyledButton = styled.button`
   border-radius: 300px;
   border-style: solid;
   border-color: #873fe2;
-  width: 156px;
+  width: 15%;
+  max-width: 156px;
+  min-width: 96px;
   height: 48px;
   color: #fff;
   padding-left: 32px;
+  display:"flex"
   align-items: center;
   display:inline-blok;
 

@@ -7,16 +7,15 @@ import LogoTtm from "../../images/navbar/logo-ttm.svg"
 const useStyles = makeStyles({
   root: {
     height: "80px",
-    display: "flex",
-    flexWrap: "wrap",
+    display: "inline-flex",
+    alignItems: "center",
+    width: "fit-content",
     alignItems: "center"
   },
   logo: {
-    component: "img",
-    alt: "TTM logo",
-    width: "48",
-    height: "auto",
-    lineHeight: "80px"
+    width: "48px",
+    height: "49px",
+    margin:"0%",
   },
   text: {
     display: "inline",
@@ -30,7 +29,7 @@ export default function Logo() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Box component="img" src={LogoTtm} className={classes.logo}/>
+      <Box component="img" src={LogoTtm} className={classes.logo} alt="TTM logo"/>
       <Box
        className={classes.text}
       >Toronto Tech Mentoring</Box>

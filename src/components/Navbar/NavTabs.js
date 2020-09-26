@@ -34,24 +34,50 @@ import "./NavAccessibility.css"
     }, []); // Empty array ensures that effect is only run on mount
 
     // The padding value as a function of screen size
-    let navbarPadding; // small screen
+    let navbarPadding,navbarHeight, navtabsFloat, navitemWidth, logoTextSize;
+    let buttonHeight, buttonWidth;
+    let navtabsDisplay, burgerMenuDisplay;
+    
     if (windowSize.width > 1040) {
-      navbarPadding = (windowSize.width / 4 -240).toFixed(1);
+      navbarPadding = (windowSize.width / 4 - 240).toFixed(1);
+      navbarHeight = 80;
+      navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
+      logoTextSize = 20;
+      buttonHeight = 48;
+      buttonWidth = 156;
+      navtabsDisplay = "inline-block"
+      burgerMenuDisplay = "none"
+      navtabsFloat = "right"
     } else if (windowSize.width >360 && windowSize.width < 1040) {
-       navbarPadding = (windowSize.width / 45 +7).toFixed(1);
+      navbarPadding = (windowSize.width / 45 + 7).toFixed(1);
+      navbarHeight = 58;
+      logoTextSize = 16;
+      buttonHeight = 40;
+      buttonWidth = (windowSize.width *0.11).toFixed(0);
+      navtabsDisplay = "none";
+      burgerMenuDisplay = "inline-block";
+      navtabsFloat = "none";
     } else{
-      navbarPadding=20; // small screen
+      navbarPadding = 20; // small screen
+      navbarHeight = 48;
+      logoTextSize = 12;
+      buttonHeight = 32;
+      buttonWidth = 96;
+      navtabsDisplay = "none";
+      burgerMenuDisplay = "inline-block";
+      navtabsFloat = "none";
     }
-    //Navlink width between 90px and 104 px;
-    let navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
-    if (navitemWidth > 104) {
-      navitemWidth = 104;
-    } else if (navitemWidth < 85) {
-      navitemWidth = 88;
-    }
+    
     const responsiveStyle = {
-      navbarPadding: navbarPadding,
-      navitemWidth :navitemWidth, 
+      navbarPadding,
+      navitemWidth, 
+      navbarHeight,
+      navtabsFloat,
+      logoTextSize,
+      buttonHeight,
+      buttonWidth,
+      navtabsDisplay,
+      burgerMenuDisplay,
     };
     return responsiveStyle;
   }
@@ -95,36 +121,37 @@ function NavTabs() {
   const useStyles = makeStyles({
   navbar: {
             position: "sticky",
-            left: "0%",
-            right: "0%",
             top: "0%",
+            left: "0%",
+            right:"0%",
             height: "80px",
             background: "#FFFFFF",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
             padding: "0 "+responsiveNavbar.navbarPadding+"px",
             color: "black",
-            display: "block",
             alignItems: "center",
             justifyContent: "space-between",
-      fontFamily: 'Poppins',
+            fontFamily: 'Poppins',
             zIndex:2,
         },
-  navtabs: {
+    navtabs: {
             width: "fit-content",
             height: "80px",
-            float: "right!important",
-            paddingLeft: "0",
-            marginBottom: "0",
+            float: responsiveNavbar.navtabsFloat,
+            padding: "0",
+            margin: "0",
             listStyle: "none",
-            marginTop: "0"
+            display: "inline-block" 
         },
   navitem: {
     marginBottom: "-1px",
-    display:"inline-block"
+    display:responsiveNavbar.navtabsDisplay
   },
 
       navlink: {
-            width: responsiveNavbar.navitemWidth+"px",
+        width: responsiveNavbar.navitemWidth + "px",
+            maxWidth: "104px",
+             minWidth:"90px",
             fontSize: "16px",
             textAlign: "center",
             lineHeight: "80px",
