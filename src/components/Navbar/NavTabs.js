@@ -57,7 +57,7 @@ import "./NavAccessibility.css"
   }
 
 function NavTabs() {
-  const responsiveNavebar = useWindowSize();
+  const responsiveNavbar = useWindowSize();
   const listItems = [{
     id: 'client',
     path: '/client/',
@@ -93,11 +93,6 @@ function NavTabs() {
 
   
   const useStyles = makeStyles({
-   root: {
-            margin: "0px",
-            padding: "0px",
-            boxSizing: "border-box"
-        },
   navbar: {
             position: "sticky",
             left: "0%",
@@ -106,21 +101,18 @@ function NavTabs() {
             height: "80px",
             background: "#FFFFFF",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-            padding: "0 "+responsiveNavebar.navbarPadding+"px",
+            padding: "0 "+responsiveNavbar.navbarPadding+"px",
             color: "black",
-            display: "flex",
-            flexWrap: "wrap",
+            display: "block",
             alignItems: "center",
             justifyContent: "space-between",
-    fontFamily: 'Poppins',
-            overflow: "hidden"
+      fontFamily: 'Poppins',
+            zIndex:2,
         },
   navtabs: {
             width: "fit-content",
             height: "80px",
             float: "right!important",
-            display: "flex",
-            flexWrap: "wrap",
             paddingLeft: "0",
             marginBottom: "0",
             listStyle: "none",
@@ -128,10 +120,11 @@ function NavTabs() {
         },
   navitem: {
     marginBottom: "-1px",
+    display:"inline-block"
   },
 
       navlink: {
-            width: responsiveNavebar.navitemWidth+"px",
+            width: responsiveNavbar.navitemWidth+"px",
             fontSize: "16px",
             textAlign: "center",
             lineHeight: "80px",
@@ -148,8 +141,6 @@ function NavTabs() {
 
 });
 
-  
-  
   const classes = useStyles();
 
   const renderListItems = () => {
@@ -159,7 +150,7 @@ function NavTabs() {
           to={item.path}
           id={item.id}
           className={classes.navlink}
-          activeStyle={{ color: '#873FE2', lineHeight:'78px', boxShadow:"0px 2px 0px #873FE2" }}
+          activeStyle={{ color: '#873FE2', boxShadow:"0px 2px 0px #873FE2" }}
         >
           {item.title}
         </Link>
@@ -190,15 +181,13 @@ function NavTabs() {
 
 
   return (
-    <div className={classes.root}>
-        <div className={classes.navbar}>
+        <div className={classes.navbar} >
             <Logo/>
             <ul className={classes.navtabs}>
               {renderListItems()}
               <DonateBtn/>
             </ul>
         </div>
-      </div>
     );
   }
 
