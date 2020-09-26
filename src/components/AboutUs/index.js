@@ -4,8 +4,10 @@ import HowAreWeDifferentSection from './HowAreWeDifferentSection';
 import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
 import TimelineSection from './TimelineSection';
-import LeftAnchoredBubbleText from './LeftAnchoredBubbleText';
-import WhyTech from './WhyTechSection';
+import LeftAnchoredBubbleText from '../WhyTechSVG/LeftAnchoredBubbleText';
+import WhyTech from '../WhyTechSVG/WhyTech';
+import Computer from '../WhyTechSVG/ComputerSVG';
+import Hands from '../WhyTechSVG/HandsSVG';
 import {
   SkylineHeader as SkylineHeaderSVG,
   SkylineFooter as SkylineFooterSVG,
@@ -22,6 +24,8 @@ export default function Home() {
         heroBodyText="We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)"
       />
       <WhyTech />
+      <Computer />
+      <Hands />
       <LeftAnchoredBubbleText/>
       <HowAreWeDifferentSection />
       <TheBottomLineSection />
