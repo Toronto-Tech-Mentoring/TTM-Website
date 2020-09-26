@@ -43,7 +43,7 @@ import "./NavAccessibility.css"
       navbarPadding=20; // small screen
     }
     //Navlink width between 90px and 104 px;
-    let navitemWidth = ((windowSize.width - 720) / 5).toFixed(1);
+    let navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
     if (navitemWidth > 104) {
       navitemWidth = 104;
     } else if (navitemWidth < 85) {
@@ -53,7 +53,6 @@ import "./NavAccessibility.css"
       navbarPadding: navbarPadding,
       navitemWidth :navitemWidth, 
     };
-    console.log(responsiveStyle)
     return responsiveStyle;
   }
 
@@ -113,7 +112,8 @@ function NavTabs() {
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "space-between",
-            fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
+            overflow: "hidden"
         },
   navtabs: {
             width: "fit-content",
@@ -127,7 +127,7 @@ function NavTabs() {
             marginTop: "0"
         },
   navitem: {
-            marginBottom: "-1px"
+    marginBottom: "-1px",
   },
 
       navlink: {
