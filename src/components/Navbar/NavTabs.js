@@ -34,50 +34,58 @@ import "./NavAccessibility.css"
     }, []); // Empty array ensures that effect is only run on mount
 
     // The padding value as a function of screen size
-    let navbarPadding,navbarHeight, navtabsFloat, navitemWidth, logoTextSize;
-    let buttonHeight, buttonWidth;
+    let navbarPadding,navbarHeight, navitemWidth, logoWidth, logoFontSize; 
+    let buttonHeight, buttonWidth, heartFontSize, heartWidth;
     let navtabsDisplay, burgerMenuDisplay;
     
     if (windowSize.width > 1040) {
       navbarPadding = (windowSize.width / 4 - 240).toFixed(1);
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
-      logoTextSize = 20;
+      logoFontSize = 20;
+      logoWidth = 48;
       buttonHeight = 48;
       buttonWidth = 156;
       navtabsDisplay = "inline-block"
       burgerMenuDisplay = "none"
-      navtabsFloat = "right"
-    } else if (windowSize.width >360 && windowSize.width < 1040) {
+      heartFontSize = 18;
+      heartWidth=17
+    } else if (windowSize.width >400 && windowSize.width < 1040) {
       navbarPadding = (windowSize.width / 45 + 7).toFixed(1);
       navbarHeight = 58;
-      logoTextSize = 16;
+      logoWidth = 40;
+      logoFontSize = 16;
       buttonHeight = 40;
       buttonWidth = (windowSize.width *0.11).toFixed(0);
       navtabsDisplay = "none";
       burgerMenuDisplay = "inline-block";
-      navtabsFloat = "none";
+      heartFontSize = 14;
+      heartWidth=15;
     } else{
-      navbarPadding = 20; // small screen
+      navbarPadding = 16; // small screen
       navbarHeight = 48;
-      logoTextSize = 12;
+      logoWidth = 30;
+      logoFontSize = 12;
       buttonHeight = 32;
       buttonWidth = 96;
       navtabsDisplay = "none";
       burgerMenuDisplay = "inline-block";
-      navtabsFloat = "none";
+      heartFontSize = 12;
+      heartWidth=13;
     }
     
     const responsiveStyle = {
       navbarPadding,
       navitemWidth, 
       navbarHeight,
-      navtabsFloat,
-      logoTextSize,
+      logoWidth,
+      logoFontSize,
       buttonHeight,
       buttonWidth,
       navtabsDisplay,
       burgerMenuDisplay,
+      heartFontSize,
+      heartWidth,
     };
     return responsiveStyle;
   }
@@ -124,7 +132,7 @@ function NavTabs() {
             top: "0%",
             left: "0%",
             right:"0%",
-            height: "80px",
+            height: responsiveNavbar.navbarHeight+"px",
             background: "#FFFFFF",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
             padding: "0 "+responsiveNavbar.navbarPadding+"px",
@@ -136,12 +144,13 @@ function NavTabs() {
         },
     navtabs: {
             width: "fit-content",
-            height: "80px",
-            float: responsiveNavbar.navtabsFloat,
+            height: responsiveNavbar.navbarHeight,
+            float: "right",
             padding: "0",
             margin: "0",
             listStyle: "none",
-            display: "inline-block" 
+           display: "flex", 
+            alignItems: "center",
         },
   navitem: {
     marginBottom: "-1px",
@@ -149,12 +158,12 @@ function NavTabs() {
   },
 
       navlink: {
-        width: responsiveNavbar.navitemWidth + "px",
+            width: responsiveNavbar.navitemWidth + "px",
             maxWidth: "104px",
-             minWidth:"90px",
+            minWidth:"90px",
             fontSize: "16px",
             textAlign: "center",
-            lineHeight: "80px",
+            lineHeight: responsiveNavbar.navbarHeight+"px",
             color: "black",
             padding: "0px",
             display: "block",
@@ -162,7 +171,6 @@ function NavTabs() {
   },
          active: {
             boxShadow: "0px 2px 0px #873FE2",
-            lineHeight: "80px",
             color: "#873FE2!important"
         }
 
@@ -209,10 +217,18 @@ function NavTabs() {
 
   return (
         <div className={classes.navbar} >
-            <Logo/>
+            <Logo
+                logoFontSize={responsiveNavbar.logoFontSize}
+                logoWidth={responsiveNavbar.logoWidth}
+            />
             <ul className={classes.navtabs}>
               {renderListItems()}
-              <DonateBtn/>
+              <DonateBtn
+                buttonHeight = {responsiveNavbar.buttonHeight}
+                buttonWidth={responsiveNavbar.buttonWidth}
+                heartFontSize={responsiveNavbar.heartFontSize}
+                heartWidth={responsiveNavbar.heartWidth}
+             />
             </ul>
         </div>
     );
