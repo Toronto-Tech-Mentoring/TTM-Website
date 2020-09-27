@@ -66,12 +66,12 @@ export default function Cards() {
 
   return (
     <Grid container alignItems="center" justify="center">
-      <Grid item xs={12} md={4} lg={4} xl={2}>
+      <Grid item xs={12} md={4} lg={3} xl={2.5}>
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background1}` }}>
             <img className={classes.innerImage} style={{ top: '35px' }} alt="skill_development" src={pic1} />
-          </div>
+          </div> 
           <CardContent>
             <p className={classes.contents}>
               We support the client in setting their own career, entrepreneurial or personal.
@@ -79,7 +79,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={4} xl={2}>
+      <Grid item xs={12} md={4} lg={3} xl={2.5}>
         <Card className={classes.root}>
           <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background2}` }}>
@@ -93,14 +93,14 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={4} xl={2}>
+      <Grid item xs={12} md={4} lg={3} xl={2.5}>
         <Card className={classes.root}>
           <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background3}` }}>
             <img className={classes.innerImage} style={{ top: '44px', zIndex: '3', left: '60px' }} alt="supports" src={pic3} />
             <img className={classes.innerImage} style={{ top: '33px', zIndex: '2', right: '60px' }} alt="shiny" src={shiny3} />
           </div>
-          <CardContent>
+          <CardContent> 
             <p className={classes.contents}>
               We have strategic partnerships with community organizations to provide additional support.
             </p>
