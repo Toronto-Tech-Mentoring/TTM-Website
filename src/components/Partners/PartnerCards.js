@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
             padding: '0px',
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '12px',
+            fontSize: '10px',
             lineHeight: '20px',
         },
     },
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '80px',
         [theme.breakpoints.down('md')]: {
             backgroundSize: '81px 97px',
-            marginTop: '45px',
+            marginTop: '50px',
         },
     },
     bg2: {
@@ -137,6 +137,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         fontSize: '16px',
         lineHeight: '27px',
+        borderStyle:'none',
         textAlign: 'center',
         backgroundColor:'white',
         color:'#873FE2',
