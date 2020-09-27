@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import LogoTtm from "../../images/navbar/logo-ttm.svg"
+import LogoTtm from "../../images/navbar/heart-purple.svg"
+import ClientSideRender from "../../utils/ClientRendering"
 
 const useStyles = makeStyles({
   root: {
@@ -28,9 +29,22 @@ const useStyles = makeStyles({
 
 export default function Logo() {
   const classes = useStyles();
+  const [currentSrc, updateSrc] = useState(null)
+  const src = LogoTtm
+
+   useEffect(() => {
+     // start loading original image
+     const imageToLoad = new Image()
+     imageToLoad.src = src
+     imageToLoad.onload = () => {
+       // When image is loaded replace the src and set loading to false
+       updateSrc(src)
+     }
+   }, [src])
+
   return (
     <div className={classes.root}>
-      <Box component="img" src={LogoTtm} className={classes.logo}/>
+      <Box component="img" src={currentSrc} className={classes.logo}/>
       <Box
        className={classes.text}
       >Toronto Tech Mentoring</Box>
