@@ -160,7 +160,7 @@ function NavTabs() {
       navlink: {
             width: responsiveNavbar.navitemWidth + "px",
             maxWidth: "104px",
-            minWidth:"87px",
+            minWidth:"86px",
             fontSize: "16px",
             textAlign: "center",
             lineHeight: responsiveNavbar.navbarHeight+"px",
