@@ -13,8 +13,7 @@ const useStyles = makeStyles({
   },
   text: {
     display: "inline",
-    margin: "10px",
-    fontFamilly: "Poppins"
+    margin: "7px",
   },
 });
 

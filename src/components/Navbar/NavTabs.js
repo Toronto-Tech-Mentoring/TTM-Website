@@ -38,7 +38,7 @@ import "./NavAccessibility.css"
     let buttonHeight, buttonWidth, heartFontSize, heartWidth;
     let navtabsDisplay, burgerMenuDisplay;
     
-    if (windowSize.width > 1040) {
+    if (windowSize.width >= 1040) {
       navbarPadding = (windowSize.width / 4 - 240).toFixed(1);
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
@@ -61,8 +61,8 @@ import "./NavAccessibility.css"
       burgerMenuDisplay = "inline-block";
       heartFontSize = 14;
       heartWidth=15;
-    } else{
-      navbarPadding = 16; // small screen
+    } else if(windowSize.width <=400){
+      navbarPadding = 14; // small screen
       navbarHeight = 48;
       logoWidth = 30;
       logoFontSize = 12;
