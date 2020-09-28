@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             display: 'block',
-            margin: '0px',
+            margin: '20px',
             paddingLeft:'20px',
         },
     },
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     },
     copyrightDiv: {
         float: 'left',
-        paddingLeft: 'calc(( 100% - 218px - 345px - 180px ) * 0.2)',
+        paddingLeft: '50px',
         fontFamily: 'Poppins',
         alignItems: 'center',
         paddingTop: '20px',
