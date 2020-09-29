@@ -1,31 +1,25 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 // import pic1 from '../images/about-us/timeline/pic1.svg'; 
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Spinner from '../images/loader.svg';
 
 export default function LoadableImage(props){
-    const [isLoadDone, setLoadingState] = useState("false");
-    const [src, setSrc] = useState(undefined);
+    const [isLoadDone, setLoadingState] = useState(false);
     const { classes, imageSrc } = props;
 
-    useEffect(() => {
-        if(isLoadDone){
-            setSrc(imageSrc);
-        };
-        // console.log(imageSrc)
-    }, [isLoadDone]);
-
     function loadSuccessful(){
-        console.log("LOAD");
         setLoadingState(true);
     } 
 
-    console.log(isLoadDone);
+    function renderImage(){
+        return isLoadDone ?  <img className={classes} src={imageSrc} /> : <img src={Spinner}></img>;
+    } 
+
   
     return (
-        <div>
-            <img style={{display: isLoadDone ? 'inline-block' : 'none'}}  onLoad={loadSuccessful} className={classes} src={src} />
-            <CircularProgress style={{display: isLoadDone === "false" ? 'inline-block' : 'none'}} />
-        </div>
-        
+        <>
+            <img style={{display: 'none'}}  onLoad={loadSuccessful} className={classes} src={imageSrc} />
+            {renderImage()}
+        </>    
     ) 
 } 
