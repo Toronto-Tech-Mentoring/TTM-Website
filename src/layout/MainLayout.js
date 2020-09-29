@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from 'react'
 
 import ClientSideRender from "../utils/ClientRendering"
 import NavBar from "../components/Navbar"
@@ -8,9 +8,11 @@ export default function MainLayout({ children }) {
 
   return (
     <ClientSideRender>
-      <NavBar />
-      {children}
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <NavBar />
+          {children}
+        <Footer />
+      </Suspense>
     </ClientSideRender>
   )
 }

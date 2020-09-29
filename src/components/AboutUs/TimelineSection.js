@@ -1,14 +1,22 @@
 import React from "react";
+import loadable, { lazy } from '@loadable/component'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
-import titleRight from '../../images/about-us/bottom-line/titleRight.svg';
-import titleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
-import pin from '../../images/about-us/timeline/pin.svg';
-import pic1 from '../../images/about-us/timeline/pic1.svg';
-import pic3 from '../../images/about-us/timeline/pic3.svg';
+// import titleRight from '../../images/about-us/bottom-line/titleRight.svg';
+// import titleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
+// import pin from '../../images/about-us/timeline/pin.svg';
+// import pic1 from '../../images/about-us/timeline/pic1.svg'; 
+// import pic3 from '../../images/about-us/timeline/pic3.svg';
 import { DriveEtaOutlined } from "@material-ui/icons";
-
+// import lazyImage from '../lazyImage';
+ 
+const pin = loadable(() => import('../../images/about-us/timeline/pin.svg')).load().then(res => res.default);
+const pic1 = lazy(() => import('../../images/about-us/timeline/pic1.svg'));
+const pic3 = lazy(() => import('../../images/about-us/timeline/pic3.svg'));
+const titleRight = lazy(() => import('../../images/about-us/bottom-line/titleRight.svg'));
+const titleLeft = lazy(() => import('../../images/about-us/bottom-line/titleLeft.svg'));
+console.log(pin);
+ 
 const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Josefin Sans',
@@ -202,9 +210,11 @@ export default function TimelineSection() {
                     <span className={classes.yearTagSm}>2017</span>
                     <span className={classes.eventTitle}>Research and program development</span>
                     <p className={classes.eventContent}>Toronto Tech Mentoring was born out of the Civic Tech Toronto space. Civic Tech is a movement that focuses on developing and harnessing technology for the betterment of civic life.</p>
-                    <div>
-                        <img className={`${classes.firstPic} ${classes.pic}`} src={pic1} />
-                        <img className={classes.pic} src={pic1} />
+                    <div> 
+                        {/* <lazyImage classes={`${classes.firstPic} ${classes.pic}`} imageSrc={pic1} /> */}
+                        <img  className={`${classes.firstPic} ${classes.pic}`} src={pic1} />
+                        <img  className={classes.pic} src={pic1} />
+                        {/* <lazyImage classes={classes.pic} imageSrc={pic1} /> */}
                         {/* <img className={classes.bg} alt="purple bubble" src={bg3} /> */}
                     </div>
                 </Grid>
