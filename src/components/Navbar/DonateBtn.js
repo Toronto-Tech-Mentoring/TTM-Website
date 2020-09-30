@@ -11,14 +11,8 @@ const StyledButton = styled.button`
   border-radius: 300px;
   border-style: solid;
   border-color: #873fe2;
-  width: 156px;
-  height: 48px;
-  margin: 8px;
   color: #fff;
-  padding-left: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+
 
   &:hover {
     background: #ffff;
@@ -28,20 +22,14 @@ const StyledButton = styled.button`
     color: #873fe2;
   }
 `
-const StyledText = styled.p`
+
+const StyledFont = styled.a`
   display: inline-block;
-  font-size: 18px;
-  height: fit-content;
-  margin-left: 8px;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  padding: 0px;
   padding-right: 8px;
-  float: left;
 `
 
 const StyledImg = styled.img`
-    width: 17px;
-    float: left;
     transition: transform 300ms ease-in-out;
 
     ${StyledButton}:hover &{
@@ -92,13 +80,25 @@ class DonateBtn extends React.Component {
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
         onClick={this.handleOnClick}
+        style={{
+          height: this.props.buttonHeight + "px", width: this.props.buttonWidth + "px", minWidth: "96px"
+        }}
       >
-        <StyledText>Donate</StyledText>
-        <StyledImg
-          src={this.state.imgSrc}
-          alt="heart color"
-          onClick={this.handleOnClick}
-        />
+        <span
+          style={{width:"fit-content", margin:"auto"}}
+        >
+          <StyledFont
+            style={{ fontSize: this.props.buttonFontSize + "px" }}
+          >
+            Donate
+            </StyledFont>
+          <StyledImg
+            src={this.state.imgSrc}
+            alt="heart color"
+            onClick={this.handleOnClick}
+            style={{width:this.props.heartWidth+"px"}}
+            />
+          </span>
         <Confetti active={this.state.confetti} config={config} />
       </StyledButton>
     )
