@@ -7,13 +7,7 @@ import Logo2 from '../../images/delivery-partner/our-partner/logo2.svg';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        height: '400px',
-        [theme.breakpoints.down('md')]: {
-            height: '360px',
-        },
-        [theme.breakpoints.down('sm')]: {
-            height: 'auto',
-        },
+        paddingBottom: '90px',
     },
     paper: {
         height: '92px',
@@ -36,11 +30,17 @@ const useStyles = makeStyles((theme) => ({
     title: {
         color: '#000000',
         textAlign: 'center',
-        paddingTop: '65px',
+        paddingTop: '90px',
         fontFamily: 'Josefin Sans',
         fontStyle: 'normal',
         fontWeight: 600,
         fontSize: '28px',
+        marginTop: '0px',
+        marginBottom: '40px',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: '60px',
+            marginBottom: '48px',
+        },
     },
     logo: {
         paddingTop: '5px',

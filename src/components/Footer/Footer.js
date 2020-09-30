@@ -7,12 +7,11 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const useStyles = makeStyles((theme) => ({
     footer: {
-        position: 'absolute',
-        bottom: 0,
         width: '100%',
         height: '75px',
         zIndex: '999',
         alignItems: 'center',
+        borderTop: '1px solid #C4C4C4',
     },
     footerUl: {
         display: 'inline-block',
@@ -26,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             paddingRight: '10px',
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             display: 'block',
             margin: '20px',
             paddingLeft: '10px',
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('lg')]: {
             paddingRight: '80px',
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             paddingLeft: 'calc(( 100% - 187px - 274px - 180px ) * 0.2)',
             paddingRight: '0px'
         },
@@ -53,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             padding: '0px 5px',
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             display: 'block',
         },
     },
@@ -61,20 +60,17 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         fontFamily: 'Poppins',
         fontSize: '1.5vw',
-        // fontSize: '16px',
         textDecoration: 'none',
-        [theme.breakpoints.down('md')]: {
-            // fontSize: '12px',
-        },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             fontSize: '3vw',
         },
     },
     footerLinks: {
         float: 'right',
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             float: 'left',
-            paddingRight: 'calc(100% - 200px)'
+            paddingRight: 'calc(100% - 200px)',
+            marginTop:'20px'
         },
     },
     copyrightDiv: {
@@ -87,29 +83,26 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '8vw',
-            // fontSize:'22px'
         },
         [theme.breakpoints.down('md')]: {
             paddingLeft: '6vw',
-            // fontSize: '10px',
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             paddingLeft: '30px',
             margin: '0px',
             paddingTop: '10px',
-            // fontSize:'12px',
         },
     },
     iconLi: {
         display: 'inline-block',
         padding: '12px 10px 0px 10px',
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             padding: '10px 3px 0px 3px',
         },
     },
     iconDiv: {
         float: 'right',
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             display: 'none'
         },
     },
@@ -120,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
             width: '50px',
             height: '50px'
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             fontSize: '8px',
             width: '40px',
             height: '40px'
@@ -133,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('lg')]: {
             fontSize: '9vw',
         },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             fontSize: '1.5vw',
         },
     },
@@ -144,19 +137,17 @@ const useStyles = makeStyles((theme) => ({
     },
     copyright: {
         fontSize: '1.5vw',
-        // fontSize: '16px',
-        [theme.breakpoints.down('md')]: {
-            // fontSize:'12px',
-        },
-        [theme.breakpoints.down(710)]: {
+        [theme.breakpoints.down(750)]: {
             position: 'relative',
             bottom: '8px',
             fontSize: '3vw',
         },
     },
     hideMobileIcon: {
-        [theme.breakpoints.up(710)]: {
-            display: 'none',
+        display:'none',
+        [theme.breakpoints.down(750)]: {
+            display: 'inline-block',
+            paddingLeft:'8vw',
         },
     }
 }));
