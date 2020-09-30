@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: '75px',
         zIndex: '999',
-        alignItems: 'center',
+        verticalAlign: 'middle',
         borderTop: '1px solid #C4C4C4',
+        marginTop:'-4px',
     },
     footerUl: {
         display: 'inline-block',
