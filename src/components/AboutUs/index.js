@@ -13,7 +13,7 @@ import ClientSideRender from "../../utils/ClientRendering"
 
 export default function Home() {
   return (
-    <ClientSideRender>
+    <div>
       {/* <LeftAnchoredBubbleText/> */}
       <SkylineHeaderSVG />
       <HeroText
@@ -25,6 +25,6 @@ export default function Home() {
       <OurRootsSection />
       <TimelineSection />
       <SkylineFooterSVG />
-    </ClientSideRender>
+    </div>
   )
 }

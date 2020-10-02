@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import skylinehead from "../../images/skyline/skylineheader.svg"
+import Skylinehead from "../../images/skyline/skylineheader.svg"
 import styles from "./skyline.module.css"
 
 export default function SkylineHeaderSVG() {
@@ -15,12 +15,17 @@ export default function SkylineHeaderSVG() {
   //     updateSrc(src)
   //   }
   // }, [src])
-  useEffect(() => {
-    const imageList = [skylinehead]
-    imageList.forEach((image) => {
-      new Image().src = image
-    });
-  }, [])
+  // useEffect(() => {
+  //   const imageList = [skylinehead]
+  //   imageList.forEach((image) => {
+  //     new Image().src = image
+  //   });
+  // }, [])
 
-  return <img className={styles.spacing} alt="city" src={skylinehead} />
+  // return <img className={styles.spacing} alt="city" src={require(skylinehead)} />
+  return (
+    <div>
+      <Skylinehead className={styles.spacing} />
+    </div>
+  )
 }
