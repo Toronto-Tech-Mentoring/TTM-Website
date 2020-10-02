@@ -1,5 +1,4 @@
 import React from 'react';
-import WebFont from "webfontloader";
 
 import Home from "../components/AboutUs/index.js";
 
@@ -16,7 +15,9 @@ function ClientSideRendering({children, ...delegated}) {
       active: Home, // invoked when fonts are active
     }
 
-    WebFont.load(WebFontConfig);
+    import('webfontloader').then(WebFontLoader => {
+        WebFontLoader.load(WebFontConfig);
+    })
 
     React.useEffect(() => {
         setHasMounted(true);
