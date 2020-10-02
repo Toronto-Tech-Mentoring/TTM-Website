@@ -1,17 +1,29 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
-const container = {
-    // position: 'absolute',
-    width: '333px',
-    height: '313px',
-    left: '117px',
-    top: '1291px'
-}
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        [theme.breakpoints.down('xl')]: {
+            display: 'inline-block',
+            position: "absolute",
+            maxWidth: '333px',
+            maxHeight: '293px',
+            left: '117px',
+            top: '1600px',    
+          },
+    },
+
+}));
 
 export default function Hands(){
+    const classes = useStyles();
+
     return(
 
-    <div style={container}>
+    <Grid item xs={12} md={4} lg={3} xl={2.5}>
+    <div className={classes.root}>
         <svg width="333" height="293" viewBox="0 0 139 162" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.31308 148.595L6.84786 144.813L7.04349 146.225C7.07485 146.451 7.69508 150.926 7.69508 150.926C7.76823 151.454 8.13593 151.876 8.63187 152.001L11.6195 152.756L8.6421 153.559C8.14945 153.692 7.78925 154.12 7.72455 154.648L6.97444 160.774L6.12732 154.661C6.05417 154.134 5.68724 153.712 5.19251 153.587L2.20266 152.831L5.18033 152.028C5.67288 151.895 6.00082 151.156 6.06552 150.628" stroke="black" stroke-width="0.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M129.729 5.96453L130.451 1.05032L130.714 2.88501C130.756 3.17846 131.59 8.99384 131.59 8.99384C131.688 9.6793 132.183 10.2274 132.851 10.3901L136.875 11.3703L132.865 12.4148C132.201 12.5876 131.716 13.1432 131.628 13.8303L130.616 21.7907L129.477 13.8477C129.379 13.1621 128.885 12.6142 128.218 12.4518L124.191 11.4711L128.202 10.4264C128.866 10.2535 129.308 9.29304 129.395 8.60612" stroke="black" stroke-width="0.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,6 +75,9 @@ export default function Hands(){
             <path d="M96.041 91.066C99.5832 85.9065 98.278 78.8516 93.1215 75.3019C88.2013 71.9148 81.5518 72.9423 77.8641 77.518C77.567 77.8866 77.0416 77.9835 76.6325 77.7453C71.5547 74.7873 64.9763 76.2012 61.5892 81.1213C58.0394 86.2777 59.3384 93.3338 64.4889 96.889L81.3832 108.519C82.3736 109.201 83.729 108.951 84.4108 107.961L96.041 91.066Z" fill="#FC78A8"/>
             <path d="M96.042 91.0657L84.4114 107.961C83.7296 108.951 82.3749 109.201 81.3843 108.519L79.3082 107.09L90.6577 90.6012C94.2008 85.442 92.8948 78.3859 87.7383 74.8361C86.8567 74.2292 85.9202 73.7648 84.9553 73.4364C87.7156 73.0082 90.6394 73.5944 93.1212 75.3028C98.2775 78.8526 99.5833 85.9068 96.042 91.0657Z" fill="#FC5A95"/>
         </svg>
+
     </div>
+
+    </Grid>
     )
 }

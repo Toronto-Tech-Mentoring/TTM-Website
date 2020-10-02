@@ -1,19 +1,31 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
-const container = {
-    // position: "absolute",
-    width: '333px',
-    height: '293px',
-    left: '973px',
-    top: '816px'
-}
+
+const useStyles = makeStyles((theme) => ({
+    root: {   
+        [theme.breakpoints.down('xl')]: {
+            display: 'inline-block',
+            position: "absolute",
+            maxWidth: '333px',
+            maxHeight: '293px',
+            right: '250px',
+            top: '1100px',    
+          },
+    },
+
+}));
 
 export default function Computer(){
+    const classes = useStyles();
+
     return(
 
-        <div style={container}>
+        <Grid item xs={12} md={4} lg={3} xl={2.5}>
+        <div className={classes.root}>
 
-        <svg width="333" height="293" viewBox="0 0 180 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="406" height="286" viewBox="0 0 180 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M110.048 18.0231C143.613 18.7554 150.367 45.1526 159.727 70.0065C168.187 92.4702 173.873 109.074 149.64 123.157C123.785 138.183 81.783 145.481 54.8404 131.636C24.6443 116.119 26.2108 90.4929 37.36 63.8742C48.5692 37.1121 73.5739 17.2272 110.048 18.0231Z" fill="#E4FFFF"/>
             <g clip-path="url(#clip0)">
             <path d="M159.902 41.1835L159.536 44.0003L159.364 45.3163C159.308 45.7456 159.751 46.0646 160.135 45.8709L161.31 45.2774L163.827 44.0075L159.902 41.1835Z" fill="#DC8744"/>
@@ -85,5 +97,7 @@ export default function Computer(){
         </svg>
 
         </div>
+
+        </Grid>
     )
 }

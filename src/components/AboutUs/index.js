@@ -4,7 +4,7 @@ import HowAreWeDifferentSection from './HowAreWeDifferentSection';
 import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
 import TimelineSection from './TimelineSection';
-import LeftAnchoredBubbleText from '../WhyTechSVG/LeftAnchoredBubbleText';
+import ValuesDriven from '../WhyTechSVG/ValuesDriven';
 import WhyTech from '../WhyTechSVG/WhyTech';
 import Computer from '../WhyTechSVG/ComputerSVG';
 import Hands from '../WhyTechSVG/HandsSVG';
@@ -18,7 +18,6 @@ import ClientSideRender from "../../utils/ClientRendering"
 export default function Home() {
   return (
     <ClientSideRender>
-      {/* <LeftAnchoredBubbleText/> */}
       <SkylineHeaderSVG />
       <HeroText
         heroText="What is Toronto Tech Mentoring?"
@@ -27,7 +26,7 @@ export default function Home() {
       <WhyTech />
       <Computer />
       <Hands />
-      <LeftAnchoredBubbleText/>
+      <ValuesDriven/>
       <HowAreWeDifferentSection />
       <TheBottomLineSection />
       <OurRootsSection />
