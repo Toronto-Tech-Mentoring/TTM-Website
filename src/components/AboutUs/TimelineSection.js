@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, StylesProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
@@ -205,7 +205,7 @@ export default function TimelineSection() {
             <span className={classes.eventTitle}>
               Research and program development
             </span>
-            <LeftBlob/>
+            {/* <LeftBlob style = {StylesProvider.overlay/> */}
             <p className={classes.eventContent}>
               Toronto Tech Mentoring was born out of the Civic Tech Toronto
               space. Civic Tech is a movement that focuses on developing and
