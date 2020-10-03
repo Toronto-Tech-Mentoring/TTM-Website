@@ -1,16 +1,15 @@
 import React from "react"
 
-import ClientSideRender from "../utils/ClientRendering"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
+import ClientSideRendering from "../utils/ClientRendering"
 
 export default function MainLayout({ children }) {
-
   return (
-    <ClientSideRender>
+    <ClientSideRendering>
       <NavBar />
       {children}
       <Footer />
-    </ClientSideRender>
+    </ClientSideRendering>
   )
 }
