@@ -17,7 +17,7 @@ import ClientSideRender from "../../utils/ClientRendering"
 
 export default function Home() {
   return (
-    <ClientSideRender>
+    <div>
       <SkylineHeaderSVG />
       <HeroText
         heroText="What is Toronto Tech Mentoring?"
@@ -32,6 +32,6 @@ export default function Home() {
       <OurRootsSection />
       <TimelineSection />
       <SkylineFooterSVG />
-    </ClientSideRender>
+    </div>
   )
 }
