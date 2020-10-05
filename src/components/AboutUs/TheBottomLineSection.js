@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import people from '../../images/about-us/bottom-line/people.svg';
-import titleRight from '../../images/about-us/bottom-line/titleRight.svg';
-import titleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
-import contentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
-import contentRight from '../../images/about-us/bottom-line/contentRight.svg';
+import People from '../../images/about-us/bottom-line/people.svg';
+import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
+import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
+import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
+import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
@@ -112,13 +112,13 @@ export default function TheBottomLineSection() {
             <Grid item xs={12} md={6}>
                 <div className={classes.textBox}>
                     <div>
-                        <img className={classes.hideTitleStyle} alt="title decoration left" src={titleLeft} />
+                        <TitleLeft className={classes.hideTitleStyle} alt="title decoration left"/>
                         <span className={classes.title}>The bottom line</span>
-                        <img className={classes.hideTitleStyle} alt="title decoration right" src={titleRight} />
+                        <TitleRight className={classes.hideTitleStyle} alt="title decoration right"/>
                     </div>
-                    <img className={classes.contentRight} alt="content decoration right" src={contentRight} />
+                    <ContentRight className={classes.contentRight} alt="content decoration right"/>
                     <span className={classes.contents}>If you’re facing housing precarity in Toronto and want to learn 'tech' skills, we want to help you. Free of charge. </span>
-                    <img className={classes.contentLeft} alt="content decoration left" src={contentLeft} />
+                    <ContentLeft className={classes.contentLeft} alt="content decoration left"/>
                     <Hidden smDown>
                         <p className={classes.question}>Not sure if you qualify?</p>
                         <button className={classes.contactButton}>Contact us</button>
@@ -126,7 +126,7 @@ export default function TheBottomLineSection() {
                 </div>
             </Grid>
             <Grid item xs={12} md={6}>
-                <img className={classes.people} alt="people" src={people} />
+                <People className={classes.people} alt="people" />
                 <Hidden mdUp>
                     <p className={classes.question}>Not sure if you qualify?</p>
                     <button className={classes.contactButton}>Contact us</button>

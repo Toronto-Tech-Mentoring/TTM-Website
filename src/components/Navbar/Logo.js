@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 
 export default function Logo(props) {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Box component="img" src={LogoTtm}
