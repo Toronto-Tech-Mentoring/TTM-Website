@@ -3,6 +3,7 @@
     width: 100%;
     background-image: url('../../images/about-us/torontoSkyline.svg');
     background-repeat: no-repeat;
+    background-size: 200% auto;
     background-position: left bottom;
 }
 
