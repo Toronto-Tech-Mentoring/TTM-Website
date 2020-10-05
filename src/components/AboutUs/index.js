@@ -25,7 +25,7 @@ export default function Home() {
       />
       <WhyTech />
       <Hands />
-      <ValuesDriven/>
+      {/* <ValuesDriven/> */}
       <HowAreWeDifferentSection />
       <TheBottomLineSection />
       <Computer />
