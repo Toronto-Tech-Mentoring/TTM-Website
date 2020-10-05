@@ -7,6 +7,7 @@ import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import Pin from '../../images/about-us/timeline/pin.svg';
 import Pic1 from '../../images/about-us/timeline/pic1.svg';
 import Pic3 from '../../images/about-us/timeline/pic3.svg';
+import skyline from '../../images/about-us/torontoSkyline.svg'
 import LeftBlob from '../../images/about-us/timeline/leftblob.svg';
 import RightBlob from '../../images/about-us/timeline/rightblob.svg';
 import { DriveEtaOutlined } from "@material-ui/icons";
@@ -29,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     yearTag: {
-        position: 'relative',
-        bottom: '275px',
+        // position: 'relative',
+        // bottom: '275px',
         marginRight: '20px',
         backgroundColor: '#873FE2',
         borderRadius: '300px',
@@ -87,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
     eventContent: {
         marginTop: '0px',
-        position: 'relative',
+        // position: 'relative',
         fontFamily: 'Poppins',
         fontSize: '15px',
         lineHeight: '31px',
@@ -130,9 +131,9 @@ const useStyles = makeStyles((theme) => ({
     },
     testing: {
         display: 'inline-block',
-        position: 'absolute',
+        // position: 'absolute',
         marginRight: '30px',
-        left: '350px',
+        // left: '350px',
         width: '350px',
         zIndex: 2,
         // Tablet Above to Laptop/ Desktop
@@ -147,8 +148,8 @@ const useStyles = makeStyles((theme) => ({
     },
     bg: {
         zIndex: 1,
-        position: 'relative',
-        bottom: '50px',
+        // position: 'relative',
+        // bottom: '50px',
         height: '370px',
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
@@ -162,11 +163,11 @@ const useStyles = makeStyles((theme) => ({
     },
     bg2: {
         zIndex: 1,
-        position: 'absolute',
+        // position: 'absolute',
         // float:'right',
-        right: '0',
+        // right: '0',
         height: '209px',
-        top: '20px',
+        // top: '20px',
         // width: '1050%',
 
 
@@ -186,7 +187,12 @@ export default function TimelineSection() {
     const classes = useStyles();
 
     return (
-      <Grid container justify="center" alignItems="center">
+      <Grid container justify="center" alignItems="center"
+      style={{ backgroundImage: `url(${skyline})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "200% auto",
+    backgroundPosition: "right bottom"}}
+      >
         <Grid item xs={12} className={classes.center}>
           {/* <img alt="title decoration left" src={titleLeft} /> */}
           <TitleLeft />

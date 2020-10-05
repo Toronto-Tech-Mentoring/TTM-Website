@@ -10,7 +10,7 @@ import Computer from '../WhyTechSVG/ComputerSVG';
 import Hands from '../WhyTechSVG/HandsSVG';
 import {
   // SkylineHeader as SkylineHeaderSVG,
-  SkylineFooter as SkylineFooterSVG,
+  // SkylineFooter as SkylineFooterSVG,
 } from "../SkylineSVG"
 import HeroText from "../HeroText/HeroText"
 // import ClientSideRender from "../../utils/ClientRendering"
@@ -31,7 +31,7 @@ export default function Home() {
       <Computer />
       <OurRootsSection />
       <TimelineSection />
-      <SkylineFooterSVG />
+      {/* <SkylineFooterSVG /> */}
     </div>
   )
 }
