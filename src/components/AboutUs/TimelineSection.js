@@ -202,7 +202,8 @@ export default function TimelineSection() {
           backgroundSize: "200% auto",
         backgroundPosition: "right bottom",
         paddingBottom: "calc(30vw + 108px)",
-        paddingLeft: "calc(29vw - 70px)"
+        paddingLeft: "calc(29vw - 100px)",
+        paddingRight: "calc(22vw - 65px)",
       }}
       >
         <Grid item xs={12} className={classes.center}>
