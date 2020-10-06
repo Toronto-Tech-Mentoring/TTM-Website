@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
         // position: 'relative',
         fontFamily: 'Poppins',
         fontSize: '15px',
-        lineHeight: '31px',
+        lineHeight: 'calc(1vw + 15px)',
         width: '80%',
         zIndex: 2,
         [theme.breakpoints.between('sm', 'md')]: {
@@ -108,7 +108,8 @@ const useStyles = makeStyles((theme) => ({
     },
     pic: {
         display: 'inline-block',
-        width: '350px',
+      width: '350px',
+        height:'auto',
         borderRadius: '10px',
 
         // Tablet Above to Laptop/ Desktop
@@ -127,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     gridContainer: {
-        marginTop: '50px',
+        marginTop: 'calc(1.5vw + 42px)',
     },
     testing: {
         display: 'inline-block',
@@ -191,7 +192,9 @@ export default function TimelineSection() {
       style={{ backgroundImage: `url(${skyline})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "200% auto",
-    backgroundPosition: "right bottom"}}
+        backgroundPosition: "right bottom",
+        paddingBottom:"calc(400px - vw)",
+      }}
       >
         <Grid item xs={12} className={classes.center}>
           {/* <img alt="title decoration left" src={titleLeft} /> */}
