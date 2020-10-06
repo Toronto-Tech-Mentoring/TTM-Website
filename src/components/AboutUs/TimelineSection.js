@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         fontSize: '15px',
         lineHeight: 'calc(1vw + 15px)',
-        width: '80%',
+        width: '95%',
         zIndex: 2,
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '16px',
@@ -105,12 +105,20 @@ const useStyles = makeStyles((theme) => ({
     },
     center: {
         textAlign: 'center',
+  },
+    
+  picContainer:{
+    display: 'flex',
+    width: '95%',
+    justifyContent:'space-between',
     },
     pic: {
         display: 'inline-block',
       width: '350px',
         height:'auto',
-        borderRadius: '10px',
+      borderRadius: '10px',
+        margin:'0px',
+        
 
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
@@ -122,10 +130,10 @@ const useStyles = makeStyles((theme) => ({
             width: '35%',
         },
     },
-    firstPic: {
-        display: 'inline-block',
-        marginRight: '30px',
-    },
+    // firstPic: {
+    //     display: 'inline-block',
+    //     marginRight: '30px',
+    // },
 
     gridContainer: {
         marginTop: 'calc(1.5vw + 42px)',
@@ -220,7 +228,7 @@ export default function TimelineSection() {
               space. Civic Tech is a movement that focuses on developing and
               harnessing technology for the betterment of civic life.
             </p>
-            <div>
+            <div className={classes.picContainer}>
               <Pic1
                 className={`${classes.firstPic} ${classes.pic}`}
                 // src={pic1}
@@ -247,7 +255,7 @@ export default function TimelineSection() {
               mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
               nisi tristique viverra at ac elit.
             </p>
-            <div>
+            <div className={classes.picContainer}>
               <Pic3
                 className={`${classes.firstPic} ${classes.pic}`}
                 // src={pic3}
