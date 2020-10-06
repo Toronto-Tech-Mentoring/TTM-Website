@@ -198,10 +198,10 @@ export default function TimelineSection() {
     return (
       <Grid container justify="center" alignItems="center"
       style={{ backgroundImage: `url(${skyline})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "200% auto",
+        backgroundRepeat: "no-repeat",
+          backgroundSize: "200% auto",
         backgroundPosition: "right bottom",
-        paddingBottom:"calc(400px - vw)",
+        paddingBottom: "calc(30vw + 108px)"
       }}
       >
         <Grid item xs={12} className={classes.center}>
