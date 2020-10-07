@@ -24,7 +24,7 @@ export default function SkylineHeaderSVG() {
 
   // return <img className={styles.spacing} alt="city" src={require(skylinehead)} />
   return (
-    <div>
+    <div className={styles.moveUp}>
       <Skylinehead style={{height: 'auto', width: '100%'}} />
     </div>
   )

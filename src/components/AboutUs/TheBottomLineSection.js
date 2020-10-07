@@ -8,6 +8,7 @@ import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
 import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 import Hidden from '@material-ui/core/Hidden';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '500px',
