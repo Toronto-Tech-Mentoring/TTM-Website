@@ -1,5 +1,5 @@
 import React from "react"
- 
+import People from '../../images/about-us/bottom-line/people.svg';
 import HowAreWeDifferentSection from './HowAreWeDifferentSection';
 import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
