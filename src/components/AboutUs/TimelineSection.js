@@ -130,10 +130,10 @@ const useStyles = makeStyles((theme) => ({
             width: '35%',
         },
     },
-    // firstPic: {
-    //     display: 'inline-block',
-    //     marginRight: '30px',
-    // },
+    firstPic: {
+        display: 'inline-block',
+        marginRight: '30px',
+    },
 
     gridContainer: {
         marginTop: 'calc(1.5vw + 42px)',
