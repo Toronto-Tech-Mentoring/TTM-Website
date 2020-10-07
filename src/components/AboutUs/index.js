@@ -9,8 +9,8 @@ import WhyTech from '../WhyTechSVG/WhyTech';
 import Computer from '../WhyTechSVG/ComputerSVG';
 import Hands from '../WhyTechSVG/HandsSVG';
 import {
-  // SkylineHeader as SkylineHeaderSVG,
-  // SkylineFooter as SkylineFooterSVG,
+  SkylineHeader as SkylineHeaderSVG,
+  SkylineFooter as SkylineFooterSVG,
 } from "../SkylineSVG"
 import HeroText from "../HeroText/HeroText"
 // import ClientSideRender from "../../utils/ClientRendering"
@@ -25,13 +25,13 @@ export default function Home() {
       />
       <WhyTech />
       <Hands />
-      {/* <ValuesDriven/> */}
+      <ValuesDriven/>
       <HowAreWeDifferentSection />
       <TheBottomLineSection />
       <Computer />
       <OurRootsSection />
       <TimelineSection />
-      {/* <SkylineFooterSVG /> */}
+      <SkylineFooterSVG />
     </div>
   )
 }
