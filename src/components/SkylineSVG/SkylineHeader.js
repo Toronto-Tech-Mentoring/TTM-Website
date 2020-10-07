@@ -13,7 +13,7 @@ export default function SkylineHeaderSVG() {
   //   imageToLoad.onload = () => {
   //     // When image is loaded replace the src and set loading to false
   //     updateSrc(src)
-  //   }
+  //   } 
   // }, [src])
   // useEffect(() => {
   //   const imageList = [skylinehead]

@@ -18,20 +18,20 @@ import ClientSideRender from "../../utils/ClientRendering"
 export default function Home() {
   return (
     <div>
-      <SkylineHeaderSVG />
       <HeroText
         heroText="What is Toronto Tech Mentoring?"
-        heroBodyText="We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)"
-      />
-      <WhyTech />
+        heroBodyText="We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)."
+      /> 
+      <SkylineHeaderSVG />
+      {/* <WhyTech />
       <Hands />
-      <ValuesDriven/>
+      <ValuesDriven/> */} 
       <HowAreWeDifferentSection />
       <TheBottomLineSection />
-      <Computer />
+      {/* <Computer /> */}
       <OurRootsSection />
       <TimelineSection />
-      <SkylineFooterSVG />
-    </div>
+      <SkylineFooterSVG /> 
+    </div> 
   )
 }
