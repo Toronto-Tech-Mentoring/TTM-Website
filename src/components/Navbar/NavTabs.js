@@ -140,7 +140,7 @@ function NavTabs() {
             alignItems: "center",
             justifyContent: "space-between",
             fontFamily: 'Poppins',
-            zIndex:2,
+            zIndex:99,
         },
     navtabs: {
             width: "fit-content",

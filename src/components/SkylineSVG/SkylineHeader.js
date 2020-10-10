@@ -13,7 +13,7 @@ export default function SkylineHeaderSVG() {
   //   imageToLoad.onload = () => {
   //     // When image is loaded replace the src and set loading to false
   //     updateSrc(src)
-  //   }
+  //   } 
   // }, [src])
   // useEffect(() => {
   //   const imageList = [skylinehead]
@@ -24,8 +24,8 @@ export default function SkylineHeaderSVG() {
 
   // return <img className={styles.spacing} alt="city" src={require(skylinehead)} />
   return (
-    <div>
-      <Skylinehead className={styles.spacing} />
+    <div className={styles.moveUp}>
+      <Skylinehead style={{height: 'auto', width: '100%'}} />
     </div>
   )
 }
