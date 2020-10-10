@@ -35,7 +35,7 @@ import "./NavAccessibility.css"
 
     // The padding value as a function of screen size
     let navbarPadding,navbarHeight, navitemWidth, logoWidth, logoFontSize; 
-    let buttonHeight, buttonWidth, heartFontSize, heartWidth;
+    let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
     let navtabsDisplay, burgerMenuDisplay;
     
     if (windowSize.width >= 1040) {
@@ -48,7 +48,7 @@ import "./NavAccessibility.css"
       buttonWidth = 156;
       navtabsDisplay = "inline-block"
       burgerMenuDisplay = "none"
-      heartFontSize = 18;
+      buttonFontSize = 18;
       heartWidth=17
     } else if (windowSize.width >400 && windowSize.width < 1040) {
       navbarPadding = (windowSize.width / 45 + 7).toFixed(1);
@@ -56,10 +56,10 @@ import "./NavAccessibility.css"
       logoWidth = 40;
       logoFontSize = 16;
       buttonHeight = 40;
-      buttonWidth = (windowSize.width *0.11).toFixed(0);
+      buttonWidth = 105;
       navtabsDisplay = "none";
       burgerMenuDisplay = "inline-block";
-      heartFontSize = 14;
+      buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
       navbarPadding = 14; // small screen
@@ -70,7 +70,7 @@ import "./NavAccessibility.css"
       buttonWidth = 96;
       navtabsDisplay = "none";
       burgerMenuDisplay = "inline-block";
-      heartFontSize = 12;
+      buttonFontSize = 12;
       heartWidth=13;
     }
     
@@ -84,7 +84,7 @@ import "./NavAccessibility.css"
       buttonWidth,
       navtabsDisplay,
       burgerMenuDisplay,
-      heartFontSize,
+      buttonFontSize,
       heartWidth,
     };
     return responsiveStyle;
@@ -226,7 +226,7 @@ function NavTabs() {
               <DonateBtn
                 buttonHeight = {responsiveNavbar.buttonHeight}
                 buttonWidth={responsiveNavbar.buttonWidth}
-                heartFontSize={responsiveNavbar.heartFontSize}
+                buttonFontSize={responsiveNavbar.buttonFontSize}
                 heartWidth={responsiveNavbar.heartWidth}
              />
             </ul>
