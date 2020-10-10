@@ -8,6 +8,7 @@ import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
 import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 import Hidden from '@material-ui/core/Hidden';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '500px',
@@ -127,7 +128,7 @@ export default function TheBottomLineSection() {
             </Grid>
             <Grid item xs={12} md={6}>
                 <People className={classes.people} alt="people" />
-                <Hidden mdUp>
+                <Hidden mdUp> 
                     <p className={classes.question}>Not sure if you qualify?</p>
                     <button className={classes.contactButton}>Contact us</button>
                 </Hidden>
