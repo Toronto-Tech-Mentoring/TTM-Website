@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles';
 
 import DonateBtn from "./DonateBtn"
+import BurgerMenu from "./BurgerMenu"
 import Logo from  "./Logo"
 import "./NavAccessibility.css"
 
@@ -33,7 +34,7 @@ import "./NavAccessibility.css"
       return () => window.removeEventListener("resize", handleResize);
     }, []); // Empty array ensures that effect is only run on mount
 
-    // The padding value as a function of screen size
+    // Navbar and childs slyle properties
     let navbarPadding,navbarHeight, navitemWidth, logoWidth, logoFontSize; 
     let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
     let navtabsDisplay, burgerMenuDisplay;
@@ -220,8 +221,11 @@ function NavTabs() {
             <Logo
                 logoFontSize={responsiveNavbar.logoFontSize}
                 logoWidth={responsiveNavbar.logoWidth}
-            />
-            <ul className={classes.navtabs}>
+      />
+      <ul className={classes.navtabs}>
+        <BurgerMenu>
+         {renderListItems()}
+        </BurgerMenu>
               {renderListItems()}
               <DonateBtn
                 buttonHeight = {responsiveNavbar.buttonHeight}

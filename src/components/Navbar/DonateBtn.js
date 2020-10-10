@@ -27,6 +27,7 @@ const StyledFont = styled.a`
   display: inline-block;
   padding: 0px;
   padding-right: 8px;
+  font-weight: 500
 `
 
 const StyledImg = styled.img`
@@ -75,7 +76,6 @@ class DonateBtn extends React.Component {
 
   // The mouse over events need to be placed on the button tag to update the heart as well
   render() {
-    console.log(this.props);
     return (
       <StyledButton
         onMouseOver={this.handleMouseOver}
