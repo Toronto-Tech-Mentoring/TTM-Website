@@ -4,7 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import LogoTtm from "../../images/navbar/logo-ttm.svg"
 
-const useStyles = makeStyles({
+
+
+export default function Logo(props) {
+  const useStyles = makeStyles({
   root: {
     height: "100%",
     display: "inline-flex",
@@ -14,10 +17,9 @@ const useStyles = makeStyles({
   text: {
     display: "flex",
     margin: "7px",
+    maxWidth: props.logoTextMaxWidth
   },
 });
-
-export default function Logo(props) {
   const classes = useStyles();
 
   return (

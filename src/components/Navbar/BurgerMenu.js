@@ -1,14 +1,14 @@
 import React from "react";
 import { slide as Menu } from 'react-burger-menu';
-export default function BurgerMenu ({children}) {
-
+export default function BurgerMenu (props) {
+ console.log(props)
 var styles = {
   bmBurgerButton: {
     position: 'fixed',
     width: '36px',
     height: '30px',
-    left: '36px',
-    top: '36px'
+    left: props.burMenuButtonPosition,
+    top: '10px'
   },
   bmBurgerBars: {
     background: '#373a47'
@@ -51,7 +51,7 @@ var styles = {
 }
     return (
         <Menu styles ={ styles }>
-            {children}
+            {props.children}
       </Menu>
     );
   }
