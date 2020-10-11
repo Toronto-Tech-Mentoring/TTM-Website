@@ -141,7 +141,7 @@ function NavTabs() {
             alignItems: "center",
             justifyContent: "space-between",
             fontFamily: 'Poppins',
-            zIndex:999,
+            zIndex:99,
         },
     navtabs: {
             width: "fit-content",
@@ -222,10 +222,10 @@ function NavTabs() {
                 logoFontSize={responsiveNavbar.logoFontSize}
                 logoWidth={responsiveNavbar.logoWidth}
       />
-      <ul className={classes.navtabs}>
-        <BurgerMenu>
+       <BurgerMenu>
          {renderListItems()}
         </BurgerMenu>
+       <ul className={classes.navtabs}>
               {renderListItems()}
               <DonateBtn
                 buttonHeight = {responsiveNavbar.buttonHeight}
@@ -233,7 +233,7 @@ function NavTabs() {
                 buttonFontSize={responsiveNavbar.buttonFontSize}
                 heartWidth={responsiveNavbar.heartWidth}
              />
-            </ul>
+        </ul>
         </div>
     );
   }
