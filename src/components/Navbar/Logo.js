@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     width: "fit-content",
   },
   text: {
-    display: "inline",
+    display: "flex",
     margin: "7px",
   },
 });
@@ -24,7 +24,7 @@ export default function Logo(props) {
     <div className={classes.root}>
       <Box component="img" src={LogoTtm}
         className={classes.logo} alt="TTM logo"
-        style={{width:props.logoWidth+"px"}}
+        style={{width:props.logoWidth+"px", marginLeft:props.navbarSideMargin+"px"}}
       />
       <Box
         className={classes.text}

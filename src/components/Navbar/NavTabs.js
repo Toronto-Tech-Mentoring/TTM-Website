@@ -35,12 +35,12 @@ import "./NavAccessibility.css"
     }, []); // Empty array ensures that effect is only run on mount
 
     // Navbar and childs slyle properties
-    let navbarPadding,navbarHeight, navitemWidth, logoWidth, logoFontSize; 
+    let navbarSideMargin,navbarHeight, navitemWidth, logoWidth, logoFontSize; 
     let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
     let navtabsDisplay, burgerMenuDisplay;
     
     if (windowSize.width >= 1040) {
-      navbarPadding = (windowSize.width / 4 - 240).toFixed(1);
+      navbarSideMargin = (windowSize.width / 4 - 240).toFixed(1);
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
       logoFontSize = 20;
@@ -52,7 +52,7 @@ import "./NavAccessibility.css"
       buttonFontSize = 18;
       heartWidth=17
     } else if (windowSize.width >400 && windowSize.width < 1040) {
-      navbarPadding = (windowSize.width / 45 + 7).toFixed(1);
+      navbarSideMargin = (windowSize.width / 45 + 7).toFixed(1);
       navbarHeight = 58;
       logoWidth = 40;
       logoFontSize = 16;
@@ -63,7 +63,7 @@ import "./NavAccessibility.css"
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
-      navbarPadding = 14; // small screen
+      navbarSideMargin = 14; // small screen
       navbarHeight = 48;
       logoWidth = 30;
       logoFontSize = 12;
@@ -76,7 +76,7 @@ import "./NavAccessibility.css"
     }
     
     const responsiveStyle = {
-      navbarPadding,
+      navbarSideMargin,
       navitemWidth, 
       navbarHeight,
       logoWidth,
@@ -136,7 +136,7 @@ function NavTabs() {
             height: responsiveNavbar.navbarHeight+"px",
             background: "#FFFFFF",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-            padding: "0 "+responsiveNavbar.navbarPadding+"px",
+            padding: "0px",
             color: "black",
             alignItems: "center",
             justifyContent: "space-between",
@@ -147,10 +147,11 @@ function NavTabs() {
             width: "fit-content",
             height: responsiveNavbar.navbarHeight,
             float: "right",
+            marginRight: responsiveNavbar.navbarSideMargin+"px",
             padding: "0",
             margin: "0",
             listStyle: "none",
-           display: "flex", 
+            display: "flex", 
             alignItems: "center",
         },
   navitem: {
@@ -221,6 +222,7 @@ function NavTabs() {
             <Logo
                 logoFontSize={responsiveNavbar.logoFontSize}
                 logoWidth={responsiveNavbar.logoWidth}
+                navbarSideMargin={responsiveNavbar.navbarSideMargin}
       />
        <BurgerMenu>
          {renderListItems()}
