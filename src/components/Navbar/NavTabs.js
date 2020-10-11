@@ -73,7 +73,7 @@ import "./NavAccessibility.css"
       navitemWidth = 105;
       logoWidth = 30;
       logoFontSize = 12;
-      logoTextMaxWidth = 0.21*windowSize.width;
+      logoTextMaxWidth = 0.21*windowSize.width+10;
       buttonHeight = 32;
       buttonWidth = 96;
       navtabsDisplay = "none";

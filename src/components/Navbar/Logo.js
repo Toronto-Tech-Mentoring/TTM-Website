@@ -17,7 +17,7 @@ export default function Logo(props) {
   text: {
     display: "flex",
     margin: "7px",
-    maxWidth: props.logoTextMaxWidth
+    maxWidth: props.logoTextMaxWidth,
   },
 });
   const classes = useStyles();
