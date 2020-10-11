@@ -25,23 +25,25 @@ var styles = {
   },
   bmMenuWrap: {
     position: 'fixed',
-    height: '100%'
+      height: '100%',
+    width: 'fit-content',  
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#FFFFFF',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
-    overflow: 'hidden'
+      overflow: 'hidden',
+      marginTop: '2px',
+      padding: '0px'
+    
   },
   bmMorphShape: {
     fill: '#373a47'
   },
   bmItemList: {
     color: '#b8b7ad',
-    padding: '0.8em'
-  },
-  bmItem: {
-    display: 'inline-block'
+      padding: '15px',
+    width: 'fit-content'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'

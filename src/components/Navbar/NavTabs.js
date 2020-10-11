@@ -65,6 +65,7 @@ import "./NavAccessibility.css"
     } else if(windowSize.width <=400){
       navbarSideMargin = 14; // small screen
       navbarHeight = 48;
+      navitemWidth = 105;
       logoWidth = 30;
       logoFontSize = 12;
       buttonHeight = 32;
@@ -91,7 +92,7 @@ import "./NavAccessibility.css"
     return responsiveStyle;
   }
 
-function NavTabs() {
+export default function NavTabs() {
   const responsiveNavbar = useWindowSize();
   const listItems = [{
     id: 'client',
@@ -141,7 +142,7 @@ function NavTabs() {
             alignItems: "center",
             justifyContent: "space-between",
             fontFamily: 'Poppins',
-            zIndex:99,
+            zIndex:2000,
         },
     navtabs: {
             width: "fit-content",
@@ -170,7 +171,10 @@ function NavTabs() {
             padding: "0px",
             display: "block",
             textDecoration: "none",
-  },
+    },
+    burgerMenu: {
+        display: responsiveNavbar.burgerMenuDisplay,
+      },
          active: {
             boxShadow: "0px 2px 0px #873FE2",
             color: "#873FE2!important"
@@ -224,9 +228,6 @@ function NavTabs() {
                 logoWidth={responsiveNavbar.logoWidth}
                 navbarSideMargin={responsiveNavbar.navbarSideMargin}
             />
-            <BurgerMenu>
-            {renderListItems()}
-            </BurgerMenu>
             <ul className={classes.navtabs}>
                     {renderListItems()}
                     <DonateBtn
@@ -236,8 +237,9 @@ function NavTabs() {
                       heartWidth={responsiveNavbar.heartWidth}
                   />
             </ul>
+            <BurgerMenu className={classes.burgerMenu}>
+              {renderListItems()}
+            </BurgerMenu>
         </div>
     );
   }
-
-export default NavTabs;
