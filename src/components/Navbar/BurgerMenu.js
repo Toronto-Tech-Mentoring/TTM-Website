@@ -31,6 +31,9 @@ var styles = {
   bmMenu: {
     background: '#FFFFFF',
     padding: '2.5em 1.5em 0',
+    width: '25vw',
+      minWidth: '140px',
+      maxWidth: '300px',
     fontSize: '1.15em',
       overflow: 'hidden',
       marginTop: '2px',
@@ -42,8 +45,8 @@ var styles = {
   },
   bmItemList: {
     color: '#b8b7ad',
-      padding: '15px',
-    width: 'fit-content'
+      width: 'fit-content',
+    margin: 'auto'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
