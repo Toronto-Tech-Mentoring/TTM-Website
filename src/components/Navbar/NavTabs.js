@@ -151,7 +151,7 @@ function NavTabs() {
             padding: "0",
             margin: "0",
             listStyle: "none",
-            display: "flex", 
+            display: "inline-flex", 
             alignItems: "center",
         },
   navitem: {
@@ -223,19 +223,19 @@ function NavTabs() {
                 logoFontSize={responsiveNavbar.logoFontSize}
                 logoWidth={responsiveNavbar.logoWidth}
                 navbarSideMargin={responsiveNavbar.navbarSideMargin}
-      />
-       <BurgerMenu>
-         {renderListItems()}
-        </BurgerMenu>
-       <ul className={classes.navtabs}>
-              {renderListItems()}
-              <DonateBtn
-                buttonHeight = {responsiveNavbar.buttonHeight}
-                buttonWidth={responsiveNavbar.buttonWidth}
-                buttonFontSize={responsiveNavbar.buttonFontSize}
-                heartWidth={responsiveNavbar.heartWidth}
-             />
-        </ul>
+            />
+            <BurgerMenu>
+            {renderListItems()}
+            </BurgerMenu>
+            <ul className={classes.navtabs}>
+                    {renderListItems()}
+                    <DonateBtn
+                      buttonHeight = {responsiveNavbar.buttonHeight}
+                      buttonWidth={responsiveNavbar.buttonWidth}
+                      buttonFontSize={responsiveNavbar.buttonFontSize}
+                      heartWidth={responsiveNavbar.heartWidth}
+                  />
+            </ul>
         </div>
     );
   }
