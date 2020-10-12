@@ -35,13 +35,15 @@ import "./NavAccessibility.css"
     }, []); // Empty array ensures that effect is only run on mount
 
     // Navbar and childs slyle properties
-    let navbarSideMargin, navbarHeight, navtabsDisplay,navitemWidth;
+    let navbarSideMargin, navbarLeftMargin, navbarHeight, navtabsDisplay,navitemWidth;
     let logoWidth, logoFontSize, logoTextMaxWidth; 
     let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
     let burgerMenuDisplay, burMenuButtonPosition;
     
     if (windowSize.width >= 1040) {
       navbarSideMargin = (windowSize.width / 4 - 240).toFixed(1);
+      navbarSideMargin = navbarSideMargin+"px"
+      navbarLeftMargin = navbarSideMargin;
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
       logoFontSize = 20;
@@ -56,6 +58,8 @@ import "./NavAccessibility.css"
       heartWidth=17
     } else if (windowSize.width >400 && windowSize.width < 1040) {
       navbarSideMargin = (windowSize.width / 45 + 7).toFixed(1);
+      navbarSideMargin = navbarSideMargin+"px"
+      navbarLeftMargin = "calc(51vw - 128px)";
       navbarHeight = 58;
       logoWidth = 40;
       logoFontSize = 16;
@@ -64,11 +68,12 @@ import "./NavAccessibility.css"
       buttonWidth = 105;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
-      burMenuButtonPosition = "50%"
+      burMenuButtonPosition = navbarSideMargin;
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
-      navbarSideMargin = 14; // small screen
+      navbarSideMargin = "14px"; // small screen
+      navbarLeftMargin = "calc(51vw - 125px)";
       navbarHeight = 48;
       navitemWidth = 105;
       logoWidth = 30;
@@ -78,13 +83,14 @@ import "./NavAccessibility.css"
       buttonWidth = 96;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
-      burMenuButtonPosition = "47%"
+      burMenuButtonPosition = navbarSideMargin;
       buttonFontSize = 12;
       heartWidth=13;
     }
     
     const responsiveStyle = {
       navbarSideMargin,
+      navbarLeftMargin,
       navitemWidth, 
       navbarHeight,
       logoWidth,
@@ -157,7 +163,7 @@ export default function NavTabs() {
             width: "fit-content",
             height: responsiveNavbar.navbarHeight,
             float: "right",
-            marginRight: responsiveNavbar.navbarSideMargin+"px",
+            marginRight: responsiveNavbar.navbarSideMargin,
             padding: "0",
             margin: "0",
             listStyle: "none",
@@ -235,7 +241,7 @@ export default function NavTabs() {
             <Logo
                 logoFontSize={responsiveNavbar.logoFontSize}
                 logoWidth={responsiveNavbar.logoWidth}
-                navbarSideMargin={responsiveNavbar.navbarSideMargin}
+                navbarSideMargin={responsiveNavbar.navbarLeftMargin}
                 logoTextMaxWidth = {responsiveNavbar.logoTextMaxWidth}
             />
             <ul className={classes.navtabs}>

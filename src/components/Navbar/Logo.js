@@ -1,11 +1,7 @@
 import React from "react"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
 import LogoTtm from "../../images/navbar/logo-ttm.svg"
-
-
-
 export default function Logo(props) {
   const useStyles = makeStyles({
   root: {
@@ -18,7 +14,12 @@ export default function Logo(props) {
     display: "flex",
     margin: "7px",
     maxWidth: props.logoTextMaxWidth,
-  },
+    fontSize: props.logoFontSize
+    },
+    logo: {
+      width: props.logoWidth + "px",
+      marginLeft: props.navbarSideMargin
+  }
 });
   const classes = useStyles();
 
@@ -26,11 +27,9 @@ export default function Logo(props) {
     <div className={classes.root}>
       <Box component="img" src={LogoTtm}
         className={classes.logo} alt="TTM logo"
-        style={{width:props.logoWidth+"px", marginLeft:props.navbarSideMargin+"px"}}
       />
       <Box
         className={classes.text}
-        style={{fontSize: props.logoFontSize}}
       >Toronto Tech Mentoring</Box>
     </div>
   )
