@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
+
 import background1 from '../../images/about-us/How-are-we-different-section/background1.svg';
 import background2 from '../../images/about-us/How-are-we-different-section/background2.svg';
 import background3 from '../../images/about-us/How-are-we-different-section/background3.svg';
@@ -76,7 +77,7 @@ export default function Cards() {
           </div>  
           <CardContent>
             <p className={classes.contents}>
-              We support the client in setting their own career, entrepreneurial or personal.
+              We support the client in setting their own career, entrepreneurial or personal goals.
             </p>
           </CardContent>
         </Card>
