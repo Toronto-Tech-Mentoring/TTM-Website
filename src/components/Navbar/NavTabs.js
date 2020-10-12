@@ -53,7 +53,6 @@ import "./NavAccessibility.css"
       buttonWidth = 156;
       navtabsDisplay = "inline-block"
       burgerMenuDisplay = "none"
-      burMenuButtonPosition = "55%"
       buttonFontSize = 18;
       heartWidth=17
     } else if (windowSize.width >400 && windowSize.width < 1040) {
@@ -68,6 +67,7 @@ import "./NavAccessibility.css"
       buttonWidth = 105;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
+      burMenuButtonPosition = navbarSideMargin;
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
