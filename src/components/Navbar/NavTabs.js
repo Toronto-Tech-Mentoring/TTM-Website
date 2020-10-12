@@ -186,6 +186,7 @@ export default function NavTabs() {
             padding: "0px",
             display: "block",
             textDecoration: "none",
+            borderStyle: "none",
     },
     burgerMenu: {
         display: responsiveNavbar.burgerMenuDisplay,
@@ -205,6 +206,7 @@ export default function NavTabs() {
         <Link
           to={item.path}
           id={item.id}
+          key={item.id}
           className={classes.navlink}
           activeStyle={{ color: '#873FE2', boxShadow:"0px 2px 0px #873FE2" }}
         >
