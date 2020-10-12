@@ -221,7 +221,7 @@ export default function TimelineSection() {
             </div>
           </Grid>
         </Grid>
-        <Grid className={classes.gridContainer} container xs={12}>
+        <Grid className={classes.gridContainer} container>
           <Grid item xs={2} md={3} lg={3} className={classes.center}>
             <span className={classes.yearTag}>2018</span>
             <Pin className={classes.pinStyle} />
@@ -248,7 +248,7 @@ export default function TimelineSection() {
             </div>
           </Grid>
         </Grid>
-        <Grid className={classes.gridContainer} container xs={12}>
+        <Grid className={classes.gridContainer} container>
           <Grid item xs={2} md={3} lg={3} className={classes.center}>
             <span className={classes.yearTag}>2019</span>
             <Pin className={classes.pinStyle} />

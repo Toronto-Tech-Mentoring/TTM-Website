@@ -104,9 +104,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TheBottomLineSection() {
     const classes = useStyles();
-
+ 
     return (
-        <Grid container
+        <Grid container style={{backgroundImage: `url(${People})`}}
             className={classes.root}
             justify="center"
             alignItems="center">
