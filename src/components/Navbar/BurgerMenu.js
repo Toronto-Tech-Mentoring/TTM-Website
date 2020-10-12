@@ -32,7 +32,7 @@ var styles = {
       minWidth: '140px',
       maxWidth: '300px',
     fontSize: '1.15em',
-      overflow: 'hidden',
+      overflowY: 'hidden',
       marginTop: '2px',
       padding: '0px'
     

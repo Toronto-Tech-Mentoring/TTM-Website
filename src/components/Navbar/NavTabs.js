@@ -68,7 +68,6 @@ import "./NavAccessibility.css"
       buttonWidth = 105;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
-      burMenuButtonPosition = navbarSideMargin;
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
