@@ -23,7 +23,7 @@ var styles = {
   bmMenuWrap: {
     position: 'fixed',
       height: '100%',
-    width: props.sideBarWidth,  
+    width: props.sideBarWidth, 
   },
   bmMenu: {
     background: '#FFFFFF',
@@ -32,9 +32,12 @@ var styles = {
       minWidth: '140px',
       maxWidth: '300px',
     fontSize: '1.15em',
-      overflowY: 'hidden',
-      marginTop: '2px',
-      padding: '0px'
+    overflowY: 'hidden',
+    marginTop: '2px',
+    padding: '0px',
+    boxShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
+    padding: "0",
+    margin: "0",
     
   },
   bmMorphShape: {
@@ -42,8 +45,13 @@ var styles = {
   },
   bmItemList: {
     color: '#b8b7ad',
-      width: props.sideBarWidth,
-    margin: 'auto'
+    width: props.sideBarWidth,
+     padding: "0",
+     margin: "0",
+    display:'block'
+  },
+  bmItem: {
+        marginRight: "2px",
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'

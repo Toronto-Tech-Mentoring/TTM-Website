@@ -36,7 +36,7 @@ import "./NavAccessibility.css"
 
     // Navbar and childs slyle properties
     let navbarSideMargin, navbarLeftMargin, navbarHeight, navtabsDisplay;
-    let navitemWidth, navitemMaxWidth;
+    let navitemWidth, navitemMaxWidth, navLinkBoxShadow;
     let logoWidth, logoFontSize, logoTextMaxWidth; 
     let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
     let burgerMenuDisplay, burgerMenuButtonPosition, sideBarWidth;
@@ -47,8 +47,9 @@ import "./NavAccessibility.css"
       navbarLeftMargin = navbarSideMargin;
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
-      navitemWidth = navitemWidth+"px"
-      navitemMaxWidth = '104px'
+      navitemWidth = navitemWidth + "px";
+      navitemMaxWidth = '104px';
+      navLinkBoxShadow = "0px 2px 0px #873FE2";
       logoFontSize = 20;
       logoWidth = 48;
       logoTextMaxWidth = 250;
@@ -72,8 +73,9 @@ import "./NavAccessibility.css"
       burgerMenuDisplay = "block";
       burgerMenuButtonPosition = navbarSideMargin;
       sideBarWidth = "250px"
-      navitemWidth = sideBarWidth;
+      navitemWidth = "auto";
       navitemMaxWidth = 'none'
+      navLinkBoxShadow = "3px 0px 0px #873FE2";
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
@@ -90,7 +92,8 @@ import "./NavAccessibility.css"
       burgerMenuDisplay = "block";
       burgerMenuButtonPosition = navbarSideMargin;
       sideBarWidth = "140px"
-      navitemWidth = sideBarWidth;
+      navitemWidth = "auto";
+      navLinkBoxShadow = "3px 0px 0px #873FE2";
       buttonFontSize = 12;
       heartWidth=13;
     }
@@ -100,6 +103,7 @@ import "./NavAccessibility.css"
       navbarLeftMargin,
       navitemWidth, 
       navitemMaxWidth,
+      navLinkBoxShadow,
       navbarHeight,
       logoWidth,
       logoFontSize,
@@ -181,7 +185,7 @@ export default function NavTabs() {
         },
   navitem: {
     marginBottom: "-1px",
-    display:responsiveNavbar.navtabsDisplay
+    display: responsiveNavbar.navtabsDisplay,
   },
 
       navlink: {
@@ -195,16 +199,11 @@ export default function NavTabs() {
             padding: "0px",
             display: "block",
             textDecoration: "none",
-            borderStyle: "none",
+        borderStyle: "none",
     },
     burgerMenu: {
         display: responsiveNavbar.burgerMenuDisplay,
-      },
-         active: {
-            boxShadow: "0px 2px 0px #873FE2",
-            color: "#873FE2!important"
-        }
-
+      }
 });
 
   const classes = useStyles();
@@ -217,7 +216,7 @@ export default function NavTabs() {
           id={item.id}
           key={item.id}
           className={classes.navlink}
-          activeStyle={{ color: '#873FE2', boxShadow:"0px 2px 0px #873FE2" }}
+          activeStyle={{ color: '#873FE2', boxShadow:responsiveNavbar.navLinkBoxShadow}}
         >
           {item.title}
         </Link>
