@@ -1,13 +1,10 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 
-import People from '../../images/about-us/bottom-line/people.svg';
+import DataAnalyse from '../../images/partners/vital_role/data_analyse.svg';
 import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
-import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
-import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -76,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: 380,
         margin: '0 auto'
     },
-    people: {
+    dataAnalyse: {
         width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
@@ -103,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function TheBottomLineSection() {
+export default function VitalRoleSection() {
     const classes = useStyles();
 
     return (
@@ -115,24 +112,17 @@ export default function TheBottomLineSection() {
                 <div className={classes.textBox}>
                     <div>
                         <TitleLeft className={classes.hideTitleStyle} alt="title decoration left"/>
-                        <span className={classes.title}>The bottom line</span>
+                        <span className={classes.title}>The Vital role out partners play:</span>
                         <TitleRight className={classes.hideTitleStyle} alt="title decoration right"/>
                     </div>
-                    <ContentRight className={classes.contentRight} alt="content decoration right"/>
-                    <span className={classes.contents}>If you’re facing housing precarity in Toronto and want to learn 'tech' skills, we want to help you. Free of charge. </span>
-                    <ContentLeft className={classes.contentLeft} alt="content decoration left"/>
-                    <Hidden smDown>
-                        <p className={classes.question}>Not sure if you qualify?</p>
-                        <button className={classes.contactButton}>Contact us</button>
-                    </Hidden>
+                    <span className={classes.contents}>A learning environment requires safety, and stability.
+Each client that comes through our program has faced, and often still is facing, significant adversity. Our delivery partners provide a safe and stable environment, so that our clients are able to focus on learning a new skill, and planning for a better future.
+
+Currently, some of the wrap-around supports that our delivery partners provide are shelter & transitional housing, access to transport, and health and well-being support. </span>
                 </div>
             </Grid>
             <Grid item xs={12} md={6}>
-                <People className={classes.people} alt="people" />
-                <Hidden mdUp>
-                    <p className={classes.question}>Not sure if you qualify?</p>
-                    <button className={classes.contactButton}>Contact us</button>
-                </Hidden>
+                <DataAnalyse className={classes.dataAnalyse} alt="data_analyse" />
             </Grid>
         </Grid>
     )

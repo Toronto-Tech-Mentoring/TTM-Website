@@ -1,4 +1,6 @@
 import React from "react";
+
+import VitalRole from './VitalRole';
 import PartnerCards from './PartnerCards';
 import LastSection from "./LastSection";
 
@@ -8,7 +10,7 @@ export default function Partners() {
       <p style={{ padding: "10px", margin: "20px", backgroundColor: "yellow", textAlign: "center" }}>
         I am <strong>PARTNERS</strong> page's body.
       </p>
-
+      <VitalRole />
       <PartnerCards />
       <LastSection />
     </div>
