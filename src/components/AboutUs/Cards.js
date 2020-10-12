@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '30px',
     margin: '0px 25px',
     marginTop: '-5px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       margin: '25px 15px',
       maxWidth: '350px',
       maxHeight: '360px',
