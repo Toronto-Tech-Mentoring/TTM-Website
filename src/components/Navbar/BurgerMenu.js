@@ -7,7 +7,7 @@ var styles = {
     position: 'fixed',
     width: '36px',
     height: '30px',
-    left: props.burMenuButtonPosition,
+    left: props.burgerMenuButtonPosition,
     top: '10px'
   },
   bmBurgerBars: {
@@ -23,12 +23,12 @@ var styles = {
   bmMenuWrap: {
     position: 'fixed',
       height: '100%',
-    width: 'fit-content',  
+    width: props.sideBarWidth,  
   },
   bmMenu: {
     background: '#FFFFFF',
     padding: '2.5em 1.5em 0',
-    width: '25vw',
+    width: props.sideBarWidth,
       minWidth: '140px',
       maxWidth: '300px',
     fontSize: '1.15em',
@@ -42,7 +42,7 @@ var styles = {
   },
   bmItemList: {
     color: '#b8b7ad',
-      width: 'fit-content',
+      width: props.sideBarWidth,
     margin: 'auto'
   },
   bmOverlay: {

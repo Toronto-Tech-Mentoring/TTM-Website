@@ -35,10 +35,11 @@ import "./NavAccessibility.css"
     }, []); // Empty array ensures that effect is only run on mount
 
     // Navbar and childs slyle properties
-    let navbarSideMargin, navbarLeftMargin, navbarHeight, navtabsDisplay,navitemWidth;
+    let navbarSideMargin, navbarLeftMargin, navbarHeight, navtabsDisplay;
+    let navitemWidth, navitemMaxWidth;
     let logoWidth, logoFontSize, logoTextMaxWidth; 
     let buttonHeight, buttonWidth, buttonFontSize, heartWidth;
-    let burgerMenuDisplay, burMenuButtonPosition;
+    let burgerMenuDisplay, burgerMenuButtonPosition, sideBarWidth;
     
     if (windowSize.width >= 1040) {
       navbarSideMargin = (windowSize.width / 4 - 240).toFixed(1);
@@ -46,6 +47,8 @@ import "./NavAccessibility.css"
       navbarLeftMargin = navbarSideMargin;
       navbarHeight = 80;
       navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1);
+      navitemWidth = navitemWidth+"px"
+      navitemMaxWidth = '104px'
       logoFontSize = 20;
       logoWidth = 48;
       logoTextMaxWidth = 250;
@@ -67,14 +70,17 @@ import "./NavAccessibility.css"
       buttonWidth = 105;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
-      burMenuButtonPosition = navbarSideMargin;
+      burgerMenuButtonPosition = navbarSideMargin;
+      sideBarWidth = "250px"
+      navitemWidth = sideBarWidth;
+      navitemMaxWidth = 'none'
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
       navbarSideMargin = "14px"; // small screen
       navbarLeftMargin = "calc(51vw - 125px)";
       navbarHeight = 48;
-      navitemWidth = 105;
+      navitemMaxWidth = 'none'
       logoWidth = 30;
       logoFontSize = 12;
       logoTextMaxWidth = 0.21*windowSize.width+10;
@@ -82,7 +88,9 @@ import "./NavAccessibility.css"
       buttonWidth = 96;
       navtabsDisplay = "none";
       burgerMenuDisplay = "block";
-      burMenuButtonPosition = navbarSideMargin;
+      burgerMenuButtonPosition = navbarSideMargin;
+      sideBarWidth = "140px"
+      navitemWidth = sideBarWidth;
       buttonFontSize = 12;
       heartWidth=13;
     }
@@ -91,6 +99,7 @@ import "./NavAccessibility.css"
       navbarSideMargin,
       navbarLeftMargin,
       navitemWidth, 
+      navitemMaxWidth,
       navbarHeight,
       logoWidth,
       logoFontSize,
@@ -99,7 +108,8 @@ import "./NavAccessibility.css"
       buttonWidth,
       navtabsDisplay,
       burgerMenuDisplay,
-      burMenuButtonPosition,
+      burgerMenuButtonPosition,
+      sideBarWidth,
       buttonFontSize,
       heartWidth,
     };
@@ -175,8 +185,8 @@ export default function NavTabs() {
   },
 
       navlink: {
-            width: responsiveNavbar.navitemWidth + "px",
-            maxWidth: "104px",
+            width: responsiveNavbar.navitemWidth,
+            maxWidth: responsiveNavbar.navitemMaxWidth,
             minWidth:"86px",
             fontSize: "16px",
             textAlign: "center",
@@ -256,7 +266,8 @@ export default function NavTabs() {
       </ul>
           <div className={classes.burgerMenu}>
         <BurgerMenu
-           burMenuButtonPosition = {responsiveNavbar.burMenuButtonPosition}
+          burgerMenuButtonPosition={responsiveNavbar.burgerMenuButtonPosition}
+          sideBarWidth={responsiveNavbar.sideBarWidth}
         >
                   {renderListItems()}
                 </BurgerMenu>
