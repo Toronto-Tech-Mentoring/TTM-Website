@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
+
 import background1 from '../../images/about-us/How-are-we-different-section/background1.svg';
 import background2 from '../../images/about-us/How-are-we-different-section/background2.svg';
 import background3 from '../../images/about-us/How-are-we-different-section/background3.svg';
@@ -14,15 +15,17 @@ import shiny3 from '../../images/about-us/How-are-we-different-section/shiny3.sv
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'inline-block',
     maxWidth: '350px',
-    // maxHeight: '325px',
+    maxHeight: '360px',
+    display: 'inline-block',
     borderRadius: '30px',
     margin: '0px 25px',
     marginTop: '-5px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       margin: '25px 15px',
-    },
+      maxWidth: '350px',
+      maxHeight: '360px',
+    }
   },
   media: {
     height: 0,
@@ -65,21 +68,21 @@ export default function Cards() {
   const classes = useStyles();
 
   return (
-    <>
-      <Grid item xs={12} md={4}>
+    <Grid container alignItems="center" justify="center">
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background1}` }}>
             <img className={classes.innerImage} style={{ top: '35px' }} alt="skill_development" src={pic1} />
-          </div>
+          </div>  
           <CardContent>
             <p className={classes.contents}>
-              We support the client in setting their own career, entrepreneurial or personal.
+              We support the client in setting their own career, entrepreneurial or personal goals.
             </p>
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background2}` }}>
@@ -93,7 +96,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background3}` }}>
@@ -107,6 +110,6 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-    </>
+    </Grid>
   );
 }
