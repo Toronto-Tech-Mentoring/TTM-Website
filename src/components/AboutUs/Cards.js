@@ -69,7 +69,7 @@ export default function Cards() {
 
   return (
     <Grid container alignItems="center" justify="center">
-      <Grid item xs={12} md={4} lg={3} xl={2.5}>
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background1}` }}>
@@ -82,7 +82,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={3} xl={2.5}>
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background2}` }}>
@@ -96,7 +96,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={3} xl={2.5}>
+      <Grid item xs={12} md={4} lg={3} xl={2}>
         <Card className={classes.root}>
           <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background3}` }}>
