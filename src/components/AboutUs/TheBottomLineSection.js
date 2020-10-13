@@ -1,107 +1,14 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 
+import { useStyles } from '../../shared/styles/BottomLineVitalRole';
 import People from '../../images/about-us/bottom-line/people.svg';
 import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
 import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        minHeight: '500px',
-        [theme.breakpoints.down('sm')]: {
-            textAlign: 'center',
-        }
-    },
-    textBox: {
-        padding: '0px 10%',
-        [theme.breakpoints.down('sm')]: {
-            paddingTop: '50px',
-        }
-    },
-    title: {
-        fontFamily: 'Josefin Sans',
-        color: 'black',
-        fontSize: '22px',
-        lineHeight: '38px',
-        fontWeight: 600,
-        textDecoration: 'underline',
-        textDecorationColor: '#FF7500',
-        [theme.breakpoints.down('sm')]: {
-            margin: '0px 20px'
-        }
-
-    },
-    contents: {
-        fontFamily: 'Poppins',
-        fontSize: '16px',
-        lineHeight: '27px',
-        padding:'5px',
-        [theme.breakpoints.down('sm')]: {
-            padding: '0px',
-            paddingRight: '0px',
-            textAlign: 'center',
-        }
-    },
-    question: {
-        fontFamily: 'Josefin Sans',
-        color: 'black',
-        fontWeight: 600,
-        marginTop:'20px',
-        fontSize: '20px',
-        lineHeight: '34px',
-        [theme.breakpoints.down('sm')]: {
-            marginTop: '40px',
-        }
-    },
-    contactButton: {
-        backgroundColor: '#873FE2',
-        borderRadius: '300px',
-        width: '200px',
-        height: '50px',
-        fontSize: '18px',
-        color: 'white',
-        borderStyle: 'none',
-        [theme.breakpoints.down('sm')]: {
-            marginTop: '30px',
-            marginBottom: '50px',
-        }
-    },
-    picDiv: {
-        maxWidth: 470,
-        maxHeight: 380,
-        margin: '0 auto'
-    },
-    people: {
-        width: '80%',
-        [theme.breakpoints.up('sm')]: {
-            padding: '10%',
-            // width: '100%'
-        },
-    },
-    hideTitleStyle: {
-        [theme.breakpoints.up('sm')]: {
-            display: 'none',
-        },
-    },
-    contentRight: {
-        float:'right',
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
-    },
-    contentLeft: {
-        margin:'5px 10px 0px 0px',
-        float:'left',
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
-    }
-}));
 
 export default function TheBottomLineSection() {
     const classes = useStyles();
