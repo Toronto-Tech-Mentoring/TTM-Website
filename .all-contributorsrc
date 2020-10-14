@@ -1,6 +1,6 @@
 {
   "projectName": "TTM-Gatsby",
-  "projectOwner": "rishFilet",
+  "projectOwner": "Toronto-Tech-Mentoring",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -9,6 +9,19 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "gitmoji",
-  "contributors": [],
-  "contributorsPerLine": 7
+  "contributors": [
+    {
+      "login": "rishFilet",
+      "name": "Rishi Khan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28996036?v=4",
+      "profile": "https://github.com/rishFilet",
+      "contributions": [
+        "infra",
+        "code",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
