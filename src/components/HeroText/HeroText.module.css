@@ -1,6 +1,6 @@
 .position {
-  margin-top: 100px;
-  margin-left: 400px;
+    margin-top: 100px;
+    margin-left: 400px;
 }
 
 .hero {
@@ -14,16 +14,16 @@
 }
 
 .f {
-  position: relative;
-  width: calc(18px + 1vw);
+    position: relative;
+    width: calc(18px + 1vw);
 }
 
-.left{
-  position: relative;
-  left: 70px;
-  top: 40px;
-  width: calc(18px + 1vw);
-  transform: scaleY(-1) rotate(315deg);
+.left {
+    position: relative;
+    left: 70px;
+    top: 40px;
+    width: calc(18px + 1vw);
+    transform: scaleY(-1) rotate(315deg);
 }
 
 .right{
@@ -60,7 +60,7 @@
     left: 5px;
   }
 
-  .right{
+  .right {
     left: 15px;
     top: 30px;
   }
@@ -88,13 +88,11 @@
     top: 5px;
     left: 10px;
   }
-
-  .right{
-    position: absolute;
-    right: 100px;
-    top: 150px;
+  .right {
+        position: absolute;
+        right: 100px;
+        top: 150px;
   }
-
 }
 
 /* Tablet to Laptop (NOT DESKTOP) */
@@ -126,7 +124,6 @@
     right: 150px;
     top: 100px;
   }
-
 }
 
 
