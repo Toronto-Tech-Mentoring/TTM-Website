@@ -18,7 +18,56 @@
       "contributions": [
         "infra",
         "code",
-        "projectManagement"
+        "projectManagement",
+        "doc"
+      ]
+    },
+    {
+      "login": "dghazi12",
+      "name": "David Ghazi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/59675897?v=4",
+      "profile": "https://david-ghazi-portfolio.herokuapp.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "BBoutet1",
+      "name": "Brice Boutet",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/59809722?v=4",
+      "profile": "https://brice-boutet.herokuapp.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "hanlinc27",
+      "name": "Hanlin Cheng",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19617248?v=4",
+      "profile": "http://hanlincheng.me",
+      "contributions": [
+        "infra",
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "gh0stl0nely",
+      "name": "Khoi Nguyen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23471813?v=4",
+      "profile": "https://khoi-portfolio.herokuapp.com/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "demiwu96",
+      "name": "Yu-Hsuan Wu",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/56731719?v=4",
+      "profile": "https://demiwu96.github.io/",
+      "contributions": [
+        "code"
       ]
     },
     {
