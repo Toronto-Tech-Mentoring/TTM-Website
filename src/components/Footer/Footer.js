@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '1.5vw',
         textDecoration: 'none',
         [theme.breakpoints.down(750)]: {
-            fontSize: '3vw',
+            fontSize: '2vw',
         },
     },
     footerLinks: {
@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(750)]: {
             float: 'left',
             paddingRight: 'calc(100% - 200px)',
-            marginTop:'20px'
         },
     },
     copyrightDiv: {
@@ -81,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         paddingTop: '20px',
         fontSize: '1.5vw',
+        verticalAlign:'middle',
 
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '8vw',
@@ -91,14 +91,15 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(750)]: {
             paddingLeft: '30px',
             margin: '0px',
-            paddingTop: '10px',
+            paddingTop: '0px',
+            width:'90%',
         },
     },
     iconLi: {
         display: 'inline-block',
         padding: '12px 10px 0px 10px',
         [theme.breakpoints.down(750)]: {
-            padding: '10px 3px 0px 3px',
+            padding: '10px 5px 0px 5px',
         },
     },
     iconDiv: {
@@ -115,20 +116,21 @@ const useStyles = makeStyles((theme) => ({
             height: '50px'
         },
         [theme.breakpoints.down(750)]: {
-            fontSize: '8px',
-            width: '40px',
-            height: '40px'
+            width: '25px',
+            height: '25px',
+            paddingbottom:'5px'
         },
     },
+
     active: {
         color: '#873FE2'
     },
-    Icon: {
+    icon: {
         [theme.breakpoints.up('lg')]: {
             fontSize: '9vw',
         },
         [theme.breakpoints.down(750)]: {
-            fontSize: '1.5vw',
+            fontSize: '10px',
         },
     },
     hideIcon: {
@@ -140,15 +142,15 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '1.5vw',
         [theme.breakpoints.down(750)]: {
             position: 'relative',
-            bottom: '8px',
-            fontSize: '3vw',
+            top: '15px',
+            fontSize: '2vw',
         },
     },
     hideMobileIcon: {
         display:'none',
         [theme.breakpoints.down(750)]: {
             display: 'inline-block',
-            paddingLeft:'8vw',
+            float:'right',
         },
     }
 }));
