@@ -24,13 +24,14 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             margin: '0px 20px'
         }
-
     },
     contents: {
         fontFamily: 'Poppins',
         fontSize: '16px',
         lineHeight: '27px',
         padding:'5px',
+        marginTop: '-5px',
+        marginBottom: '-5px',
         [theme.breakpoints.down('sm')]: {
             padding: '0px',
             paddingRight: '0px',
@@ -41,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Josefin Sans',
         color: 'black',
         fontWeight: 600,
-        marginTop:'20px',
+        marginTop:'5px',
+        marginBottom: '5px',
         fontSize: '20px',
         lineHeight: '34px',
         [theme.breakpoints.down('sm')]: {
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: 380,
         margin: '0 auto'
     },
-    dataAnalyse: {
+    svgSettings: {
         width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
@@ -86,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contentLeft: {
         margin:'5px 10px 0px 0px',
+        paddingLeft: '3em',
         float:'left',
         [theme.breakpoints.down('xs')]: {
             display: 'none',
