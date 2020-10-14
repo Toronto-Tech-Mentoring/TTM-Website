@@ -18,7 +18,17 @@
       "contributions": [
         "infra",
         "code",
-        "projectManagement"
+        "projectManagement",
+        "doc"
+      ]
+    },
+    {
+      "login": "dghazi12",
+      "name": "David Ghazi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/59675897?v=4",
+      "profile": "https://david-ghazi-portfolio.herokuapp.com/",
+      "contributions": [
+        "code"
       ]
     },
     {
