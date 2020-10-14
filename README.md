@@ -1,6 +1,6 @@
 # <img src="./src/images/navbar/logo-ttm.svg"> Toronto Tech Mentoring
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.torontotechmentoring.live%2F)![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Toronto-Tech-Mentoring/TTM-Gatsby?include_prereleases)![Netlify](https://img.shields.io/netlify/129ddafb-ec6d-4002-83e5-ce05c55ca1a1?style=plastic)<br/>![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Toronto-Tech-Mentoring/TTM-Gatsby?style=plastic)![Lines of code](https://img.shields.io/tokei/lines/github/Toronto-Tech-Mentoring/TTM-Gatsby)![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Toronto-Tech-Mentoring/TTM-gatsby)![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/Toronto-Tech-Mentoring/TTM-gatsby/latest?include_prereleases)
 
@@ -38,7 +38,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/rishFilet"><img src="https://avatars2.githubusercontent.com/u/28996036?v=4" width="100px;" alt=""/><br /><sub><b>Rishi Khan</b></sub></a><br /><a href="#infra-rishFilet" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=rishFilet" title="Code">💻</a> <a href="#projectManagement-rishFilet" title="Project Management">📆</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=rishFilet" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rishFilet"><img src="https://avatars2.githubusercontent.com/u/28996036?v=4" width="100px;" alt=""/><br /><sub><b>Rishi Khan</b></sub></a><br /><a href="#infra-rishFilet" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=rishFilet" title="Code">💻</a> <a href="#projectManagement-rishFilet" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://david-ghazi-portfolio.herokuapp.com/"><img src="https://avatars0.githubusercontent.com/u/59675897?v=4" width="100px;" alt=""/><br /><sub><b>David Ghazi</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=dghazi12" title="Code">💻</a></td>
   </tr>
 </table>
 
