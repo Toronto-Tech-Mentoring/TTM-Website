@@ -18,4 +18,8 @@ The website is being developed by volunteers sharing a passion to teach one anot
 
 If you would like to get involved with the project reach out to hello@acceleratorproject.xyz or join attend one of the CivicTechTO meetup sessions every tuesday night [here](https://www.meetup.com/Civic-Tech-Toronto/)
 
+## :beetle: Reporting Bugs
+
+If you would like to contribute to open source initiatives, please report any bugs, UI issues or anything else that affects your experience while using this website [here](https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/issues). Describe it an as much detail as possible and include pictures or GIFs to help describe the issue
+
 ### 💜 Check out our Github WIKI here: https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/wiki
