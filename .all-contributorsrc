@@ -30,6 +30,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "BBoutet1",
+      "name": "Brice Boutet",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/59809722?v=4",
+      "profile": "https://brice-boutet.herokuapp.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
