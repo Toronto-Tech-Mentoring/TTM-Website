@@ -20,6 +20,16 @@
         "code",
         "projectManagement"
       ]
+    },
+    {
+      "login": "gh0stl0nely",
+      "name": "Khoi Nguyen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23471813?v=4",
+      "profile": "https://khoi-portfolio.herokuapp.com/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
