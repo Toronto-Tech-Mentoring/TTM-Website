@@ -1,0 +1,3 @@
+.rainbowImgHack img[alt="rainbow heart"] {
+  display: none !important;
+}
