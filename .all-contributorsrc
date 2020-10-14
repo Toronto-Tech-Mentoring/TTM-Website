@@ -79,6 +79,15 @@
         "infra",
         "code"
       ]
+    },
+    {
+      "login": "harshvchawla",
+      "name": "Harsh Chawla",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6857593?v=4",
+      "profile": "http://Linkedin.com/in/harshvchawla",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
