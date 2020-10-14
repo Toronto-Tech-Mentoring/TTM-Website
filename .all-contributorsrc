@@ -60,6 +60,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "demiwu96",
+      "name": "Yu-Hsuan Wu",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/56731719?v=4",
+      "profile": "https://demiwu96.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
