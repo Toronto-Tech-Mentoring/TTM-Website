@@ -39,6 +39,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "hanlinc27",
+      "name": "Hanlin Cheng",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19617248?v=4",
+      "profile": "http://hanlincheng.me",
+      "contributions": [
+        "infra",
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
