@@ -9,9 +9,10 @@ export default function TheBottomLineSection() {
     const content = "If you’re facing housing precarity in Toronto and want to learn 'tech' skills, we want to help you. Free of charge."
     const question = "Not sure if you qualify?"
     const buttonText = "Contact Us"
+    const justifyContents = "center"
 
     return (
-        <GridContainerTextPic title={title} content={content} displayCheetoh={true} displayHiddenComponent={true} hiddenQuestion={question} hiddenButtonText={buttonText} image={People}/>
+        <GridContainerTextPic title={title} content={content} displayCheetoh={true} displayHiddenComponent={true} hiddenQuestion={question} hiddenButtonText={buttonText} image={People} justified={justifyContents}/>
     )
 };
 

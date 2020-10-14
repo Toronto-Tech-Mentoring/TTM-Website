@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
             paddingTop: '50px',
         }
     },
-    title: {
+    titleCentered: {
         fontFamily: 'Josefin Sans',
         color: 'black',
         fontSize: '22px',
@@ -22,10 +22,25 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline',
         textDecorationColor: '#FF7500',
         [theme.breakpoints.down('sm')]: {
-            margin: '0px 20px'
+            margin: '0px 20px',
+            textAlign: 'center'
         }
     },
-    contents: {
+    titleLeft: {
+        fontFamily: 'Josefin Sans',
+        color: 'black',
+        fontSize: '22px',
+        lineHeight: '38px',
+        fontWeight: 600,
+        [theme.breakpoints.up('md')]: {
+           textDecoration: 'underline',
+            textDecorationColor: '#FF7500',
+        },
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'left'
+        }
+    },
+    contentsCentered: {
         fontFamily: 'Poppins',
         fontSize: '16px',
         lineHeight: '27px',
@@ -36,6 +51,19 @@ const useStyles = makeStyles((theme) => ({
             padding: '0px',
             paddingRight: '0px',
             textAlign: 'center',
+        }
+    },
+    contentsLeft: {
+        fontFamily: 'Poppins',
+        fontSize: '16px',
+        lineHeight: '27px',
+        padding:'5px',
+        marginTop: '-5px',
+        marginBottom: '-5px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0px',
+            paddingRight: '0px',
+            textAlign: 'left',
         }
     },
     question: {
@@ -69,7 +97,10 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 auto'
     },
     svgSettings: {
+        height: '50%',
         width: '80%',
+        paddingBottom: '10%',
+        paddingTop: '10%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
             // width: '100%'

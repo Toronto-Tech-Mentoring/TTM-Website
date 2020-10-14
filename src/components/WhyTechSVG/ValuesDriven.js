@@ -1,8 +1,7 @@
 import React from "react";
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     cssHeaderText: {
         fontFamily: 'Josefin Sans',
         fontStyle: 'normal',
@@ -27,9 +26,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ValuesDriven() {
-    
+
     const classes = useStyles();
-    
+
     return (
             <div>
                 <svg viewBox="0 0 841 444" fill="none" xmlns="http://www.w3.org/2000/svg">
