@@ -24,6 +24,9 @@ If you would like to get involved with the project reach out to hello@accelerato
 ### 💜 Check out our Github WIKI here: https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/wiki
 <br/>
 
+## :beetle: Reporting Bugs
+
+If you would like to contribute to open source initiatives, please report any bugs, UI issues or anything else that affects your experience while using this website [here](https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/issues). Describe it an as much detail as possible and include pictures or GIFs to help describe the issue
 ***
 
 ## Contributors ✨
@@ -38,3 +41,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
