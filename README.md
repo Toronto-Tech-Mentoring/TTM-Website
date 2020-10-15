@@ -1,77 +1,60 @@
-<h1 align="center">
-Toronto Tech Mentoring Starter Code 
-</h1>
+# <img src="./src/images/navbar/logo-ttm.svg"> Toronto Tech Mentoring
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.torontotechmentoring.live%2F)![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Toronto-Tech-Mentoring/TTM-Gatsby?include_prereleases)![Netlify](https://img.shields.io/netlify/129ddafb-ec6d-4002-83e5-ce05c55ca1a1?style=plastic)<br/>![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Toronto-Tech-Mentoring/TTM-Gatsby?style=plastic)![Lines of code](https://img.shields.io/tokei/lines/github/Toronto-Tech-Mentoring/TTM-Gatsby)![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Toronto-Tech-Mentoring/TTM-gatsby)![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/Toronto-Tech-Mentoring/TTM-gatsby/latest?include_prereleases)
 
-<h5>💜 Check out our Github WIKI here: https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/wiki</h5>
+## Overview
 
+Born out of [CivicTechTO](http://civictech.ca/), Toronto Tech Mentoring is a volunteer run organisation aimed at supporting youth in the Greater Toronto Area through mentorship and education in technology and coding. Due to the success of the not for profit program and the desire to scale to accomodate this rising interest, a website is being developed to provide information for volunteers, clients and partners.
 
-## 🚀 Quick start
+<br/>
+The website is being developed by volunteers sharing a passion to teach one another and develop sharper coding skills in web development and React.
 
-1.  **Start developing.**
+<br/>
 
-    Navigate into your new site’s directory and start it up.
+## :construction: Architecture
 
-    ```shell
-    cd my-hello-world-starter/
-    npm start
-    ```
+<img src="./TTM-Arch.svg">
 
-1.  **Open the source code and start editing!**
+## Contributions
 
-    Your site is now running at `http://localhost:8000`!
+If you would like to get involved with the project reach out to hello@acceleratorproject.xyz or join attend one of the CivicTechTO meetup sessions every tuesday night [here](https://www.meetup.com/Civic-Tech-Toronto/)
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data.
+### 💜 Check out our Github WIKI here: https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/wiki
+<br/>
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## :beetle: Reporting Bugs
 
-## 🧐 What's inside?
+If you would like to contribute to open source initiatives, please report any bugs, UI issues or anything else that affects your experience while using this website [here](https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/issues). Describe it an as much detail as possible and include pictures or GIFs to help describe the issue
+***
 
-A quick look at the top-level files and directories you'll see.
+## Contributors ✨
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/rishFilet"><img src="https://avatars2.githubusercontent.com/u/28996036?v=4" width="100px;" alt=""/><br /><sub><b>Rishi Khan</b></sub></a><br /><a href="#infra-rishFilet" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=rishFilet" title="Code">💻</a> <a href="#projectManagement-rishFilet" title="Project Management">📆</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=rishFilet" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://david-ghazi-portfolio.herokuapp.com/"><img src="https://avatars0.githubusercontent.com/u/59675897?v=4" width="100px;" alt=""/><br /><sub><b>David Ghazi</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=dghazi12" title="Code">💻</a></td>
+    <td align="center"><a href="https://brice-boutet.herokuapp.com/"><img src="https://avatars3.githubusercontent.com/u/59809722?v=4" width="100px;" alt=""/><br /><sub><b>Brice Boutet</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=BBoutet1" title="Code">💻</a></td>
+    <td align="center"><a href="http://hanlincheng.me"><img src="https://avatars1.githubusercontent.com/u/19617248?v=4" width="100px;" alt=""/><br /><sub><b>Hanlin Cheng</b></sub></a><br /><a href="#infra-hanlinc27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=hanlinc27" title="Code">💻</a> <a href="#design-hanlinc27" title="Design">🎨</a></td>
+    <td align="center"><a href="https://khoi-portfolio.herokuapp.com/"><img src="https://avatars1.githubusercontent.com/u/23471813?v=4" width="100px;" alt=""/><br /><sub><b>Khoi Nguyen</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=gh0stl0nely" title="Code">💻</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=gh0stl0nely" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://demiwu96.github.io/"><img src="https://avatars3.githubusercontent.com/u/56731719?v=4" width="100px;" alt=""/><br /><sub><b>Yu-Hsuan Wu</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=demiwu96" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/airshiprook"><img src="https://avatars2.githubusercontent.com/u/10469986?v=4" width="100px;" alt=""/><br /><sub><b>Rishi Kapoor</b></sub></a><br /><a href="#infra-airshiprook" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=airshiprook" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://Linkedin.com/in/harshvchawla"><img src="https://avatars1.githubusercontent.com/u/6857593?v=4" width="100px;" alt=""/><br /><sub><b>Harsh Chawla</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Gatsby/commits?author=harshvchawla" title="Code">💻</a></td>
+  </tr>
+</table>
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 
