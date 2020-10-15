@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Hidden from '@material-ui/core/Hidden';
+
 import ComputerSVG from './ComputerSVG';
 import WhyTech from './WhyTech';
 import HandsSVG from './HandsSVG';

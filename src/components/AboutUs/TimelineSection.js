@@ -68,6 +68,15 @@ const useStyles = makeStyles((theme) => ({
             height: 200,
         },
     },
+    yearCol:{
+      textAlign:'right',
+      marginRight:'69px',
+
+      [theme.breakpoints.down('sm')]: {
+        marginRight:'0px',
+        textAlign:'center',
+    },
+    },
     eventTitle: {
         fontFamily: 'Josefin Sans',
         fontWeight: 600,
@@ -93,17 +102,27 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '31px',
         width: '80%',
         zIndex: 2,
-        [theme.breakpoints.between('sm', 'md')]: {
+        [theme.breakpoints.down(768)]: {
             fontSize: '16px',
+            lineHeight: '27px',
         },
 
         // Tablet below to Mobile
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down(425)]: {
             fontSize: '12px',
+            lineHeight: '20px',
+            height:'70px',
         },
     },
     center: {
         textAlign: 'center',
+    },
+    imgDiv:{
+      display:'flex',
+      alignItems:'space-between',
+      [theme.breakpoints.down('sm')]: {
+        height: '120px',
+    },
     },
     pic: {
         display: 'inline-block',
@@ -195,12 +214,12 @@ export default function TimelineSection() {
           {/* <img alt="title decoration right" src={titleRight} /> */}
         </Grid>
         <Grid className={classes.gridContainer} container item xs={12}>
-          <Grid item xs={2} md={3} lg={3} className={classes.center}>
+          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
             <span className={classes.yearTag}>2017</span>
             <Pin className={classes.pinStyle} />
             {/* <img className={classes.pinStyle} alt="pin" src={pin} /> */}
           </Grid>
-          <Grid container item xs={10} md={9} lg={9}>
+          <Grid container item xs={10} md={6} lg={8} xl={8}>
             <span className={classes.yearTagSm}>2017</span>
             <span className={classes.eventTitle}>
               Research and program development
@@ -211,7 +230,7 @@ export default function TimelineSection() {
               space. Civic Tech is a movement that focuses on developing and
               harnessing technology for the betterment of civic life.
             </p>
-            <div>
+            <div className={classes.imgDiv}>
               <Pic1
                 className={`${classes.firstPic} ${classes.pic}`}
                 // src={pic1}
@@ -222,13 +241,13 @@ export default function TimelineSection() {
           </Grid>
         </Grid>
         <Grid className={classes.gridContainer} container>
-          <Grid item xs={2} md={3} lg={3} className={classes.center}>
+          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
             <span className={classes.yearTag}>2018</span>
             <Pin className={classes.pinStyle} />
 
             {/* <img className={classes.pinStyle} alt="pin" src={pin} /> */}
           </Grid>
-          <Grid container item xs={10} md={9} lg={9}>
+          <Grid container item xs={10} md={6} lg={8} xl={8}>
             <span className={classes.yearTagSm}>2018</span>
             <span className={classes.eventTitle}>
               Pilot testing and refinement
@@ -238,7 +257,7 @@ export default function TimelineSection() {
               mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
               nisi tristique viverra at ac elit.
             </p>
-            <div>
+            <div className={classes.imgDiv}>
               <Pic3
                 className={`${classes.firstPic} ${classes.pic}`}
                 // src={pic3}
@@ -249,13 +268,13 @@ export default function TimelineSection() {
           </Grid>
         </Grid>
         <Grid className={classes.gridContainer} container>
-          <Grid item xs={2} md={3} lg={3} className={classes.center}>
+          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
             <span className={classes.yearTag}>2019</span>
             <Pin className={classes.pinStyle} />
 
             {/* <img className={classes.pinStyle} alt="pin" src={pin} /> */}
           </Grid>
-          <Grid item xs={10} md={9} lg={9}>
+          <Grid item xs={10} md={6} lg={8} xl={8}>
             <span className={classes.yearTagSm}>2019</span>
             <span className={classes.eventTitle}>Full program launch!</span>
             <p className={classes.eventContent}>

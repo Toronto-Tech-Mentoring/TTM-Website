@@ -72,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
             float: 'left',
             paddingRight: 'calc(100% - 200px)',
         },
+        [theme.breakpoints.down(425)]:{
+            height:'110px',
+        }
     },
     copyrightDiv: {
         float: 'left',
@@ -81,7 +84,6 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '20px',
         fontSize: '1.5vw',
         verticalAlign:'middle',
-
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '8vw',
         },
@@ -121,7 +123,6 @@ const useStyles = makeStyles((theme) => ({
             paddingbottom:'5px'
         },
     },
-
     active: {
         color: '#873FE2'
     },

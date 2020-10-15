@@ -13,7 +13,7 @@
   font-family: 'Poppins';
 }
 
-.f {
+.heart {
     position: relative;
     width: calc(18px + 1vw);
 }
@@ -51,15 +51,16 @@
     font-size: 14px;
   }
 
-  .f {
+  .heart {
     top: 15px;
     left: 10px;
   }
+
   .left{
     top: 30px;
     left: 5px;
   }
-
+  
   .right {
     left: 15px;
     top: 30px;
@@ -84,7 +85,7 @@
     padding-right: 100px;
   }
 
-  .f {
+  .heart {
     top: 5px;
     left: 10px;
   }
@@ -115,7 +116,7 @@
     line-height: 27px;
   }
 
-  .f {
+  .heart {
     top: 5px;
   }
 
@@ -147,7 +148,7 @@
     padding-right: 390px;
   }
 
-  .f {
+  .heart {
     top: 5px;
   }
 

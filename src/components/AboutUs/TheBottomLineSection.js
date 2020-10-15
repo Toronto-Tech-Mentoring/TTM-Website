@@ -106,7 +106,7 @@ export default function TheBottomLineSection() {
     const classes = useStyles();
  
     return (
-        <Grid container style={{backgroundImage: `url(${People})`}}
+        <Grid container
             className={classes.root}
             justify="center"
             alignItems="center">
