@@ -27,6 +27,7 @@ const StyledFont = styled.a`
   display: inline-block;
   padding: 0px;
   padding-right: 8px;
+  font-weight: 500
 `
 
 const StyledImg = styled.img`
