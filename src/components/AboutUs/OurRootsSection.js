@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
    
         // Large screen up
         [theme.breakpoints.up(2560)]: {
-            padding: '0 800px 50px 800px',
+            padding: '0 800px 96px 800px',
             fontSize: '25px',
         }, 
  
