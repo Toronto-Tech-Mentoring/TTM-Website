@@ -52,12 +52,12 @@ const useStyles = makeStyles((theme) => ({
         
         // Tablet to Desktop
         [theme.breakpoints.between('md', 'lg')]: {
-            padding: '0 350px 96px 350px',
+            padding: '0 500px 96px 500px',
             fontSize: '18px',  
         },   
         // // Mobile to Tablet 
         [theme.breakpoints.between('sm', 'md')]: {
-            padding: '0 200px 96px 200px',
+            padding: '0 300px 96px 300px',
             fontSize: '16px',
         },  
   
