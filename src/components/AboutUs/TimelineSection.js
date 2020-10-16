@@ -5,8 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import Pin from '../../images/about-us/timeline/pin.svg';
-import pic1 from '../../images/pngs/pic1.png';
-import pic3 from '../../images/pngs/pic3.png';
+import ImgOpt from '../../utils/ImageOptimise.js';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -167,6 +166,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TimelineSection() {
     const classes = useStyles();
+    const timelinePicLeft2017 = 'timelinePicLeft2017.jpg'
+    const timelinePicRight2017 = 'timelinePicLeft2017.jpg'
+    const timelinePicLeft2018 = 'timelinePicLeft2018.jpg'
+    const timelinePicRight2018 = 'timelinePicLeft2018.jpg'
 
     return (
       <Grid container justify="center" alignItems="center">
@@ -191,11 +194,16 @@ export default function TimelineSection() {
               harnessing technology for the betterment of civic life.
             </p>
             <div>
-              <img
+              <ImgOpt
                 className={`${classes.firstPic} ${classes.pic}`}
-                src={pic1}
+                alt="timeline pic left 2017"
+                filename= {timelinePicLeft2017}
               />
-              <img className={classes.pic} src={pic1}/>
+              <ImgOpt
+                className={classes.pic}
+                alt="timeline pic right 2017"
+                filename={timelinePicRight2017}
+              />
             </div>
           </Grid>
         </Grid>
@@ -215,11 +223,16 @@ export default function TimelineSection() {
               nisi tristique viverra at ac elit.
             </p>
             <div>
-              <img
+              <ImgOpt
                 className={`${classes.firstPic} ${classes.pic}`}
-                src={pic3}
+                alt="timeline pic left 2018"
+                filename={timelinePicLeft2018}
               />
-              <img className={classes.pic} src={pic3}/>
+              <ImgOpt
+                className={classes.pic}
+                alt="timeline pic right 2018"
+                filename={timelinePicRight2018}
+              />
             </div>
           </Grid>
         </Grid>
