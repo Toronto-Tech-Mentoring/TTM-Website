@@ -99,13 +99,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         width: '350px',
         borderRadius: '10px',
-        // Tablet Above to Laptop/ Desktop
-        [theme.breakpoints.between('sm', 'md')]: {
-            width: '47%',
-        },
-        // Tablet below to Mobile
-        [theme.breakpoints.down('sm')]: {
-            width: '35%',
+        [theme.breakpoints.down('md')]: {
+            width: '35vw',
+            maxWidth: '350px'
         },
     },
     firstPic: {
