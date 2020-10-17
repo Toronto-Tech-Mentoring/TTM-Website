@@ -18,7 +18,6 @@ export default function Computer() {
     return (
 
         <div>
-
             <svg viewBox="0 0 393 323" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M234.47 30.0559C316.056 31.8293 332.474 95.7497 355.224 155.933C375.787 210.329 389.608 250.535 330.707 284.635C267.861 321.02 165.769 338.694 100.281 305.168C26.8846 267.593 30.6922 205.541 57.7919 141.084C85.0376 76.2797 145.815 28.1288 234.47 30.0559Z" fill="#E4FFFF"/>
                 <g clip-path="url(#clip0)">

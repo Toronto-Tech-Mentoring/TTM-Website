@@ -12,7 +12,7 @@ export default function HeroText(props) {
         <h1 className={styles.hero}>{props.heroText}</h1>
         <div className={styles.bodyText}>
           {props.heroBodyText}
-          <img className={styles.f} alt="rainbow heart" src={rainbowHeart} />
+          <img className={styles.heart} alt="rainbow heart" src={rainbowHeart} />
           <img className={styles.right} alt="cheetoRight" src={cheetoRight} />
         </div>    
     </div>          
