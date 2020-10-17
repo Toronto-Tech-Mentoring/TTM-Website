@@ -7,9 +7,14 @@ import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import Pin from '../../images/about-us/timeline/pin.svg';
 import Pic1 from '../../images/about-us/timeline/pic1.svg';
 import Pic3 from '../../images/about-us/timeline/pic3.svg';
-import LeftBlob from '../../images/about-us/timeline/leftblob.svg';
-import RightBlob from '../../images/about-us/timeline/rightblob.svg';
+
 const useStyles = makeStyles((theme) => ({
+   
+    tealBackground: {
+      background: 'linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)',
+      padding: '50px 20px 0px 0px',
+
+    },
     title: {
         fontFamily: 'Josefin Sans',
         fontWeight: 600,
@@ -30,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '275px',
         marginRight: '20px',
         backgroundColor: '#873FE2',
+        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
         borderRadius: '300px',
         padding: '5px 30px',
         fontSize: '25px',
@@ -47,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px 25px',
         fontSize: '14px',
         backgroundColor: '#873FE2',
+        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
         borderRadius: '300px',
         color: 'white',
         borderStyle: 'none',
@@ -61,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
     pinStyle: {
         display: 'inline-block',
         height: 300,
-        // Tablet Above to Laptop/ Desktop
 
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
@@ -144,6 +150,7 @@ const useStyles = makeStyles((theme) => ({
         left: '350px',
         width: '350px',
         zIndex: 2,
+
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
             width: '40%',
@@ -172,12 +179,9 @@ const useStyles = makeStyles((theme) => ({
     bg2: {
         zIndex: 1,
         position: 'absolute',
-        // float:'right',
         right: '0',
         height: '209px',
         top: '20px',
-        // width: '1050%',
-
 
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
@@ -195,8 +199,8 @@ export default function TimelineSection() {
     const classes = useStyles();
 
     return (
-      <Grid container justify="center" alignItems="center">
-        <Grid item xs={12} className={classes.center}>
+      <Grid className = {classes.tealBackground} container justify="center" alignItems="center">
+        <Grid item xs={12} className={classes.center}>          
           <TitleLeft />
           <span className={classes.title}>See how we’ve grown!</span>
           <TitleRight />
@@ -211,6 +215,7 @@ export default function TimelineSection() {
             <span className={classes.eventTitle}>
               Research and program development
             </span>
+            
             <p className={classes.eventContent}>
               Toronto Tech Mentoring was born out of the Civic Tech Toronto
               space. Civic Tech is a movement that focuses on developing and
