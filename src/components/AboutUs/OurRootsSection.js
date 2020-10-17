@@ -8,15 +8,14 @@ const useStyles = makeStyles((theme) => ({
     },
     h1: {
         color: '#FFFFFF',
-        paddingTop: '40px',
+        paddingTop: '96px',
         fontWeight: '600',
-        lineHeight: '60px',
+        lineHeight: '44px',
         fontFamily: 'Josefin Sans',
 
         // Large screen
         [theme.breakpoints.up('xl')]: {
             fontSize: '50px',
-            // lineHeight: '27px',
         },
  
         // Tablet Above to Laptop/ Desktop
@@ -41,38 +40,32 @@ const useStyles = makeStyles((theme) => ({
    
         // Large screen up
         [theme.breakpoints.up(2560)]: {
-            padding: '0 800px 50px 800px',
+            padding: '0 800px 96px 800px',
             fontSize: '25px',
         }, 
  
         // Tablet Above to Desktop to large screen
         [theme.breakpoints.between("lg", 2560)]: {
-            padding: '0 550px 50px 550px',
+            padding: '0 550px 96px 550px',
             fontSize: '20px', 
         },       
         
         // Tablet to Desktop
         [theme.breakpoints.between('md', 'lg')]: {
-            padding: '0 350px 50px 350px',
+            padding: '0 500px 96px 500px',
             fontSize: '18px',  
         },   
         // // Mobile to Tablet 
         [theme.breakpoints.between('sm', 'md')]: {
-            padding: '0 200px 50px 200px',
+            padding: '0 300px 96px 300px',
             fontSize: '16px',
         },  
   
         // Small mobile to large mobile
         [theme.breakpoints.between('xs', 'sm')]: {
-            padding: '0 100px 50px 100px',
+            padding: '0 27px 96px 27px',
             fontSize: '14px',
-            // lineHeight: '24px',
         },  
-        // [theme.breakpoints.down('xs')]: {
-        //     padding: '0 20px 50px 20px',
-        //     fontSize: '12px',
-        //     // lineHeight: '24px',
-        // },
     }
 }));
 
