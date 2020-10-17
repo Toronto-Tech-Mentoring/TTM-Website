@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Hidden from '@material-ui/core/Hidden';
-import { makeStyles } from "@material-ui/core/styles";
+
 import ComputerSVG from './ComputerSVG';
 import WhyTech from './WhyTech';
 import HandsSVG from './HandsSVG';
@@ -20,7 +20,7 @@ export default function WhyTechAndValuesDrivenSection() {
             </Hidden>
             <Grid item xs={5} sm={6} md={4} lg={3} xl={3}>
                 <ComputerSVG />
-            </Grid> 
+            </Grid>
             <Hidden smUp>
                 <Grid item xs={3.5} sm={3}></Grid>
             </Hidden>

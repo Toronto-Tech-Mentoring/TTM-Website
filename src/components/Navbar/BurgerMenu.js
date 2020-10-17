@@ -1,7 +1,7 @@
 import React from "react";
 import { slide as Menu } from 'react-burger-menu';
+
 export default function BurgerMenu (props) {
- console.log(props)
 var styles = {
   bmBurgerButton: {
     position: 'fixed',
@@ -23,11 +23,11 @@ var styles = {
   bmMenuWrap: {
     position: 'fixed',
       height: '100%',
-    width: props.sideBarWidth, 
+    width: props.sideBarWidth,
   },
   bmMenu: {
     background: '#FFFFFF',
-    padding: '2.5em 1.5em 0',
+    // padding: '2.5em 1.5em 0',
     width: props.sideBarWidth,
       minWidth: '140px',
       maxWidth: '300px',
@@ -36,9 +36,8 @@ var styles = {
     marginTop: '2px',
     padding: '0px',
     boxShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
-    padding: "0",
     margin: "0",
-    
+
   },
   bmMorphShape: {
     fill: '#373a47'
