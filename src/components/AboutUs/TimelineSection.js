@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         width: '243px',
         borderRadius: '10px',
-
+        
         // Tablet Above to Laptop/ Desktop
         [theme.breakpoints.between('sm', 'md')]: {
             width: '47%',
@@ -120,6 +120,10 @@ const useStyles = makeStyles((theme) => ({
     firstPic: {
         display: 'inline-block',
         marginRight: '30px',
+
+        [theme.breakpoints.between('sm', 'md')]: {
+          marginLeft: '-20px',
+        }
     },
 
     gridContainer: {
