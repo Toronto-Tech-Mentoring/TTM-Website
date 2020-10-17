@@ -61,15 +61,6 @@ const useStyles = makeStyles((theme) => ({
             height: 200,
         },
     },
-    yearCol:{
-      textAlign:'right',
-      marginRight:'69px',
-
-      [theme.breakpoints.down('sm')]: {
-        marginRight:'0px',
-        textAlign:'center',
-    },
-    },
     eventTitle: {
         fontFamily: 'Josefin Sans',
         fontWeight: 600,
@@ -93,26 +84,16 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '31px',
         width: '80%',
         zIndex: 2,
-        [theme.breakpoints.down(768)]: {
+        [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '16px',
-            lineHeight: '27px',
         },
         // Tablet below to Mobile
-        [theme.breakpoints.down(425)]: {
+        [theme.breakpoints.down('sm')]: {
             fontSize: '12px',
-            lineHeight: '20px',
-            height:'70px',
         },
     },
     center: {
         textAlign: 'center',
-    },
-    imgDiv:{
-      display:'flex',
-      alignItems:'space-between',
-      [theme.breakpoints.down('sm')]: {
-        height: '120px',
-    },
     },
     pic: {
         display: 'inline-block',
@@ -194,11 +175,11 @@ export default function TimelineSection() {
           <TitleRight />
         </Grid>
         <Grid className={classes.gridContainer} container item xs={12}>
-          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
+          <Grid item xs={2} md={3} lg={3} className={classes.center}>
             <span className={classes.yearTag}>2017</span>
             <Pin className={classes.pinStyle} />
           </Grid>
-          <Grid container item xs={10} md={6} lg={8} xl={8}>
+          <Grid container item xs={10} md={9} lg={9}>
             <span className={classes.yearTagSm}>2017</span>
             <span className={classes.eventTitle}>
               Research and program development
@@ -208,6 +189,7 @@ export default function TimelineSection() {
               space. Civic Tech is a movement that focuses on developing and
               harnessing technology for the betterment of civic life.
             </p>
+            <div>
               <ImgOpt
                 className={`${classes.firstPic} ${classes.pic}`}
                 alt="timeline pic left 2017"
@@ -221,12 +203,12 @@ export default function TimelineSection() {
             </div>
           </Grid>
         </Grid>
-        <Grid className={classes.gridContainer} container>
-          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
+        <Grid className={classes.gridContainer} container xs={12}>
+          <Grid item xs={2} md={3} lg={3} className={classes.center}>
             <span className={classes.yearTag}>2018</span>
             <Pin className={classes.pinStyle} />
           </Grid>
-          <Grid container item xs={10} md={6} lg={8} xl={8}>
+          <Grid container item xs={10} md={9} lg={9}>
             <span className={classes.yearTagSm}>2018</span>
             <span className={classes.eventTitle}>
               Pilot testing and refinement
@@ -236,6 +218,7 @@ export default function TimelineSection() {
               mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
               nisi tristique viverra at ac elit.
             </p>
+            <div>
               <ImgOpt
                 className={`${classes.firstPic} ${classes.pic}`}
                 alt="timeline pic left 2018"
@@ -249,12 +232,12 @@ export default function TimelineSection() {
             </div>
           </Grid>
         </Grid>
-        <Grid className={classes.gridContainer} container>
-          <Grid item xs={2} md={3} lg={3} xl={3} className={classes.yearCol}>
+        <Grid className={classes.gridContainer} container xs={12}>
+          <Grid item xs={2} md={3} lg={3} className={classes.center}>
             <span className={classes.yearTag}>2019</span>
             <Pin className={classes.pinStyle} />
           </Grid>
-          <Grid item xs={10} md={6} lg={8} xl={8}>
+          <Grid item xs={10} md={9} lg={9}>
             <span className={classes.yearTagSm}>2019</span>
             <span className={classes.eventTitle}>Full program launch!</span>
             <p className={classes.eventContent}>
