@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Josefin Sans',
         color: 'black',
-        fontSize: '22px',
+        fontSize: '18px',
         lineHeight: '38px',
         fontWeight: 600,
         paddingBottom: 50, 
