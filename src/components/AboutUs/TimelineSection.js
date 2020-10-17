@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         borderStyle: 'none',
         fontFamily: 'Futura',
+        fontStyle: 'normal',
+        fontWeight: '500',
 
         [theme.breakpoints.down('sm')]: {
             display: 'none',
@@ -49,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         borderStyle: 'none',
         fontFamily: 'Futura',
+        fontWeight: '500',
         display: 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'block',
@@ -93,7 +96,10 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.between('sm', 'md')]: {
             fontSize: '16px',
         },
-
+        //Tablet Above to Laptop/ Desktop
+        [theme.breakpoints.up('lg')]: {
+        marginRight: '450px',
+        },
         // Tablet below to Mobile
         [theme.breakpoints.down('sm')]: {
             fontSize: '12px',
@@ -101,6 +107,17 @@ const useStyles = makeStyles((theme) => ({
     },
     center: {
         textAlign: 'center',
+    },
+    firstPic: {
+      display: 'inline-block',
+      marginRight: '50px',
+      [theme.breakpoints.between('sm', 'md')]: {
+        marginLeft: '-20px',
+        marginRight: '10px',
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginLeft: '0px',
+      },
     },
     pic: {
         display: 'inline-block',
@@ -117,15 +134,6 @@ const useStyles = makeStyles((theme) => ({
             width: '35%',
         },
     },
-    firstPic: {
-        display: 'inline-block',
-        marginRight: '30px',
-
-        [theme.breakpoints.between('sm', 'md')]: {
-          marginLeft: '-20px',
-        }
-    },
-
     gridContainer: {
         marginTop: '50px',
     },
@@ -250,7 +258,7 @@ export default function TimelineSection() {
             <p className={classes.eventContent}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
               mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
-              nisi tristique viverra at ac elit.
+              nisi.
             </p>
             <Grid item xs={12}>
             </Grid>
