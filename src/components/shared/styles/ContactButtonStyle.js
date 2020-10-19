@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         color: 'white',
         borderStyle: 'none',
+        fontFamily: 'Poppins',
         [theme.breakpoints.down('sm')]: {
             marginTop: '30px',
             marginBottom: '50px',

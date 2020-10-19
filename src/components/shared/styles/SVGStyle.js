@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
-            // width: '100%'
         },
     }
 }));
