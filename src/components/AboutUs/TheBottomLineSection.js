@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TheBottomLineSection() {
     const classes = useStyles();
-
+ 
     return (
         <Grid container
             className={classes.root}
