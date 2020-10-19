@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     textBox: {
-        padding: '0px 10%',
+        padding: '0px 16%',
         [theme.breakpoints.down('sm')]: {
             paddingTop: '50px',
         }
@@ -25,11 +25,13 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Josefin Sans',
         color: 'black',
-        fontSize: '22px',
+        fontSize: '18px',
         lineHeight: '38px',
         fontWeight: 600,
+        paddingBottom: 50, 
         textDecoration: 'underline',
         textDecorationColor: '#FF7500',
+        textUnderlinePosition: 'under',
         [theme.breakpoints.down('sm')]: {
             margin: '0px 20px'
         }
@@ -65,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         color: 'white',
         borderStyle: 'none',
+        fontFamily: 'Poppins',
         [theme.breakpoints.down('sm')]: {
             marginTop: '30px',
             marginBottom: '50px',
@@ -79,7 +82,6 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.up('sm')]: {
             padding: '10%',
-            // width: '100%'
         },
     },
     hideTitleStyle: {
@@ -94,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     contentLeft: {
-        margin:'5px 10px 0px 0px',
+        margin: '70px 5px 0px -40px',
         float:'left',
         [theme.breakpoints.down('xs')]: {
             display: 'none',
