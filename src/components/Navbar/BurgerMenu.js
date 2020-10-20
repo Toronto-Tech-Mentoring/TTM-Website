@@ -5,10 +5,10 @@ export default function BurgerMenu(props) {
   var styles = {
     bmBurgerButton: {
       position: 'fixed',
-      width: '36px',
-      height: '30px',
+      width: 'calc(1.4vw + 19px)',
+      height: 'calc(0.7vw + 15px)',
       left: props.burgerMenuButtonPosition,
-      top: '10px'
+      top: '16px'
     },
     bmBurgerBars: {
       background: '#373a47'

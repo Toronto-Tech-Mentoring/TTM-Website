@@ -8,8 +8,7 @@ import Logo from  "./Logo"
 import "./NavAccessibility.css"
 
 
-/** sizing  navbar padding based on window width**/
- 
+/** sizing  navbar padding based on viewport**/
 
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
