@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useStyles } from './styles/ContactButtonStyle'
+import { useStyles } from './ContactButtonStyle'
 
 
 export default function ContactButton(props){

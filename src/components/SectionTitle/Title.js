@@ -1,7 +1,7 @@
 import React from "react";
 import Hidden from '@material-ui/core/Hidden';
 
-import { useStyles } from './styles/TitleStyle.js';
+import { useStyles } from './TitleStyle.js';
 import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 

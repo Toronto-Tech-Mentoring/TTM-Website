@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useStyles } from './styles/QuestionStyle'
+import { useStyles } from './QuestionStyle'
 
 export default function QuestionText(props){
     const classes = useStyles();

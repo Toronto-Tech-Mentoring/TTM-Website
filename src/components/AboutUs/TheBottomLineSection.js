@@ -2,14 +2,14 @@ import React from "react";
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 
-import GridContainer from '../shared/GridContainer'
-import TextBox from '../shared/TextBox'
-import Title from '../shared/Title'
-import PContent from '../shared/ParagraphedContent'
-import Question from '../shared/Question'
-import ContactButton from '../shared/ContactButton'
+import GridContainer from '../GridContainer/GridContainer'
+import TextBox from '../TextBox/TextBox'
+import Title from '../SectionTitle/Title'
+import PContent from '../ParagraphedText/ParagraphedContent'
+import Question from '../BoldedHeaderText/Question'
+import ContactButton from '../Button/ContactButton'
 import People from '../../images/about-us/bottom-line/people.svg';
-import SVGLoad from '../shared/SVG'
+import SVGLoad from '../SVGLoad/SVG'
 
 export default function TheBottomLineSection() {
 

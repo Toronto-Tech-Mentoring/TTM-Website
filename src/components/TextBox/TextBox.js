@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useStyles } from './styles/TextBoxStyle'
+import { useStyles } from './TextBoxStyle'
 
 export default function TextBox(props){
     const classes = useStyles();

@@ -4,11 +4,11 @@ import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 
-import GridContainer from '../shared/GridContainer'
-import TextBox from '../shared/TextBox'
-import Title from '../shared/Title'
-import PContent from '../shared/ParagraphedContent'
-import SVGLoad from '../shared/SVG'
+import GridContainer from '../GridContainer/GridContainer'
+import TextBox from '../TextBox/TextBox'
+import Title from '../SectionTitle/Title'
+import PContent from '../ParagraphedText/ParagraphedContent'
+import SVGLoad from '../SVGLoad/SVG'
 import DataAnalyse from '../../images/partners/vital-role/data_analyse.svg';
 
 export default function TheBottomLineSection() {

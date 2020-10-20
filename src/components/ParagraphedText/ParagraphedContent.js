@@ -1,7 +1,7 @@
 import React from 'react';
 import Hidden from '@material-ui/core/Hidden';
 
-import { useStyles } from './styles/ParagraphedContentStyle'
+import { useStyles } from './ParagraphedContentStyle'
 import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
 import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
 
