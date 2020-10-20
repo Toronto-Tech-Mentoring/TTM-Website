@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '999',
         verticalAlign: 'middle',
         borderTop: '1px solid #C4C4C4',
-        marginTop:'-4px',
+        marginTop: '-4px',
     },
     footerUl: {
         display: 'inline-block',
@@ -21,12 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.up('lg')]: {
             paddingRight: '50px',
-            fontSize: '22px',
         },
         [theme.breakpoints.down('md')]: {
             paddingRight: '10px',
         },
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             display: 'block',
             margin: '20px',
             paddingLeft: '10px',
@@ -34,16 +33,22 @@ const useStyles = makeStyles((theme) => ({
     },
     iconUl: {
         display: 'inline-block',
-        paddingRight: '40px',
+        paddingRight: '15px',
         height: '100%',
         marginTop: '0px',
         marginBottom: '10px',
         [theme.breakpoints.up('lg')]: {
             paddingRight: '80px',
         },
-        [theme.breakpoints.down(750)]: {
-            paddingLeft: 'calc(( 100% - 187px - 274px - 180px ) * 0.2)',
+        [theme.breakpoints.down(761)]: {
+            paddingLeft: '20px',
             paddingRight: '0px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            paddingLeft: '0px',
+            paddingRight: '0px',
+            marginTop:'5px',
+            marginBottom:'0px',
         },
     },
     footerLi: {
@@ -53,27 +58,32 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             padding: '0px 5px',
         },
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             display: 'block',
         },
     },
     linkText: {
         color: 'black',
         fontFamily: 'Poppins',
-        fontSize: '1.5vw',
+        fontSize: '16px',
         textDecoration: 'none',
-        [theme.breakpoints.down(750)]: {
-            fontSize: '2vw',
+        [theme.breakpoints.down(1024)]: {
+            fontSize: '12px',
+            lineHeight:'27px',
+        },
+        [theme.breakpoints.down(761)]: {
+            fontSize: '14px',
+            lineHeight:'24px',
         },
     },
     footerLinks: {
         float: 'right',
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             float: 'left',
             paddingRight: 'calc(100% - 200px)',
         },
-        [theme.breakpoints.down(425)]:{
-            height:'110px',
+        [theme.breakpoints.down(426)]: {
+            height: '135px',
         }
     },
     copyrightDiv: {
@@ -82,31 +92,34 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         alignItems: 'center',
         paddingTop: '20px',
-        fontSize: '1.5vw',
-        verticalAlign:'middle',
+        verticalAlign: 'middle',
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '8vw',
         },
-        [theme.breakpoints.down('md')]: {
-            paddingLeft: '6vw',
+        [theme.breakpoints.down(1024)]: {
+            paddingLeft: '3vw',
+            paddingTop: '0px',
         },
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             paddingLeft: '30px',
             margin: '0px',
             paddingTop: '0px',
-            width:'90%',
+            width: '90%',
         },
     },
     iconLi: {
         display: 'inline-block',
         padding: '12px 10px 0px 10px',
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             padding: '10px 5px 0px 5px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '10px 3px 0px 3px',
         },
     },
     iconDiv: {
         float: 'right',
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             display: 'none'
         },
     },
@@ -117,10 +130,10 @@ const useStyles = makeStyles((theme) => ({
             width: '50px',
             height: '50px'
         },
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             width: '25px',
             height: '25px',
-            paddingbottom:'5px'
+            paddingbottom: '5px'
         },
     },
     active: {
@@ -128,9 +141,9 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         [theme.breakpoints.up('lg')]: {
-            fontSize: '9vw',
+            fontSize: '20px',
         },
-        [theme.breakpoints.down(750)]: {
+        [theme.breakpoints.down(761)]: {
             fontSize: '10px',
         },
     },
@@ -140,18 +153,23 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     copyright: {
-        fontSize: '1.5vw',
-        [theme.breakpoints.down(750)]: {
+        fontSize: '18px',
+        lineHeight:'31px',
+        [theme.breakpoints.down(1024)]: {
             position: 'relative',
             top: '15px',
-            fontSize: '2vw',
+            fontSize: '14px',
+        },
+        [theme.breakpoints.down(761)]: {
+            fontSize: '14px',
+            lineHeight:'24px',
         },
     },
     hideMobileIcon: {
-        display:'none',
-        [theme.breakpoints.down(750)]: {
+        display: 'none',
+        [theme.breakpoints.down(761)]: {
             display: 'inline-block',
-            float:'right',
+            float: 'right',
         },
     }
 }));
