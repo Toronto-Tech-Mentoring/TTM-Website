@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '42px',
 
         // Tablet 
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(1024)]: {
             fontSize: '22px',
             lineHeight: '38px',
         },
@@ -33,11 +33,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     cheeto: {
+        height:'50px',
         display: 'none',
-        visibility:'hidden',
         margin: '0px 30px',
         // Tablet 
-        [theme.breakpoints.up(800)]: {
+        [theme.breakpoints.up(1024)]: {
             display: 'inline-block',
         },
     },
@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '792px',
         margin: '0 auto',
         // Tablet 
-        [theme.breakpoints.down(800)]: {
+        [theme.breakpoints.down(1024)]: {
             width: '535px',
         },
         // Mobile 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             margin:'0px 15px',
             width:'auto',
         },
@@ -63,14 +63,14 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
 
         // Tablet 
-        [theme.breakpoints.down(800)]: {
+        [theme.breakpoints.down(1024)]: {
             fontSize: '16px',
             lineHeight: '27px',
             width: 'auto',
         },
 
         // Mobile 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             fontSize: '14px',
             lineHeight: '24px',
             width: 'auto',
@@ -89,19 +89,19 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
 
         // Tablet 
-        [theme.breakpoints.down(800)]: {
+        [theme.breakpoints.down(1024)]: {
             width: '143px',
             height: '40px',
-            margin: '62px 20% 110px 20%',
+            margin: '48px 20% 96px 20%',
             fontSize: '16px',
             lineHeight: '27px',
         },
 
         // Mobile 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             width: '120px',
             height: '32px',
-            margin: '58px 20% 74px 20%',
+            margin: '48px 20% 64px 20%',
             fontSize: '14px',
             lineHeight: '24px',
         },
@@ -114,11 +114,11 @@ export default function SupportUsSection() {
     return (
         <div className={classes.divStyle}>
             <h1 className={classes.title}>Support Us</h1>
-            <CheetoLeft className={classes.cheeto} />
+            <CheetoLeft customClass={classes.cheeto} />
             <div className={classes.contentDiv}>
                 <span className={classes.content}>Make a donation to help give underprivledged LGBTQ youth an opportunity to succeed. If you are unable to donate at this time, but want to help us in our mission, we are always looking for great volunteers to help our programs continue functioning.</span>
             </div>
-            <CheetoRight className={classes.cheeto} />
+            <CheetoRight customClass={classes.cheeto} />
             <CustomButton text={"Volunteer"} customClass={classes.button} />
         </div>
     )
