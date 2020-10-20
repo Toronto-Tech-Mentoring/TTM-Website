@@ -80,7 +80,7 @@ import "./NavAccessibility.css"
       heartWidth=15;
     } else if(windowSize.width <=400){
       navbarSideMargin = "calc(1.8vw + 9px)";
-      navbarLeftMargin = "calc(51vw - 125px)";
+      navbarLeftMargin = "calc(52vw - 110px)";
       navbarHeight = 48;
       navitemMaxWidth = 'none'
       logoWidth = 30;
