@@ -120,7 +120,7 @@ export default function ContactUsSection() {
     const classes = useStyles();
 
     return (
-        <div style={{marginTop: '70px'}}>
+        <div className={classes.divStyle}>
             <div>
                 <CheetoLeft className={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
                 <h2 className={classes.h2Text}> 
