@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-//
+
 import CustomButton from '../CustomButton';
 import { CheetoLeft, CheetoRight } from '../Cheetos';
 
@@ -16,24 +16,19 @@ const useStyles = makeStyles(theme => ({
         height: '50px',
         width: '180px',
 
-         // Screen size: Tablet To Laptop
-        [theme.breakpoints.between('sm', 'md')]: {
-
-        },
- 
         // Screen size: Mobile to Tablet
         [theme.breakpoints.between('xs', 'sm')]: {
             fontSize: '16px',
             height: '40px',
             width: '153px',
-        },   
+        },
 
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
             fontSize: '14px',
             height: '32px',
-            width: '120px', 
-        }, 
+            width: '120px',
+        },
     },
 
     h2Text: {
@@ -65,68 +60,74 @@ const useStyles = makeStyles(theme => ({
             fontSize: '22px',
             maxWidth: '490px',
             lineHeight: '38px',
-        },   
+        },
 
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
             fontSize: '18px',
             maxWidth: '240px',
-        },  
+        },
     },
 
     cLeft: {
         position: 'relative',
- 
+
         // Screen size: Mobile to Tablet
         [theme.breakpoints.between('xs', 'sm')]: {
             top: '35px',
             left: 'calc(50% - 300px)',
-        },   
+        },
 
         // Screen size: Mobile below
         [theme.breakpoints.down('xs')]: {
             top: '65px',
             left: 'calc(50% - 150px)',
-        },   
-    }, 
-    
+        },
+    },
+
     cRight: {
         position: 'relative',
         float: 'right',
 
-       // Screen size: Mobile to Tablet
-       [theme.breakpoints.between('xs', 'sm')]: {
+        // Screen size: Mobile to Tablet
+        [theme.breakpoints.between('xs', 'sm')]: {
             bottom: '65px',
             right: 'calc(50% - 300px)',
-       },   
+        },
 
-       // Screen size: Mobile below
-       [theme.breakpoints.down('xs')]: {
+        // Screen size: Mobile below
+        [theme.breakpoints.down('xs')]: {
             bottom: '118px',
             right: 'calc(50% - 150px)',
-       },   
+        },
     },
-
     noDisplayOnBigScreen: {
         [theme.breakpoints.up('md')]: {
             display: 'none'
-         },
+        },
     },
+    divStyle: {
+        marginTop: '96px',
+        // Screen size: Mobile below
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '64px',
+        },
+    }
 }))
 
-export default function ContactUsSection(){
+export default function ContactUsSection() {
     const classes = useStyles();
- 
+
     return (
         <div>
-            <div style={{display: 'inline'}}>
+            <div className={classes.divStyle}>
                 <CheetoLeft customClass={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
                 <h2 className={classes.h2Text}>
                     If you have a way to help that isn’t listed above, or have any questions about donating.
                 </h2>
-                <CheetoRight customClass={`${classes.cRight} ${classes.noDisplayOnBigScreen}`}/>
+                <CheetoRight customClass={`${classes.cRight} ${classes.noDisplayOnBigScreen}`} />
             </div>
-            <div style={{textAlign: 'center', marginTop: '45px', marginBottom: '90px'}}>
+            <div style={{ textAlign: 'center', marginTop: '45px', marginBottom: '90px' }}>
                 <CustomButton text={"Contact Us"} customClass={classes.contactButton} />
             </div>
         </div>
