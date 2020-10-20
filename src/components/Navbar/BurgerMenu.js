@@ -53,7 +53,7 @@ export default function BurgerMenu(props) {
       outline: "none",
     },
     bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)'
+      background: 'rgba(0, 0, 0, 0.2)'
     }
   }
 

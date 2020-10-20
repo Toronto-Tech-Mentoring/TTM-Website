@@ -79,7 +79,7 @@ import "./NavAccessibility.css"
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
-      navbarSideMargin = "14px"; // small screen
+      navbarSideMargin = "calc(1.8vw + 9px)";
       navbarLeftMargin = "calc(51vw - 125px)";
       navbarHeight = 48;
       navitemMaxWidth = 'none'
