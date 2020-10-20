@@ -1,5 +1,6 @@
-import React from "react";
+import React from "react"
 
+import SupportUsSection from './SupportUsSection';
 import ContactUsSection from './ContactUsSection';
 
 export default function Sponsors() {
@@ -7,6 +8,7 @@ export default function Sponsors() {
     <div>
        <h1>Sponsors page</h1>
        <ContactUsSection />
+       <SupportUsSection />
     </div>
   )
 }
