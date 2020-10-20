@@ -19,6 +19,11 @@ export default function TheBottomLineSection() {
 
     return (
         <GridContainer>
+            <Grid item xs={12}>
+                <Container maxWidth="large">
+                    <Typography component="div" style={{ height: '10vh' }} />
+                </Container>
+            </Grid>
             <Grid item xs={12} md={6}>
             <TextBox>
                 <Title title={title} style={{'text-align':'left'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
@@ -39,7 +44,7 @@ export default function TheBottomLineSection() {
             </Hidden>
             <Grid item xs={12}>
                 <Container maxWidth="large">
-                    <Typography component="div" style={{ height: '8vh' }} />
+                    <Typography component="div" style={{ height: '10vh' }} />
                 </Container>
             </Grid>
         </GridContainer>

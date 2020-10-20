@@ -26,7 +26,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /(skyline|timeline|bottom-line|partner-organization|vital-role)/,
+          include: /(skyline|timeline|bottom-line|partner-organization|vital-role|cheetohs)/,
         },
       },
     },

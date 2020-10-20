@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'underline',
         textDecorationColor: '#FF7500',
         textUnderlinePosition: 'under',
-        marginLeft: '1.3em',
+        marginLeft: '2.5vw',
         [theme.breakpoints.down('sm')]: {
             fontSize: '20px',
             marginLeft: '0'
