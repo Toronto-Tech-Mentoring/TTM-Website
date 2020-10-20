@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "./HeroText.module.css"
 import rainbowHeart from "../../images/rainbowHeart.svg"
-import cheetoLeft from "../../images/cheetos/cheetoLeft.svg"
-import cheetoRight from "../../images/cheetos/cheetoRight.svg"
+import cheetoLeft from "../../images/cheetohs/cheetoLeft.svg"
+import cheetoRight from "../../images/cheetohs/cheetoRight.svg"
 
 
 export default function HeroText(props) {
@@ -14,7 +14,7 @@ export default function HeroText(props) {
           {props.heroBodyText}
           <img className={styles.heart} alt="rainbow heart" src={rainbowHeart} />
           <img className={styles.right} alt="cheetoRight" src={cheetoRight} />
-        </div>    
-    </div>          
-  )   
+        </div>
+    </div>
+  )
 }

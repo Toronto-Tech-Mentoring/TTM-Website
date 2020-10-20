@@ -20,7 +20,7 @@ export default function WhyTechAndValuesDrivenSection() {
             </Hidden>
             <Grid item xs={5} sm={6} md={4} lg={3} xl={3}>
                 <ComputerSVG />
-            </Grid> 
+            </Grid>
             <Hidden smUp>
                 <Grid item xs={'auto'} sm={3}></Grid>
             </Hidden>

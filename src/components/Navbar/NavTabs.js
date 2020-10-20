@@ -8,8 +8,7 @@ import Logo from  "./Logo"
 import "./NavAccessibility.css"
 
 
-/** sizing  navbar padding based on window width**/
- 
+/** sizing  navbar padding based on viewport**/
 
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
@@ -79,13 +78,13 @@ import "./NavAccessibility.css"
       buttonFontSize = 14;
       heartWidth=15;
     } else if(windowSize.width <=400){
-      navbarSideMargin = "14px"; // small screen
-      navbarLeftMargin = "calc(51vw - 125px)";
+      navbarSideMargin = "calc(1.8vw + 9px)";
+      navbarLeftMargin = "calc(52vw - 110px)";
       navbarHeight = 48;
       navitemMaxWidth = 'none'
       logoWidth = 30;
       logoFontSize = 12;
-      logoTextMaxWidth = 0.21*windowSize.width+10;
+      logoTextMaxWidth = 0.22*windowSize.width+10;
       buttonHeight = 32;
       buttonWidth = 96;
       navtabsDisplay = "none";
