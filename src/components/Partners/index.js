@@ -1,4 +1,6 @@
 import React from "react"
+
+import VitalRole from "./VitalRole"
 import PartnerCards from "./PartnerCards"
 import LastSection from "./LastSection"
 import HeroText from "../HeroText/HeroText"
@@ -13,17 +15,7 @@ export default function Partners() {
         heroBodyText="The Accelerator Project is an entirely volunteer-run organization. All donations go directly into offering tech mentoring to young people who have faced adversity."
       />
       <SkylineHeaderSVG />
-      <p
-        style={{
-          padding: "10px",
-          margin: "20px",
-          backgroundColor: "yellow",
-          textAlign: "center",
-        }}
-      >
-        I am <strong>PARTNERS</strong> page's body.
-      </p>
-
+      <VitalRole />
       <PartnerCards />
       <LastSection />
     </div>

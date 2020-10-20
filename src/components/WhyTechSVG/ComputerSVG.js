@@ -1,19 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-
-    root: {
-        [theme.breakpoints.down('sm')]: {
-            height:'200px'
-        },
-    },
-
-}));
 
 export default function Computer() {
-
-    const classes = useStyles();
 
     return (
 
