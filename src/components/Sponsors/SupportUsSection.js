@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import CheetoLeft from '../Cheetos/cheetoLeft';
-import CheetoRight from '../Cheetos/cheetoRight';
+import { CheetoLeft, CheetoRight } from '../Cheetos';
+import CustomButton from '../CustomButton';
 
 const useStyles = makeStyles((theme) => ({
     divStyle: {
@@ -33,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     cheeto: {
-        display: 'inline-block',
+        display: 'none',
+        visibility:'hidden',
         margin: '0px 30px',
         // Tablet 
-        [theme.breakpoints.down(769)]: {
-            display:'none',
+        [theme.breakpoints.up(800)]: {
+            display: 'inline-block',
         },
     },
     contentDiv: {
@@ -45,13 +46,13 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '792px',
         margin: '0 auto',
         // Tablet 
-        [theme.breakpoints.down(769)]: {
-            // margin:'0px 110px',
-            width:'535px',
+        [theme.breakpoints.down(800)]: {
+            width: '535px',
         },
         // Mobile 
         [theme.breakpoints.down('sm')]: {
-            // margin:'0px 15px',
+            margin:'0px 15px',
+            width:'auto',
         },
     },
     content: {
@@ -62,24 +63,24 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
 
         // Tablet 
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(800)]: {
             fontSize: '16px',
             lineHeight: '27px',
-            width:'auto',
+            width: 'auto',
         },
 
         // Mobile 
         [theme.breakpoints.down('sm')]: {
             fontSize: '14px',
             lineHeight: '24px',
-            width:'auto',
+            width: 'auto',
         },
     },
     button: {
         width: '180px',
         height: '59px',
         background: '#FFFFFF',
-        margin: '40px 20% 96px 20%',
+        margin: '40px calc((100% - 792px) * 0.5) 96px calc((100% - 792px) * 0.5)',
         borderRadius: '30px',
         fontFamily: 'Poppins',
         color: '#873FE2',
@@ -88,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
 
         // Tablet 
-        [theme.breakpoints.down(769)]: {
+        [theme.breakpoints.down(800)]: {
             width: '143px',
             height: '40px',
             margin: '62px 20% 110px 20%',
@@ -118,7 +119,7 @@ export default function SupportUsSection() {
                 <span className={classes.content}>Make a donation to help give underprivledged LGBTQ youth an opportunity to succeed. If you are unable to donate at this time, but want to help us in our mission, we are always looking for great volunteers to help our programs continue functioning.</span>
             </div>
             <CheetoRight className={classes.cheeto} />
-            <button className={classes.button}>Volunteers</button>
+            <CustomButton text={"Volunteer"} customClass={classes.button} />
         </div>
     )
 };
