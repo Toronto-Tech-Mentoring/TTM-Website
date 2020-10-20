@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         paddingTop: '96px',
         marginBottom: '16px',
-        fontFamily: 'Futura',
+        fontFamily: 'Josefin Sans',
         fontWeight: 500,
         fontSize: '28px',
         lineHeight: '42px',
@@ -115,6 +115,7 @@ export default function SupportUsSection() {
     return (
         <div className={classes.divStyle}>
             <h1 className={classes.title}>Support Us</h1>
+            <CheetoLeft className={classes.cheeto} />
             <div className={classes.contentDiv}>
                 <span className={classes.content}>Make a donation to help give underprivledged LGBTQ youth an opportunity to succeed. If you are unable to donate at this time, but want to help us in our mission, we are always looking for great volunteers to help our programs continue functioning.</span>
             </div>
