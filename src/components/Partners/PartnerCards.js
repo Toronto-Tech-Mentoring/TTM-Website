@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import background1 from '../../images/partners/partner-organization/background1.svg';
 import background2 from '../../images/partners/partner-organization/background2.svg';
 import background3 from '../../images/partners/partner-organization/background3.svg';
-import helping from '../../images/partners/partner-organization/helping.svg';
-import house from '../../images/partners/partner-organization/house.svg';
-import training from '../../images/partners/partner-organization/training.svg';
+import HelpingSVG from '../../images/partners/partner-organization/helping.svg';
+import HouseSVG from '../../images/partners/partner-organization/house.svg';
+import TrainingSVG from '../../images/partners/partner-organization/training.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -166,7 +166,7 @@ export default function Cards() {
             <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg1}`} style={{ backgroundImage: `url(${background1}` }}>
-                        <img className={classes.help} alt="helping each other" src={helping} />
+                        <HelpingSVG className={classes.help} alt="helping each other" />
                     </div>
                     <CardContent>
                         <p className={classes.contents}>
@@ -178,7 +178,7 @@ export default function Cards() {
             <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg2}`} style={{ backgroundImage: `url(${background2}` }}>
-                        <img className={classes.house} alt="house and tree" src={house} />
+                        <HouseSVG className={classes.house} alt="house and tree" />
                     </div>
                     <CardContent>
                         <p className={classes.contents}>
@@ -190,7 +190,7 @@ export default function Cards() {
             <Grid item xs={12} sm={4} md={3} lg={3} xl={2}>
                 <Card className={classes.card}>
                     <div className={`${classes.imgDiv}  ${classes.bg3}`} style={{ backgroundImage: `url(${background3}` }}>
-                        <img className={classes.training} alt="training support" src={training} />
+                        <TrainingSVG className={classes.training} alt="training support" />
                     </div>
                     <CardContent>
                         <p className={classes.contents}>
