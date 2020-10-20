@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { CheetoLeft, CheetoRight } from '../Cheetos';
+import CheetoLeft from '../../images/cheetohs/cheetoLeft.svg';
+import CheetoRight from '../../images/cheetohs/cheetoRight.svg';
 import CustomButton from '../CustomButton';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFFFFF',
         paddingTop: '96px',
         marginBottom: '16px',
-        fontFamily: 'Futura',
+        fontFamily: 'Josefin Sans',
         fontWeight: 500,
         fontSize: '28px',
         lineHeight: '42px',
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     cheeto: {
-        height:'50px',
+        height: '50px',
         display: 'none',
         margin: '0px 30px',
         // Tablet 
@@ -51,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
         },
         // Mobile 
         [theme.breakpoints.down('xs')]: {
-            margin:'0px 15px',
-            width:'auto',
+            margin: '0px 15px',
+            width: 'auto',
         },
     },
     content: {
@@ -114,11 +115,11 @@ export default function SupportUsSection() {
     return (
         <div className={classes.divStyle}>
             <h1 className={classes.title}>Support Us</h1>
-            <CheetoLeft customClass={classes.cheeto} />
+            <CheetoLeft className={classes.cheeto} />
             <div className={classes.contentDiv}>
                 <span className={classes.content}>Make a donation to help give underprivledged LGBTQ youth an opportunity to succeed. If you are unable to donate at this time, but want to help us in our mission, we are always looking for great volunteers to help our programs continue functioning.</span>
             </div>
-            <CheetoRight customClass={classes.cheeto} />
+            <CheetoRight className={classes.cheeto} />
             <CustomButton text={"Volunteer"} customClass={classes.button} />
         </div>
     )
