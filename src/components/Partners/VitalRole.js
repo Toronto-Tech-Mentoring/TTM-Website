@@ -11,7 +11,7 @@ import PContent from '../ParagraphedText/ParagraphedContent'
 import SVGLoad from '../SVGLoad/SVG'
 import DataAnalyse from '../../images/partners/vital-role/data_analyse.svg';
 
-export default function TheBottomLineSection() {
+export default function VitalRole() {
 
     const title = "The vital role out partners play:"
     const content1 = "A learning environment requires safety, and stability. Each client that comes through our program has faced, and often still is facing, significant adversity."

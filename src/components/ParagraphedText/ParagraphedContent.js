@@ -2,21 +2,22 @@ import React from 'react';
 import Hidden from '@material-ui/core/Hidden';
 
 import { useStyles } from './ParagraphedContentStyle'
-import ContentLeft from '../../images/about-us/bottom-line/contentLeft.svg';
-import ContentRight from '../../images/about-us/bottom-line/contentRight.svg';
+import CheetohLeft from '../../images/cheetohs/cheetohLeft.svg';
+import CheetohRight from '../../images/cheetohs/cheetohRight.svg';
 
 export default function ParagraphedContent(props){
     const classes = useStyles();
     let splitContent = props.content.split('\n').map((item, i) => <p key={i}>{item}</p>);
+    const extra = props.extra
 
     return(
         <div >
             <Hidden  only={props.hideCheetohs}>
-                <ContentRight className={classes.contentDecorationRight} alt="content decoration right"/>
+                <CheetohRight className={classes.cheetohRight} alt="content decoration right"/>
             </Hidden>
-            <p className={classes.contents} style={props.style}>{splitContent}</p>
+            <p className={classes.contents} style={props.style}>{splitContent}{extra}</p>
             <Hidden  only={props.hideCheetohs}>
-                <ContentLeft className={classes.contentDecorationLeft} alt="content decoration left"/>
+                <CheetohLeft className={classes.cheetohLeft} alt="content decoration left"/>
             </Hidden>
         </div>
     )

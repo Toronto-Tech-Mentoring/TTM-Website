@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    question: {
+    headerText: {
         fontFamily: 'Josefin Sans',
         color: 'black',
         fontWeight: 600,

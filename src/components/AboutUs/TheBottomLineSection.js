@@ -6,7 +6,7 @@ import GridContainer from '../GridContainer/GridContainer'
 import TextBox from '../TextBox/TextBox'
 import Title from '../SectionTitle/Title'
 import PContent from '../ParagraphedText/ParagraphedContent'
-import Question from '../BoldedHeaderText/Question'
+import Question from '../BoldedHeaderText/BoldedHeader'
 import ContactButton from '../Button/ContactButton'
 import People from '../../images/about-us/bottom-line/people.svg';
 import SVGLoad from '../SVGLoad/SVG'
@@ -25,7 +25,7 @@ export default function TheBottomLineSection() {
                 <Title title={title} hideCheetohs={["lg","md"]}/>
                 <PContent content={content} hideCheetohs={["sm","xs"]}/>
                 <Hidden smDown>
-                    <Question question={question}/>
+                    <Question headerText={question}/>
                     <ContactButton buttonText={buttonText}/>
                 </Hidden>
             </TextBox>
@@ -33,7 +33,7 @@ export default function TheBottomLineSection() {
             <Grid item xs={12} md={6}>
                 <SVGLoad image={People} alt="peopleSVG" />
                 <Hidden mdUp>
-                    <Question question={question}/>
+                    <Question headerText={question}/>
                     <ContactButton buttonText={buttonText}/>
                 </Hidden>
             </Grid>

@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import CustomButton from '../CustomButton';
-import CheetoLeft from '../../images/cheetohs/cheetoLeft.svg';
-import CheetoRight from '../../images/cheetohs/cheetoRight.svg';
+import CheetoLeft from '../../images/cheetohs/cheetohLeft.svg';
+import CheetoRight from '../../images/cheetohs/cheetohRight.svg';
 
 const useStyles = makeStyles(theme => ({
     contactButton: {
@@ -123,7 +123,7 @@ export default function ContactUsSection() {
         <div className={classes.divStyle}>
             <div>
                 <CheetoLeft className={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
-                <h2 className={classes.h2Text}> 
+                <h2 className={classes.h2Text}>
                     If you have a way to help that isn’t listed above, or have any questions about donating.
                 </h2>
                 <CheetoRight className={`${classes.cRight} ${classes.noDisplayOnBigScreen}`}/>
