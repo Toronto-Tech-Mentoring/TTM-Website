@@ -1,5 +1,4 @@
 import React from "react"
-import Confetti from "react-dom-confetti"
 import styled from "styled-components"
 import HeartWhite from "../../images/navbar/heart-white.svg"
 import HeartPurple from "../../images/navbar/heart-purple.svg"
@@ -38,27 +37,12 @@ const StyledImg = styled.img`
     }
 `
 
-const config = {
-  angle: "90",
-  spread: "360",
-  startVelocity: "25",
-  elementCount: "50",
-  dragFriction: "0.17",
-  duration: "1500",
-  stagger: "2",
-  width: "15px",
-  height: "15px",
-  perspective: "499px",
-  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
-}
-
 class DonateBtn extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {confetti:false, imgSrc: HeartWhite }
+    this.state = {imgSrc: HeartWhite }
     this.handleMouseOver = this.handleMouseOver.bind(this)
     this.handleMouseOut = this.handleMouseOut.bind(this)
-    this.handleOnClick = this.handleOnClick.bind(this)
   }
 
   handleMouseOver() {
@@ -66,11 +50,7 @@ class DonateBtn extends React.Component {
   }
 
   handleMouseOut() {
-    this.setState({confetti: false, imgSrc: HeartWhite, buttonHovered: false})
-  }
-
-  handleOnClick(){
-    this.setState({confetti: true})
+    this.setState({imgSrc: HeartWhite, buttonHovered: false})
   }
 
 
@@ -80,7 +60,6 @@ class DonateBtn extends React.Component {
       <StyledButton
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        onClick={this.handleOnClick}
         style={{
           height: this.props.buttonHeight + "px", width: this.props.buttonWidth + "px", minWidth: "96px"
         }}
@@ -100,7 +79,6 @@ class DonateBtn extends React.Component {
             style={{width:this.props.heartWidth+"px"}}
             />
           </span>
-        <Confetti active={this.state.confetti} config={config} />
       </StyledButton>
     )
   }
