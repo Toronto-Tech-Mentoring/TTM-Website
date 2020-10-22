@@ -7,8 +7,7 @@ import TextBox from '../shared/TextBox'
 import Title from '../shared/Title'
 import PContent from '../shared/ParagraphedContent'
 import ContactButton from '../shared/ContactButton'
-import DonateIcons from '../../images/sponsors/iconsDonate.svg';
-import SVGLoad from '../shared/SVG'
+import DonateIconsGroup from './DonateIconsGroup'
 
 export default function TheBottomLineSection() {
 
@@ -28,7 +27,7 @@ export default function TheBottomLineSection() {
             </TextBox>
             </Grid>
             <Grid item xs={12} md={6}>
-                <img src={DonateIcons} alt="donate icons" />
+                <DonateIconsGroup />
                 <Hidden mdUp>
                     <ContactButton buttonText={buttonText}/>
                 </Hidden>
