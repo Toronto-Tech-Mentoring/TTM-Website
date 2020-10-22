@@ -1,5 +1,4 @@
 import React from "react";
-import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 
 import GridContainer from '../shared/GridContainer'
@@ -19,19 +18,12 @@ export default function TheBottomLineSection() {
         <GridContainer>
             <Grid item xs={12} md={6}>
             <TextBox>
-                <Title title={title} hideCheetohs={["lg","md"]}/>
-                <PContent content={content} hideCheetohs={["sm","xs"]}/>
-                <Hidden smDown>
-                    <ContactButton buttonText={buttonText}/>
-                </Hidden>
+                <Title title={title} hideCheetohs={["xl","lg","md","sm","xs"]}/>
+                <PContent content={content}/>
+                <ContactButton buttonText={buttonText}/>
             </TextBox>
             </Grid>
-            <Grid item xs={12} md={6}>
-                <DonateIconsGroup />
-                <Hidden mdUp>
-                    <ContactButton buttonText={buttonText}/>
-                </Hidden>
-            </Grid>
+            <DonateIconsGroup />
         </GridContainer>
     )
 };
