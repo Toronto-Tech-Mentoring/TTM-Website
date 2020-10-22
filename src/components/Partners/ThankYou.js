@@ -2,7 +2,7 @@ import React from "react"
 
 import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import TextBox from '../TextBox/TextBox'
-import Content from '../ParagraphedText/ParagraphedContent'
+import Content from '../DecoratedText/DecoratedText'
 // import styles from "./HeroText.module.css"
 import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"

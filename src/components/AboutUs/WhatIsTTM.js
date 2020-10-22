@@ -2,7 +2,7 @@ import React from "react"
 
 import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import TextBox from '../TextBox/TextBox'
-import Content from '../ParagraphedText/ParagraphedContent'
+import Content from '../DecoratedText/DecoratedText'
 // import styles from "./HeroText.module.css"
 import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
@@ -19,11 +19,11 @@ export default function WhatiIsTTM() {
 
   return (
     <div>
-        <TextBox style={{'margin-top':'135px', 'margin-right':'20vw'}}>
+        <TextBox >
             <CheetoLeft className={classes.cheetohLeftMirrored} style={{'margin-top':'-1.6em'}} alt="cheetohLeft" />
-            <BoldedHeader headerText={headerText} style={{'font-size':'36px'}}/>
-            <CheetoRight className={classes.cheetohRightMirrored} style={{'margin-top':'200px'}} alt="cheetohRight"/>
-            <Content content={content} extra={<RainbowHeart/>} style={{'font-size':'18px', 'line-height':'1.8'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
+            <BoldedHeader headerText={headerText} style={{'font-size':'calc(1.3vw + 1em)'}}/>
+            <Content content={content} extra={<RainbowHeart style={{'margin-left':'15px'}}/>} style={{'text-align':'left'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
+            <CheetoRight className={classes.cheetohRightMirrored} style={{'margin-top':'calc(1vh + 1px)'}} alt="cheetohRight"/>
         </TextBox>
         <SkylineHeaderSVG />
     </div>

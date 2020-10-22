@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '34px',
         [theme.breakpoints.down('sm')]: {
             marginTop: '40px',
+            textAlign:'left'
         }
     }
 }));

@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container'
 import GridContainer from '../GridContainer/GridContainer'
 import TextBox from '../TextBox/TextBox'
 import Title from '../SectionTitle/Title'
-import PContent from '../ParagraphedText/ParagraphedContent'
+import PContent from '../DecoratedText/DecoratedText'
 import SVGLoad from '../SVGLoad/SVG'
 import DataAnalyse from '../../images/partners/vital-role/data_analyse.svg';
 

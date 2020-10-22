@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import GridContainer from '../GridContainer/GridContainer'
 import TextBox from '../TextBox/TextBox'
 import Title from '../SectionTitle/Title'
-import PContent from '../ParagraphedText/ParagraphedContent'
+import PContent from '../DecoratedText/DecoratedText'
 import Question from '../BoldedHeaderText/BoldedHeader'
 import ContactButton from '../Button/ContactButton'
 import People from '../../images/about-us/bottom-line/people.svg';

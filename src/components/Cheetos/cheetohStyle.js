@@ -16,17 +16,11 @@ const useStyles = makeStyles((theme) => ({
     },
     cheetohRightMirrored: {
         float:'right',
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
         transform: 'scaleY(-1) rotate(315deg)'
     },
     cheetohLeftMirrored: {
         margin:'2em 10px 0px 0px',
         float:'left',
-        [theme.breakpoints.down('xs')]: {
-            display: 'none',
-        },
         transform: 'scaleY(-1) rotate(315deg)'
     }
 }));
