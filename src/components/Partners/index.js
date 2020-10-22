@@ -12,7 +12,7 @@ export default function Partners() {
     <div className={styles.rainbowImgHack}>
       <HeroText
         heroText="Thank you for partnering with us"
-        heroBodyText="The Accelerator Project is an entirely volunteer-run organization. All donations go directly into offering tech mentoring to young people who have faced adversity."
+        heroBodyText="The Accelerator Project is part of an ecosystem of programs aimed at addressing homelessness in Toronto. Our delivery partners help facilitate our programs, and provide wrap-around support to allow our clients to focus on learning tech skills and building their futures."
       />
       <SkylineHeaderSVG />
       <VitalRole />
