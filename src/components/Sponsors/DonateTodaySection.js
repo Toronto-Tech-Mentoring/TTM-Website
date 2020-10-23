@@ -1,32 +1,67 @@
 import React from "react";
-import {Box, Container, makeStyles} from '@material-ui/core';
+import { Box, Container, makeStyles } from '@material-ui/core';
 
-import Title from '../shared/Title'
-import PContent from '../shared/ParagraphedContent'
-import ContactButton from '../shared/ContactButton'
-import DonateIconsGroup from './DonateIconsGroup'
+import DonateIconsGroup from './DonateIconsGroup';
+import DonateButton from '../shared/AnimatedPurpleButton'
 
 const useStyles = makeStyles((theme) => ({
 
      container: {
         height: 'calc(40vw + 134px)',
-        marginTop: 'calc(7vw + 94px)',
-         padding:'0px'
+        padding: '0',
+        margin: '0'
        
     },
     textBox: {
         float: 'left',
-        marginLeft: 'calc(16vw - 94px)',
+        marginTop: 'calc(7vw + 94px)',
+        marginLeft: 'calc(19vw - 50px)',
         width: 'calc(27vw + 198px)',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 'calc(19.6% - 55px)',
+        },
            [theme.breakpoints.down('xs')]: {
             width: '100%',
-        }
+        },
+       
     },
 
-    button: {
-       width: 'calc(4vw + 122px)' 
-    }
+    title: {
+        fontFamily: 'Josefin Sans',
+        color: 'black',
+        fontSize: '28px',
+        lineHeight: '44px',
+        fontWeight: '600',
+        marginBottom: '16px',
+        textDecoration: 'underline',
+        textDecorationColor: '#FF7500',
+        textUnderlinePosition: 'under',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '22px',
+             marginBottom: '8px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '18px',
+             marginBottom: '8px',
+        },
+    },
+    
+    text: {
+      fontFamily: 'Poppins',
+        fontSize: '16px',
+        lineHeight: '27px',
+        fontWeight: '400',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '14px',
+            lineHeight: '24px',
+        }   
+    },
 
+    DonateButton: {
+        marginTop: 'calc(2.4vw - 2px)',
+    },
+
+    
 }));
 
 
@@ -39,9 +74,13 @@ export default function TheBottomLineSection() {
     return (
         <Container className={classes.container}>
             <Box className={classes.textBox}>
-                <Title title={title} hideCheetohs={["xl","lg","md","sm","xs"]} />
-                <PContent content={content}/>
-                <ContactButton buttonText={buttonText} className={classes.button}/>
+                <Box className={classes.title}>{title}</Box>
+                <Box className={classes.text}>{content}</Box>
+                <Box className={classes.DonateButton}>
+                    <DonateButton
+                        buttonText = {buttonText}
+                    />
+                </Box>
             </Box>
             <DonateIconsGroup />
         </Container>

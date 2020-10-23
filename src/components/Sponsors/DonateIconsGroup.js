@@ -4,21 +4,21 @@ import DonateIcons from '../../images/sponsors/donateIcons.svg';
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        rightMargin: 'calc(14.7% - 94px)',
-        bottomMargin : '97px',
+        float: 'right',
+        position: 'relative',
+        right: 'calc(12% - 56px)',
+        top : '102px',
         width: 'calc(34.2vw - 19px)',
         height: 'auto'
     },
         // Tablet to Mobile
-        [theme.breakpoints.down('md')]: {
-            rightMargin: 'calc(1% + 11px)',
-            bottomMargin : '97px',
+        [theme.breakpoints.between('xs','md')]: {
+            right: 'calc(5% - 2px)',
+            top: '105px',
             width: 'calc(26vw + 47px)',
     },
-         [theme.breakpoints.down('sm')]: {
-            rightMargin: 'calc(1% + 11px)',
-            bottomMargin : '97px',
-            width: 'auto',
+         [theme.breakpoints.down('xs')]: {
+            top : '-100px',
         },
 }));
 
