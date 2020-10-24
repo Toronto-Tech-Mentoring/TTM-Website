@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
            [theme.breakpoints.down('542')]: {
                width: 'calc(71vw + 35px)',
         },
+             [theme.breakpoints.down('442')]: {
+               width: 'calc(71vw + 20px)',
+        },
        
     },
 
@@ -77,15 +80,15 @@ const useStyles = makeStyles((theme) => ({
     },
 
      cheetohLeft: {
-            width: '50px',
+             width: 'calc(1.39vw + 13px)',
          transform: 'rotate(-45deg)',
-         marginLeft: 'calc(-1.5vw - 20px)',
-            marginTop: '-4px'
+         marginLeft: 'calc(-1.5vw - 5px)',
+            marginTop: '-6px'
         },
 
     cheetohRight: {
             float:'right',
-            width: '50px',
+             width: 'calc(1.39vw + 13px)',
             transform: 'rotate(-45deg)',
             marginRight: 'calc(-1.5vw - 20px)',
         }

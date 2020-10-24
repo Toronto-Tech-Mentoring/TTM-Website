@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('542')]: {
             paddingTop: '295px',
-            width: 'calc(21vw + 58px)',
+            width: 'calc(21vw + 58px)'
         },
     },
     image: {
