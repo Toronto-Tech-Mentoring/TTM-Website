@@ -11,20 +11,20 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         fontSize: '18px',
         fontFamily: 'Poppins',
-        
-        '&:hover, &:focus': {
-            background: '#ffff',
-            borderStyle: 'solid',
-            borderWidth: 'medium',
-            borderColor: '#873fe2',
-            color: '#873fe2',
-        },
+       
         [theme.breakpoints.down('sm')]: {
             fontSize: '16px',
         },
         [theme.breakpoints.down('542')]: {
             fontSize: '14px',
             width: '120px',
+        }, 
+        '&:hover, &:focus': {
+            background: '#ffff',
+            borderStyle: 'solid',
+            borderWidth: 'medium',
+            borderColor: '#873fe2',
+            color: '#873fe2',
         },
     },
 
