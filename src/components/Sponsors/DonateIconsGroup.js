@@ -3,29 +3,46 @@ import { makeStyles } from '@material-ui/core/styles';
 import DonateIcons from '../../images/sponsors/donateIcons.svg';
 
 const useStyles = makeStyles((theme) => ({
-    image: {
-        float: 'right',
+    imageWrapper: {
         position: 'relative',
-        right: 'calc(12% - 56px)',
-        top : '102px',
-        width: 'calc(34.2vw - 19px)',
-        height: 'auto'
-    },
-        // Tablet to Mobile
-        [theme.breakpoints.between('xs','md')]: {
-            right: 'calc(5% - 2px)',
-            top: '105px',
-            width: 'calc(26vw + 47px)',
-    },
-         [theme.breakpoints.down('xs')]: {
-            top : '-100px',
+        width: 'calc(36vw - 57px)',
+        top: '-160px',
+        left: 'calc(61vw - 26px)',
+        height: 'calc(40vw + 134px)',
+        paddingTop: '102px',
+         [theme.breakpoints.down('sm')]: {
+            paddingTop: '105px',
+            height: 'calc(5.6vw + 205px)',
         },
+        [theme.breakpoints.down('542')]: {
+            paddingTop: '230px',
+            width: 'calc(21vw + 58px)',
+        },
+        
+       
+    },
+    image: {
+        width: '100%',
+        height: 'auto',
+         [theme.breakpoints.up('1440')]: {
+            width: '509px',
+        },
+        [theme.breakpoints.down('sm')]: {
+        width: 'calc(21vw + 58px)',
+        [theme.breakpoints.down('542')]: {
+            width: 'calc(21vw + 58px)',
+        },
+    },
+},
+  
 }));
 
 
 export default function DonateIconsGroup() {
     const classes = useStyles();
     return (
-        <img src={DonateIcons} className={classes.image}/>
+        <div className = { classes.imageWrapper }> 
+            < img src={DonateIcons} className = { classes.image } />
+        </div>
     )
 };

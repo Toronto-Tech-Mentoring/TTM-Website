@@ -8,20 +8,28 @@ const useStyles = makeStyles((theme) => ({
 
      container: {
         height: 'calc(40vw + 134px)',
+        width: '100%',
+        maxWidth: '100%',
         padding: '0',
-        margin: '0'
-       
+        margin: '0', 
+        [theme.breakpoints.down('sm')]: {
+            height: 'calc(5.6vw + 405px)',
+        },
     },
+  
     textBox: {
-        float: 'left',
-        marginTop: 'calc(7vw + 94px)',
-        marginLeft: 'calc(19vw - 50px)',
-        width: 'calc(27vw + 198px)',
+        position: 'relative',
+        top: 'calc(7vw + 90px)',
+        left: 'calc(19vw - 50px)',
+        width: 'calc(27vw + 190px)',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 'calc(19.6% - 55px)',
         },
-           [theme.breakpoints.down('xs')]: {
-            width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            width: 'calc(27vw + 105px)',
+        },
+           [theme.breakpoints.down('542')]: {
+            width: 'calc(71vw + 40px)',
         },
        
     },
@@ -47,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
     
     text: {
-      fontFamily: 'Poppins',
+        fontFamily: 'Poppins',
         fontSize: '16px',
         lineHeight: '27px',
         fontWeight: '400',
@@ -59,6 +67,20 @@ const useStyles = makeStyles((theme) => ({
 
     DonateButton: {
         marginTop: 'calc(2.4vw - 2px)',
+        marginLeft: '0px',
+        width: 'calc(4vw + 122px)',
+        minWidth: '120px',
+        height: 'calc(1.5vw + 28px)',
+        minHeight: '24px',
+        fontSize: '18px',
+        fontFamily: 'Poppins',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '16px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '14px',
+            width: '120px',
+        },
     },
 
     
@@ -77,11 +99,10 @@ export default function TheBottomLineSection() {
                 <Box className={classes.title}>{title}</Box>
                 <Box className={classes.text}>{content}</Box>
                 <Box className={classes.DonateButton}>
-                    <DonateButton
-                        buttonText = {buttonText}
-                    />
+                    <DonateButton buttonText = {buttonText}/>
                 </Box>
             </Box>
+            
             <DonateIconsGroup />
         </Container>
     )
