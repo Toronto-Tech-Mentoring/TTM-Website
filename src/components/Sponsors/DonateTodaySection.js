@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Container, makeStyles } from '@material-ui/core';
+import {makeStyles } from '@material-ui/core';
 
 import DonateIconsGroup from './DonateIconsGroup';
 import DonateButton from '../shared/AnimatedPurpleButton'
+
+import CheetohLeft from '../../images/cheetohs/cheetoLeft.svg'
+import CheetohRight from '../../images/cheetohs/cheetoRight.svg'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -20,16 +23,16 @@ const useStyles = makeStyles((theme) => ({
     textBox: {
         position: 'relative',
         top: 'calc(7vw + 90px)',
-        left: 'calc(19vw - 50px)',
+        left: 'calc(19vw - 41px)',
         width: 'calc(27vw + 190px)',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: 'calc(19.6% - 55px)',
+            marginLeft: 'calc(19% - 55px)',
         },
         [theme.breakpoints.down('sm')]: {
             width: 'calc(27vw + 105px)',
         },
            [theme.breakpoints.down('542')]: {
-            width: 'calc(71vw + 40px)',
+               width: 'calc(71vw + 35px)',
         },
        
     },
@@ -62,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             fontSize: '14px',
             lineHeight: '24px',
-        }   
+        },
+        
+       
     },
 
     DonateButton: {
@@ -83,6 +88,20 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
+     cheetohLeft: {
+            width: '50px',
+         transform: 'rotate(-45deg)',
+         marginLeft: 'calc(-1.5vw - 20px)',
+            marginTop: '-4px'
+        },
+
+    cheetohRight: {
+            float:'right',
+            width: '50px',
+            transform: 'rotate(-45deg)',
+            marginRight: 'calc(-1.5vw - 20px)',
+        }
+
     
 }));
 
@@ -94,17 +113,18 @@ export default function TheBottomLineSection() {
     const buttonText = "Donate"
 
     return (
-        <Container className={classes.container}>
-            <Box className={classes.textBox}>
-                <Box className={classes.title}>{title}</Box>
-                <Box className={classes.text}>{content}</Box>
-                <Box className={classes.DonateButton}>
+        <div className={classes.container}>
+            <div  className={classes.textBox}>
+                <CheetohRight className={classes.cheetohRight}/>
+                <div className={classes.title}>{title}</div>
+                <div className={classes.text}>{content}</div>
+                <div className={classes.DonateButton}>
                     <DonateButton buttonText = {buttonText}/>
-                </Box>
-            </Box>
-            
+                </div>
+                <CheetohLeft className={classes.cheetohLeft}/>
+            </div>
             <DonateIconsGroup />
-        </Container>
+        </div>
     )
 };
 

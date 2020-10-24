@@ -6,20 +6,18 @@ const useStyles = makeStyles((theme) => ({
     imageWrapper: {
         position: 'relative',
         width: 'calc(36vw - 57px)',
-        top: '-160px',
+        top: 'calc(-240px - 1%)',
         left: 'calc(61vw - 26px)',
         height: 'calc(40vw + 134px)',
-        paddingTop: '102px',
+        paddingTop: '130px',
          [theme.breakpoints.down('sm')]: {
-            paddingTop: '105px',
+            paddingTop: '160px',
             height: 'calc(5.6vw + 205px)',
         },
         [theme.breakpoints.down('542')]: {
             paddingTop: '230px',
             width: 'calc(21vw + 58px)',
         },
-        
-       
     },
     image: {
         width: '100%',
