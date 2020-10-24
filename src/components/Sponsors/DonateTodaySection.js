@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '22px',
              marginBottom: '8px',
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('542')]: {
             fontSize: '18px',
              marginBottom: '8px',
         },
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '16px',
         lineHeight: '27px',
         fontWeight: '400',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('542')]: {
             fontSize: '14px',
             lineHeight: '24px',
         },
@@ -77,15 +77,6 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '120px',
         height: 'calc(1.5vw + 28px)',
         minHeight: '24px',
-        fontSize: '18px',
-        fontFamily: 'Poppins',
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '16px',
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '14px',
-            width: '120px',
-        },
     },
 
      cheetohLeft: {

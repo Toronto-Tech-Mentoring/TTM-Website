@@ -9,13 +9,22 @@ const useStyles = makeStyles((theme) => ({
         borderStyle: 'none',
         width: '100%',
         height: '100%',
-
+        fontSize: '18px',
+        fontFamily: 'Poppins',
+        
         '&:hover, &:focus': {
             background: '#ffff',
             borderStyle: 'solid',
             borderWidth: 'medium',
             borderColor: '#873fe2',
             color: '#873fe2',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '16px',
+        },
+        [theme.breakpoints.down('542')]: {
+            fontSize: '14px',
+            width: '120px',
         },
     },
 
