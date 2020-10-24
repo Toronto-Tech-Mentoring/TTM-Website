@@ -10,7 +10,7 @@ import ImgOpt from '../../utils/ImageOptimise.js';
 const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Josefin Sans',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: '32px',
         lineHeight: '57px',
         padding: '0px 20px',
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     yearTag: {
+        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
         position: 'relative',
         bottom: '275px',
         marginRight: '20px',
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     yearTagSm: {
+        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
         padding: '5px 25px',
         fontSize: '14px',
         backgroundColor: '#873FE2',
@@ -104,6 +106,11 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: '350px'
         },
     },
+    tealBackground: {
+      background: 'linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)',
+      padding: '50px 20px 0px 0px',
+
+    },
     firstPic: {
         display: 'inline-block',
         marginRight: '30px',
@@ -168,7 +175,7 @@ export default function TimelineSection() {
     const timelinePicRight2018 = 'timelinePicLeft2018.jpg'
 
     return (
-      <Grid container justify="center" alignItems="center">
+      <Grid className = {classes.tealBackground} container justify="center" alignItems="center">
         <Grid item xs={12} className={classes.center}>
           <TitleLeft />
           <span className={classes.title}>See how we’ve grown!</span>
