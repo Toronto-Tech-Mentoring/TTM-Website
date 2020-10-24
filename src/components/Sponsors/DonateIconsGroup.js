@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
             height: 'calc(5.6vw + 205px)',
         },
         [theme.breakpoints.down('542')]: {
-            paddingTop: '230px',
+            paddingTop: '295px',
             width: 'calc(21vw + 58px)',
         },
     },
