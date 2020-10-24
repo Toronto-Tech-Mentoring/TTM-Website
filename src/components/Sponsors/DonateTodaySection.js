@@ -25,10 +25,7 @@ const useStyles = makeStyles((theme) => ({
         top: 'calc(7vw + 90px)',
         left: 'calc(19vw - 41px)',
         width: 'calc(27vw + 190px)',
-        [theme.breakpoints.down('sm')]: {
-            marginLeft: 'calc(19% - 55px)',
-        },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: 'calc(27vw + 105px)',
         },
            [theme.breakpoints.down('542')]: {
