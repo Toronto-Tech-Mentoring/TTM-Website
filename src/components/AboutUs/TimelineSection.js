@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   tealBackground: {
     background: 'linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)',
     padding: '50px 20px 0px 0px',
-
   },
   title: {
     fontFamily: 'Josefin Sans',
@@ -43,12 +42,11 @@ const useStyles = makeStyles((theme) => ({
   yearCol: {
     textAlign: 'right',
     marginRight: '30px',
-
     [theme.breakpoints.up('lg')]: {
       marginRight: '69px',
       textAlign: 'right',
     },
-
+    // Moboile
     [theme.breakpoints.down('sm')]: {
       marginRight: '0px',
       textAlign: 'center',
@@ -71,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '22px',
       lineHeight: '38px',
     },
+    // Moboile
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -205,11 +204,9 @@ const useStyles = makeStyles((theme) => ({
   bg2: {
     zIndex: 1,
     position: 'absolute',
-    // float:'right',
     right: '0',
     height: '209px',
     top: '20px',
-    // width: '1050%',
     // Tablet Above to Laptop/ Desktop
     [theme.breakpoints.between('sm', 'md')]: {
       height: '65%',
