@@ -22,7 +22,7 @@ export default function BurgerMenu(props) {
     },
     bmMenuWrap: {
       position: 'fixed',
-      width: 'fit-content'
+      width: 'fit-content',
     },
     bmMenu: {
       background: '#FFFFFF',

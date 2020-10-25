@@ -80,7 +80,8 @@
           color: "#873FE2",
           boxShadow: "0px 2px 0px #873FE2",
           [theme.breakpoints.down('1040')]: {
-              boxShadow: "3px 0px 0px #873FE2"
+              boxShadow: "3px 0px 0px #873FE2",
+              marginRight: '2.5px'
           },
       },
       burgerMenu: {
