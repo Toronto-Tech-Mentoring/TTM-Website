@@ -155,9 +155,6 @@ const useStyles = makeStyles((theme) => ({
   firstPic: {
     display: 'inline-block',
     marginRight: '30px',
-    [theme.breakpoints.up('lg')]: {
-      marginRight: '40px',
-    },
   },
   gridContainer: {
     marginTop: '50px',
