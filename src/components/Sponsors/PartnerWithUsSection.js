@@ -2,68 +2,97 @@ import React from "react";
 import { makeStyles } from '@material-ui/core';
 
 import Cheetoh from '../../images/cheetohs/cheetoRight.svg';
-import GroupedCard from '../shared/GroupedCards';
+
+
+// Images 
 import ImageOne from '../../images/sponsors/partner/laptop.svg';
 import ImageTwo from '../../images/sponsors/partner/software.svg';
 import ImageThree from '../../images/sponsors/partner/workspaces.svg';
-import ImageFour from  '../../images/sponsors/partner/training.svg'
-    
+import ImageFour from '../../images/sponsors/partner/training.svg'
 
+//  Cards flex container
+import GroupedCardContainer from '../shared/GroupedCardsContainer';
+    
+// Cards objects array
+/********************************************************
+    Each card object contains 3 propersties:
+    - image: image path
+    - text: image title
+    - cardStyle: card JSS properties object
+*********************************************************/
 const listCards = [
     {
         image: ImageOne,
         text: 'Laptops for accessability',
-        style: {
-            width: 'calc(8vw + 11.4px)',
-            minWidth: '72px',
-            height: 'auto'
+        cardStyle: {
+            width: 'calc(2.8vw + 129px)',
+            minWidth: '114px',
+            height: '100%',
+            margin:'24px'
         },
     },
     {
         text: 'Software or server subscriptions',
         image: ImageTwo,
-        style: {
-            width: 'calc(14vw - 21px)',
-            minWidth: '86px',
-            height: 'auto'
+        cardStyle: {
+            width: 'calc(4.3vw + 117px)',
+            minWidth: '149px',
+            height: '100%',
+            margin:'24px'
         },
     },
     {
         image: ImageThree,
         text: 'Workspaces where we can host our sessions',
-        style: {
-            width: 'calc(7.4vw + 37px)',
-            minWidth: '86px',
-            height: 'auto'
+        cardStyle: {
+            width: 'calc(3.7vw + 160px)',
+            minWidth: '187px',
+            height: '100%',
+            margin:'24px'
         },
       
     },
     {
         image: ImageFour,
         text: 'Access to additional training and workshops',
-        style: {
-            width: 'calc(10.4vw + 35px)',
-            minWidth: '115px',
-            height: 'auto'
+        cardStyle: {
+            width: 'calc(3.6vw + 168px)',
+            minWidth: '188px',
+            height: '100%',
+            margin:'24px'
         },
       
     }
 ];
-  
+
+// image title (text) properties
 const imageTextStyle = {
-        fontFamily: 'Poppins',
-        fontWeight: 500,
-        fontSize: '18px',
-        color: '#FFFFFF',
-        lineHeight:'27px',
-        sm: {
-            fontSize: '16px',
-        },
-        xs: {
-             fontSize: '14px',
-             lineHeight:'24px',
-        },
-}
+    fontFamily: 'Poppins',
+    fontWeight: 500,
+    fontSize: '18px',
+    color: '#FFFFFF',
+    lineHeight: '27px',
+    sm: {
+        fontSize: '16px',
+    },
+    xs: {
+        fontSize: '14px',
+        lineHeight: '24px',
+    },
+};
+
+// Cards flex container JSS object
+const cardsContainerStyle = {
+    width: 'calc(90vw - 34px)',
+    marginLeft: 'calc(5vw - 17px)',
+    sm: {
+        marginTop: '-32px',
+    },
+    xs: {
+        fontSize: '14px',
+        lineHeight: '24px',
+    },
+};
 
 const useStyles = makeStyles((theme) => ({
 
@@ -173,24 +202,6 @@ const useStyles = makeStyles((theme) => ({
     cheetohRight: {
         width: 'calc(1.39vw + 13px)',
     }, 
-    CardContainer: {
-        marginLeft: 'calc(5vw + 17px)',
-        marginRight: 'calc(5vw + 17px)',
-        MarginBottom: 'calc(5vw + 58px)',
-        marginTop: 'calc(4.7vw - 68px)',
-        [theme.breakpoints.down('sm')]: {
-            marginTop: '-32px',
-        },
-         [theme.breakpoints.down('360')]: {
-             fontSize: '14px',
-             lineHeight:'24px',
-        },
-    },
-    imageText: {
-        
-    }
-
-
 }));
 
 
@@ -211,12 +222,19 @@ export default function TheBottomLineSection() {
                 </div>
                 <div className={classes.secondParagraph}>{secondParagraph}</div> 
             </div>
-            <div className={classes.CardContainer}>
-                <GroupedCard
-                    listCards={listCards}
-                    imageTextStyle = {imageTextStyle}
+            
+            {/* Cards flex container:  
+               - cardContainerStyle,  and listCards are passed as props 
+               to the reusable component in GroupedCardsContainer.js
+               - imageTextStyle is passed as props to reusable components GroupedCardsContainer.js 
+                  then ImageCardWithTile.js
+            */}
+             <GroupedCardContainer
+                cardsContainerStyle={cardsContainerStyle}
+                listCards={listCards}
+                imageTextStyle = {imageTextStyle}
             />
-            </div>
+         
             
         </div>
     )
