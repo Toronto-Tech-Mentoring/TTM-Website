@@ -40,7 +40,7 @@ export default function DonateIconsGroup() {
     const classes = useStyles();
     return (
         <div className = { classes.imageWrapper }> 
-            < img src={DonateIcons} className = { classes.image } />
+            < img src={DonateIcons} className = { classes.image} alt='Donate icons'/>
         </div>
     )
 };

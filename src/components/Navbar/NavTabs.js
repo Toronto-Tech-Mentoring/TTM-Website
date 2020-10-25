@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, {useEffect } from "react"
 import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -9,117 +9,7 @@ import "./NavAccessibility.css"
 
 /** sizing  navbar padding based on viewport**/
 
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-  })
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-      })
-    }
-    // Add event listener
-    window.addEventListener("resize", handleResize)
-
-    // Call handler right away so state gets updated with initial window size
-    handleResize()
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize)
-  }, []) // Empty array ensures that effect is only run on mount
-
-  // Navbar and childs slyle properties
-  let navbarSideMargin, navbarLeftMargin, navbarHeight, navtabsDisplay
-  let navitemWidth, navitemMaxWidth, navLinkBoxShadow
-  let logoWidth, logoFontSize, logoTextMaxWidth
-  let buttonHeight, buttonWidth, buttonFontSize, heartWidth
-  let burgerMenuDisplay, burgerMenuButtonPosition, sideBarWidth
-
-  if (windowSize.width >= 1040) {
-    navbarSideMargin = (windowSize.width / 4 - 240).toFixed(1)
-    navbarSideMargin = navbarSideMargin + "px"
-    navbarLeftMargin = navbarSideMargin
-    navbarHeight = 80
-    navitemWidth = ((windowSize.width - 720) / 5.5).toFixed(1)
-    navitemWidth = navitemWidth + "px"
-    navitemMaxWidth = "104px"
-    navLinkBoxShadow = "0px 2px 0px #873FE2"
-    logoFontSize = 20
-    logoWidth = 48
-    logoTextMaxWidth = 250
-    buttonHeight = 48
-    buttonWidth = 156
-    navtabsDisplay = "inline-block"
-    burgerMenuDisplay = "none"
-    buttonFontSize = 18
-    heartWidth = 17
-  } else if (windowSize.width > 400 && windowSize.width < 1040) {
-    navbarSideMargin = (windowSize.width / 45 + 7).toFixed(1)
-    navbarSideMargin = navbarSideMargin + "px"
-    navbarLeftMargin = "calc(51vw - 128px)"
-    navbarHeight = 58
-    logoWidth = 40
-    logoFontSize = 16
-    logoTextMaxWidth = 0.2 * windowSize.width + 50
-    buttonHeight = 40
-    buttonWidth = 105
-    navtabsDisplay = "none"
-    burgerMenuDisplay = "block"
-    burgerMenuButtonPosition = navbarSideMargin
-    sideBarWidth = "250px"
-    navitemWidth = "auto"
-    navitemMaxWidth = "none"
-    navLinkBoxShadow = "3px 0px 0px #873FE2"
-    buttonFontSize = 14
-    heartWidth = 15
-  } else if (windowSize.width <= 400) {
-    navbarSideMargin = "calc(1.8vw + 9px)"
-    navbarLeftMargin = "calc(52vw - 110px)"
-    navbarHeight = 48
-    navitemMaxWidth = "none"
-    logoWidth = 30
-    logoFontSize = 12
-    logoTextMaxWidth = 0.22 * windowSize.width + 10
-    buttonHeight = 32
-    buttonWidth = 96
-    navtabsDisplay = "none"
-    burgerMenuDisplay = "block"
-    burgerMenuButtonPosition = navbarSideMargin
-    sideBarWidth = "140px"
-    navitemWidth = "auto"
-    navLinkBoxShadow = "3px 0px 0px #873FE2"
-    buttonFontSize = 12
-    heartWidth = 13
-  }
-
-  const responsiveStyle = {
-    navbarSideMargin,
-    navbarLeftMargin,
-    navitemWidth,
-    navitemMaxWidth,
-    navLinkBoxShadow,
-    navbarHeight,
-    logoWidth,
-    logoFontSize,
-    logoTextMaxWidth,
-    buttonHeight,
-    buttonWidth,
-    navtabsDisplay,
-    burgerMenuDisplay,
-    burgerMenuButtonPosition,
-    sideBarWidth,
-    buttonFontSize,
-    heartWidth,
-  }
-  return responsiveStyle
-}
-
 export default function NavTabs() {
-  const responsiveNavbar = useWindowSize()
   const listItems = [
     {
       id: "client",
@@ -160,13 +50,13 @@ export default function NavTabs() {
   /** @function
    * @name renderListItems */
 
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     navbar: {
       position: "sticky",
       top: "0%",
       left: "0%",
       right: "0%",
-      height: responsiveNavbar.navbarHeight + "px",
+      height: "80px",
       background: "#FFFFFF",
       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
       padding: "0px",
@@ -175,43 +65,81 @@ export default function NavTabs() {
       justifyContent: "space-between",
       fontFamily: "Poppins",
       zIndex: 2000,
+      [theme.breakpoints.down('1040')]: {
+        height: '56px',
+      },
+      [theme.breakpoints.down('400')]: {
+        height: '48px',
+      },
     },
     navtabs: {
       width: "fit-content",
-      height: responsiveNavbar.navbarHeight,
+      height: "80px",
       float: "right",
-      marginRight: responsiveNavbar.navbarSideMargin,
+      marginRight: "calc(25vw - 240px)",
       padding: "0",
       margin: "0",
       listStyle: "none",
       display: "inline-flex",
       alignItems: "center",
+      [theme.breakpoints.down('1040')]: {
+        height: "56px",
+        marginRight: 'calc(2.22vw + 7px)'
+      },
+      [theme.breakpoints.down('400')]: {
+        height: "48px",
+        marginRight: "calc(1.8vw + 9px)"
+      },
     },
     navitem: {
       marginBottom: "-1px",
-      display: responsiveNavbar.navtabsDisplay,
+      display: "inline-block",
+      [theme.breakpoints.down('1040')]: {
+          display:"none"
+      }
     },
 
     navlink: {
-      width: responsiveNavbar.navitemWidth,
-      maxWidth: responsiveNavbar.navitemMaxWidth,
+      width:'calc(18.2vw - 136px)',
+      maxWidth: '104px',
       minWidth: "86px",
       fontSize: "16px",
       textAlign: "center",
-      lineHeight: responsiveNavbar.navbarHeight + "px",
+      lineHeight: "80px",
       color: "black",
       padding: "0px",
       display: "block",
       textDecoration: "none",
       borderStyle: "none",
+      [theme.breakpoints.down('1040')]: {
+        width:'auto',
+        lineHeight: "56px",
+        maxWidth: '100%',
+         minWidth: "104px",
+      },
+      [theme.breakpoints.down('400')]: {
+        lineHeight: "48px",
+        maxWidth: '100%',
+          minWidth: "104px",
+      },
       "&:hover": {
         color: "#873FE2",
       },
     },
-    burgerMenu: {
-      display: responsiveNavbar.burgerMenuDisplay,
+    active: {
+        color: "#873FE2",
+        boxShadow: "0px 2px 0px #873FE2",
+        [theme.breakpoints.down('1040')]: {
+        boxShadow: "3px 0px 0px #873FE2"
+      },
     },
-  })
+    burgerMenu: {
+      display: 'none',
+      [theme.breakpoints.down('1040')]: {
+          display: 'block',
+      },
+    },
+  }))
 
   const classes = useStyles()
 
@@ -224,10 +152,7 @@ export default function NavTabs() {
           to={item.path}
           id={item.id}
           className={classes.navlink}
-          activeStyle={{
-            color: "#873FE2",
-            boxShadow: responsiveNavbar.navLinkBoxShadow,
-          }}
+          activeClassName= {classes.active}
         >
           {item.title}
         </Link>
@@ -257,25 +182,13 @@ export default function NavTabs() {
 
   return (
     <div className={classes.navbar}>
-      <Logo
-        logoFontSize={responsiveNavbar.logoFontSize}
-        logoWidth={responsiveNavbar.logoWidth}
-        navbarSideMargin={responsiveNavbar.navbarLeftMargin}
-        logoTextMaxWidth={responsiveNavbar.logoTextMaxWidth}
-      />
+      <Logo/>
       <ul className={classes.navtabs}>
         {renderListItems()}
-        <DonateBtn
-          buttonHeight={responsiveNavbar.buttonHeight}
-          buttonWidth={responsiveNavbar.buttonWidth}
-          buttonFontSize={responsiveNavbar.buttonFontSize}
-          heartWidth={responsiveNavbar.heartWidth}
-        />
+        <DonateBtn/>
       </ul>
       <div className={classes.burgerMenu}>
         <BurgerMenu
-          burgerMenuButtonPosition={responsiveNavbar.burgerMenuButtonPosition}
-          sideBarWidth={responsiveNavbar.sideBarWidth}
         >
           {renderListItems()}
         </BurgerMenu>

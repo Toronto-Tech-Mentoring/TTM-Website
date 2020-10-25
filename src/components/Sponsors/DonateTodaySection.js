@@ -65,9 +65,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('542')]: {
             fontSize: '14px',
             lineHeight: '24px',
-        },
-        
-       
+        }, 
     },
 
     DonateButton: {
