@@ -1,7 +1,49 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core';
 
-import Cheetoh from '../../images/cheetohs/cheetoRight.svg'
+import Cheetoh from '../../images/cheetohs/cheetoRight.svg';
+import GroupedCard from '../shared/GroupedCards'
+
+const listCards = [
+    {
+    image: '../../images/sponsors/partner/laptop.svg',
+    text: 'Laptops for accessability',
+    style: {
+     width: 'calc(8vw + 11.4px)',
+     minWidth: '72px',
+     height: 'auto'
+    },
+    },
+    {
+      text: 'Software or server subscriptions',
+      image: '../../images/sponsors/partner/software.svg',
+       style: {
+        width: 'calc(14vw - 21px)',
+        minWidth: '86px',
+        height: 'auto'
+        },
+    },
+      {
+        image: '../../images/sponsors/partner/workspaces.svg',
+        text: 'Workspaces where we can host our sessions',
+       style: {
+        width: 'calc(7.4vw + 37px)',
+        minWidth: '86px',
+        height: 'auto'
+    },
+      
+    },
+     {
+         image: '../../images/sponsors/partner/training.svg',
+         text: 'Access to additional training and workshops',
+        style: {
+        width: 'calc(10.4vw + 35px)',
+        minWidth: '115px',
+        height: 'auto'
+    },
+      
+    }
+  ]
 
 const useStyles = makeStyles((theme) => ({
 
@@ -95,7 +137,6 @@ const useStyles = makeStyles((theme) => ({
              marginTop:'48px',
         },
 
-        // Mobile 
         [theme.breakpoints.down('542')]: {
             marginTop:'64px',
             fontSize: '18px',
@@ -111,8 +152,28 @@ const useStyles = makeStyles((theme) => ({
 
     cheetohRight: {
         width: 'calc(1.39vw + 13px)',
-        }
-
+    }, 
+    CardContainer: {
+        position: 'relative',
+        left: 'calc(5vw + 17px)',
+        right: 'calc(5vw + 17px)',
+        bottom: 'calc(5vw + 58px)',
+        top: '81px',
+        fontFamily: 'Poppins',
+        fontWeight: 500,
+        fontSize: '18px',
+        color: '#FFFFFF',
+        lineHeight:'27px',
+        marginTop: 'cal(4.7vw - 68px)',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '-32px',
+            fontSize: '16px',
+        },
+         [theme.breakpoints.down('360')]: {
+             fontSize: '14px',
+             lineHeight:'24px',
+        },
+    }
 }));
 
 
@@ -131,9 +192,14 @@ export default function TheBottomLineSection() {
                     <div className={classes.firstParagraph}>{firstParagraph}</div>
                     <Cheetoh className={classes.cheetohRight}/>
                 </div>
-                <div className={classes.secondParagraph}>{secondParagraph}</div>
-                
+                <div className={classes.secondParagraph}>{secondParagraph}</div> 
             </div>
+            <div className={classes.CardContainer}>
+                <GroupedCard
+                listCards = {listCards}
+            />
+            </div>
+            
         </div>
     )
 };
