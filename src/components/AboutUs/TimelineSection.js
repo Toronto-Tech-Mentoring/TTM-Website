@@ -156,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     marginRight: '30px',
     [theme.breakpoints.up('lg')]: {
-      marginRight: '50px',
+      marginRight: '40px',
     },
   },
   gridContainer: {
