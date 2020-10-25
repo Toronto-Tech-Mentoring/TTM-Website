@@ -2,11 +2,16 @@ import React from "react";
 import { makeStyles } from '@material-ui/core';
 
 import Cheetoh from '../../images/cheetohs/cheetoRight.svg';
-import GroupedCard from '../shared/GroupedCards'
+import GroupedCard from '../shared/GroupedCards';
+import ImageOne from '../../images/sponsors/partner/laptop.svg';
+import ImageTwo from '../../images/sponsors/partner/software.svg';
+import ImageThree from '../../images/sponsors/partner/workspaces.svg';
+import ImageFour from  '../../images/sponsors/partner/training.svg'
+    
 
 const listCards = [
     {
-    image: '../../images/sponsors/partner/laptop.svg',
+    image: ImageOne,
     text: 'Laptops for accessability',
     style: {
      width: 'calc(8vw + 11.4px)',
@@ -16,7 +21,7 @@ const listCards = [
     },
     {
       text: 'Software or server subscriptions',
-      image: '../../images/sponsors/partner/software.svg',
+      image: ImageTwo,
        style: {
         width: 'calc(14vw - 21px)',
         minWidth: '86px',
@@ -24,7 +29,7 @@ const listCards = [
         },
     },
       {
-        image: '../../images/sponsors/partner/workspaces.svg',
+        image: ImageThree,
         text: 'Workspaces where we can host our sessions',
        style: {
         width: 'calc(7.4vw + 37px)',
@@ -34,7 +39,7 @@ const listCards = [
       
     },
      {
-         image: '../../images/sponsors/partner/training.svg',
+         image: ImageFour,
          text: 'Access to additional training and workshops',
         style: {
         width: 'calc(10.4vw + 35px)',

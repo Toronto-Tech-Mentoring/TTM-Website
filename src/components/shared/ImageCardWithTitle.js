@@ -18,8 +18,8 @@ export default function ImageCard(props) {
     return (
         
         <div className={classes.cardContainer}>
-            <img className={classes.image} src={props.cardObject.image} alt={ props.cardObject.text} />
-            <div> { props.cardObject.text} </div>
+            <img src={props.cardObject.image} className={classes.image}  alt={ props.cardObject.text} />
+            <div> {props.cardObject.text} </div>
         </div>   
     )
     };
