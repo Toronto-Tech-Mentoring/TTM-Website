@@ -217,11 +217,12 @@ export default function NavTabs() {
 
   const renderListItems = () => {
     return listItems.map(item => (
-      <li className={classes.navitem}>
+      <li className={classes.navitem}
+        key={item.id}
+      >
         <Link
           to={item.path}
           id={item.id}
-          key={item.id}
           className={classes.navlink}
           activeStyle={{
             color: "#873FE2",
