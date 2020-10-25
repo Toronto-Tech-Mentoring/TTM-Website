@@ -16,8 +16,10 @@ export default function GroupedCards(props) {
 
  const renderListCards = () => {
     return props.listCards.map(cardObject => (
-        <ImageCard cardObject={cardObject}
+        <ImageCard
+            cardObject={cardObject}
             key={cardObject.text}
+            imageTextStyle ={props.imageTextStyle}
       />
     ))
   }

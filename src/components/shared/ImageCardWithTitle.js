@@ -12,14 +12,23 @@ export default function ImageCard(props) {
             width: '95%',
             height: 'auto'
         },
-        // imageText:props.cardObject.textStyle
+        imageText: {
+            
+        fontFamily: props.imageTextStyle.fontFamily,
+        fontWeight: props.imageTextStyle.fontWeight,
+        fontSize: props.imageTextStyle.fontSize,
+        color: props.imageTextStyle.color,
+        lineHeight: props.imageTextStyle.lineHeight,
+        [theme.breakpoints.down('sm')]: props.imageTextStyle.sm,
+        [theme.breakpoints.down('360')]:props.imageTextStyle.xs
+        }
     }));
     const classes = useStyles();
     return (
         
         <div className={classes.cardContainer}>
             <img src={props.cardObject.image} className={classes.image}  alt={ props.cardObject.text} />
-            <div> {props.cardObject.text} </div>
+            <div className={classes.imageText}> {props.cardObject.text} </div>
         </div>   
     )
     };

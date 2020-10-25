@@ -11,44 +11,59 @@ import ImageFour from  '../../images/sponsors/partner/training.svg'
 
 const listCards = [
     {
-    image: ImageOne,
-    text: 'Laptops for accessability',
-    style: {
-     width: 'calc(8vw + 11.4px)',
-     minWidth: '72px',
-     height: 'auto'
-    },
-    },
-    {
-      text: 'Software or server subscriptions',
-      image: ImageTwo,
-       style: {
-        width: 'calc(14vw - 21px)',
-        minWidth: '86px',
-        height: 'auto'
+        image: ImageOne,
+        text: 'Laptops for accessability',
+        style: {
+            width: 'calc(8vw + 11.4px)',
+            minWidth: '72px',
+            height: 'auto'
         },
     },
-      {
+    {
+        text: 'Software or server subscriptions',
+        image: ImageTwo,
+        style: {
+            width: 'calc(14vw - 21px)',
+            minWidth: '86px',
+            height: 'auto'
+        },
+    },
+    {
         image: ImageThree,
         text: 'Workspaces where we can host our sessions',
-       style: {
-        width: 'calc(7.4vw + 37px)',
-        minWidth: '86px',
-        height: 'auto'
-    },
+        style: {
+            width: 'calc(7.4vw + 37px)',
+            minWidth: '86px',
+            height: 'auto'
+        },
       
     },
-     {
-         image: ImageFour,
-         text: 'Access to additional training and workshops',
+    {
+        image: ImageFour,
+        text: 'Access to additional training and workshops',
         style: {
-        width: 'calc(10.4vw + 35px)',
-        minWidth: '115px',
-        height: 'auto'
-    },
+            width: 'calc(10.4vw + 35px)',
+            minWidth: '115px',
+            height: 'auto'
+        },
       
     }
-  ]
+];
+  
+const imageTextStyle = {
+        fontFamily: 'Poppins',
+        fontWeight: 500,
+        fontSize: '18px',
+        color: '#FFFFFF',
+        lineHeight:'27px',
+        sm: {
+            fontSize: '16px',
+        },
+        xs: {
+             fontSize: '14px',
+             lineHeight:'24px',
+        },
+}
 
 const useStyles = makeStyles((theme) => ({
 
@@ -159,26 +174,23 @@ const useStyles = makeStyles((theme) => ({
         width: 'calc(1.39vw + 13px)',
     }, 
     CardContainer: {
-        position: 'relative',
-        left: 'calc(5vw + 17px)',
-        right: 'calc(5vw + 17px)',
-        bottom: 'calc(5vw + 58px)',
-        top: '81px',
-        fontFamily: 'Poppins',
-        fontWeight: 500,
-        fontSize: '18px',
-        color: '#FFFFFF',
-        lineHeight:'27px',
-        marginTop: 'cal(4.7vw - 68px)',
+        marginLeft: 'calc(5vw + 17px)',
+        marginRight: 'calc(5vw + 17px)',
+        MarginBottom: 'calc(5vw + 58px)',
+        marginTop: 'calc(4.7vw - 68px)',
         [theme.breakpoints.down('sm')]: {
             marginTop: '-32px',
-            fontSize: '16px',
         },
          [theme.breakpoints.down('360')]: {
              fontSize: '14px',
              lineHeight:'24px',
         },
+    },
+    imageText: {
+        
     }
+
+
 }));
 
 
@@ -201,7 +213,8 @@ export default function TheBottomLineSection() {
             </div>
             <div className={classes.CardContainer}>
                 <GroupedCard
-                listCards = {listCards}
+                    listCards={listCards}
+                    imageTextStyle = {imageTextStyle}
             />
             </div>
             
