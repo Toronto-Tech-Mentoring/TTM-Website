@@ -8,16 +8,20 @@ import Pin from '../../images/about-us/timeline/pin.svg';
 import ImgOpt from '../../utils/ImageOptimise.js';
 
 const useStyles = makeStyles((theme) => ({
-  container: {
+  titleContainer: {
     marginTop: '160px',
     // Tablet Above to Laptop/ Desktop
     [theme.breakpoints.between('sm', 'md')]: {
-      marginTop: '96px'
+      marginTop: '96px',
     },
-    // Tablet below to Mobile
     [theme.breakpoints.down('sm')]: {
       marginTop: '69px',
     },
+  },
+  tealBackground: {
+    background: 'linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)',
+    padding: '50px 20px 0px 0px',
+
   },
   title: {
     fontFamily: 'Josefin Sans',
@@ -51,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   yearTag: {
+    filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
     position: 'relative',
     bottom: '340px',
     marginRight: '20px',
@@ -71,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   yearTagSm: {
-    // padding: '3px 25px',
+    filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
     backgroundColor: '#873FE2',
     borderRadius: '300px',
     color: 'white',
@@ -82,15 +87,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       display: 'block',
       fontSize: '14px',
-      height:'30px',
-      width:'86px',
+      height: '30px',
+      width: '86px',
       marginRight: 'calc(100% - 86px)'
     },
   },
   pinStyle: {
     display: 'inline-block',
     height: 400,
-    // Tablet Above to Laptop/ Desktop
     // Tablet below to Mobile
     [theme.breakpoints.down('sm')]: {
       marginRight: '30px',
@@ -228,8 +232,8 @@ export default function TimelineSection() {
   const timelinePicRight2018 = 'timelinePicLeft2018.jpg'
 
   return (
-    <Grid container justify="center" alignItems="center" className={classes.container}>
-      <Grid item xs={12} className={classes.center}>
+    <Grid container justify="center" alignItems="center" className={classes.tealBackground}>
+      <Grid item xs={12} className={`${classes.titleContainer} ${classes.center}`}>
         <TitleLeft />
         <span className={classes.title}>See how we’ve grown!</span>
         <TitleRight />
