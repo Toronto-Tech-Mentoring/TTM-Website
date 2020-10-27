@@ -59,7 +59,7 @@ const listCards = [
             imageStyle: {
                 width: 'calc(7.4vw + 37px)',
                 minWidth:'94px',
-                padding: '20px',
+                padding: '20px 20px 0 20px',
             }
          }
     },
@@ -73,10 +73,7 @@ const listCards = [
             imageStyle: {
                 width: 'calc(10.4vw + 35px)',
                 minWidth:'115',
-                padding: '20px',
-                // '@media screen and (max-width: 1090px)': {
-                // width: '115px',
-                // },
+                padding: '20px 20px 0 20px',
             }
         } 
     }
