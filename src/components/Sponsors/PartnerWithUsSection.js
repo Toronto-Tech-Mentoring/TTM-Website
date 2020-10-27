@@ -134,8 +134,11 @@ const useStyles = makeStyles((theme) => ({
           width: 'calc(14.7vw + 527px)',
           margin: '0px auto 16px auto',
           paddingTop:'96px',
-           [theme.breakpoints.down('542')]: {
-               width: 'calc(73vw + 77px)',
+           [theme.breakpoints.down('sm')]: {
+               width:  'calc(73vw + 75px)',
+          }, 
+             [theme.breakpoints.down('411')]: {
+               width:  '100vw',
         }, 
     },
 
@@ -146,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         fontSize: '28px',
         lineHeight: '44px',
-        textAlign:'center',
+        textAlign: 'center',
 
         // Tablet 
         [theme.breakpoints.down('sm')]: {
@@ -165,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         display: "inline-flex",
         alignItems: "center",
-         justifyContent: "space-between",
+        justifyContent: "space-between",
     },
 
     firstParagraph: {
@@ -177,7 +180,6 @@ const useStyles = makeStyles((theme) => ({
         width: 'calc(3.6vw + 504px)',
         textAlign: 'center',
 
-        // Tablet 
         [theme.breakpoints.down('sm')]: {
             fontSize: '16px',
             lineHeight: '27px',
@@ -185,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
         },
 
         // Mobile 
-        [theme.breakpoints.down('360')]: {
+        [theme.breakpoints.down('411')]: {
             fontSize: '14px',
             lineHeight: '24px',
         },
@@ -211,6 +213,7 @@ const useStyles = makeStyles((theme) => ({
         },
 
         [theme.breakpoints.down('542')]: {
+            width: '80%',
             marginTop:'64px',
             fontSize: '18px',
             lineHeight: '29px',
