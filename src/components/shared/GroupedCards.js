@@ -16,6 +16,5 @@ export default function GroupedCards(props) {
             />
         ))
     }
-
     return ( < div className = { classes.container } > { renderListCards() } </div>   )
     };

@@ -31,13 +31,9 @@ const listCards = [
             imageStyle: {
                 width: 'calc(8vw + 11px)',
                 minWidth: '72px',
-                padding: '20px',
-                // '@media screen and (max-width: 1090px)': {
-                //   width: '72px',
-                // },
+                padding: '20px 20px 0 20px',
             },
         }
-     
     },
     {
         text: 'Software or server subscriptions',
@@ -49,13 +45,9 @@ const listCards = [
             imageStyle: {
                 width: 'calc(7.4vw + 29px)',
                 minWidth: '86px',
-                padding: '20px',
-                // '@media screen and (max-width: 1090px)': {
-                // width: '86px',
-                // },
+                  padding: '20px 20px 0 20px',
             }
         }
-
     },
     {
         image: ImageThree,
@@ -68,9 +60,6 @@ const listCards = [
                 width: 'calc(7.4vw + 37px)',
                 minWidth:'94px',
                 padding: '20px',
-                // '@media screen and (max-width: 1090px)': {
-                // width: '94px',
-                // },
             }
          }
     },
@@ -89,8 +78,7 @@ const listCards = [
                 // width: '115px',
                 // },
             }
-        }
-      
+        } 
     }
 ];
 
