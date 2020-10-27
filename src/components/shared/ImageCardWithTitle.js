@@ -9,8 +9,8 @@ export default function ImageCard(props) {
 );
     const classes = useStyles();
     return (
-        <div className={classes.cardContainer}>
-            <img src={props.cardObject.image} className={classes.image}  alt={ props.cardObject.text} />
+        <div className={classes.cardStyle}>
+            <img src={props.cardObject.image} className={classes.imageStyle}  alt={ props.cardObject.text} />
             <div> {props.cardObject.text} </div>
         </div>   
     )

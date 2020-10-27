@@ -29,11 +29,12 @@ const listCards = [
                 maxWidth:'170px'
             },  
             imageStyle: {
-                width: '125px',
+                width: 'calc(8vw + 11px)',
+                minWidth: '72px',
                 padding: '20px',
-                '@media screen and (max-width: 1090px)': {
-                  width: '72px',
-                },
+                // '@media screen and (max-width: 1090px)': {
+                //   width: '72px',
+                // },
             },
         }
      
@@ -46,11 +47,12 @@ const listCards = [
                 maxWidth:'180px'
             },  
             imageStyle: {
-                width: '136px',
+                width: 'calc(7.4vw + 29px)',
+                minWidth: '86px',
                 padding: '20px',
-                '@media screen and (max-width: 1090px)': {
-                width: '86px',
-                },
+                // '@media screen and (max-width: 1090px)': {
+                // width: '86px',
+                // },
             }
         }
 
@@ -63,11 +65,12 @@ const listCards = [
                 maxWidth:'214px'
             },  
             imageStyle: {
-                width: '144px',
+                width: 'calc(7.4vw + 37px)',
+                minWidth:'94px',
                 padding: '20px',
-                '@media screen and (max-width: 1090px)': {
-                width: '94px',
-                },
+                // '@media screen and (max-width: 1090px)': {
+                // width: '94px',
+                // },
             }
          }
     },
@@ -79,11 +82,12 @@ const listCards = [
                 maxWidth:'220px'
             },  
             imageStyle: {
-                width: '185px',
+                width: 'calc(10.4vw + 35px)',
+                minWidth:'115',
                 padding: '20px',
-                '@media screen and (max-width: 1090px)': {
-                width: '115px',
-                },
+                // '@media screen and (max-width: 1090px)': {
+                // width: '115px',
+                // },
             }
         }
       
@@ -98,22 +102,25 @@ const cardsContainerStyle = {
     alignItems: "flex-end",
     flexWrap:'wrap',
     justifyContent: "space-between",
-    fontSize: '10px',
-    lineHeight: '24px',
     fontFamily: 'Poppins',
     fontWeight: 500,
     fontSize: '18px',
     color: '#FFFFFF',
     lineHeight: '27px',
-    '@media screen and (max-width: 1090px)': {
-        maxWidth: '620px',
+    textAlign: 'center',
+    padding: '0 50px 125px 50px',
+    '@media screen and (max-width: 1040px)': {
+        maxWidth: '540px',
         fontSize: '16px',
+        paddingBotton: '95px'
     },
-    '@media screen and (max-width: 540px)': {
+    '@media screen and (max-width:560px)': {
         maxWidth: '300px',
         fontSize: '14px',
         lineHeight: '24px',
-    },
+        justifyContent: "space-around",
+          paddingBotton: '64px'
+    }
 };
 
 const useStyles = makeStyles((theme) => ({
