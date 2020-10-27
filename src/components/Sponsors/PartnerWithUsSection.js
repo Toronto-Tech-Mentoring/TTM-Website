@@ -11,84 +11,106 @@ import ImageThree from '../../images/sponsors/partner/workspaces.svg';
 import ImageFour from '../../images/sponsors/partner/training.svg'
 
 //  Cards flex container
-import GroupedCardContainer from '../shared/GroupedCardsContainer';
+import GroupedCards from '../shared/GroupedCards';
     
-// Cards objects array
-/********************************************************
+// Cards JSON
+/*********************************************************************
     Each card object contains 3 propersties:
     - image: image path
     - text: image title
-    - cardStyle: card JSS properties object
+    - style: object containing style objects for the container and the image
 *********************************************************/
 const listCards = [
     {
         image: ImageOne,
         text: 'Laptops for accessability',
-        cardStyle: {
-            width: 'calc(2.8vw + 129px)',
-            minWidth: '114px',
-            height: '100%',
-            margin:'24px'
-        },
+        style: {
+            cardStyle: {
+                maxWidth:'170px'
+            },  
+            imageStyle: {
+                width: '125px',
+                padding: '20px',
+                '@media screen and (max-width: 1090px)': {
+                  width: '72px',
+                },
+            },
+        }
+     
     },
     {
         text: 'Software or server subscriptions',
         image: ImageTwo,
-        cardStyle: {
-            width: 'calc(4.3vw + 117px)',
-            minWidth: '149px',
-            height: '100%',
-            margin:'24px'
-        },
+        style: {
+            cardStyle: {
+                maxWidth:'180px'
+            },  
+            imageStyle: {
+                width: '136px',
+                padding: '20px',
+                '@media screen and (max-width: 1090px)': {
+                width: '86px',
+                },
+            }
+        }
+
     },
     {
         image: ImageThree,
         text: 'Workspaces where we can host our sessions',
-        cardStyle: {
-            width: 'calc(3.7vw + 160px)',
-            minWidth: '187px',
-            height: '100%',
-            margin:'24px'
-        },
-      
+        style: {
+            cardStyle: {
+                maxWidth:'214px'
+            },  
+            imageStyle: {
+                width: '144px',
+                padding: '20px',
+                '@media screen and (max-width: 1090px)': {
+                width: '94px',
+                },
+            }
+         }
     },
     {
         image: ImageFour,
         text: 'Access to additional training and workshops',
-        cardStyle: {
-            width: 'calc(3.6vw + 168px)',
-            minWidth: '188px',
-            height: '100%',
-            margin:'24px'
-        },
+        style: {
+            cardStyle: {
+                maxWidth:'220px'
+            },  
+            imageStyle: {
+                width: '185px',
+                padding: '20px',
+                '@media screen and (max-width: 1090px)': {
+                width: '115px',
+                },
+            }
+        }
       
     }
 ];
 
-// image title (text) properties
-const imageTextStyle = {
+// Cards flex container style object
+const cardsContainerStyle = {
+    maxWidth: '1024px',
+    margin: '10px auto 10px auto',
+    display: "flex",
+    alignItems: "flex-end",
+    flexWrap:'wrap',
+    justifyContent: "space-between",
+    fontSize: '10px',
+    lineHeight: '24px',
     fontFamily: 'Poppins',
     fontWeight: 500,
     fontSize: '18px',
     color: '#FFFFFF',
     lineHeight: '27px',
-    sm: {
+    '@media screen and (max-width: 1090px)': {
+        maxWidth: '620px',
         fontSize: '16px',
     },
-    xs: {
-        fontSize: '14px',
-        lineHeight: '24px',
-    },
-};
-
-// Cards flex container JSS object
-const cardsContainerStyle = {
-    width: 'calc(90vw - 34px)',
-    marginLeft: 'calc(5vw - 17px)',
-    sm: {
-        marginTop: '-32px',
-    },
-    xs: {
+    '@media screen and (max-width: 540px)': {
+        maxWidth: '300px',
         fontSize: '14px',
         lineHeight: '24px',
     },
@@ -97,15 +119,10 @@ const cardsContainerStyle = {
 const useStyles = makeStyles((theme) => ({
 
      container: {
-        height: 'calc(-3.4vw + 830px)',
+        height: 'fit-content',
         width: '100%',
-        maxHeight: '1144px',
         backgroundColor:'#4529AE',
-        [theme.breakpoints.down('542')]: {
-            height: '1144px',
-        },
     }, 
-
       textBox: {
           width: 'calc(14.7vw + 527px)',
           margin: '0px auto 16px auto',
@@ -222,20 +239,10 @@ export default function TheBottomLineSection() {
                 </div>
                 <div className={classes.secondParagraph}>{secondParagraph}</div> 
             </div>
-            
-            {/* Cards flex container:  
-               - cardContainerStyle,  and listCards are passed as props 
-               to the reusable component in GroupedCardsContainer.js
-               - imageTextStyle is passed as props to reusable components GroupedCardsContainer.js 
-                  then ImageCardWithTile.js
-            */}
-             <GroupedCardContainer
+             <GroupedCards
                 cardsContainerStyle={cardsContainerStyle}
                 listCards={listCards}
-                imageTextStyle = {imageTextStyle}
-            />
-         
-            
+            />      
         </div>
     )
 };
