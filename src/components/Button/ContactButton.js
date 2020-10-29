@@ -7,6 +7,6 @@ export default function ContactButton(props){
     const classes = useStyles();
 
     return(
-        <button className={classes.contactButton}>{props.buttonText}</button>
+        <button className={classes.contactButton} style={props.style}>{props.buttonText}</button>
     )
 }

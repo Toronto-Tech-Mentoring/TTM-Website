@@ -7,11 +7,11 @@ import Grid from '@material-ui/core/Grid';
 import background1 from '../../images/about-us/How-are-we-different-section/background1.svg';
 import background2 from '../../images/about-us/How-are-we-different-section/background2.svg';
 import background3 from '../../images/about-us/How-are-we-different-section/background3.svg';
-import pic1 from '../../images/about-us/How-are-we-different-section/pic1.svg';
-import pic2 from '../../images/about-us/How-are-we-different-section/pic2.svg';
-import pic3 from '../../images/about-us/How-are-we-different-section/pic3.svg';
-import shiny2 from '../../images/about-us/How-are-we-different-section/shiny2.svg';
-import shiny3 from '../../images/about-us/How-are-we-different-section/shiny3.svg';
+import GoalSVG from '../../images/about-us/How-are-we-different-section/goals.svg';
+import SkillSVG from '../../images/about-us/How-are-we-different-section/skills.svg';
+import SupportSVG from '../../images/about-us/How-are-we-different-section/support.svg';
+import Shiny1SVG from '../../images/about-us/How-are-we-different-section/shiny.svg';
+import Shiny2SVG from '../../images/about-us/How-are-we-different-section/shiny2.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,8 +73,8 @@ export default function Cards() {
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background1}` }}>
-            <img className={classes.innerImage} style={{ top: '35px' }} alt="skill_development" src={pic1} />
-          </div>  
+            <GoalSVG className={classes.innerImage} style={{ top: '35px' }} alt="skill_development" />
+          </div>
           <CardContent>
             <p className={classes.contents}>
               We support the client in setting their own career, entrepreneurial or personal goals.
@@ -86,8 +86,8 @@ export default function Cards() {
         <Card className={classes.root}>
           <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background2}` }}>
-            <img className={classes.innerImage} style={{ top: '15px', zIndex: '3', left: '60px' }} alt="skill_development" src={pic2} />
-            <img className={classes.innerImage} style={{ top: '30px', zIndex: '2', right: '55px' }} alt="shiny" src={shiny2} />
+            <SkillSVG className={classes.innerImage} style={{ top: '15px', zIndex: '3', left: '60px' }} alt="skill_development"/>
+            <Shiny1SVG className={classes.innerImage} style={{ top: '30px', zIndex: '2', right: '55px' }} alt="shiny" />
           </div>
           <CardContent>
             <p className={classes.contents}>
@@ -100,8 +100,8 @@ export default function Cards() {
         <Card className={classes.root}>
           <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${background3}` }}>
-            <img className={classes.innerImage} style={{ top: '44px', zIndex: '3', left: '60px' }} alt="supports" src={pic3} />
-            <img className={classes.innerImage} style={{ top: '33px', zIndex: '2', right: '60px' }} alt="shiny" src={shiny3} />
+            <SupportSVG className={classes.innerImage} style={{ top: '44px', zIndex: '3', left: '60px' }} alt="supports" />
+            <Shiny2SVG className={classes.innerImage} style={{ top: '33px', zIndex: '2', right: '60px' }} alt="shiny"/>
           </div>
           <CardContent>
             <p className={classes.contents}>

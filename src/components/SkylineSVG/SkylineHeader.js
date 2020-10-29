@@ -6,7 +6,7 @@ export default function SkylineHeaderSVG() {
 
   return (
     <div className={styles.moveUp}>
-      <Skylinehead style={{height: 'auto', width: '100%'}} />
+      <Skylinehead className={styles.skylineSettings} />
     </div>
   )
 }

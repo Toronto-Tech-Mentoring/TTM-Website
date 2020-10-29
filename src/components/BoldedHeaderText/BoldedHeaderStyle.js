@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         marginTop:'5px',
         marginBottom: '5px',
-        fontSize: '20px',
-        lineHeight: '34px',
+        fontSize: 'calc(1.48vw + 14.7px)',
+        lineHeight: 'calc(2.31vw + 23.7px)',
         [theme.breakpoints.down('sm')]: {
             marginTop: '40px',
             textAlign:'left'

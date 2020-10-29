@@ -2,13 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     textBox: {
-        marginTop:'135px',
-        marginRight:'20vw',
-        padding: '0px 0 0 16%',
+        paddingLeft: 'calc(19vw - 51.3px)',
+        paddingRight: 'calc(46.5vw - 151px)',
         [theme.breakpoints.down('sm')]: {
-            padding:' 0px 0 0 0',
-            margin: 0,
-            textAlign: 'left',
+            marginTop: '0',
         }
     }
 }));

@@ -20,12 +20,13 @@ export default function VitalRole() {
     return (
         <GridContainer>
             <Grid item xs={12}>
+                {/* This is whitespace container which can be adjusted */}
                 <Container maxWidth="large">
                     <Typography component="div" style={{ height: '10vh' }} />
                 </Container>
             </Grid>
             <Grid item xs={12} md={6}>
-            <TextBox>
+            <TextBox style={{'padding-right':'calc(1.96vw + 8.94px)','padding-left':'calc(19.4vw - 53.7px)'}}>
                 <Title title={title} style={{'text-align':'left'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
                 <PContent content={content1} style={{'text-align':'left'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
                 <Hidden smDown>

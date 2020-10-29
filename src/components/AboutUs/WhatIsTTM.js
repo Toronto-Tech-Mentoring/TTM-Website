@@ -1,4 +1,5 @@
 import React from "react"
+import Hidden from '@material-ui/core/Hidden';
 
 import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import TextBox from '../TextBox/TextBox'
@@ -19,12 +20,12 @@ export default function WhatiIsTTM() {
 
   return (
     <div>
-        <TextBox >
-            <CheetoLeft className={classes.cheetohLeftMirrored} style={{'margin-top':'-1.6em'}} alt="cheetohLeft" />
+        <CheetoLeft className={classes.cheetohLeftMirrored} style={{'margin-top':'-1.6em'}} alt="cheetohLeft" />
+          <TextBox style={{'margin-top':'135px', 'margin-right':'calc(46.5vw - 151px)','padding-right':'0'}}>
             <BoldedHeader headerText={headerText} style={{'font-size':'calc(1.3vw + 1em)'}}/>
-            <Content content={content} extra={<RainbowHeart style={{'margin-left':'15px'}}/>} style={{'text-align':'left'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
+            <Content content={content} extra={<RainbowHeart style={{'margin-left':'15px'}}/>} style={{'text-align':'left' , 'margin-top':'-5px'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
             <CheetoRight className={classes.cheetohRightMirrored} style={{'margin-top':'calc(1vh + 1px)'}} alt="cheetohRight"/>
-        </TextBox>
+          </TextBox>
         <SkylineHeaderSVG />
     </div>
   )

@@ -19,11 +19,11 @@ export default function WhatiIsTTM() {
 
   return (
     <div>
-        <TextBox style={{'margin-top':'135px', 'margin-right':'20vw'}}>
-            <CheetoLeft className={classes.cheetohLeftMirrored} style={{'margin-top':'-1.6em'}} alt="cheetohLeft" />
-            <BoldedHeader headerText={headerText} style={{'font-size':'36px'}}/>
-            <CheetoRight className={classes.cheetohRightMirrored} style={{'margin-top':'100px'}} alt="cheetohRight"/>
-            <Content content={content} style={{'font-size':'18px', 'line-height':'1.8'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
+        <CheetoLeft className={classes.cheetohLeftMirrored} style={{'margin-top':'-1.6em'}} alt="cheetohLeft" />
+        <TextBox style={{'margin-top':'135px', 'margin-right':'calc(46.5vw - 151px)','padding-right':'0'}}>
+            <BoldedHeader headerText={headerText} style={{'font-size':'calc(1.3vw + 1em)'}}/>
+            <Content content={content} style={{'text-align':'left' , 'margin-top':'-5px'}} hideCheetohs={["sm","xs","lg","md","xl"]}/>
+            <CheetoRight className={classes.cheetohRightMirrored} style={{'margin-top':'calc(1vh + 1px)'}} alt="cheetohRight"/>
         </TextBox>
         <SkylineHeaderSVG />
     </div>
