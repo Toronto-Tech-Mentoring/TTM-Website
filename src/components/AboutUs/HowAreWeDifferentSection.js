@@ -1,5 +1,5 @@
 import React from "react"
-import Cards from "./Cards"
+import AboutUsCards from "./Cards"
 import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -90,7 +90,7 @@ export default function HowAreWeDifferentSection() {
           </p>
         </div>
       </Grid>
-      <Cards />
+      <AboutUsCards />
     </Grid>
   )
 }
