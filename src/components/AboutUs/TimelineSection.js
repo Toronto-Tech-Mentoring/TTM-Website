@@ -126,8 +126,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '31px',
     width: '90%',
     zIndex: 2,
-    [theme.breakpoints.up('md')]: {
-      width: '85%',
+    [theme.breakpoints.up(1921)]: {
+      width:'720px',
+      marginRight:'calc(100% - 710px)',
+    },
+    [theme.breakpoints.between('lg', 1920)]: {
+      width: '80%',
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: '16px',
@@ -154,6 +158,17 @@ const useStyles = makeStyles((theme) => ({
   firstPic: {
     display: 'inline-block',
     marginRight: '30px',
+  },
+  picDiv: {
+    width: '90%',
+    display:'flex',
+    justifyContent: 'space-between',
+    [theme.breakpoints.up(1921)]: {
+      width:'720px',
+    },
+    [theme.breakpoints.between('lg', 1920)]: {
+      width: '80%',
+    }, 
   },
   gridContainer: {
     marginTop: '50px',
@@ -247,7 +262,7 @@ export default function TimelineSection() {
             space. Civic Tech is a movement that focuses on developing and
             harnessing technology for the betterment of civic life.
             </p>
-          <div>
+          <div className={classes.picDiv}>
             <ImgOpt
               className={`${classes.firstPic} ${classes.pic}`}
               alt="timeline pic left 2017"
@@ -276,7 +291,7 @@ export default function TimelineSection() {
             mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
             nisi tristique viverra at ac elit.
             </p>
-          <div>
+          <div className={classes.picDiv}>
             <ImgOpt
               className={`${classes.firstPic} ${classes.pic}`}
               alt="timeline pic left 2018"
