@@ -4,7 +4,6 @@ import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import TextBox from '../TextBox/TextBox'
 import Content from '../DecoratedText/DecoratedText'
 // import styles from "./HeroText.module.css"
-import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
@@ -15,7 +14,7 @@ import {
 export default function WhatiIsTTM() {
     const classes = useStyles()
     const headerText = "Thank you for partnering with us"
-    const content = "The Accelerator Project is an entirely volunteer-run organization. All donations go directly into offering tech mentoring to young people who have faced adversity."
+    const content = "The Accelerator Project is part of an ecosystem of programs aimed at addressing homelessness in Toronto. Our delivery partners help facilitate our programs, and provide wrap-around support to allow our clients to focus on learning tech skills and building their futures."
 
   return (
     <div>

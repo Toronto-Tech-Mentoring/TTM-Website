@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     p: {
         color: '#FFFFFF',
-        marginBottom: '50px',
+        marginBottom: '0px',
         fontWeight: 'normal',
         lineHeight: '30px',
         fontFamily: 'Poppins',

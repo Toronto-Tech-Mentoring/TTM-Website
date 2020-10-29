@@ -27,13 +27,11 @@ export default function BurgerMenu(props) {
     },
     bmMenu: {
       background: '#FFFFFF',
-      padding: '2.5em 1.5em 0',
       width: props.sideBarWidth,
       minWidth: '140px',
       maxWidth: '300px',
       fontSize: '1.15em',
       marginTop: '2px',
-      padding: '0px',
       boxShadow: "4px 2px 4px rgba(0, 0, 0, 0.3)",
       padding: "0",
       margin: "0",
