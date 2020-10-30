@@ -15,10 +15,11 @@ import GroupedCards from '../shared/GroupedCards';
     
 // Cards JSON
 /*********************************************************************
-    Each card object contains 3 propersties:
-    - image: image path
-    - text: image title
-    - style: object containing style objects for the container and the image
+    Each card object contains 4 propersties ( all required for the reusable component):
+    - header: for the card header 
+    - body: for the card body
+    - footer for the card footer
+    - style: object to style each of the s sections
 *********************************************************/
 const cardsJson = [
 
