@@ -20,61 +20,108 @@ import GroupedCards from '../shared/GroupedCards';
     - text: image title
     - style: object containing style objects for the container and the image
 *********************************************************/
-const listCards = [
-    {
-        image: ImageOne,
-        text: 'Laptops for accessability',
+const cardsJson = [
+
+    {   header:'',
+        body: <img src={ImageOne} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,    
+        footer: 'Laptops for accessability',
         style: {
-            cardStyle: {
-                maxWidth:'170px'
+            cardContainer: {
+                maxWidth: '170px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '116px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '114px',
+                }
             },  
-            imageStyle: {
+            bodyWrapper: {
                 width: 'calc(8vw + 11px)',
                 minWidth: '72px',
                 padding: '20px 20px 0 20px',
+                display:'inline-block'
             },
+            header:{},
+            footer:{},
         }
     },
-    {
-        text: 'Software or server subscriptions',
-        image: ImageTwo,
+    {   header:'',
+       body: <img src={ImageTwo} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,
+        footer: 'Software or server subscriptions',
         style: {
-            cardStyle: {
-                maxWidth:'180px'
+            cardContainer: {
+                maxWidth: '180px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '151px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '149px',
+                }
             },  
-            imageStyle: {
+            bodyWrapper: {
                 width: 'calc(7.4vw + 29px)',
                 minWidth: '86px',
-                  padding: '20px 20px 0 20px',
-            }
+                padding: '20px 20px 0 20px',
+                textAlign: 'center',
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
         }
     },
     {
-        image: ImageThree,
-        text: 'Workspaces where we can host our sessions',
+        header: '',
+        body: <img src={ImageThree} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,
+        footer: 'Workspaces where we can host our sessions',
         style: {
-            cardStyle: {
-                maxWidth:'214px'
+            cardContainer: {
+                maxWidth: '214px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '189px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '187px',
+                }
             },  
-            imageStyle: {
+            bodyWrapper: {
                 width: 'calc(7.4vw + 37px)',
                 minWidth:'94px',
                 padding: '20px 20px 0 20px',
-            }
-         }
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
+        },
+      
     },
     {
-        image: ImageFour,
-        text: 'Access to additional training and workshops',
+        header: '',
+        body: <img src={ImageFour} width='100%' height='auto' alt='laptops for accessibility' />,
+        footer: 'Access to additional training and workshops',
         style: {
-            cardStyle: {
-                maxWidth:'220px'
+            cardContainer: {
+                maxWidth: '220px',
+                margin:'0px',
+                '@media screen and (max-width: 1024px)': {
+                    maxWidth: '196px',
+                     margin:'0 30px',
+
+                }
             },  
-            imageStyle: {
+            bodyWrapper: {
                 width: 'calc(10.4vw + 35px)',
                 minWidth:'115',
                 padding: '20px 20px 0 20px',
-            }
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
         } 
     }
 ];
@@ -94,17 +141,17 @@ const cardsContainerStyle = {
     lineHeight: '27px',
     textAlign: 'center',
     padding: '0 50px 125px 50px',
-    '@media screen and (max-width: 1040px)': {
+    '@media screen and (max-width: 1024px)': {
         maxWidth: '540px',
         fontSize: '16px',
-        paddingBotton: '95px'
+        padding: '0 0 95px 0',
     },
     '@media screen and (max-width:560px)': {
         maxWidth: '300px',
         fontSize: '14px',
         lineHeight: '24px',
         justifyContent: "space-around",
-          paddingBotton: '64px'
+          paddingBottom: '64px'
     }
 };
 
@@ -236,7 +283,7 @@ export default function TheBottomLineSection() {
             </div>
              <GroupedCards
                 cardsContainerStyle={cardsContainerStyle}
-                listCards={listCards}
+                cardsJson={cardsJson}
             />      
         </div>
     )

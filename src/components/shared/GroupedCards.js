@@ -1,18 +1,17 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core';
 
-import ImageCard from './ImageCardWithTitle'
-
+import ImageCard from './ThreeSectionsCard'
 export default function GroupedCards(props) {
     const useStyles = makeStyles({
         container: props.cardsContainerStyle
     });
     const classes = useStyles();
     const renderListCards = () => {
-        return props.listCards.map(cardObject => (
+        return props.cardsJson.map(card => (
             <ImageCard
-                cardObject={cardObject}
-                key = { cardObject.text }
+                card={card}
+                key = { card.key}
             />
         ))
     }
