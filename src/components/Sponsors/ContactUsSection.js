@@ -1,9 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
+import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import CustomButton from '../CustomButton';
 import CheetoLeft from '../../images/cheetohs/cheetohLeft.svg';
 import CheetoRight from '../../images/cheetohs/cheetohRight.svg';
+
+
 
 const useStyles = makeStyles(theme => ({
     contactButton: {
@@ -118,14 +121,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContactUsSection() {
     const classes = useStyles();
+    const headerText = "If you have a way to help that isn’t listed above, or have any questions about donating."
 
     return (
         <div className={classes.divStyle}>
             <div>
                 <CheetoLeft className={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
-                <h2 className={classes.h2Text}>
-                    If you have a way to help that isn’t listed above, or have any questions about donating.
-                </h2>
+                <BoldedHeader headerText={headerText} style={{'text-align':'center','font-size':'calc(0.926vw + 14.7px)','margin-left':'calc(37vw - 118px)', 'margin-right':'calc(37vw - 118px)'}}/>
                 <CheetoRight className={`${classes.cRight} ${classes.noDisplayOnBigScreen}`}/>
             </div>
             <div style={{ textAlign: 'center', marginTop: '45px', marginBottom: '90px' }}>

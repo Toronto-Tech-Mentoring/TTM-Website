@@ -1,5 +1,4 @@
 import React from "react"
-import Hidden from '@material-ui/core/Hidden';
 
 import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import TextBox from '../TextBox/TextBox'
