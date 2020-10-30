@@ -6,11 +6,19 @@
   max-height: 100%;
 }
 
-@media (min-width: 450px) and (max-width: 1441px) {
+@media (min-width: 1270px) and (max-width: 2550px) {
   .skylineSettings {
       height: 100%;
       width: 100%;
-      margin-top:-10em;
+      margin-top:-40vh;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 1269px) {
+  .skylineSettings {
+    height: 100%;
+    width: 100%;
+    margin-top: -10em;
   }
 }
 
