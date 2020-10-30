@@ -6,7 +6,7 @@
   max-height: 100%;
 }
 
-@media (min-width: 1270px) and (max-width: 2550px) {
+@media (min-width: 1270px) {
   .skylineSettings {
       height: 100%;
       width: 100%;

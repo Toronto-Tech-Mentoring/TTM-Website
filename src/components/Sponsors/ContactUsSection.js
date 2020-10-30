@@ -1,12 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import BoldedHeader from '../BoldedHeaderText/BoldedHeader'
 import CustomButton from '../CustomButton';
 import CheetoLeft from '../../images/cheetohs/cheetohLeft.svg';
 import CheetoRight from '../../images/cheetohs/cheetohRight.svg';
-
-
 
 const useStyles = makeStyles(theme => ({
     contactButton: {
@@ -41,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '28px',
         fontWeight: 600,
         fontStyle: 'normal',
-        lineHeight: '29px',
+        lineHeight: '44px',
         margin: '0 auto',
         letterSpacing: '0em',
 
@@ -53,10 +50,9 @@ const useStyles = makeStyles(theme => ({
 
         // Screen size: Tablet To Laptop
         [theme.breakpoints.between('sm', 'md')]: {
-            fontFamily: 'Futura',
-            fontSize: '28px',
-            fontWeight: 500,
-            lineHeight: '42px',
+            fontSize: '22px',
+            fontWeight: 600,
+            lineHeight: '38px',
         },
 
         // Screen size: Mobile to Tablet
@@ -121,13 +117,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContactUsSection() {
     const classes = useStyles();
-    const headerText = "If you have a way to help that isn’t listed above, or have any questions about donating."
 
     return (
         <div className={classes.divStyle}>
             <div>
                 <CheetoLeft className={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
-                <BoldedHeader headerText={headerText} style={{'text-align':'center','font-size':'calc(0.926vw + 14.7px)','margin-left':'calc(37vw - 118px)', 'margin-right':'calc(37vw - 118px)'}}/>
+                <h2 className={classes.h2Text}>
+                    If you have a way to help that isn’t listed above, or have any questions about donating.
+                </h2>
                 <CheetoRight className={`${classes.cRight} ${classes.noDisplayOnBigScreen}`}/>
             </div>
             <div style={{ textAlign: 'center', marginTop: '45px', marginBottom: '90px' }}>
