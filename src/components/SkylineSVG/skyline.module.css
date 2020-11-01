@@ -6,6 +6,29 @@
   max-height: 100%;
 }
 
+@media (min-width: 1270px) {
+  .skylineSettings {
+      height: 100%;
+      width: 100%;
+      margin-top:-40vh;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 1269px) {
+  .skylineSettings {
+    height: 100%;
+    width: 100%;
+    margin-top: -10em;
+  }
+}
+
+@media (max-width: 450px){
+  .skylineSettings {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1441px){
   .moveUp {
     margin-top: -100px;

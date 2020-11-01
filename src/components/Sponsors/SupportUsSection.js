@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import CheetoLeft from '../../images/cheetohs/cheetoLeft.svg';
-import CheetoRight from '../../images/cheetohs/cheetoRight.svg';
+import CheetoLeft from '../../images/cheetohs/cheetohLeft.svg';
+import CheetoRight from '../../images/cheetohs/cheetohRight.svg';
 import CustomButton from '../CustomButton';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '28px',
         lineHeight: '42px',
 
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down(1024)]: {
             fontSize: '22px',
             lineHeight: '38px',
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         height: '50px',
         display: 'none',
         margin: '0px 30px',
-        // Tablet 
+        // Tablet
         [theme.breakpoints.up(1024)]: {
             display: 'inline-block',
         },
@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         maxWidth: '792px',
         margin: '0 auto',
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down(1024)]: {
             width: '535px',
         },
-        // Mobile 
+        // Mobile
         [theme.breakpoints.down('xs')]: {
             margin: '0px 15px',
             width: 'auto',
@@ -63,14 +63,14 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         lineHeight: '27px',
 
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down(1024)]: {
             fontSize: '16px',
             lineHeight: '27px',
             width: 'auto',
         },
 
-        // Mobile 
+        // Mobile
         [theme.breakpoints.down('xs')]: {
             fontSize: '14px',
             lineHeight: '24px',
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         lineHeight: '27px',
 
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down(1024)]: {
             width: '143px',
             height: '40px',
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
             lineHeight: '27px',
         },
 
-        // Mobile 
+        // Mobile
         [theme.breakpoints.down('xs')]: {
             width: '120px',
             height: '32px',

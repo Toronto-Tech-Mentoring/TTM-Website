@@ -1,8 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core';
 
-import Cheetoh from '../../images/cheetohs/cheetoRight.svg';
-
+import Cheetoh from '../../images/cheetohs/cheetohRight.svg';
 
 // Images 
 import ImageOne from '../../images/sponsors/partner/laptop.svg';
