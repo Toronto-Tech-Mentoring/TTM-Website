@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core';
 
 import Cheetoh from '../../images/cheetohs/cheetohRight.svg';
 
-
-// Images
+// Images 
 import ImageOne from '../../images/sponsors/partner/laptop.svg';
 import ImageTwo from '../../images/sponsors/partner/software.svg';
 import ImageThree from '../../images/sponsors/partner/workspaces.svg';
@@ -12,70 +11,118 @@ import ImageFour from '../../images/sponsors/partner/training.svg'
 
 //  Cards flex container
 import GroupedCards from '../shared/GroupedCards';
-
+    
 // Cards JSON
 /*********************************************************************
-    Each card object contains 3 propersties:
-    - image: image path
-    - text: image title
-    - style: object containing style objects for the container and the image
+    Each card object contains 4 propersties ( all required for the reusable component):
+    - header: for the card header 
+    - body: for the card body
+    - footer for the card footer
+    - style: object to style each of the s sections
 *********************************************************/
-const listCards = [
-    {
-        image: ImageOne,
-        text: 'Laptops for accessability',
+const cardsJson = [
+
+    {   header:'',
+        body: <img src={ImageOne} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,    
+        footer: 'Laptops for accessability',
         style: {
-            cardStyle: {
-                maxWidth:'170px'
-            },
-            imageStyle: {
+            cardContainer: {
+                maxWidth: '170px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '116px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '114px',
+                }
+            },  
+            bodyWrapper: {
                 width: 'calc(8vw + 11px)',
                 minWidth: '72px',
                 padding: '20px 20px 0 20px',
+                display:'inline-block'
             },
+            header:{},
+            footer:{},
         }
     },
-    {
-        text: 'Software or server subscriptions',
-        image: ImageTwo,
+    {   header:'',
+       body: <img src={ImageTwo} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,
+        footer: 'Software or server subscriptions',
         style: {
-            cardStyle: {
-                maxWidth:'180px'
-            },
-            imageStyle: {
+            cardContainer: {
+                maxWidth: '180px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '151px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '149px',
+                }
+            },  
+            bodyWrapper: {
                 width: 'calc(7.4vw + 29px)',
                 minWidth: '86px',
-                  padding: '20px 20px 0 20px',
-            }
+                padding: '20px 20px 0 20px',
+                textAlign: 'center',
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
         }
     },
     {
-        image: ImageThree,
-        text: 'Workspaces where we can host our sessions',
+        header: '',
+        body: <img src={ImageThree} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,
+        footer: 'Workspaces where we can host our sessions',
         style: {
-            cardStyle: {
-                maxWidth:'214px'
-            },
-            imageStyle: {
+            cardContainer: {
+                maxWidth: '214px',
+                 margin:'0px',
+                 '@media screen and (max-width: 1024px)': {
+                     maxWidth: '189px',
+                      margin:'0 30px',
+                },
+                '@media screen and (max-width:560px)': {
+                    maxWidth: '187px',
+                }
+            },  
+            bodyWrapper: {
                 width: 'calc(7.4vw + 37px)',
                 minWidth:'94px',
                 padding: '20px 20px 0 20px',
-            }
-         }
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
+        },
+      
     },
     {
-        image: ImageFour,
-        text: 'Access to additional training and workshops',
+        header: '',
+        body: <img src={ImageFour} width='100%' height='auto' alt='laptops for accessibility' />,
+        footer: 'Access to additional training and workshops',
         style: {
-            cardStyle: {
-                maxWidth:'220px'
-            },
-            imageStyle: {
+            cardContainer: {
+                maxWidth: '220px',
+                margin:'0px',
+                '@media screen and (max-width: 1024px)': {
+                    maxWidth: '196px',
+                     margin:'0 30px',
+
+                }
+            },  
+            bodyWrapper: {
                 width: 'calc(10.4vw + 35px)',
                 minWidth:'115',
                 padding: '20px 20px 0 20px',
-            }
-        }
+                display:'inline-block'
+            },
+            header:{},
+            footer:{},
+        } 
     }
 ];
 
@@ -94,17 +141,17 @@ const cardsContainerStyle = {
     lineHeight: '27px',
     textAlign: 'center',
     padding: '0 50px 125px 50px',
-    '@media screen and (max-width: 1040px)': {
+    '@media screen and (max-width: 1024px)': {
         maxWidth: '540px',
         fontSize: '16px',
-        paddingBotton: '95px'
+        padding: '0 0 95px 0',
     },
     '@media screen and (max-width:560px)': {
         maxWidth: '300px',
         fontSize: '14px',
         lineHeight: '24px',
         justifyContent: "space-around",
-          paddingBotton: '64px'
+          paddingBottom: '64px'
     }
 };
 
@@ -114,17 +161,17 @@ const useStyles = makeStyles((theme) => ({
         height: 'fit-content',
         width: '100%',
         backgroundColor:'#4529AE',
-    },
+    }, 
       textBox: {
           width: 'calc(14.7vw + 527px)',
           margin: '0px auto 16px auto',
           paddingTop:'96px',
            [theme.breakpoints.down('sm')]: {
                width:  'calc(73vw + 75px)',
-          },
+          }, 
              [theme.breakpoints.down('411')]: {
                width:  '100vw',
-        },
+        }, 
     },
 
     title: {
@@ -136,7 +183,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '44px',
         textAlign: 'center',
 
-        // Tablet
+        // Tablet 
         [theme.breakpoints.down('sm')]: {
             fontSize: '22px',
             lineHeight: '38px',
@@ -148,7 +195,7 @@ const useStyles = makeStyles((theme) => ({
             lineHeight: '32px',
         },
     },
-
+    
     firstParagraphContainer: {
         width: '100%',
         display: "inline-flex",
@@ -171,12 +218,12 @@ const useStyles = makeStyles((theme) => ({
             width: 'calc(51vw + 142px)',
         },
 
-        // Mobile
+        // Mobile 
         [theme.breakpoints.down('411')]: {
             fontSize: '14px',
             lineHeight: '24px',
         },
-
+        
     },
 
     secondParagraph: {
@@ -189,7 +236,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         margin:'calc(4.7vw + 11px) auto 0 auto',
 
-        // Tablet
+        // Tablet 
         [theme.breakpoints.down('sm')]: {
             fontSize: '22px',
             lineHeight: '38px',
@@ -203,7 +250,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '18px',
             lineHeight: '29px',
         },
-
+        
     },
 
       cheetohLeft: {
@@ -213,7 +260,7 @@ const useStyles = makeStyles((theme) => ({
 
     cheetohRight: {
         width: 'calc(1.39vw + 13px)',
-    },
+    }, 
 }));
 
 
@@ -232,12 +279,12 @@ export default function TheBottomLineSection() {
                     <div className={classes.firstParagraph}>{firstParagraph}</div>
                     <Cheetoh className={classes.cheetohRight}/>
                 </div>
-                <div className={classes.secondParagraph}>{secondParagraph}</div>
+                <div className={classes.secondParagraph}>{secondParagraph}</div> 
             </div>
              <GroupedCards
                 cardsContainerStyle={cardsContainerStyle}
-                listCards={listCards}
-            />
+                cardsJson={cardsJson}
+            />      
         </div>
     )
 };
