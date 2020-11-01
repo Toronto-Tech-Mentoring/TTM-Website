@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 
-import { useStyles } from './styles/GridContainerStyle';
+import { useStyles } from './GridContainerStyle';
 
 export default function GridContainer(props) {
     const classes = useStyles();

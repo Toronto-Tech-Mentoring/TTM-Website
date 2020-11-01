@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import CustomButton from '../CustomButton';
-import CheetoLeft from '../../images/cheetohs/cheetoLeft.svg';
-import CheetoRight from '../../images/cheetohs/cheetoRight.svg';
+import CheetoLeft from '../../images/cheetohs/cheetohLeft.svg';
+import CheetoRight from '../../images/cheetohs/cheetohRight.svg';
 
 const useStyles = makeStyles(theme => ({
     contactButton: {
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '28px',
         fontWeight: 600,
         fontStyle: 'normal',
-        lineHeight: '29px',
+        lineHeight: '44px',
         margin: '0 auto',
         letterSpacing: '0em',
 
@@ -50,10 +50,9 @@ const useStyles = makeStyles(theme => ({
 
         // Screen size: Tablet To Laptop
         [theme.breakpoints.between('sm', 'md')]: {
-            fontFamily: 'Futura',
-            fontSize: '28px',
-            fontWeight: 500,
-            lineHeight: '42px',
+            fontSize: '22px',
+            fontWeight: 600,
+            lineHeight: '38px',
         },
 
         // Screen size: Mobile to Tablet
@@ -123,7 +122,7 @@ export default function ContactUsSection() {
         <div className={classes.divStyle}>
             <div>
                 <CheetoLeft className={`${classes.cLeft} ${classes.noDisplayOnBigScreen}`} />
-                <h2 className={classes.h2Text}> 
+                <h2 className={classes.h2Text}>
                     If you have a way to help that isn’t listed above, or have any questions about donating.
                 </h2>
                 <CheetoRight className={`${classes.cRight} ${classes.noDisplayOnBigScreen}`}/>

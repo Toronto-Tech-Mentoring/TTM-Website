@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core';
 
-import Cheetoh from '../../images/cheetohs/cheetoRight.svg';
+import Cheetoh from '../../images/cheetohs/cheetohRight.svg';
 
 
-// Images 
+// Images
 import ImageOne from '../../images/sponsors/partner/laptop.svg';
 import ImageTwo from '../../images/sponsors/partner/software.svg';
 import ImageThree from '../../images/sponsors/partner/workspaces.svg';
@@ -12,7 +12,7 @@ import ImageFour from '../../images/sponsors/partner/training.svg'
 
 //  Cards flex container
 import GroupedCards from '../shared/GroupedCards';
-    
+
 // Cards JSON
 /*********************************************************************
     Each card object contains 3 propersties:
@@ -27,7 +27,7 @@ const listCards = [
         style: {
             cardStyle: {
                 maxWidth:'170px'
-            },  
+            },
             imageStyle: {
                 width: 'calc(8vw + 11px)',
                 minWidth: '72px',
@@ -41,7 +41,7 @@ const listCards = [
         style: {
             cardStyle: {
                 maxWidth:'180px'
-            },  
+            },
             imageStyle: {
                 width: 'calc(7.4vw + 29px)',
                 minWidth: '86px',
@@ -55,7 +55,7 @@ const listCards = [
         style: {
             cardStyle: {
                 maxWidth:'214px'
-            },  
+            },
             imageStyle: {
                 width: 'calc(7.4vw + 37px)',
                 minWidth:'94px',
@@ -69,13 +69,13 @@ const listCards = [
         style: {
             cardStyle: {
                 maxWidth:'220px'
-            },  
+            },
             imageStyle: {
                 width: 'calc(10.4vw + 35px)',
                 minWidth:'115',
                 padding: '20px 20px 0 20px',
             }
-        } 
+        }
     }
 ];
 
@@ -114,17 +114,17 @@ const useStyles = makeStyles((theme) => ({
         height: 'fit-content',
         width: '100%',
         backgroundColor:'#4529AE',
-    }, 
+    },
       textBox: {
           width: 'calc(14.7vw + 527px)',
           margin: '0px auto 16px auto',
           paddingTop:'96px',
            [theme.breakpoints.down('sm')]: {
                width:  'calc(73vw + 75px)',
-          }, 
+          },
              [theme.breakpoints.down('411')]: {
                width:  '100vw',
-        }, 
+        },
     },
 
     title: {
@@ -136,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '44px',
         textAlign: 'center',
 
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down('sm')]: {
             fontSize: '22px',
             lineHeight: '38px',
@@ -148,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
             lineHeight: '32px',
         },
     },
-    
+
     firstParagraphContainer: {
         width: '100%',
         display: "inline-flex",
@@ -171,12 +171,12 @@ const useStyles = makeStyles((theme) => ({
             width: 'calc(51vw + 142px)',
         },
 
-        // Mobile 
+        // Mobile
         [theme.breakpoints.down('411')]: {
             fontSize: '14px',
             lineHeight: '24px',
         },
-        
+
     },
 
     secondParagraph: {
@@ -189,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         margin:'calc(4.7vw + 11px) auto 0 auto',
 
-        // Tablet 
+        // Tablet
         [theme.breakpoints.down('sm')]: {
             fontSize: '22px',
             lineHeight: '38px',
@@ -203,7 +203,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '18px',
             lineHeight: '29px',
         },
-        
+
     },
 
       cheetohLeft: {
@@ -213,7 +213,7 @@ const useStyles = makeStyles((theme) => ({
 
     cheetohRight: {
         width: 'calc(1.39vw + 13px)',
-    }, 
+    },
 }));
 
 
@@ -232,12 +232,12 @@ export default function TheBottomLineSection() {
                     <div className={classes.firstParagraph}>{firstParagraph}</div>
                     <Cheetoh className={classes.cheetohRight}/>
                 </div>
-                <div className={classes.secondParagraph}>{secondParagraph}</div> 
+                <div className={classes.secondParagraph}>{secondParagraph}</div>
             </div>
              <GroupedCards
                 cardsContainerStyle={cardsContainerStyle}
                 listCards={listCards}
-            />      
+            />
         </div>
     )
 };

@@ -4,8 +4,8 @@ import {makeStyles } from '@material-ui/core';
 import DonateIconsGroup from './DonateIconsGroup';
 import DonateButton from '../shared/AnimatedPurpleButton'
 
-import CheetohLeft from '../../images/cheetohs/cheetoLeft.svg'
-import CheetohRight from '../../images/cheetohs/cheetoRight.svg'
+import CheetohLeft from '../../images/cheetohs/cheetohLeft.svg'
+import CheetohRight from '../../images/cheetohs/cheetohRight.svg'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxWidth: '100%',
         padding: '0',
-        margin: '0', 
+        margin: '0',
         [theme.breakpoints.down('sm')]: {
             height: 'calc(5.6vw + 405px)',
         },
     },
-  
+
     textBox: {
         position: 'relative',
         top: 'calc(7vw + 90px)',
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
              [theme.breakpoints.down('442')]: {
                width: 'calc(71vw + 20px)',
         },
-       
+
     },
 
     title: {
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
              marginBottom: '8px',
         },
     },
-    
+
     text: {
         fontFamily: 'Poppins',
         fontSize: '16px',
@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '14px',
             lineHeight: '24px',
         },
-        
-       
+
+
     },
 
     DonateButton: {
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
             marginRight: 'calc(-1.5vw - 20px)',
         }
 
-    
+
 }));
 
 
