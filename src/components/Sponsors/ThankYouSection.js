@@ -1,13 +1,15 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 
 import Hands from '../Sponsors/ThankYouHands'
+import Stars from '../Sponsors/ThankYouStars'
 
 const useStyles = makeStyles((theme) => ({
     container: {
         width: '1200px',
-        margin: 'auto',
+        marginTop: '78px',
+        marginLeft: '215px'
+        // margin: 'auto',
     },
     blobStyle: {
         position: 'relative',
@@ -30,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '31px',
         display: 'flex',
         alignItems: 'center',
-        color: '#404040'
+        color: '#000000'
     },
 }));
 
@@ -42,24 +44,25 @@ export default function ThankYou() {
 
         <div className={classes.container}>
 
-            <svg className={classes.blobStyle} viewBox="0 0 1113 1023" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M734.553 646.274C876.991 539.805 1109.12 558.273 1097.09 468.72C1086.7 391.453 424.413 345.528 301.28 393.584C186.282 438.464 124.509 455.695 62.5313 557.331C6.80869 648.709 79.0658 673.949 141.367 695.635C217.328 722.075 608.737 740.318 734.553 646.274Z" fill="#E8D1FF" fill-opacity="0.4"/>
+            <svg width="1056" height="344" viewBox="0 0 1056 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M692.553 273.274C834.991 166.805 1067.12 185.273 1055.09 95.7201C1044.7 18.4531 382.414 -27.4718 259.28 20.5836C144.282 65.4637 82.5093 82.6956 20.5314 184.331C-35.1913 275.709 37.0658 300.949 99.3671 322.635C175.328 349.075 566.737 367.318 692.553 273.274Z" fill="#E8D1FF" fill-opacity="0.4"/>
             
-                <foreignObject x="450" y="400" width="140" height="44" className={classes.headerText}> 
-                    Thank You!
+                <foreignObject x='434' y='17' width="140" height="44" className={classes.headerText}> 
+                    Thank you!
                 </foreignObject>
 
-                <foreignObject className={classes.bodyText} x="250" y="450" width="672" height="180">
+                <foreignObject x='168' y='76' className={classes.bodyText} width="672" height="70">
                     We are exceedingly grateful to our sponsors, who allow us to continue to offer life-changing tech mentoring through our program.
                 </foreignObject>
 
-                <foreignObject className={classes.bodyText} x="250" y="525" width="600" height="180">
+                <foreignObject x='168' y='155' className={classes.bodyText} width="719" height="120">
                     Our work would not have been possible without the overwhelming positive and creative community of Civictech Toronto. Thank you to the amazing volunteers, sponsors, and community partners who help make this space a reality so projects like ours can begin.
                 </foreignObject>
-
+            
             </svg>
 
             <Hands />
+            <Stars />
 
         </div>
 
