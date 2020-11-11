@@ -15,7 +15,7 @@ import Shiny2SVG from '../../images/about-us/How-are-we-different-section/shiny2
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '350px',
+    width: '350px',
     maxHeight: '360px',
     display: 'inline-block',
     borderRadius: '30px',
@@ -23,9 +23,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '-5px',
     [theme.breakpoints.down('lg')]: {
       margin: '25px 15px',
-      maxWidth: '350px',
-      maxHeight: '360px',
-    }
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: '25px 10px',
+    },
+    [theme.breakpoints.down('1100')]: {
+      margin: '25px 10px',
+      width: '328px',
+      maxHeight: '334px',
+    },
   },
   media: {
     height: 0,
