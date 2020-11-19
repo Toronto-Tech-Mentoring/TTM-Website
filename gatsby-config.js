@@ -9,14 +9,10 @@ module.exports = {
     plugins: [{
             resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fonts: [{
-                        family: `Josefin Sans`,
-                        variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-                    },
-                    {
-                        family: `Poppins`,
-                        variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-                    },
+                fonts: [
+                    `Josefin Sans\:300,400,500,600,700,800,900`,
+                    `Poppins\:300,400,500,600,700,800,900`,
+                    `Poppins\:300,400,500,600,700,800,900`
                 ],
             },
         },
