@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         fontSize: '18px',
         fontFamily: 'Poppins',
-       
         [theme.breakpoints.down('sm')]: {
             fontSize: '16px',
         },
