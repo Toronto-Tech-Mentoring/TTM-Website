@@ -6,19 +6,11 @@ import TheBottomLineSection  from './TheBottomLineSection';
 import OurRootsSection from './OurRootsSection';
 import TimelineSection from './TimelineSection';
 import WhyTechAndValuesDrivenSection from '../WhyTechSVG/index';
-import {
-  SkylineHeader as SkylineHeaderSVG,
-  SkylineFooter as SkylineFooterSVG,
-} from "../SkylineSVG"
-import HeroText from "../HeroText/HeroText"
+import { SkylineFooter as SkylineFooterSVG} from "../SkylineSVG"
 
 export default function AboutUs() {
   return (
     <div>
-      {/* <HeroText
-        heroText="What is Toronto Tech Mentoring?"
-        heroBodyText="We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)."
-      /> */}
       <WhatIsTTM />
       <WhyTechAndValuesDrivenSection />
       <HowAreWeDifferentSection />

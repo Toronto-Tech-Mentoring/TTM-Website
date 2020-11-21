@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+
 import HeartWhite from "../../images/navbar/heart-white.svg"
 import HeartPurple from "../../images/navbar/heart-purple.svg"
-
 
 // The style components were used as an easy way to change the button color on hover
 const StyledButton = styled.button`
@@ -11,27 +11,54 @@ const StyledButton = styled.button`
   border-style: solid;
   border-color: #873fe2;
   color: #fff;
-
-
+  min-width: 96px;
+  height: 48px;
+  width: 156px;
   &:hover {
     background: #ffff;
     border-style: solid;
     border-width: medium;
     border-color: #873fe2;
     color: #873fe2;
-  }
+  };
+   @media (max-width: 1040px) {
+      font-size: 14px;
+      height: 40px;
+      width: 105px;
+    }
+    @media (max-width: 400px) {
+        font-size: 12px;
+        height: 32px;
+        width: 96px;
+    }
+     @media (max-width: 300px) {
+        width: 85px;
+        min-width: 85px;
+    }
 `
 
 const StyledFont = styled.a`
   display: inline-block;
   padding: 0px;
   padding-right: 8px;
-  font-weight: 500
+  font-size: 18px;
+  font-weight: 500;
+   @media (max-width: 1040px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+        font-size: 12px;
+    }
 `
-
 const StyledImg = styled.img`
     transition: transform 300ms ease-in-out;
-
+    width: 17px;
+     @media (max-width: 1040px) {
+        width: 15px;
+    }
+    @media (max-width: 400px) {
+        width: 13px;
+    }
     ${StyledButton}:hover &{
       transform: scale(1.5)
     }
@@ -60,23 +87,14 @@ class DonateBtn extends React.Component {
       <StyledButton
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        style={{
-          height: this.props.buttonHeight + "px", width: this.props.buttonWidth + "px", minWidth: "96px"
-        }}
       >
         <span
           style={{width:"fit-content", margin:"auto"}}
         >
-          <StyledFont
-            style={{ fontSize: this.props.buttonFontSize + "px" }}
-          >
-            Donate
-            </StyledFont>
+          <StyledFont>Donate</StyledFont>
           <StyledImg
             src={this.state.imgSrc}
             alt="heart color"
-            onClick={this.handleOnClick}
-            style={{width:this.props.heartWidth+"px"}}
             />
           </span>
       </StyledButton>
