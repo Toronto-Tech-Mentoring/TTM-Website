@@ -5,38 +5,32 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Josefin Sans`,
-            variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-          },
-          {
-            family: `Poppins`,
-            variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-          },
-        ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /(about-us|skyline|timeline|bottom-line|partner-organization|vital-role|cheetohs|thankyou)/,
+    /* Your site config here */
+    plugins: [{
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [
+                    `Josefin Sans\:300,400,500,600,700,800,900`,
+                    `Poppins\:300,400,500,600,700,800,900`,
+                    `Poppins\:300,400,500,600,700,800,900`
+                ],
+            },
         },
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images/nonsvgs`,
-      },
-    },
-  ],
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /(about-us|skyline|timeline|bottom-line|partner-organization|vital-role|cheetohs|thankyou)/,
+                },
+            },
+        },
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/images/nonsvgs`,
+            },
+        },
+    ],
 }
