@@ -1,8 +1,12 @@
 import React from "react"
+import VolunteerWithUs from './VolunteerWithUs';
+import PositiveDifferenceSection from "./PositiveDifferenceSection"
+
 export default function Volunteer() {
   return (
   <div>
-      <h1>Volunteer Page</h1>
-  </div>
+    <VolunteerWithUs/>
+    <PositiveDifferenceSection/>
+    </div>
   )
 }
