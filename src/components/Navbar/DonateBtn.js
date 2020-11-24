@@ -43,6 +43,7 @@ const StyledFont = styled.a`
   padding-right: 8px;
   font-size: 18px;
   font-weight: 500;
+  font-family: Poppins;
    @media (max-width: 1040px) {
       font-size: 14px;
     }
