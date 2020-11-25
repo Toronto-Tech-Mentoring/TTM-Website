@@ -15,21 +15,19 @@ import Shiny2SVG from '../../images/about-us/How-are-we-different-section/shiny2
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '350px',
-    maxHeight: '360px',
+    width: '350px',
+    height: '360px',
     display: 'inline-block',
     borderRadius: '30px',
     margin: '0px 25px',
     marginTop: '-5px',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('1201')]: {
       margin: '25px 15px',
-      maxWidth: '350px',
-      maxHeight: '360px',
-    }
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+    },
+    [theme.breakpoints.down('1140')]: {
+      margin: '25px 5px',
+      width: '328px'
+    },
   },
   title: {
     fontFamily: 'Poppins',
@@ -62,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
   innerImage: {
     position: "relative",
   },
+  stack: {
+    [theme.breakpoints.between('676', '1014')]: {
+      margin: '0px 170px 0px 170px'
+    },
+  }
 }));
 
 export default function Cards() {
@@ -71,7 +74,7 @@ export default function Cards() {
 
   return (
     <Grid container alignItems="center" justify="center">
-      <Grid item xs={12} md={4} lg={3} xl={2}>
+      <Grid className={classes.stack}>
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>
           <div className={classes.imgDiv} style={{ backgroundImage: `url(${Background1}` }}>
@@ -84,7 +87,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={3} xl={2}>
+      <Grid className={classes.stack}>
         <Card className={classes.root}>
           <p className={classes.title}>One-on-one skills development</p>
           <div className={classes.imgDiv} style={{ backgroundImage: { card2Background } }}>
@@ -98,7 +101,7 @@ export default function Cards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4} lg={3} xl={2}>
+      <Grid className={classes.stack}>
         <Card className={classes.root}>
           <p className={classes.title}>Wrap-around supports</p>
           <div className={classes.imgDiv} style={{ backgroundImage: {card3Background} }}>
