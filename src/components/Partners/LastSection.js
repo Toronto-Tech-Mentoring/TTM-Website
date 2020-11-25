@@ -114,13 +114,13 @@ export default function LastSection() {
             <Grid container justify="center">
                 <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
                     <div className={`${classes.paper} ${classes.leftDiv}`}>
-                        <img className={`${classes.logo} ${classes.logo1}`} src={Logo} />
+                        <img alt = "" className={`${classes.logo} ${classes.logo1}`} src={Logo} />
                         <span className={classes.text1}>Civic Tech Toronto</span>
                     </div>
                 </Grid>
                 <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
                     <div className={`${classes.paper} ${classes.RightDiv}`}>
-                        <img className={`${classes.logo} ${classes.logo2}`} src={Logo2} />
+                        <img alt = "" className={`${classes.logo} ${classes.logo2}`} src={Logo2} />
                         <span className={classes.text2}>The Sprott House</span>
                     </div>
                 </Grid>
