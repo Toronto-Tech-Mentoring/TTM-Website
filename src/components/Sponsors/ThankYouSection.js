@@ -85,15 +85,18 @@ const useStyles = makeStyles((theme) => ({
         fontStyle: 'normal',
         fontWeight: '400',
         fontSize: '18px',
-        lineHeight: '31px',
+        lineHeight: '10px',
         display: 'flex',
         align: 'center',
         color: '#000000',
         [theme.breakpoints.down('426')]: {
             position: 'absolute',
             fontSize: '14px',
-            lineHeight: '24px'
+            lineHeight: '10px'
         },
+    },
+    alignBodyText: {
+        textAlign: "center"
     },
     handsStyle: {
         position: 'absolute',
@@ -145,11 +148,15 @@ export default function ThankYou() {
                     </foreignObject>
 
                     <foreignObject x='168' y='76' className={classes.bodyText} width="672" height="70">
-                        We are exceedingly grateful to our sponsors, who allow us to continue to offer life-changing tech mentoring through our program.
+                        <p className={classes.alignBodyText}>We are exceedingly grateful to our sponsors, who allow us to continue to </p>
+                        <p className={classes.alignBodyText}>offer life-changing tech mentoring through our program. </p>
                     </foreignObject>
 
                     <foreignObject x='168' y='155' className={classes.bodyText} width="719" height="120">
-                        Our work would not have been possible without the overwhelming positive and creative community of Civictech Toronto. Thank you to the amazing volunteers, sponsors, and community partners who help make this space a reality so projects like ours can begin.
+                        <p className={classes.alignBodyText}>Our work would not have been possible without the overwhelming positive </p>
+                        <p className={classes.alignBodyText}>and creative community of Civictech Toronto. Thank you to the amazing </p>
+                        <p className={classes.alignBodyText}>volunteers, sponsors, and community partners who help make this space a </p>
+                        <p className={classes.alignBodyText}>reality so projects like ours can begin. </p>
                     </foreignObject>
 
                 </svg>
@@ -157,16 +164,23 @@ export default function ThankYou() {
                 <svg className={classes.mobileBlobStyle} height="360" viewBox="0 0 360 185" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M281.222 146.894C358.047 89.4647 483.251 99.4261 476.757 51.1214C471.154 9.44378 113.946 -15.328 47.5323 10.593C-14.4929 34.8012 -47.8104 44.096 -81.2387 98.9181C-111.293 148.207 -72.3207 161.822 -38.7179 173.519C2.25214 187.78 213.362 197.621 281.222 146.894Z" fill="#E8D1FF" fill-opacity="0.4"/>
                 
-                    <foreignObject x='120' y='-60' width="140" height="44" className={classes.headerText}> 
+                    <foreignObject x='120' y='-50' width="140" height="300" className={classes.headerText}> 
                         Thank you!
                     </foreignObject>
 
-                    <foreignObject x='20' y='-15' className={classes.bodyText} width="330" height="66">
-                        We are exceedingly grateful to our sponsors, who allow us to continue to offer life-changing tech mentoring through our program.
+                    <foreignObject x='15' y='-10' className={classes.bodyText} width="330" height="200">
+                        <p className={classes.alignBodyText}>We are exceedingly grateful to our sponsors, </p>
+                        <p className={classes.alignBodyText}>who allow us to continue to offer life-changing </p>
+                        <p className={classes.alignBodyText}>tech mentoring through our program. </p>
                     </foreignObject>
 
-                    <foreignObject x='20' y='65' className={classes.bodyText} width="330" height="300">
-                        Our work would not have been possible without the overwhelming positive and creative community of Civictech Toronto. Thank you to the amazing volunteers, sponsors, and community partners who help make this space a reality so projects like ours can begin.
+                    <foreignObject x='15' y='80' className={classes.bodyText} width="330" height="300">
+                         <p className={classes.alignBodyText}>Our work would not have been possible </p>
+                         <p className={classes.alignBodyText}>creative community of Civictech Toronto. </p> 
+                         <p className={classes.alignBodyText}>Thank you to the amazing volunteers, </p> 
+                         <p className={classes.alignBodyText}>sponsors, and community partners who help </p>
+                         <p className={classes.alignBodyText}>make this space a reality so projects like ours </p>
+                         <p className={classes.alignBodyText}>can begin.</p>
                     </foreignObject>
                 
                 </svg>
