@@ -6,6 +6,9 @@ import TitleRight from '../../images/about-us/bottom-line/titleRight.svg';
 import TitleLeft from '../../images/about-us/bottom-line/titleLeft.svg';
 import Pin from '../../images/about-us/timeline/pin.svg';
 import ImgOpt from '../../utils/ImageOptimise.js';
+import LeftBlob from '../../images/about-us/timeline/leftblob.svg';
+import RightBlob from '../../images/about-us/timeline/rightblob.svg';
+
 
 const useStyles = makeStyles((theme) => ({
   titleContainer: {
@@ -101,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   eventTitle: {
+    zIndex: '1',
     fontFamily: 'Josefin Sans',
     fontWeight: 600,
     fontSize: '28px',
@@ -146,7 +150,8 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: 'center',
   },
-  pic: {
+  secondPic: {
+    zIndex: '1',
     display: 'inline-block',
     width: '350px',
     borderRadius: '10px',
@@ -156,6 +161,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   firstPic: {
+    zIndex: '1',
     display: 'inline-block',
     marginRight: '30px',
   },
@@ -186,22 +192,6 @@ const useStyles = makeStyles((theme) => ({
       height: '200px',
     },
   },
-  testing: {
-    display: 'inline-block',
-    position: 'absolute',
-    marginRight: '30px',
-    left: '350px',
-    width: '350px',
-    zIndex: 2,
-    // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between('sm', 'md')]: {
-      width: '40%',
-    },
-    // Tablet below to Mobile
-    [theme.breakpoints.down('sm')]: {
-      width: '30%',
-    },
-  },
   bg: {
     zIndex: 1,
     position: 'relative',
@@ -229,6 +219,21 @@ const useStyles = makeStyles((theme) => ({
     // Tablet below to Mobile
     [theme.breakpoints.down('sm')]: {
       height: '40%',
+    },
+  },
+  leftBlob: {
+    position: 'absolute',
+    zIndex: '0',
+    [theme.breakpoints.down('sm')]: {
+      width:"80%"
+    },
+  },
+  rightBlob: {
+    position: 'absolute',
+    zIndex: '0',
+    right: '27.56%',
+    [theme.breakpoints.down('sm')]: {
+      width:"80%"
     },
   },
 }));
@@ -264,12 +269,13 @@ export default function TimelineSection() {
             </p>
           <div className={classes.picDiv}>
             <ImgOpt
-              className={`${classes.firstPic} ${classes.pic}`}
+              className={`${classes.firstPic} ${classes.secondPic}`}
               alt="timeline pic left 2017"
               filename={timelinePicLeft2017}
             />
+            <LeftBlob className={classes.leftBlob} />
             <ImgOpt
-              className={classes.pic}
+              className={classes.secondPic}
               alt="timeline pic right 2017"
               filename={timelinePicRight2017}
             />
@@ -293,15 +299,16 @@ export default function TimelineSection() {
             </p>
           <div className={classes.picDiv}>
             <ImgOpt
-              className={`${classes.firstPic} ${classes.pic}`}
+              className={`${classes.firstPic} ${classes.secondPic}`}
               alt="timeline pic left 2018"
               filename={timelinePicLeft2018}
             />
             <ImgOpt
-              className={classes.pic}
+              className={classes.secondPic}
               alt="timeline pic right 2018"
               filename={timelinePicRight2018}
             />
+            <RightBlob className={classes.rightBlob} />
           </div>
         </Grid>
       </Grid>
