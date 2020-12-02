@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import SVGLoad from '../SVGLoad/SVG'
 import Hands from '../../images/sponsors/thankyou/hands.svg'
-import Stars from '../../images/sponsors/thankyou/stars.svg'
+import Stars from '../../images/sponsors/thankyou/Stars.svg'
 
 const useStyles = makeStyles((theme) => ({
     container: {
