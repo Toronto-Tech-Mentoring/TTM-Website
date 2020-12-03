@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('700')]: {
             marginTop: 'calc(10vw - 300px)'
         },
+        [theme.breakpoints.down('600')]: {
+            marginTop: 'calc(20vw - 250px)'
+        },
         [theme.breakpoints.down('426')]: {
             marginTop: 'calc(10vw - 185px)',
             marginRight: 'calc(2vw - 50px)'
@@ -129,7 +132,7 @@ export default function ThankYou() {
 
         <Grid className={classes.container} alignItems="center" justify="center">
 
-            <Grid item xs={12} sm={6} lg={8} xl={12} className={classes.starsStyle}>
+            <Grid item xs={10} sm={6} lg={8} xl={12} className={classes.starsStyle}>
                 <SVGLoad image={Stars} alt="sponsorStars" />
             </Grid>
 
