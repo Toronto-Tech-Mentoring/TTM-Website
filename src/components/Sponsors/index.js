@@ -5,6 +5,7 @@ import ContactUsSection from './ContactUsSection';
 import DonateTodaySection from './DonateTodaySection';
 import PartnerWithUsSection from './PartnerWithUsSection';
 import CallForSponsorsSection from './CallForSponsors';
+import ThankYouSection from './ThankYouSection';
 
 export default function Sponsors() {
   return (
@@ -14,6 +15,7 @@ export default function Sponsors() {
        <PartnerWithUsSection />
        <ContactUsSection />
        <SupportUsSection />
+       <ThankYouSection />
     </div>
   )
 }
