@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         background: '#4529AE',
         '@media screen and (max-width: 990px)': {
             height: '1534px',
-       },
+        },
     },
     headerText: {
         fontFamily: 'Josefin Sans',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         '@media screen and (max-width: 900px)': {
             fontSize: '24px',
             lineHeight: '41px',
-       },
+        },
        '@media screen and (max-width: 550px)': {
             fontSize: '20px',
             lineHeight: '32px',
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
             marginTop: 'calc(2vw - 25px)',
             width: '534px',
             height: '80px',
-       },
+        },
        '@media screen and (max-width: 550px)': {
             fontSize: '14px',
             lineHeight: '24px',
@@ -80,7 +80,7 @@ const useStyles = makeStyles(theme => ({
         '@media screen and (max-width: 900px)': {
             fontSize: '22px',
             lineHeight: '38px',
-       },
+        },
        '@media screen and (max-width: 550px)': {
             fontSize: '18px',
             lineHeight: '29px',
@@ -92,7 +92,7 @@ const useStyles = makeStyles(theme => ({
         '@media screen and (max-width: 900px)': {
             marginRight: '-125px',
             marginTop: '-50px'
-       },
+        },
        '@media screen and (max-width: 550px)': {
             marginRight: '-50px',
         },
@@ -102,7 +102,7 @@ const useStyles = makeStyles(theme => ({
         '@media screen and (max-width: 900px)': {
             marginLeft: '-125px',
             marginTop: '-50px'
-       },
+        },
        '@media screen and (max-width: 550px)': {
             marginLeft: '-50px',
         },
@@ -125,7 +125,7 @@ export default function WhatDoVolunteersDo() {
             <CheetohRight className={classes.cheetohRight}/>
         </Grid>
         
-        <h2 className={classes.subtitleText}>Here are some examples of roles our volunteers have:</h2>
+        <h2 className={classes.subtitleText}>Here are some examples of roles our volunteers have: </h2>
 
         <VolunteerCards />
 

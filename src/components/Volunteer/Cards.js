@@ -12,7 +12,7 @@ import ImageThree from "../../images/volunteers/WhatDoVolunteersDo/meeting.svg";
 const cardsJson = [
 
     {   header:'Mentors',
-        body: <img src={ImageOne} style={{ backgroundImage: `url(${BlobOne}` }} width='100%' height='auto' margin= 'auto' alt='high five image' />,    
+        body: <div style={{ backgroundRepeat: `no-repeat`, backgroundPosition: 'center', backgroundImage: `url(${BlobOne}`}}><img src={ImageOne} alt='high five image'></img></div>,    
         footer: 'Our mentors work directly with our clients to help them achieve their own goals in learning tech skills.',
         style: {
             cardContainer: {
@@ -23,13 +23,13 @@ const cardsJson = [
                 display: 'inline-block',
                 '@media screen and (max-width: 990px)': {
                     margin: '-48px auto 0px auto',
-               },
-               '@media screen and (max-width: 350px)': {
+                },
+                '@media screen and (max-width: 350px)': {
                     width: '95%',
-               },
+                },
             },  
             bodyWrapper: {
-                padding: '25px 114px 42px 114px',
+                margin: '25px 0px 25px 105px',
                 display:'inline-block'
             },
             header:{
@@ -59,7 +59,7 @@ const cardsJson = [
         }
     },
     {   header:'Program Development',
-       body: <img src={ImageTwo} style={{ backgroundImage: `url(${BlobTwo}` }} width='100%' height='auto' margin= 'auto' alt='group image' />,
+       body: <div style={{ backgroundRepeat: `no-repeat`, backgroundPosition: 'center', backgroundImage: `url(${BlobTwo}`}}><img src={ImageTwo} alt='group image'></img></div>,
         footer: 'Our program development teams help our program run, including consistently evaluating and improving how we operate.',
         style: {
             cardContainer: {
@@ -71,16 +71,16 @@ const cardsJson = [
                 margin: '0px 100px',
                 '@media screen and (max-width: 1200px)': {
                     margin: '0 auto 0px auto',
-               },
-               '@media screen and (max-width: 990px)': {
+                },
+                '@media screen and (max-width: 990px)': {
                     margin: '48px auto 0px auto',
-               },
-               '@media screen and (max-width: 350px)': {
+                },
+                '@media screen and (max-width: 350px)': {
                     width: '95%',
-               },
+                },
             },  
             bodyWrapper: {
-                padding: '39px 114px 10px 114px',
+                margin: '25px 0px 8px 70px',
                 display:'inline-block'
             },
             header:{
@@ -111,7 +111,7 @@ const cardsJson = [
     },
     {
         header: 'External Outreach',
-        body: <img src={ImageThree} style={{ backgroundImage: `url(${BlobThree}` }} width='100%' height='auto' margin= 'auto' alt='laptops for accessibility' />,
+        body: <div style={{ backgroundRepeat: `no-repeat`, backgroundPosition: 'center', backgroundImage: `url(${BlobThree}`}}><img src={ImageThree} alt='laptops for accessibility'></img></div>,
         footer: 'Our external outreach team works with our delivery partners, sponsors and our outward facing communications.',
         style: {
             cardContainer: {
@@ -122,13 +122,13 @@ const cardsJson = [
                 display: 'inline-block',
                 '@media screen and (max-width: 990px)': {
                     margin: '48px auto 0px auto',
-               },
-               '@media screen and (max-width: 350px)': {
+                },
+                '@media screen and (max-width: 350px)': {
                     width: '95%',
-               },
+                },
             },  
             bodyWrapper: {
-                padding: '39px 117px 0px 111px',
+                padding: '25px 0px 0px 75px',
                 display:'inline-block'
             },
             header:{
@@ -165,7 +165,7 @@ const cardsContainerStyle = {
     paddingTop: '80px',
     '@media screen and (max-width: 990px)': {
         flexDirection: 'column',
-   },
+    },
 };
 
 export default function VolunteerCards() {
@@ -174,9 +174,9 @@ export default function VolunteerCards() {
       <Grid>
           
         <GroupedCards
-                cardsContainerStyle={cardsContainerStyle}
-                cardsJson={cardsJson}
-          /> 
+            cardsContainerStyle={cardsContainerStyle}
+            cardsJson={cardsJson}
+        /> 
 
       </Grid>
     )
