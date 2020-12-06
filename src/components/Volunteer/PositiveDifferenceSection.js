@@ -135,12 +135,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'calc(-1.5vw - 20px)',
     },
     
-    container: {
-        paddingBottom: '0px',
-    },
-
 }));
-
 
 export default function PositiveDifferenceSection() {
     const classes = useStyles();
