@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -23,16 +23,22 @@ const Image = props => (
     `}
     render={data => {
       const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename);
-      });
+        return n.node.relativePath.includes(props.filename)
+      })
       if (!image) {
-        return null;
+        return null
       }
 
       //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} className={props.className}/>;
+      return (
+        <Img
+          alt={props.alt}
+          fluid={image.node.childImageSharp.fluid}
+          className={props.className}
+        />
+      )
     }}
   />
-);
+)
 
-export default Image;
+export default Image

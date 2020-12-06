@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react"
 
-import { useStyles } from './SVGStyle'
+import { useStyles } from "./SVGStyle"
 
-export default function SVGLoad(props){
-    const PicSVG = props.image;
-    const classes = useStyles();
+export default function SVGLoad(props) {
+  const PicSVG = props.image
+  const classes = useStyles()
 
-    return(
-        <PicSVG className={classes.svgSettings} />
-    )
+  return <PicSVG className={classes.svgSettings} />
 }

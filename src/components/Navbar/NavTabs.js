@@ -1,4 +1,4 @@
-import React, {useEffect } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import DonateBtn from "./DonateBtn"
@@ -50,19 +50,16 @@ export default function NavTabs() {
   /** @function
    * @name renderListItems */
 
-
   const classes = useStyles()
 
   const renderListItems = () => {
     return listItems.map(item => (
-      <li className={classes.navitem}
-        key={item.id}
-      >
+      <li className={classes.navitem} key={item.id}>
         <Link
           to={item.path}
           id={item.id}
           className={classes.navlink}
-          activeClassName= {classes.active}
+          activeClassName={classes.active}
         >
           {item.title}
         </Link>
@@ -92,16 +89,13 @@ export default function NavTabs() {
 
   return (
     <div className={classes.navbar}>
-      <Logo/>
+      <Logo />
       <ul className={classes.navtabs}>
         {renderListItems()}
-        <DonateBtn/>
+        <DonateBtn />
       </ul>
       <div className={classes.burgerMenu}>
-        <BurgerMenu
-        >
-          {renderListItems()}
-        </BurgerMenu>
+        <BurgerMenu>{renderListItems()}</BurgerMenu>
       </div>
     </div>
   )

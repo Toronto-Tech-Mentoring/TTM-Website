@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react"
 
-import { useStyles } from './ParagraphedTextStyle'
+import { useStyles } from "./ParagraphedTextStyle"
 
-export default function ParagraphedText(props){
-    const classes = useStyles();
-    const extra = props.extra
+export default function ParagraphedText(props) {
+  const classes = useStyles()
+  const extra = props.extra
 
-    return(
-        <>
-        <p className={classes.contents} style={props.style}>{props.content}{extra}</p>
-        </>
-    )
+  return (
+    <>
+      <p className={classes.contents} style={props.style}>
+        {props.content}
+        {extra}
+      </p>
+    </>
+  )
 }
