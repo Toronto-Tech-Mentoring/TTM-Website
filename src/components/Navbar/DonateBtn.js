@@ -20,21 +20,21 @@ const StyledButton = styled.button`
     border-width: medium;
     border-color: #873fe2;
     color: #873fe2;
-  };
-   @media (max-width: 1040px) {
-      font-size: 14px;
-      height: 40px;
-      width: 105px;
-    }
-    @media (max-width: 400px) {
-        font-size: 12px;
-        height: 32px;
-        width: 96px;
-    }
-     @media (max-width: 300px) {
-        width: 85px;
-        min-width: 85px;
-    }
+  }
+  @media (max-width: 1040px) {
+    font-size: 14px;
+    height: 40px;
+    width: 105px;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
+    height: 32px;
+    width: 96px;
+  }
+  @media (max-width: 300px) {
+    width: 85px;
+    min-width: 85px;
+  }
 `
 
 const StyledFont = styled.a`
@@ -44,43 +44,42 @@ const StyledFont = styled.a`
   font-size: 18px;
   font-weight: 500;
   font-family: Poppins;
-   @media (max-width: 1040px) {
-      font-size: 14px;
-    }
-    @media (max-width: 400px) {
-        font-size: 12px;
-    }
+  @media (max-width: 1040px) {
+    font-size: 14px;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `
 const StyledImg = styled.img`
-    transition: transform 300ms ease-in-out;
-    width: 17px;
-     @media (max-width: 1040px) {
-        width: 15px;
-    }
-    @media (max-width: 400px) {
-        width: 13px;
-    }
-    ${StyledButton}:hover &{
-      transform: scale(1.5)
-    }
+  transition: transform 300ms ease-in-out;
+  width: 17px;
+  @media (max-width: 1040px) {
+    width: 15px;
+  }
+  @media (max-width: 400px) {
+    width: 13px;
+  }
+  ${StyledButton}:hover & {
+    transform: scale(1.5);
+  }
 `
 
 class DonateBtn extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {imgSrc: HeartWhite }
+    this.state = { imgSrc: HeartWhite }
     this.handleMouseOver = this.handleMouseOver.bind(this)
     this.handleMouseOut = this.handleMouseOut.bind(this)
   }
 
   handleMouseOver() {
-    this.setState({imgSrc: HeartPurple , buttonHovered:true})
+    this.setState({ imgSrc: HeartPurple, buttonHovered: true })
   }
 
   handleMouseOut() {
-    this.setState({imgSrc: HeartWhite, buttonHovered: false})
+    this.setState({ imgSrc: HeartWhite, buttonHovered: false })
   }
-
 
   // The mouse over events need to be placed on the button tag to update the heart as well
   render() {
@@ -89,15 +88,10 @@ class DonateBtn extends React.Component {
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
       >
-        <span
-          style={{width:"fit-content", margin:"auto"}}
-        >
+        <span style={{ width: "fit-content", margin: "auto" }}>
           <StyledFont>Donate</StyledFont>
-          <StyledImg
-            src={this.state.imgSrc}
-            alt="heart color"
-            />
-          </span>
+          <StyledImg src={this.state.imgSrc} alt="heart color" />
+        </span>
       </StyledButton>
     )
   }
