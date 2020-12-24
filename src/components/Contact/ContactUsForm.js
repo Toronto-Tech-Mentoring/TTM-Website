@@ -191,7 +191,7 @@ const StyledGrid = new styled(Grid)`
 `
 
 const StyledDropDown = new styled(Select)`
-    width: 50%;
+    width: 50% !important;
     font-family: Poppins !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -205,15 +205,16 @@ const StyledDropDown = new styled(Select)`
 `
 
 const StyledMenuItem = new styled(MenuItem)`
+    width: 100% !important;
     font-family: Poppins !important;
     font-style: normal !important;
     font-weight: normal !important;
-    font-size: 18px !important;
+    font-size: 14px !important;
     line-height: 150% !important;
 `
 
 const StyledInput = new styled(TextField)`
-    width: 80%;
+    width: 80% !important;
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
