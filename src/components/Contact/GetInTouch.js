@@ -17,7 +17,8 @@ const StyledGrid = new styled(Grid)`
 export default function GetInTouch() {
   const classes = useStyles()
   const headerText = "Get in touch"
-  const content = "Fill in the form below and we'll be happy to be in touch soon."
+  const content =
+    "Fill in the form below and we'll be happy to be in touch soon."
 
   return (
     <div>
