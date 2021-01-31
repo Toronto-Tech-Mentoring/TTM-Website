@@ -1,0 +1,11 @@
+services:
+  npm:
+    build: .
+    ports:
+      - "3000:8000"
+    volumes:
+      - /myapp/node_modules
+      - .:/myapp
+    environment:
+      - NODE_ENV=development
+      - GATSBY_WEBPACK_PUBLICPATH=/
