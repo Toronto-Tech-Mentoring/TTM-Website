@@ -6,7 +6,7 @@ import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-// import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
 import styled from "styled-components"
 
@@ -31,7 +31,7 @@ export default function GetInTouch() {
         <TextBox
           style={{
             "margin-top": "135px",
-            "margin-right": "calc(46.5vw - 151px)",
+            "margin-right": "calc(-86.3px + 52.3vw)",
             "padding-right": "0",
           }}
         >
@@ -44,6 +44,11 @@ export default function GetInTouch() {
             style={{ "text-align": "left", "margin-top": "-5px" }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
+        <CheetoRight
+          className={classes.cheetohRightMirrored}
+          style={{ "margin-top": "calc(1vh + 1px)" }}
+          alt="cheetohRight"
+        />
         </TextBox>
       </StyledGrid>
     </div>
