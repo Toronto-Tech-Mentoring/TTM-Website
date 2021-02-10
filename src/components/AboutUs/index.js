@@ -1,7 +1,5 @@
 import React from "react"
 
-import WhatIsTTM from "./WhatIsTTM"
-import HowAreWeDifferentSection from "./HowAreWeDifferentSection"
 import TheBottomLineSection from "./TheBottomLineSection"
 import OurRootsSection from "./OurRootsSection"
 import TimelineSection from "./TimelineSection"
@@ -11,9 +9,7 @@ import { SkylineFooter as SkylineFooterSVG } from "../SkylineSVG"
 export default function AboutUs() {
   return (
     <div>
-      <WhatIsTTM />
       <WhyTechAndValuesDrivenSection />
-      <HowAreWeDifferentSection />
       <TheBottomLineSection />
       <OurRootsSection />
       <TimelineSection />
