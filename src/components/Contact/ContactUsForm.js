@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 
 import { Grid } from "@material-ui/core"
 import { TextField } from "@material-ui/core"
@@ -8,6 +8,7 @@ import { Radio } from "@material-ui/core"
 import { InputLabel } from "@material-ui/core"
 import { MenuItem } from "@material-ui/core"
 import { Button } from "@material-ui/core"
+import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 
 import styled from "styled-components"
 
@@ -15,7 +16,7 @@ const LastName = new styled(TextField)`
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
-    
+
     && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
     }
@@ -27,7 +28,7 @@ const LastName = new styled(TextField)`
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #4529AE;
     }
     .MuiFormLabel-root {
@@ -35,7 +36,7 @@ const LastName = new styled(TextField)`
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 27px;   
+        line-height: 27px;
         color: #404040;
     }
 `
@@ -65,7 +66,7 @@ const FirstName = new styled(TextField)`
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #4529AE;
     }
 
@@ -74,7 +75,7 @@ const FirstName = new styled(TextField)`
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 27px;   
+        line-height: 27px;
         color: #404040;
     }
 `
@@ -85,7 +86,7 @@ const PhoneNumber = new styled(TextField)`
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
-    
+
     && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
     }
@@ -99,7 +100,7 @@ const PhoneNumber = new styled(TextField)`
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #4529AE;
     }
     .MuiFormLabel-root {
@@ -107,7 +108,7 @@ const PhoneNumber = new styled(TextField)`
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 27px;   
+        line-height: 27px;
         color: #404040;
     }
     `
@@ -116,7 +117,7 @@ const EmailAddress = new styled(TextField)`
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
-  
+
     && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
     }
@@ -128,7 +129,7 @@ const EmailAddress = new styled(TextField)`
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #4529AE;
     }
     .MuiFormLabel-root {
@@ -136,7 +137,7 @@ const EmailAddress = new styled(TextField)`
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 27px;   
+        line-height: 27px;
         color: #404040;
     }
 
@@ -146,7 +147,7 @@ const PreferredPronouns = new styled(RadioGroup)`
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
       }
-      
+
       && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
       }
@@ -230,7 +231,7 @@ const StyledInput = new styled(TextField)`
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #4529AE;
     }
     .MuiFormLabel-root {
@@ -238,7 +239,7 @@ const StyledInput = new styled(TextField)`
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 27px;   
+        line-height: 27px;
         color: #404040;
     }
 
@@ -268,7 +269,7 @@ const StyledButton = new styled(Button)`
         }
         &:active {
           background-color: #FFFFFF;
-          color: #873FE2; 
+          color: #873FE2;
         }
       }
 `
@@ -289,9 +290,15 @@ const StyledInputLabel = new styled(InputLabel)`
 `
 
 export default function ContactUsForm() {
-  const handleChange = event => {
+  const handleReasonChange = event => {
     setReason(event.target.value)
   }
+
+  const handlePronounChange = event =>{
+    setPronoun(event.target.value)
+  }
+
+  const [pronoun, setPronoun] = React.useState("")
   const [reason, setReason] = React.useState("")
 
   return (
@@ -306,28 +313,28 @@ export default function ContactUsForm() {
         <StyledQuestion>What's Your Preferred Pronoun?</StyledQuestion>
         <PreferredPronouns checked="false">
           <StyledDiv>
-            <SheHer color="primary" />
-            <StyledInputLabel>She/Her</StyledInputLabel>
+            <SheHer type="radio" value="sheher" id="sheher" onChange={handlePronounChange} name="pronoun" color="primary" />
+            <StyledInputLabel for="sheher">She/Her</StyledInputLabel>
           </StyledDiv>
 
           <StyledDiv>
-            <HeHim color="primary" />
-            <StyledInputLabel>He/Him</StyledInputLabel>
+            <HeHim type="radio" value="hehim" id="hehim" onChange={handlePronounChange} name="pronoun" color="primary" />
+            <StyledInputLabel for="hehim">He/Him</StyledInputLabel>
           </StyledDiv>
 
           <StyledDiv>
-            <TheyThem color="primary" />
-            <StyledInputLabel>They/Them</StyledInputLabel>
+            <TheyThem type="radio" value="theythem" id="theythem" onChange={handlePronounChange} name="pronoun" color="primary" />
+            <StyledInputLabel for="theythem">They/Them</StyledInputLabel>
           </StyledDiv>
 
           <StyledDiv>
-            <Other color="primary" />
-            <StyledInputLabel>Other</StyledInputLabel>
+            <Other type="radio" value="other" id="other" onChange={handlePronounChange} name="pronoun" color="primary" />
+            <StyledInputLabel for="other">Other</StyledInputLabel>
           </StyledDiv>
         </PreferredPronouns>
         <br></br>
         <StyledQuestion>What Are You Interested In?</StyledQuestion>
-        <StyledDropDown value={reason} onChange={handleChange}>
+        <StyledDropDown value={reason} onChange={handleReasonChange}>
           <StyledMenuItem value={"Sponsoring or donating to the program"}>
             Sponsoring or donating to the program
           </StyledMenuItem>
@@ -355,6 +362,8 @@ export default function ContactUsForm() {
           Send
         </StyledButton>
       </StyledGrid>
+            <SkylineHeaderSVG />
+
     </>
   )
 }
