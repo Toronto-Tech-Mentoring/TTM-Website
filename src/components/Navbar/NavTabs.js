@@ -12,36 +12,53 @@ import { useStyles } from "./navtabsStyle"
 export default function NavTabs() {
   const listItems = [
     {
-      id: "client",
-      path: "/client/",
-      title: "Client",
+      id: "who_we_are",
+      path: "/who-we-are/",
+      title: "Who we are"
     },
     {
-      id: "volunteer",
-      path: "/volunteer/",
-      title: "Volunteer",
+      id: "how_it_works",
+      path: "/how-it-works/",
+      title: "How it works"
     },
     {
-      id: "partners",
-      path: "/partners/",
-      title: "Partners",
-    },
-    {
-      id: "sponsors",
-      path: "/sponsors/",
-      title: "Sponsors",
-    },
-    {
-      id: "home",
-      path: "/",
-      title: "About us",
-    },
-    {
-      id: "contact",
-      path: "/contact/",
-      title: "Contact",
+      id: "how_to_help",
+      path: "/how-to-help/",
+      title: "How to help"
     },
   ]
+  // const listItems = [
+  //   {
+  //     id: "client",
+  //     path: "/client/",
+  //     title: "Client",
+  //   },
+  //   {
+  //     id: "volunteer",
+  //     path: "/volunteer/",
+  //     title: "Volunteer",
+  //   },
+  //   {
+  //     id: "partners",
+  //     path: "/partners/",
+  //     title: "Partners",
+  //   },
+  //   {
+  //     id: "sponsors",
+  //     path: "/sponsors/",
+  //     title: "Sponsors",
+  //   },
+  //   {
+  //     id: "home",
+  //     path: "/",
+  //     title: "About us",
+  //   },
+  //   {
+  //     id: "contact",
+  //     path: "/contact/",
+  //     title: "Contact",
+  //   },
+  // ]
 
   /** @function renderListItems */
   // This function takes in a list of object "listItems",
@@ -92,6 +109,7 @@ export default function NavTabs() {
       <Logo />
       <ul className={classes.navtabs}>
         {renderListItems()}
+        <div class="ui vertical divider" style={{paddingRight:"16px", color:"#c4c4c4"}}>|</div>
         <DonateBtn />
       </ul>
       <div className={classes.burgerMenu}>

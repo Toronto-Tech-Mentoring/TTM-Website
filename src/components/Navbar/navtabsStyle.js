@@ -50,8 +50,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   navlink: {
-    width: "calc(18.2vw - 136px)",
-    maxWidth: "104px",
+    width:"136px",
+    maxWidth: "136px",
     minWidth: "86px",
     fontSize: "16px",
     textAlign: "center",
