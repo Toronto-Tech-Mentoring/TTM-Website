@@ -10,9 +10,9 @@ import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 
 export default function CallForSponsors() {
   const classes = useStyles()
-  const headerText = "Call for Sponsors"
+  const headerText = "Sponsor Us"
   const content =
-    "The Accelerator Project is an entirely volunteer-run organization. All donations go directly into offering tech mentoring to young people who have faced adversity."
+    "Toronto Tech Mentoring is an entirely volunteer-run organization. All donations go directly to providing resources to help deliver our tech mentoring program. Help us continue to give young people a chance to access tech skills and change their lives."
 
   return (
     <div>
