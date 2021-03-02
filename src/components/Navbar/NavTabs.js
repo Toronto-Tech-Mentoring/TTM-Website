@@ -1,6 +1,16 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-
+import Button from '@material-ui/core/Button';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Grow from '@material-ui/core/Grow';
+import Paper from '@material-ui/core/Paper';
+import Popper from '@material-ui/core/Popper';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCaretDown
+} from '@fortawesome/free-solid-svg-icons'
 import DonateBtn from "./DonateBtn"
 import BurgerMenu from "./BurgerMenu"
 import Logo from "./Logo"
@@ -20,11 +30,6 @@ export default function NavTabs() {
       id: "how_it_works",
       path: "/how-it-works/",
       title: "How it works"
-    },
-    {
-      id: "how_to_help",
-      path: "/how-to-help/",
-      title: "How to help"
     },
   ]
   // const listItems = [
@@ -104,11 +109,88 @@ export default function NavTabs() {
     window.addEventListener("keydown", handleFirstTab)
   })
 
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpen(false);
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open);
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus();
+    }
+
+    prevOpen.current = open;
+  }, [open]);
+
+
   return (
     <div className={classes.navbar}>
       <Logo />
       <ul className={classes.navtabs}>
         {renderListItems()}
+        <li class="makeStyles-navitem-3">
+         <Button
+          // to={item.path}
+          // id={item.id}
+          className={classes.navlink}
+          activeClassName={classes.active}
+          ref={anchorRef}
+          aria-controls={open ? 'menu-list-grow' : undefined}
+          aria-haspopup="true"
+          onClick={handleToggle}
+          style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
+        >
+          How to help
+          <FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
+        </Button>
+        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+          {({ TransitionProps, placement }) => (
+            <Grow
+              {...TransitionProps}
+              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+            >
+              <Paper>
+                <ClickAwayListener onClickAway={handleClose}>
+                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0 }}>
+                    <MenuItem onClick={handleClose}>Volunteer with us</MenuItem>
+                    <MenuItem onClick={handleClose}>Partner with us</MenuItem>
+                    <MenuItem onClick={handleClose}>Sponsor us</MenuItem>
+                  </MenuList>
+                </ClickAwayListener>
+              </Paper>
+            </Grow>
+          )}
+        </Popper>
+        </li>
+        <li>
+          <Link
+          // to={item.path}
+          // id={item.id}
+          className={classes.navlink}
+          activeClassName={classes.active}
+        >
+          Contact Us
+        </Link>
+        </li>
         <div class="ui vertical divider" style={{paddingRight:"16px", color:"#c4c4c4"}}>|</div>
         <DonateBtn />
       </ul>
