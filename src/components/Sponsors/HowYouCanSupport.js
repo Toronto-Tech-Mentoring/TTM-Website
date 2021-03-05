@@ -6,6 +6,7 @@ import laptops from "../../images/sponsors/how-you-can-support/laptops.svg"
 import software from "../../images/sponsors/how-you-can-support/software.svg"
 import sessions from "../../images/sponsors/how-you-can-support/sessions.svg"
 import workshops from "../../images/sponsors/how-you-can-support/workshops.svg"
+import paypalImg from "../../images/sponsors/how-you-can-support/paypal.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -13,6 +14,12 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     background: "#4529AE",
     marginTop: "-5px",
+    [theme.breakpoints.down("1000")]: {
+      height: "1713px",
+    },
+    [theme.breakpoints.down("361")]: {
+      height: "1445px",
+    },
   },
   headerStyle: {
     position: "absolute",
@@ -22,10 +29,21 @@ const useStyles = makeStyles(theme => ({
     fontSize: "36px",
     lineHeight: "57px",
     fontWeight: "600",
-    margin: "96px 0px 0px 222px",
+    margin: "96px 0px 0px 15%",
     textDecoration: "underline",
     textDecorationColor: "#FF7500",
     textUnderlinePosition: "under",
+    width: "auto",
+    [theme.breakpoints.down("1000")]: {
+      fontSize: "24px",
+      lineHeight: "41px",
+      margin: "131px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      fontSize: "20px",
+      lineHeight: "32px",
+      margin: "64px 0px 0px 4%",
+    },
   },
   subHeaderStyle: {
     position: "absolute",
@@ -35,6 +53,15 @@ const useStyles = makeStyles(theme => ({
     fontSize: "28px",
     lineHeight: "42px",
     color: "#FFFFFF",
+    width: "auto",
+    [theme.breakpoints.down("1000")]: {
+      fontSize: "22px",
+      lineHeight: "38px",
+    },
+    [theme.breakpoints.down("361")]: {
+      fontSize: "18px",
+      lineHeight: "29px",
+    },
   },
   textStyle: {
     position: "absolute",
@@ -44,20 +71,55 @@ const useStyles = makeStyles(theme => ({
     fontSize: "16px",
     lineHeight: "27px",
     color: "#FFFFFF",
+    [theme.breakpoints.down("1000")]: {
+      fontSize: "16px",
+      lineHeight: "27px",
+    },
+    [theme.breakpoints.down("361")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+    },
   },
   paypalStyle: {
-    margin: "305px 0px 0px 225px",
+    margin: "305px 0px 0px 15%",
     width: "383px",
     height: "42px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "209px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "125px 0px 0px 4%",
+    },
   },
   paypalInfoStyle: {
-    margin: "348px 0px 0px 225px",
+    margin: "348px 0px 0px 15%",
     width: "485px",
     height: "81px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "255px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "162px 0px 0px 4%",
+      width: "328px",
+    },
+  },
+  paypalImage: {
+    visibility: "hidden",
+    position: "absolute",
+    [theme.breakpoints.down("1000")]: {
+      margin: "376px 0px 0px 44%",
+      visibility: "visible",
+    },
+    [theme.breakpoints.down("361")]: {
+      visibility: "hidden",
+    },
   },
   handsStyle: {
     position: "absolute",
-    margin: "259px 0px 0px 920px",
+    margin: "259px 0px 0px 64%",
+    [theme.breakpoints.down("1000")]: {
+      visibility: "hidden",
+    },
   },
   donateStyle: {
     position: "absolute",
@@ -66,23 +128,42 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "30px",
     borderWidth: "0px",
     backgroundColor: "#FF7500",
-    margin: "467px 0px 0px 933px",
+    margin: "467px 0px 0px 65%",
     fontFamily: "Poppins",
     fontWeight: "400",
     fontStyle: "normal",
     fontSize: "18px",
     lineHeight: "27px",
     color: "#FFFFFF",
+    [theme.breakpoints.down("1000")]: {
+      margin: "418px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      visibility: "hidden",
+    },
   },
   kindStyle: {
-    margin: "639px 0px 0px 225px",
+    margin: "639px 0px 0px 15%",
     width: "383px",
     height: "42px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "582px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "348px 0px 0px 4%",
+    },
   },
   kindInfoStyle: {
-    margin: "684px 0px 0px 225px",
+    margin: "684px 0px 0px 15%",
     width: "556px",
     height: "91px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "628px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "385px 0px 0px 4%",
+      width: "327px",
+    },
   },
   needStyle: {
     position: "absolute",
@@ -92,23 +173,66 @@ const useStyles = makeStyles(theme => ({
     fontSize: "22px",
     lineHeight: "35px",
     color: "#FFFFFF",
-    margin: "793px 0px 0px 225px",
+    margin: "793px 0px 0px 15%",
+    [theme.breakpoints.down("1000")]: {
+      fontSize: "20px",
+      lineHeight: "34px",
+      margin: "751px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      fontSize: "16px",
+      lineHeight: "25px",
+      margin: "545px 0px 0px 4%",
+      width: "310px",
+    },
   },
   laptopStyle: {
     position: "absolute",
-    margin: "887px 0px 0px 244px",
+    margin: "887px 0px 0px 17%",
+    [theme.breakpoints.down("1000")]: {
+      margin: "845px 0px 0px 26%",
+      height: "106px",
+      width: "97px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "605px 0px 0px 15%",
+    },
   },
   serverStyle: {
     position: "absolute",
-    margin: "889px 0px 0px 475px",
+    margin: "889px 0px 0px 33%",
+    [theme.breakpoints.down("1000")]: {
+      margin: "841px 0px 0px 60%",
+      height: "126px",
+      width: "136px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "593px 0px 0px 57%",
+    },
   },
   sessionsStyle: {
     position: "absolute",
-    margin: "866px 0px 0px 736px",
+    margin: "866px 0px 0px 51%",
+    [theme.breakpoints.down("1000")]: {
+      margin: "1040px 0px 0px 21%",
+      height: "200px",
+      width: "143px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "800px 0px 0px 11%",
+      width: "115px",
+    },
   },
   workshopStyle: {
     position: "absolute",
-    margin: "887px 0px 0px 991px",
+    margin: "887px 0px 0px 69%",
+    [theme.breakpoints.down("1000")]: {
+      margin: "1093px 0px 0px 57%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "857px 0px 0px 52%",
+      width: "159px",
+    },
   },
   imageText: {
     position: "absolute",
@@ -119,39 +243,99 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "27px",
     color: "#FFFFFF",
     textAlign: "center",
+    [theme.breakpoints.down("1000")]: {
+      fontSize: "16px",
+    },
+    [theme.breakpoints.down("361")]: {
+      fontSize: "14px",
+      lineHeight: "24px",
+    },
   },
   laptopsText: {
     position: "absolute",
-    margin: "1053px 0px 0px 222px",
+    margin: "1056px 0px 0px 15%",
     width: "170px",
     height: "43px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "983px 0px 0px 16%",
+      width: "255px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "731px 0px 0px 5%",
+      width: "149px",
+    },
   },
   serverText: {
     position: "absolute",
-    margin: "1056px 0px 0px 453px",
+    margin: "1056px 0px 0px 31%",
     width: "180px",
     height: "37px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "983px 0px 0px 52%",
+      width: "252px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "731px 0px 0px 52%",
+      width: "156px",
+    },
   },
   sessionsText: {
     position: "absolute",
-    margin: "1056px 0px 0px 698px",
+    margin: "1056px 0px 0px 48%",
     width: "214px",
     height: "37px",
+    [theme.breakpoints.down("1200")]: {
+      margin: "1056px 0px 0px 50%",
+      width: "165px",
+    },
+    [theme.breakpoints.down("1000")]: {
+      margin: "1246px 0px 0px 16%",
+      width: "255px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "990px 0px 0px 5%",
+      width: "155px",
+    },
   },
   workshopsText: {
     position: "absolute",
-    margin: "1051px 0px 0px 973px",
+    margin: "1056px 0px 0px 68%",
     width: "220px",
     height: "46px",
+    [theme.breakpoints.down("1200")]: {
+      margin: "1056px 0px 0px 69%",
+      width: "200px",
+    },
+    [theme.breakpoints.down("1000")]: {
+      margin: "1246px 0px 0px 52%",
+      width: "254px",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "990px 0px 0px 52%",
+      width: "156px",
+    },
   },
   volunteerStyle: {
-    margin: "1252px 0 0 225px",
+    margin: "1252px 0 0 15%",
+    [theme.breakpoints.down("1000")]: {
+      margin: "1439px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "1178px 0px 0px 4%",
+    },
   },
   volunteerInfoStyle: {
     position: "absolute",
-    margin: "1294px 0px 0px 225px",
+    margin: "1294px 0px 0px 15%",
     width: "631px",
     height: "68px",
+    [theme.breakpoints.down("1000")]: {
+      margin: "1485px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "1215px 0px 0px 4%",
+      width: "330px",
+    },
   },
   contactButton: {
     position: "absolute",
@@ -160,7 +344,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "30px",
     borderWidth: "0px",
     backgroundColor: "#FFFFFF",
-    margin: "1394px 0px 0px 223px",
+    margin: "1394px 0px 0px 15%",
     fontFamily: "Poppins",
     fontWeight: "500",
     fontStyle: "normal",
@@ -168,6 +352,12 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "27px",
     color: "#873FE2",
     textAlign: "center",
+    [theme.breakpoints.down("1000")]: {
+      margin: "1577px 0px 0px 15%",
+    },
+    [theme.breakpoints.down("361")]: {
+      margin: "1342px 0px 0px 4%",
+    },
   },
 }))
 
@@ -198,6 +388,7 @@ export default function HowYouCanSupport() {
         </p>
         <img src={hands} alt="handsSVG" className={classes.handsStyle} />
         <button className={classes.donateStyle}>Donate</button>
+        <img src={paypalImg} alt="paypalSVG" className={classes.paypalImage} />
       </div>
 
       <div>
