@@ -82,7 +82,6 @@ const useStyles = makeStyles(theme => ({
   },
   paypalStyle: {
     margin: "305px 0px 0px 15%",
-    width: "383px",
     height: "42px",
     [theme.breakpoints.down("1000")]: {
       margin: "209px 0px 0px 15%",
@@ -93,14 +92,17 @@ const useStyles = makeStyles(theme => ({
   },
   paypalInfoStyle: {
     margin: "348px 0px 0px 15%",
-    width: "485px",
+    // width: "485px",
+    width: "35%",
     height: "81px",
     [theme.breakpoints.down("1000")]: {
       margin: "255px 0px 0px 15%",
+      width: "63%",
     },
     [theme.breakpoints.down("361")]: {
       margin: "162px 0px 0px 4%",
-      width: "328px",
+      //   width: "328px",
+      width: "95%",
     },
   },
   paypalImage: {
@@ -110,7 +112,7 @@ const useStyles = makeStyles(theme => ({
       margin: "376px 0px 0px 44%",
       visibility: "visible",
     },
-    [theme.breakpoints.down("361")]: {
+    [theme.breakpoints.down("651")]: {
       visibility: "hidden",
     },
   },
@@ -138,7 +140,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("1000")]: {
       margin: "418px 0px 0px 15%",
     },
-    [theme.breakpoints.down("361")]: {
+    [theme.breakpoints.down("651")]: {
       visibility: "hidden",
     },
   },
@@ -155,14 +157,17 @@ const useStyles = makeStyles(theme => ({
   },
   kindInfoStyle: {
     margin: "684px 0px 0px 15%",
-    width: "556px",
+    // width: "556px",
+    width: "38%",
     height: "91px",
     [theme.breakpoints.down("1000")]: {
       margin: "628px 0px 0px 15%",
+      width: "70%",
     },
     [theme.breakpoints.down("361")]: {
       margin: "385px 0px 0px 4%",
-      width: "327px",
+      width: "90%",
+      //   width: "327px",
     },
   },
   needStyle: {
@@ -173,17 +178,20 @@ const useStyles = makeStyles(theme => ({
     fontSize: "22px",
     lineHeight: "35px",
     color: "#FFFFFF",
+    width: "auto",
     margin: "793px 0px 0px 15%",
     [theme.breakpoints.down("1000")]: {
       fontSize: "20px",
       lineHeight: "34px",
       margin: "751px 0px 0px 15%",
+      width: "60%",
     },
     [theme.breakpoints.down("361")]: {
       fontSize: "16px",
       lineHeight: "25px",
       margin: "545px 0px 0px 4%",
-      width: "310px",
+      width: "95%",
+      //   width: "310px",
     },
   },
   laptopStyle: {
@@ -286,15 +294,18 @@ const useStyles = makeStyles(theme => ({
     height: "37px",
     [theme.breakpoints.down("1200")]: {
       margin: "1056px 0px 0px 50%",
+      //   width: "15%",
       width: "165px",
     },
     [theme.breakpoints.down("1000")]: {
       margin: "1246px 0px 0px 16%",
-      width: "255px",
+      //   width: "255px",
+      width: "26%",
     },
     [theme.breakpoints.down("361")]: {
       margin: "990px 0px 0px 5%",
-      width: "155px",
+      width: "43%",
+      //   width: "155px",
     },
   },
   workshopsText: {
@@ -304,15 +315,18 @@ const useStyles = makeStyles(theme => ({
     height: "46px",
     [theme.breakpoints.down("1200")]: {
       margin: "1056px 0px 0px 69%",
-      width: "200px",
+      width: "17%",
+      //   width: "200px",
     },
     [theme.breakpoints.down("1000")]: {
       margin: "1246px 0px 0px 52%",
-      width: "254px",
+      //   width: "254px",
+      width: "26%",
     },
     [theme.breakpoints.down("361")]: {
       margin: "990px 0px 0px 52%",
-      width: "156px",
+      //   width: "156px",
+      width: "45%",
     },
   },
   volunteerStyle: {
@@ -327,14 +341,17 @@ const useStyles = makeStyles(theme => ({
   volunteerInfoStyle: {
     position: "absolute",
     margin: "1294px 0px 0px 15%",
-    width: "631px",
+    // width: "631px",
+    width: "40%",
     height: "68px",
     [theme.breakpoints.down("1000")]: {
       margin: "1485px 0px 0px 15%",
+      width: "75%",
     },
     [theme.breakpoints.down("361")]: {
       margin: "1215px 0px 0px 4%",
-      width: "330px",
+      //   width: "330px",
+      width: "92%",
     },
   },
   contactButton: {
@@ -380,7 +397,7 @@ export default function HowYouCanSupport() {
     <div className={classes.container}>
       <div>
         <h1 className={classes.headerStyle}>{header}</h1>
-        <h2 className={`${classes.subHeaderStyle} ${classes.paypalStyle}`}>
+        {/* <h2 className={`${classes.subHeaderStyle} ${classes.paypalStyle}`}>
           {paypal}
         </h2>
         <p className={`${classes.textStyle} ${classes.paypalInfoStyle}`}>
@@ -388,10 +405,10 @@ export default function HowYouCanSupport() {
         </p>
         <img src={hands} alt="handsSVG" className={classes.handsStyle} />
         <button className={classes.donateStyle}>Donate</button>
-        <img src={paypalImg} alt="paypalSVG" className={classes.paypalImage} />
+        <img src={paypalImg} alt="paypalSVG" className={classes.paypalImage} /> */}
       </div>
 
-      <div>
+      {/* <div>
         <h2 className={`${classes.subHeaderStyle} ${classes.kindStyle}`}>
           {inKind}
         </h2>
@@ -436,7 +453,7 @@ export default function HowYouCanSupport() {
           {volunteerInfo}
         </p>
         <button className={classes.contactButton}>Contact Us</button>
-      </div>
+      </div> */}
     </div>
   )
 }
