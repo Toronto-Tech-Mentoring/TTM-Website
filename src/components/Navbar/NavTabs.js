@@ -163,11 +163,11 @@ export default function NavTabs() {
           <FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {/* {({ TransitionProps, placement }) => (
+          {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
               style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            > */}
+            >
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0, fontSize: '10px' }}>
@@ -186,8 +186,8 @@ export default function NavTabs() {
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
-            {/* </Grow>
-          )} */}
+            </Grow>
+          )}
         </Popper>
         </li>
         <li class={classes.navitem}>
