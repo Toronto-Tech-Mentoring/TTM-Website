@@ -15,7 +15,8 @@ export default function Logo() {
       margin: "7px",
       maxWidth: "250px",
       fontSize: "20px",
-      [theme.breakpoints.down("1040")]: {
+      color: "black",
+      [theme.breakpoints.down("1080")]: {
         maxWidth: "calc(20vw + 50px)",
         fontSize: "16px",
       },
@@ -28,7 +29,7 @@ export default function Logo() {
     logo: {
       width: "48px",
       marginLeft: "calc(25vw - 240px)",
-      [theme.breakpoints.down("1040")]: {
+      [theme.breakpoints.down("1080")]: {
         width: "40px",
         marginLeft: "calc(51vw - 128px)",
       },

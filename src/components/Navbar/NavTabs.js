@@ -144,10 +144,10 @@ export default function NavTabs() {
 
   return (
     <div className={classes.navbar}>
-      <Logo />
+      <Link to="/landing" id="landing"><Logo /></Link>
       <ul className={classes.navtabs}>
         {renderListItems()}
-        <li class="makeStyles-navitem-3">
+        <li class={classes.navitem}>
          <Button
           // to={item.path}
           // id={item.id}
@@ -163,28 +163,37 @@ export default function NavTabs() {
           <FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {({ TransitionProps, placement }) => (
+          {/* {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
               style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
+            > */}
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0 }}>
-                    <MenuItem onClick={handleClose}>Volunteer with us</MenuItem>
-                    <MenuItem onClick={handleClose}>Partner with us</MenuItem>
-                    <MenuItem onClick={handleClose}>Sponsor us</MenuItem>
+                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0, fontSize: '10px' }}>
+                      <Link to="/volunteer" id="volunteer"
+                        className={classes.navlink}
+                        activeClassName={classes.active}
+                      ><MenuItem onClick={handleClose}>Volunteer with us</MenuItem></Link>
+                    <Link to="/partners" id="partners"
+                        className={classes.navlink}
+                        activeClassName={classes.active}
+                      ><MenuItem onClick={handleClose}>Partner with us</MenuItem></Link>
+                    <Link to="/sponsors" id="sponsors"
+                        className={classes.navlink}
+                        activeClassName={classes.active}
+                      ><MenuItem onClick={handleClose}>Sponsor us</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
-            </Grow>
-          )}
+            {/* </Grow>
+          )} */}
         </Popper>
         </li>
-        <li>
+        <li class={classes.navitem}>
           <Link
-          // to={item.path}
-          // id={item.id}
+          to="/contact"
+          id="contact"
           className={classes.navlink}
           activeClassName={classes.active}
         >
