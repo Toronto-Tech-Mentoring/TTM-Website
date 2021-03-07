@@ -1,5 +1,7 @@
 import React from "react"
 import { Box } from "@material-ui/core"
+import { Link } from "gatsby"
+
 import { makeStyles } from "@material-ui/core/styles"
 import LogoTtm from "../../images/navbar/logo-ttm.svg"
 export default function Logo() {
@@ -49,7 +51,8 @@ export default function Logo() {
         className={classes.logo}
         alt="TTM logo"
       />
-      <Box className={classes.text}>Toronto Tech Mentoring</Box>
+      <Link to="/landing" id="landing" style={{ textDecoration: 'none' }}>
+      <Box className={classes.text}>Toronto Tech Mentoring</Box></Link>
     </div>
   )
 }

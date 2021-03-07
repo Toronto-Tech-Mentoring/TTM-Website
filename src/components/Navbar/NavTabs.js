@@ -38,21 +38,22 @@ export default function NavTabs() {
   //     path: "/client/",
   //     title: "Client",
   //   },
-  //   {
-  //     id: "volunteer",
-  //     path: "/volunteer/",
-  //     title: "Volunteer",
-  //   },
-  //   {
-  //     id: "partners",
-  //     path: "/partners/",
-  //     title: "Partners",
-  //   },
-  //   {
-  //     id: "sponsors",
-  //     path: "/sponsors/",
-  //     title: "Sponsors",
-  //   },
+    const dropdownListItems = [
+      {
+      id: "volunteer",
+      path: "/volunteer/",
+      title: "Volunteer with us",
+    },
+    {
+      id: "partners",
+      path: "/partners/",
+      title: "Partner with us",
+    },
+    {
+      id: "sponsors",
+      path: "/sponsors/",
+      title: "Sponsors us",
+    }]
   //   {
   //     id: "home",
   //     path: "/",
@@ -82,6 +83,22 @@ export default function NavTabs() {
           id={item.id}
           className={classes.navlink}
           activeClassName={classes.active}
+        >
+          {item.title}
+        </Link>
+      </li>
+    ))
+  }
+
+  const renderDropdownListItems = () => {
+    return dropdownListItems.map(item => (
+      <li className={classes.navitem} key={item.id}>
+        <Link
+          to={item.path}
+          id={item.id}
+          className={classes.navlink}
+          activeClassName={classes.active}
+          style={{ boxShadow:"0px 0px 0px" , fontSize:"0.8rem"}}
         >
           {item.title}
         </Link>
@@ -144,7 +161,7 @@ export default function NavTabs() {
 
   return (
     <div className={classes.navbar}>
-      <Link to="/landing" id="landing"><Logo /></Link>
+      <Logo />
       <ul className={classes.navtabs}>
         {renderListItems()}
         <li class={classes.navitem}>
@@ -157,6 +174,7 @@ export default function NavTabs() {
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
+          disableRipple="true"
           style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
         >
           How to help
@@ -170,19 +188,20 @@ export default function NavTabs() {
             >
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0, fontSize: '10px' }}>
+                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0}}>
                       <Link to="/volunteer" id="volunteer"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                      ><MenuItem onClick={handleClose}>Volunteer with us</MenuItem></Link>
+                        style={{ boxShadow:"0px 0px 0px"}}
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Volunteer with us</MenuItem></Link>
                     <Link to="/partners" id="partners"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                      ><MenuItem onClick={handleClose}>Partner with us</MenuItem></Link>
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Partner with us</MenuItem></Link>
                     <Link to="/sponsors" id="sponsors"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                      ><MenuItem onClick={handleClose}>Sponsor us</MenuItem></Link>
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Sponsor us</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -204,7 +223,29 @@ export default function NavTabs() {
         <DonateBtn />
       </ul>
       <div className={classes.burgerMenu}>
-        <BurgerMenu>{renderListItems()}</BurgerMenu>
+        <BurgerMenu>
+        {renderListItems()}
+        <li className={classes.navitem}>
+        <Link
+          className={classes.navlink}
+          activeClassName={classes.active}
+          style={{ color:"black" }}
+        >
+         How to help<FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
+        </Link>
+      </li>
+       {renderDropdownListItems()}
+       <li className={classes.navitem}>
+        <Link
+        to="/contact"
+          id="contact"
+          className={classes.navlink}
+          activeClassName={classes.active}
+        >
+         Contact Us
+        </Link>
+      </li>
+        </BurgerMenu>
       </div>
     </div>
   )
