@@ -192,7 +192,7 @@ const Other = new styled(Radio)`
 
 const StyledGrid = new styled(Grid)`
     padding-bottom: 50px;
-    padding-left: 16.5%;
+    padding-left: calc(19.2vw - 52px);
 `
 
 const StyledDropDown = new styled(Select)`
