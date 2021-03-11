@@ -1,5 +1,7 @@
 import React from "react"
 import { Box } from "@material-ui/core"
+import { Link } from "gatsby"
+
 import { makeStyles } from "@material-ui/core/styles"
 import LogoTtm from "../../images/navbar/logo-ttm.svg"
 export default function Logo() {
@@ -15,7 +17,8 @@ export default function Logo() {
       margin: "7px",
       maxWidth: "250px",
       fontSize: "20px",
-      [theme.breakpoints.down("1040")]: {
+      color: "black",
+      [theme.breakpoints.down("1080")]: {
         maxWidth: "calc(20vw + 50px)",
         fontSize: "16px",
       },
@@ -28,7 +31,7 @@ export default function Logo() {
     logo: {
       width: "48px",
       marginLeft: "calc(25vw - 240px)",
-      [theme.breakpoints.down("1040")]: {
+      [theme.breakpoints.down("1080")]: {
         width: "40px",
         marginLeft: "calc(51vw - 128px)",
       },
@@ -48,7 +51,8 @@ export default function Logo() {
         className={classes.logo}
         alt="TTM logo"
       />
-      <Box className={classes.text}>Toronto Tech Mentoring</Box>
+      <Link to="/landing" id="landing" style={{ textDecoration: 'none' }}>
+      <Box className={classes.text}>Toronto Tech Mentoring</Box></Link>
     </div>
   )
 }
