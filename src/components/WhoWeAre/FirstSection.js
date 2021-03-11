@@ -4,7 +4,6 @@ import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
 // import styles from "./HeroText.module.css"
-import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
@@ -26,7 +25,7 @@ export default function VolunteerRunOrg() {
       <TextBox
         style={{
           "margin-top": "135px",
-          "margin-right": "calc(46.5vw - 151px)",
+          "margin-right": "calc(39.5vw - 125px)",
           "padding-right": "0",
         }}
       >
