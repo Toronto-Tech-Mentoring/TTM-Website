@@ -8,6 +8,8 @@ import Pin from "../../images/about-us/timeline/pin.svg"
 import ImgOpt from "../../utils/ImageOptimise.js"
 import LeftBlob from "../../images/about-us/timeline/leftblob.svg"
 import RightBlob from "../../images/about-us/timeline/rightblob.svg"
+import Hiring from "../../images/who-we-are/hiring.svg"
+import DataAnalyse from "../../images/who-we-are/data_analyse.svg"
 
 const useStyles = makeStyles(theme => ({
   titleContainer: {
@@ -239,10 +241,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function TimelineSection() {
   const classes = useStyles()
-  const timelinePicLeft2017 = "timelinePicLeft2017.jpg"
-  const timelinePicRight2017 = "timelinePicLeft2017.jpg"
-  const timelinePicLeft2018 = "timelinePicLeft2018.jpg"
-  const timelinePicRight2018 = "timelinePicLeft2018.jpg"
+  const researchSession1 = "researchSession1.jpg"
+  const researchSession2 = "ResearchSession2.jpg"
+  const programLaunch1 = "program_launch.jpg"
+  const programLaunch2 = "program_launch2.jpg"
+  const covidResponse1 = "covid1.jpg"
+  const covidResponse2 = "covid2.jpg"
 
   return (
     <Grid
@@ -262,37 +266,57 @@ export default function TimelineSection() {
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
         <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
-          <span className={classes.yearTag}>2017</span>
+          <span className={classes.yearTag}>2018</span>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid container item xs={10} md={8} lg={7} xl={6}>
           <button className={classes.yearTagSm}>2017</button>
           <span className={classes.eventTitle}>
-            Research and program development
+            Initial program development
           </span>
           <p className={classes.eventContent}>
-            Toronto Tech Mentoring was born out of the Civic Tech Toronto space.
-            Civic Tech is a movement that focuses on developing and harnessing
-            technology for the betterment of civic life.
+            We defined our program objectives from literature research, an
+            environmental scan and conducting consultations to better understand
+            the problem space.
+          </p>
+          <div className={classes.picDiv} style={{ justifyContent: "center" }}>
+            <Hiring className={classes.secondPic} />
+          </div>
+        </Grid>
+      </Grid>
+      <Grid className={classes.gridContainer} container item xs={12}>
+        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+          <span className={classes.yearTag}>2019</span>
+          <Pin className={classes.pinStyle} />
+        </Grid>
+        <Grid container item xs={10} md={8} lg={7} xl={6}>
+          <button className={classes.yearTagSm}>2017</button>
+          <span className={classes.eventTitle}>
+            Co-creation research session
+          </span>
+          <p className={classes.eventContent}>
+            With social services and tech sector partners, we identified and
+            brainstormed ideas to address potential challenges and barriers for
+            the program, such as tech hiring practices, social isolation among
+            homeless youth.
           </p>
           <div className={classes.picDiv}>
             <ImgOpt
               className={`${classes.firstPic} ${classes.secondPic}`}
-              alt="timeline pic left 2017"
-              filename={timelinePicLeft2017}
+              alt="Research pic 1"
+              filename={researchSession1}
             />
             <LeftBlob className={classes.leftBlob} />
             <ImgOpt
               className={classes.secondPic}
-              alt="timeline pic right 2017"
-              filename={timelinePicRight2017}
+              alt="Research pic 2"
+              filename={researchSession2}
             />
           </div>
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container xs={12}>
         <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
-          <span className={classes.yearTag}>2018</span>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid container item xs={10} md={8} lg={7} xl={6}>
@@ -301,48 +325,93 @@ export default function TimelineSection() {
             Pilot testing and refinement
           </span>
           <p className={classes.eventContent}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-            mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
-            nisi tristique viverra at ac elit.
+            We conducted user research and conducted demos at drop-in programs
+            at shelters to test our program assumptions. Based on our insights,
+            we refined our mentoring program to a highly tailored one-on-one
+            model.
+          </p>
+          <div className={classes.picDiv} style={{ justifyContent: "center" }}>
+            <DataAnalyse className={classes.secondPic} />
+          </div>
+        </Grid>
+      </Grid>
+      <Grid className={classes.gridContainer} container item xs={12}>
+        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+          <Pin className={classes.pinStyle} />
+        </Grid>
+        <Grid container item xs={10} md={8} lg={7} xl={6}>
+          <span className={classes.eventTitle}>Program launch</span>
+          <p className={classes.eventContent}>
+            We launched our first cycle of the refined program model at the YMCA
+            Sprott House, one of the first 2SLGBTQ+ transitional housing
+            programs for at-risk and homeless youth in Canada. Since then, we
+            have expanded our reach to include participants from other
+            transitional housing settings.
           </p>
           <div className={classes.picDiv}>
             <ImgOpt
               className={`${classes.firstPic} ${classes.secondPic}`}
-              alt="timeline pic left 2018"
-              filename={timelinePicLeft2018}
+              alt="Program launch pic 1"
+              filename={programLaunch1}
             />
+            <LeftBlob className={classes.leftBlob} />
             <ImgOpt
               className={classes.secondPic}
-              alt="timeline pic right 2018"
-              filename={timelinePicRight2018}
+              alt="Program Launch pic 2"
+              filename={programLaunch2}
             />
-            <RightBlob className={classes.rightBlob} />
+          </div>
+        </Grid>
+      </Grid>
+      <Grid className={classes.gridContainer} container item xs={12}>
+        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+          <span className={classes.yearTag}>2020</span>
+          <Pin className={classes.pinStyle} />
+        </Grid>
+        <Grid container item xs={10} md={8} lg={7} xl={6}>
+          <span className={classes.eventTitle}>2020 Covid-19 response</span>
+          <p className={classes.eventContent}>
+            To ensure the safety and well-being of our participants and
+            volunteers, we quickly adapted our delivery mode from in-person to
+            online. We also created care packages with personalized letters from
+            our volunteers for the clients of our delivery partner YMCA Sprott
+            House to lift spirits during this difficult time.
+          </p>
+          <div className={classes.picDiv}>
+            <ImgOpt
+              className={`${classes.firstPic} ${classes.secondPic}`}
+              alt="Covid pic 1"
+              filename={covidResponse1}
+            />
+            <LeftBlob className={classes.leftBlob} />
+            <ImgOpt
+              className={classes.secondPic}
+              alt="Covid pic 2"
+              filename={covidResponse2}
+            />
           </div>
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container xs={12}>
         <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
-          <span className={classes.yearTag}>2019</span>
+          <span className={classes.yearTag}>Onwards</span>
           <Pin className={classes.pinStyle} />
         </Grid>
-        <Grid
-          container
-          item
-          xs={10}
-          md={8}
-          lg={7}
-          xl={6}
-          direction="row"
-          alignItems="flex-start"
-        >
-          <button className={classes.yearTagSm}>2019</button>
+        <Grid container item xs={10} md={8} lg={7} xl={6}>
           <span className={`${classes.eventTitle} ${classes.title2019}`}>
-            Full program launch!
+            We’re excited to continue to expand our impact on people’s lives,
+            through:
           </span>
-          <p className={`${classes.eventContent} ${classes.content2019}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-            mi porta, finibus nisl a, gravida massa. Etiam non quam sit amet
-            nisi tristique viverra at ac elit.
+          <p className={classes.eventContent}>
+            <ul>
+              <li>Helping more clients through our program </li>
+              <li>Onboarding more volunteers, including mentors</li>
+              <li>Building more partnerships with supportive organizations</li>
+              <li>
+                Widening our access to resources to help us provide better
+                programs
+              </li>
+            </ul>
           </p>
         </Grid>
       </Grid>
