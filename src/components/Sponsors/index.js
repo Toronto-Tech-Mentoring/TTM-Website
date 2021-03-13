@@ -13,10 +13,10 @@ export default function Sponsors() {
     <div>
       <CallForSponsorsSection />
       <HowYouCanSupport />
-      {/* <DonateTodaySection />
-      <PartnerWithUsSection />
+      {/* <DonateTodaySection /> */}
+      {/* <PartnerWithUsSection /> */}
       <ContactUsSection />
-      <SupportUsSection /> */}
+      {/* <SupportUsSection /> */}
       <ThankYouSection />
     </div>
   )
