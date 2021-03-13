@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
     fontFamily: "Poppins",
     zIndex: 2000,
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       height: "56px",
     },
     [theme.breakpoints.down("400")]: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     listStyle: "none",
     display: "inline-flex",
     alignItems: "center",
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       height: "56px",
       marginRight: "calc(2.22vw + 7px)",
     },
@@ -44,14 +44,14 @@ const useStyles = makeStyles(theme => ({
   navitem: {
     marginBottom: "-1px",
     display: "inline-block",
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       display: "none",
     },
   },
 
   navlink: {
-    width: "calc(18.2vw - 136px)",
-    maxWidth: "104px",
+    width:"136px",
+    maxWidth: "136px",
     minWidth: "86px",
     fontSize: "16px",
     textAlign: "center",
@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     display: "block",
     textDecoration: "none",
     borderStyle: "none",
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       width: "auto",
       lineHeight: "56px",
       maxWidth: "100%",
@@ -79,14 +79,14 @@ const useStyles = makeStyles(theme => ({
   active: {
     color: "#873FE2",
     boxShadow: "0px 2px 0px #873FE2",
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       boxShadow: "3px 0px 0px #873FE2",
       marginRight: "2.5px",
     },
   },
   burgerMenu: {
     display: "none",
-    [theme.breakpoints.down("1040")]: {
+    [theme.breakpoints.down("1080")]: {
       display: "block",
     },
   },
