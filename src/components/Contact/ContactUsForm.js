@@ -13,6 +13,7 @@ import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 import styled from "styled-components"
 
 const LastName = new styled(TextField)`
+    width: calc(11.5vw + 115px);
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
@@ -41,6 +42,7 @@ const LastName = new styled(TextField)`
     }
 `
 const FirstName = new styled(TextField)`
+    width: calc(11.5vw + 115px);
     padding-right: 46px !important;
     font-family: Poppins;
     font-style: normal;
@@ -81,6 +83,7 @@ const FirstName = new styled(TextField)`
 `
 
 const PhoneNumber = new styled(TextField)`
+    width: calc(11.5vw + 115px);
     padding-right: 46px !important;
 
     .MuiInput-underline:before {
@@ -114,6 +117,7 @@ const PhoneNumber = new styled(TextField)`
     `
 
 const EmailAddress = new styled(TextField)`
+    width: calc(3.7vw + 229px);
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
@@ -188,7 +192,7 @@ const Other = new styled(Radio)`
 
 const StyledGrid = new styled(Grid)`
     padding-bottom: 50px;
-    padding-left: 16.5%;
+    padding-left: calc(19.2vw - 52px);
 `
 
 const StyledDropDown = new styled(Select)`
@@ -215,7 +219,7 @@ const StyledMenuItem = new styled(MenuItem)`
 `
 
 const StyledInput = new styled(TextField)`
-    width: 80% !important;
+    width: calc(26.7vw + 231px) !important;
     .MuiInput-underline:before {
         border-bottom: 1px solid #873FE2;
     }
@@ -308,7 +312,7 @@ export default function ContactUsForm() {
         <LastName label="Last Name"></LastName>
         <br></br>
         <PhoneNumber label="Phone Number"></PhoneNumber>
-        <EmailAddress label="Email"></EmailAddress>
+        <EmailAddress label="Email" ></EmailAddress>
         <br></br>
         <StyledQuestion>What's Your Preferred Pronoun?</StyledQuestion>
         <PreferredPronouns checked="false">
