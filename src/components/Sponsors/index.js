@@ -15,7 +15,7 @@ export default function Sponsors() {
       <HowYouCanSupport />
       {/* <DonateTodaySection /> */}
       {/* <PartnerWithUsSection /> */}
-      <ContactUsSection />
+      {/* <ContactUsSection /> */}
       {/* <SupportUsSection /> */}
       <ThankYouSection />
     </div>
