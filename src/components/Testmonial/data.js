@@ -1,0 +1,40 @@
+export const testimonials = {
+    content:{
+    body: [
+
+    {
+        _uid: "1",
+        name: "Tiana",
+        header:"Have you faced adversity and want to learn tech skills?",
+        paragraph: "If you are a person facing facing homelessness and housing precarity, we will work with you to give you the tech knowledge, skills and advice to help you achieve your personal, professional or entrepreneurial goals.",
+        testimony:" Tiana grew up in foster care. Since aging out of the system at 18 they no longer have access to the support they once had, and have faced prejudice and mistreatment from past shelters for being transgender. Like many others in this situation they have faced discriminination, trust and confidence issues which were significant barriers in pursuing education. Tiana loves photography and is curious about web design so when they heard about Toronto Tech Mentoring through a friend at their shelter, they contacted the TTM team to learn more. The program volunteers helped them to navigate their goals, understand their learning style, and customize a website project specifically for them that would allow them to gain hands on experience while learning the basics of web design. They really enjoyed it, and after completing their project, their mentors helped them explore web design as a career path.",
+        btnText:"Join our program"
+    },
+
+    {
+        _uid: "2",
+        name: "Enzo",
+        header:"Are you interested in mentoring someone or helping us run this program?",
+        paragraph: "We come from different backgrounds (not all tech!) and build collaborative and supportive environments. We are always looking for more dedicated individuals to join our team!",
+        testimony: "Enzo is a recent graduate with ambitions of being a Software Developer and getting his foot in the door in Toronto’s thriving tech industry. Since joining Toronto Tech Mentoring’s volunteer team, Enzo has been building his portfolio, developing his soft skills, and expanding his professional network through collaboration with other volunteer team members, including more senior developers, user researchers and other professionals —all while contributing to a cause he cares about!",
+        btnText:"Volunteer with us"
+    },
+    {
+        _uid: "3",
+        name: "Rahim",
+        header:"Want to help us continue to provide this program, and expand our project?",
+        paragraph: "Partnerships are essential to our services. We work with you to help give more opportunities to the people that you serve.",
+        testimony:"Rahim is an Executive Director at a transitional housing center in Toronto. He’s always open to hearing about opportunities that would benefit the community. He decided to partner with TTM, as it was a great skill development opportunity for residents and he had heard very positive things about the program from one of his social workers who was familiar with the success of the program. The partnership has allowed his organization to benefit from their participants having integrated access to this free program in a way that complements the existing supports within his organization. Rahim has seen an improvement in their participants' outlook and their excitement for learning.",
+        btnText:"Partner with us"
+    },
+    {
+        _uid: "4",
+        name: "Sam",
+        header:"Want to help us continue to provide this program, and expand our project?",
+        paragraph: "Your donation could help us provide tech skills to somebody who would not otherwise have the opportunity.",
+        testimony: "Sam works in communications at a tech company. She learned about Toronto Tech Mentoring through her friend who volunteers with us. Her company recently upgraded their computers, so she got in touch with our team to see if we could use their older computers. She coordinated with her IT Department to have the laptops wiped and then donated to our program. When her co-workers heard about what she had done, they loved it, and decided to come up with new ways to get involved. The next year, the company decided to continue support by donating extra software licenses. Sam’s actions directly empowered participants who did not have access to the needed technology to learn.",
+        btnText:"Sponsor us"
+    }
+    ]
+}
+}
