@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Testmonials = props => {
+const Testmonials = () => {
   const classes = useStyles()
   return (
     <>
