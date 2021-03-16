@@ -1,16 +1,16 @@
 import React from "react"
 
-import TheBottomLineSection from "./TheBottomLineSection"
+import FirstSection from "./FirstSection"
 import OurRootsSection from "./OurRootsSection"
 import TimelineSection from "./TimelineSection"
-import WhyTechAndValuesDrivenSection from "../WhyTechSVG/index"
 import { SkylineFooter as SkylineFooterSVG } from "../SkylineSVG"
+import SecondSection from "./SecondSection"
 
 export default function AboutUs() {
   return (
     <div>
-      <WhyTechAndValuesDrivenSection />
-      <TheBottomLineSection />
+      <FirstSection />
+      <SecondSection />
       <OurRootsSection />
       <TimelineSection />
       <SkylineFooterSVG />
