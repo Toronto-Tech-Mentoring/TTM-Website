@@ -24,7 +24,7 @@ export default function CallForSponsors() {
       <TextBox
         style={{
           "margin-top": "135px",
-          "margin-right": "calc(37vw - 138px)",
+          "margin-right": "calc(37vw - 100px)",
           "padding-right": "0",
         }}
       >
