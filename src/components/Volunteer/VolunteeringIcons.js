@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     width: "calc(36vw - 57px)",
     top: "calc(-240px - 1%)",
     left: "calc(61vw - 26px)",
-    height: "calc(40vw + 134px)",
+    height: "calc(28.9vw + 39px)",
     paddingTop: "130px",
     [theme.breakpoints.down("sm")]: {
       paddingTop: "160px",
