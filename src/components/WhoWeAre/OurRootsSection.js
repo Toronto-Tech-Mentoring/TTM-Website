@@ -37,33 +37,36 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "30px",
     fontFamily: "Poppins",
     marginTop: "-20px",
+    paddingLeft:"calc(36.6vw - 102px)",
+    paddingRight: "calc(36.6vw - 102px)",
+    paddingBottom: "calc(2.96vw + 53.5px)",
 
     // Large screen up
     [theme.breakpoints.up(2560)]: {
-      padding: "0 800px 96px 800px",
+      // padding: "0 800px 96px 800px",
       fontSize: "25px",
     },
 
     // Tablet Above to Desktop to large screen
     [theme.breakpoints.between("lg", 2560)]: {
-      padding: "0 550px 96px 550px",
+      // padding: "0 550px 96px 550px",
       fontSize: "20px",
     },
 
     // Tablet to Desktop
     [theme.breakpoints.between("md", "lg")]: {
-      padding: "0 500px 96px 500px",
+      // padding: "0 500px 96px 500px",
       fontSize: "18px",
     },
     // // Mobile to Tablet
     [theme.breakpoints.between("sm", "md")]: {
-      padding: "0 300px 96px 300px",
+      // padding: "0 300px 96px 300px",
       fontSize: "16px",
     },
 
     // Small mobile to large mobile
     [theme.breakpoints.between("xs", "sm")]: {
-      padding: "0 27px 96px 27px",
+      // padding: "0 27px 96px 27px",
       fontSize: "14px",
     },
   },
