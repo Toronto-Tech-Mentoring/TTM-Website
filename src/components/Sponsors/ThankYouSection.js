@@ -5,23 +5,32 @@ import { makeStyles } from "@material-ui/core/styles"
 import SVGLoad from "../SVGLoad/SVG"
 import Hands from "../../images/sponsors/thankyou/hands.svg"
 import SkylineFooter from "../../components/SkylineSVG/SkylineFooter"
+import Socials from "./ThankYouSocials"
 
 const useStyles = makeStyles(theme => ({
   container: {
     height: "488px",
     width: "100%",
     [theme.breakpoints.down("769")]: {
-      height: "350px",
+      height: "400px",
     },
     [theme.breakpoints.down("600")]: {
       height: "600px",
     },
   },
   backgroundBlob: {
-    marginLeft: "calc(5vw + 10px)",
-    marginTop: "calc(4vw + 10px)",
-    width: "1050px",
+    marginLeft: "5%",
+    marginTop: "4%",
     height: "579px",
+    width: "73%",
+    [theme.breakpoints.down("1025")]: {
+      marginTop: "0%",
+    },
+    [theme.breakpoints.down("769")]: {
+      marginTop: "33px",
+      width: "100%",
+      marginLeft: "0px",
+    },
     [theme.breakpoints.down("600")]: {
       visibility: "hidden",
       height: "0px",
@@ -29,21 +38,26 @@ const useStyles = makeStyles(theme => ({
     },
   },
   backgroundBlobMobile: {
-    visibility: "visible",
+    visibility: "hidden",
     margin: "0px 0px 0px 0px",
     height: "0",
     width: "0",
     [theme.breakpoints.down("600")]: {
       width: "100%",
-      height: "619px",
+      marginTop: "50%",
+      height: "580px",
       visibility: "visible",
       position: "relative",
+    },
+    [theme.breakpoints.down("361")]: {
+      width: "100%",
+      height: "619px",
+      marginTop: "60%",
     },
   },
   blobContainer: {
     [theme.breakpoints.down("769")]: {
-      width: "738px",
-      height: "406px",
+      height: "450px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -92,22 +106,27 @@ const useStyles = makeStyles(theme => ({
   },
   handsStyle: {
     position: "absolute",
-    marginLeft: "calc(46vw + 50px)",
-    marginTop: "calc(20vw + 40px)",
-    // marginTop: "240px",
-    // marginLeft: "792px",
+    marginLeft: "50%",
+    marginTop: "22%",
     width: "500px",
+    width: "35%",
     height: "287px",
+    [theme.breakpoints.down("1200")]: {
+      marginTop: "30%",
+    },
     [theme.breakpoints.down("769")]: {
       width: "40%",
-      marginLeft: "calc(50vw + 80px)",
-      marginTop: "calc(20vw + 60px)",
+      marginLeft: "60%",
+      marginTop: "35%",
     },
     [theme.breakpoints.down("600")]: {
       width: "0",
       height: "0",
       visibility: "hidden",
     },
+  },
+  socials: {
+    marginLeft: "100px",
   },
 }))
 
@@ -119,16 +138,7 @@ export default function ThankYou() {
         <Grid className={classes.handsStyle}>
           <SVGLoad image={Hands} alt="sponsorStars" />
         </Grid>
-        <Grid
-          className={classes.blobContainer}
-          container
-          item
-          xl={7}
-          lg={9}
-          md={10}
-          sm={12}
-          xs={12}
-        >
+        <Grid className={classes.blobContainer}>
           <svg
             viewBox="0 0 1050 579"
             fill="none"
@@ -270,6 +280,7 @@ export default function ThankYou() {
         </Grid>
       </Grid>
 
+      <Socials className={classes.socials} />
       <SkylineFooter />
     </>
   )
