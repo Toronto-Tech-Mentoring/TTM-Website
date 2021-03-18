@@ -5,7 +5,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import SVGLoad from "../SVGLoad/SVG"
 import Hands from "../../images/sponsors/thankyou/hands.svg"
 import SkylineFooter from "../../components/SkylineSVG/SkylineFooter"
-import Socials from "./ThankYouSocials"
+import Instagram from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/Instagram"
+import InstagramMobile from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/InstagramMobile"
+import Twitter from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/Twitter"
+import TwitterMobile from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/TwitterMobile"
+import Linkedin from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/Linkedin"
+import LinkedinMobile from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/LinkedinMobile"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -206,6 +211,10 @@ export default function ThankYou() {
             >
               Follow us for updates and share with your networks.
             </foreignObject>
+
+            {Instagram}
+            {Twitter}
+            {Linkedin}
           </svg>
 
           <svg
@@ -276,11 +285,14 @@ export default function ThankYou() {
             >
               Follow us for updates and share with your networks.
             </foreignObject>
+
+            {InstagramMobile}
+            {TwitterMobile}
+            {LinkedinMobile}
           </svg>
         </Grid>
       </Grid>
 
-      <Socials className={classes.socials} />
       <SkylineFooter />
     </>
   )
