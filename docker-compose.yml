@@ -1,11 +1,21 @@
+version: '3.1'
 services:
   npm:
+    image: npm
     build: .
     ports:
       - "3000:8000"
     volumes:
-      - /myapp/node_modules
-      - .:/myapp
+      # - /myapp/node_modules
+      - ./public:/myapp/public
+      - ./src:/myapp/src
+      - ./static:/myapp/static
+      - ./gatsby-browser.js:/myapp/gatsby_browser.js
+      - ./gatsby-config.js:/myapp/gatsby-config.js
+      - ./jsconfig.json:/myapp/jsconfig.json
+      - ./TTM-Arch.svg:/myapp/TTM-Arch.svg
+      - ./package.json:/myapp/package.json
+      - ./package-lock.json:/myapp/package-lock.json
     environment:
       - NODE_ENV=development
       - GATSBY_WEBPACK_PUBLICPATH=/

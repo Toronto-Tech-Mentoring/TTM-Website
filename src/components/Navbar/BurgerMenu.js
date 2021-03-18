@@ -25,7 +25,7 @@ export default function BurgerMenu(props) {
     },
     bmMenu: {
       background: "#FFFFFF",
-      width: "20vw",
+      width: "60vw",
       minWidth: "104px",
       fontSize: "1.15em",
       boxShadow: "4px 0px 4px rgba(0, 0, 0, 0.2)",
@@ -41,7 +41,7 @@ export default function BurgerMenu(props) {
       display: "block",
     },
     bmItem: {
-      width: "20vw",
+      width: "60vw",
       marginRight: "2px",
       outline: "none",
     },

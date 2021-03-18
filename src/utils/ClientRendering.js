@@ -1,6 +1,6 @@
 import React from "react"
 
-import Home from "../components/AboutUs/index.js"
+import Home from "../components/WhoWeAre/index.js"
 
 function ClientSideRendering({ children, ...delegated }) {
   const [hasMounted, setHasMounted] = React.useState(false)

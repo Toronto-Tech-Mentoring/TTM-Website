@@ -7,13 +7,14 @@ import CustomButton from "../CustomButton"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "calc(40vw + 134px)",
+    // height: "calc(40vw + 134px)",
+    height: "auto",
     width: "100%",
     maxWidth: "100%",
     padding: "0",
     margin: "0",
     [theme.breakpoints.down("sm")]: {
-      height: "calc(5.6vw + 405px)",
+      // height: "calc(5.6vw + 405px)",
     },
   },
 
