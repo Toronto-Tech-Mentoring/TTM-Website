@@ -130,13 +130,11 @@ const useStyles = makeStyles(theme => ({
       visibility: "hidden",
     },
   },
-  socials: {
-    marginLeft: "100px",
-  },
 }))
 
 export default function ThankYou() {
   const classes = useStyles()
+
   return (
     <>
       <Grid className={classes.container}>

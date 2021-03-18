@@ -1,5 +1,9 @@
 import React from "react"
 
+const redirect = () => {
+  window.open("https://www.instagram.com/civictechto")
+}
+
 const Instagram = (
   <svg
     width="50"
@@ -9,6 +13,7 @@ const Instagram = (
     viewBox="0 0 50 50"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    onClick={redirect}
   >
     <path
       d="M29.5453 24.9999C29.5453 27.5103 27.5102 29.5453 24.9998 29.5453C22.4894 29.5453 20.4543 27.5103 20.4543 24.9999C20.4543 22.4895 22.4894 20.4544 24.9998 20.4544C27.5102 20.4544 29.5453 22.4895 29.5453 24.9999Z"
