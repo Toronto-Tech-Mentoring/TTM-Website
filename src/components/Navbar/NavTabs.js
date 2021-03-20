@@ -197,10 +197,12 @@ export default function NavTabs() {
                     <Link to="/partners" id="partners"
                         className={classes.navlink}
                         activeClassName={classes.active}
+                        style={{ boxShadow:"0px 0px 0px"}}
                       ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Partner with us</MenuItem></Link>
                     <Link to="/sponsors" id="sponsors"
                         className={classes.navlink}
                         activeClassName={classes.active}
+                        style={{ boxShadow:"0px 0px 0px"}}
                       ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Sponsor us</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
