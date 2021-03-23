@@ -15,11 +15,14 @@ const useStyles = makeStyles(theme => ({
         borderStyle: "none",
         fontFamily: "Poppins",
         marginLeft: "14vw",
+        [theme.breakpoints.between("sm","md")]: {
+          marginLeft: "3vw",
+        },
+        [theme.breakpoints.between("xs","sm")]: {
+          marginLeft: "3vw",
+        },
 
-        [theme.breakpoints.down("sm")]: {
-            marginTop: "30px",
-            marginBottom: "50px",
-          },
+      
     }
   }))
 

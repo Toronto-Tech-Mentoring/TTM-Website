@@ -8,23 +8,45 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#FFFFFF",
     minHeight: "600px",
     paddingBottom: "50px",
+    marginLeft: "auto",
+    marginRight: "auto",
+
+    [theme.breakpoints.between("sm", "md")]: {
+      paddingBottom: "50px",
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      paddingBottom: "50px",
+    },
   },
   header: {
     fontFamily: "Josefin Sans",
     fontStyle: "normal",
     fontWeight: "600",
-    fontSize: "22px",
-    lineHeight: "38px",
+    fontSize: "28px",
+    lineHeight: "42px",
     color: "#000000",
     marginLeft: "16vw",
     marginTop: "166px",
-    width: "69vw"
+    width: "94vw",
+    [theme.breakpoints.between("sm", "md")]: {
+      fontSize: "22px",
+      lineHeight: "38px",
+
+      width: "94vw",
+      marginLeft: "5vw",
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      fontSize: "18px",
+      lineHeight: "29px",
+      width: "91vw",
+      marginLeft: "5vw",
+    },
   },
   text: {
     fontFamily: "Poppins",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: "16px",
+    fontSize: "18px",
     lineHeight: "27px",
     display: "flex",
     alignItems: "center",
@@ -32,9 +54,26 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "16px",
     width: "48vw",
     marginLeft: "16vw",
+
+    [theme.breakpoints.between("sm", "md")]: {
+      fontSize: "16px",
+      width: "75vw",
+      marginLeft: "5vw",
+      marginBottom: "16px",
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      fontSize: "14px",
+      width: "85vw",
+      marginLeft: "5vw",
+      lineHeight: "24px",
+    },
   },
   button: {
-    marginLeft: "15vw",
+    float: "Left",
+    marginLeft: "2vw",
+  },
+  [theme.breakpoints.between("sm", "md")]: {
+    float: "Left",
   },
 }))
 
@@ -44,10 +83,13 @@ const Testmonials = () => {
     <>
       <div className={classes.div}>
         <h2 className={classes.header}>
-        Have you faced adversity and want to learn tech skills?
+          Have you faced adversity and want to learn tech skills?
         </h2>
         <p className={classes.text}>
-          If you are a person facing facing homelessness and housing precarity, we will work with you to give you the tech knowledge, skills and advice to help you achieve your personal, professional or entrepreneurial goals.
+          If you are a person facing homelessness and housing precarity,
+          we will work with you to give you the tech knowledge, skills and
+          advice to help you achieve your personal, professional or
+          entrepreneurial goals.
         </p>
         <ExpandingTextBox
           className={classes.textBox}
@@ -67,7 +109,9 @@ const Testmonials = () => {
           program?
         </h2>
         <p className={classes.text}>
-          We come from different backgrounds (not all tech!) and build collaborative and supportive environments. We are always looking for more dedicated individuals to join our team!
+          We come from different backgrounds (not all tech!) and build
+          collaborative and supportive environments. We are always looking for
+          more dedicated individuals to join our team!
         </p>
         <ExpandingTextBox
           className={classes.textBox}
@@ -83,10 +127,11 @@ const Testmonials = () => {
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
-        Want to help us continue to provide this program, and expand our project?
+        Are you part of an organization that works to help people who face adversity?
         </h2>
         <p className={classes.text}>
-          Partnerships are essential to our services. We work with you to help give more opportunities to the people that you serve.
+          Partnerships are essential to our services. We work with you to help
+          give more opportunities to the people that you serve.
         </p>
         <ExpandingTextBox
           className={classes.textBox}
@@ -102,10 +147,12 @@ const Testmonials = () => {
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
-        Want to help us continue to provide this program, and expand our project?
+          Want to help us continue to provide this program, and expand our
+          project?
         </h2>
         <p className={classes.text}>
-          Your donation could help us provide tech skills to somebody who would not otherwise have the opportunity.
+          Your donation could help us provide tech skills to somebody who would
+          not otherwise have the opportunity.
         </p>
         <ExpandingTextBox
           className={classes.textBox}

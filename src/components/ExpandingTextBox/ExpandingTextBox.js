@@ -13,6 +13,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: "40px",
+    [theme.breakpoints.between("sm","md")]: {
+      width: "94vw",
+    },
+    [theme.breakpoints.between("xs","sm")]: {
+      width: "91vw",
+    },
   },
   read: {
     position: "absolute",
@@ -25,6 +31,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: "18px",
     lineHeight: "27px",
     color: "#4529AE",
+    [theme.breakpoints.between("sm","md")]: {
+      fontSize: "16px",
+    },
+    [theme.breakpoints.between("xs","sm")]: {
+      fontSize: "14px",
+      margin: "6px",
+      lineHeight: "22px",
+    },
   },
   content: {
     fontFamily: "Poppins",
@@ -36,6 +50,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "15px",
     marginRight: "48px",
     color: "#000000",
+    [theme.breakpoints.between("sm","md")]: {
+      fontSize: "16px",
+    },
+    [theme.breakpoints.between("xs","sm")]: {
+      fontSize: "14px",
+    },
   },
   bottomText: {
     fontFamily: "Poppins",
@@ -47,6 +67,20 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "24px",
     textAlign: "left",
     marginLeft: "15px",
+    width: "75vw",
+    [theme.breakpoints.between("sm","md")]: {
+      fontSize: "12px",
+      width: "65vw"
+    },
+    [theme.breakpoints.between("xs","sm")]: {
+      fontSize: "12px",
+      lineHeight: "18px",
+      marginBottom: "4px",
+      marginRight: "5px",
+    },
+  },
+  space:{
+    color: "#F2E9FF",
   },
   nameTag: {
     fontFamily: "Poppins",
@@ -58,6 +92,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     color: "#000000",
     marginLeft: "15px",
+    [theme.breakpoints.between("sm","md")]: {
+      fontSize: "16px",
+    },
+    [theme.breakpoints.between("xs","sm")]: {
+      fontSize: "14px",
+      
+    },
   },
 }))
 function ReadMore({ children, maxCharacterCount = 100 }) {
@@ -72,9 +113,9 @@ function ReadMore({ children, maxCharacterCount = 100 }) {
   return (
     <p className={classes.content}>
       {resultString}
-      <span onClick={toggleIsTruncated} className={classes.read}>
+      <p onClick={toggleIsTruncated} className={classes.read}>
         {isTruncated ? "Read More" : "Read Less"}
-      </span>
+      </p>
     </p>
   )
 }
@@ -92,6 +133,8 @@ function ReadMoreDemo({ mainText,name }) {
         *Note: names and identifying details have been changed to protect the
         privacy of individuals.
       </p>
+      <p className={classes.space}>.</p>
+      <p></p>
     </div>
   )
 }
