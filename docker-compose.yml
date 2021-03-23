@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:8000"
     volumes:
-      - /myapp/node_modules
+      # - /myapp/node_modules
       - ./public:/myapp/public
       - ./src:/myapp/src
       - ./static:/myapp/static
