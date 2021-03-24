@@ -13,10 +13,10 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: "40px",
-    [theme.breakpoints.between("sm","md")]: {
+    [theme.breakpoints.between("sm", "md")]: {
       width: "94vw",
     },
-    [theme.breakpoints.between("xs","sm")]: {
+    [theme.breakpoints.between("xs", "sm")]: {
       width: "91vw",
     },
   },
@@ -24,21 +24,26 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     bottom: "0",
     right: "0",
-    margin: "24px",
+    margin: "34px",
     fontFamily: "Poppins",
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: "18px",
     lineHeight: "27px",
     color: "#4529AE",
-    [theme.breakpoints.between("sm","md")]: {
+    marginLeft: "95vw",
+   
+    [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
     },
-    [theme.breakpoints.between("xs","sm")]: {
+    [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "14px",
       margin: "6px",
       lineHeight: "22px",
     },
+  },
+  newDIv: {
+    paddingTop: "20px"
   },
   content: {
     fontFamily: "Poppins",
@@ -50,10 +55,10 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "15px",
     marginRight: "48px",
     color: "#000000",
-    [theme.breakpoints.between("sm","md")]: {
+    [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
     },
-    [theme.breakpoints.between("xs","sm")]: {
+    [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "14px",
     },
   },
@@ -68,18 +73,18 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     marginLeft: "15px",
     width: "75vw",
-    [theme.breakpoints.between("sm","md")]: {
+    [theme.breakpoints.between("sm", "md")]: {
       fontSize: "12px",
-      width: "65vw"
+      width: "65vw",
     },
-    [theme.breakpoints.between("xs","sm")]: {
+    [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "12px",
       lineHeight: "18px",
       marginBottom: "4px",
       marginRight: "5px",
     },
   },
-  space:{
+  space: {
     color: "#F2E9FF",
   },
   nameTag: {
@@ -92,12 +97,11 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     color: "#000000",
     marginLeft: "15px",
-    [theme.breakpoints.between("sm","md")]: {
+    [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
     },
-    [theme.breakpoints.between("xs","sm")]: {
+    [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "14px",
-      
     },
   },
 }))
@@ -113,28 +117,26 @@ function ReadMore({ children, maxCharacterCount = 100 }) {
   return (
     <p className={classes.content}>
       {resultString}
+      <p className={classes.bottomText}>
+        *Note: names and identifying details have been changed to protect the
+        privacy of individuals.
+      </p>
+      <div className={classes.newDIv}>
       <p onClick={toggleIsTruncated} className={classes.read}>
         {isTruncated ? "Read More" : "Read Less"}
       </p>
+      </div>
     </p>
   )
 }
 
-function ReadMoreDemo({ mainText,name }) {
+function ReadMoreDemo({ mainText, name }) {
   const classes = useStyles()
 
   return (
     <div className={classes.expanding}>
       <p className={classes.nameTag}>Meet {name}</p>
-      <ReadMore maxCharacterCount={300}>
-        {mainText}
-      </ReadMore>
-      <p className={classes.bottomText}>
-        *Note: names and identifying details have been changed to protect the
-        privacy of individuals.
-      </p>
-      <p className={classes.space}>.</p>
-      <p></p>
+      <ReadMore maxCharacterCount={300}>{mainText}</ReadMore>
     </div>
   )
 }

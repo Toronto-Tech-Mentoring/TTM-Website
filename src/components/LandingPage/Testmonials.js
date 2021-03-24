@@ -86,10 +86,9 @@ const Testmonials = () => {
           Have you faced adversity and want to learn tech skills?
         </h2>
         <p className={classes.text}>
-          If you are a person facing homelessness and housing precarity,
-          we will work with you to give you the tech knowledge, skills and
-          advice to help you achieve your personal, professional or
-          entrepreneurial goals.
+          If you are a person facing homelessness and housing precarity, we will
+          work with you to give you the tech knowledge, skills and advice to
+          help you achieve your personal, professional or entrepreneurial goals.
         </p>
         <ExpandingTextBox
           className={classes.textBox}
@@ -127,7 +126,8 @@ const Testmonials = () => {
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
-        Are you part of an organization that works to help people who face adversity?
+          Are you part of an organization that works to help people who face
+          adversity?
         </h2>
         <p className={classes.text}>
           Partnerships are essential to our services. We work with you to help
