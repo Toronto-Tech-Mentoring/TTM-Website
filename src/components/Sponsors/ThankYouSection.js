@@ -4,69 +4,68 @@ import { makeStyles } from "@material-ui/core/styles"
 
 import SVGLoad from "../SVGLoad/SVG"
 import Hands from "../../images/sponsors/thankyou/hands.svg"
-import Stars from "../../images/sponsors/thankyou/Stars.svg"
+import SkylineFooter from "../../components/SkylineSVG/SkylineFooter"
+import Instagram from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/Instagram"
+import InstagramMobile from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/InstagramMobile"
+import Twitter from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/Twitter"
+import TwitterMobile from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/TwitterMobile"
+import Linkedin from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/Linkedin"
+import LinkedinMobile from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/LinkedinMobile"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "648px",
+    height: "488px",
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     [theme.breakpoints.down("769")]: {
-      height: "614px",
-    },
-    [theme.breakpoints.down("426")]: {
-      height: "627px",
-    },
-  },
-  starsStyle: {
-    position: "relative",
-    marginTop: "calc(2vw - 100px)",
-    [theme.breakpoints.down("1300")]: {
-      marginTop: "calc(5vw - 150px)",
-    },
-    [theme.breakpoints.down("1025")]: {
-      marginTop: "calc(10vw - 200px)",
-    },
-    [theme.breakpoints.down("769")]: {
-      marginTop: "calc(6vw - 200px)",
-    },
-    [theme.breakpoints.down("700")]: {
-      marginTop: "calc(10vw - 300px)",
+      height: "400px",
     },
     [theme.breakpoints.down("600")]: {
-      marginTop: "calc(20vw - 250px)",
-    },
-    [theme.breakpoints.down("426")]: {
-      marginTop: "calc(10vw - 185px)",
-      marginRight: "calc(2vw - 50px)",
+      height: "600px",
     },
   },
-  blobStyle: {
-    position: "absolute",
-    width: "1056px",
-    height: "344px",
-    marginTop: "calc(2vw - 150px)",
-    [theme.breakpoints.down("1300")]: {
-      marginTop: "calc(2vw - 150px)",
-    },
+  backgroundBlob: {
+    marginLeft: "5%",
+    marginTop: "4%",
+    height: "579px",
+    width: "73%",
     [theme.breakpoints.down("1025")]: {
-      marginTop: "calc(2vw - 150px)",
+      marginTop: "0%",
     },
-    [theme.breakpoints.down("550")]: {
-      marginTop: "calc(2vw - 100px)",
+    [theme.breakpoints.down("769")]: {
+      marginTop: "33px",
+      width: "100%",
+      marginLeft: "0px",
     },
-    [theme.breakpoints.down("426")]: {
+    [theme.breakpoints.down("600")]: {
       visibility: "hidden",
+      height: "0px",
+      width: "0px",
     },
   },
-  mobileBlobStyle: {
+  backgroundBlobMobile: {
     visibility: "hidden",
-    [theme.breakpoints.down("426")]: {
-      marginTop: "calc(2vw - 180px)",
-      visibility: "visible",
+    margin: "0px 0px 0px 0px",
+    height: "0",
+    width: "0",
+    [theme.breakpoints.down("600")]: {
       width: "100%",
+      marginTop: "50%",
+      height: "580px",
+      visibility: "visible",
+      position: "relative",
+    },
+    [theme.breakpoints.down("361")]: {
+      width: "100%",
+      height: "619px",
+      marginTop: "60%",
+    },
+  },
+  blobContainer: {
+    [theme.breakpoints.down("769")]: {
+      height: "450px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
   headerText: {
@@ -74,52 +73,61 @@ const useStyles = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "600",
     fontSize: "28px",
-    lineHeight: "44px",
+    lineHeight: "42px",
     display: "flex",
     alignItems: "center",
     color: "#000000",
-    [theme.breakpoints.down("426")]: {
+    [theme.breakpoints.down("769")]: {
+      width: "245px",
+      height: "38px",
+      fontSize: "22px",
+    },
+    [theme.breakpoints.down("600")]: {
+      width: "245px",
       fontSize: "20px",
       lineHeight: "32px",
     },
   },
   bodyText: {
-    fontFamily: "poppins",
+    fontFamily: "Poppins",
     fontStyle: "normal",
     fontWeight: "400",
     fontSize: "18px",
-    lineHeight: "10px",
+    lineHeight: "27px",
     display: "flex",
     align: "center",
     color: "#000000",
-    [theme.breakpoints.down("426")]: {
-      position: "absolute",
-      fontSize: "14px",
-      lineHeight: "10px",
+    [theme.breakpoints.down("769")]: {
+      width: "534px",
+      height: "138px",
+      fontSize: "16px",
     },
-  },
-  alignBodyText: {
-    textAlign: "center",
+    [theme.breakpoints.down("600")]: {
+      width: "330px",
+      height: "169px",
+      fontSize: "14px",
+      lineHeight: "24px",
+    },
   },
   handsStyle: {
     position: "absolute",
-    right: "calc(10vw + 50px)",
-    marginTop: "calc(10vw + 150px)",
-    [theme.breakpoints.down("1300")]: {
-      marginTop: "calc(20vw + 50px)",
-      right: "calc(2vw + 10px)",
-    },
-    [theme.breakpoints.down("1025")]: {
-      marginTop: "calc(25vw + 50px)",
-      marginRight: "calc(8vw - 100px)",
+    marginLeft: "50%",
+    marginTop: "22%",
+    width: "500px",
+    width: "35%",
+    height: "287px",
+    [theme.breakpoints.down("1200")]: {
+      marginTop: "30%",
     },
     [theme.breakpoints.down("769")]: {
-      marginTop: "calc(40vw - 100px)",
-      marginRight: "calc(20vw - 100px)",
+      width: "40%",
+      marginLeft: "60%",
+      marginTop: "35%",
     },
-    [theme.breakpoints.down("426")]: {
-      marginTop: "calc(40vw + 200px) ",
-      left: "calc(20vw + 50px)",
+    [theme.breakpoints.down("600")]: {
+      width: "0",
+      height: "0",
+      visibility: "hidden",
     },
   },
 }))
@@ -128,149 +136,162 @@ export default function ThankYou() {
   const classes = useStyles()
 
   return (
-    <Grid className={classes.container} alignItems="center" justify="center">
-      <Grid item xs={10} sm={6} lg={8} xl={12} className={classes.starsStyle}>
-        <SVGLoad image={Stars} alt="sponsorStars" />
-      </Grid>
-
-      <Grid item xs={5} sm={4} lg={8} xl={12} className={classes.handsStyle}>
-        <SVGLoad image={Hands} alt="sponsorStars" />
-      </Grid>
-
-      <Grid item xs={12} sm={12} lg={8} xl={10} className={classes.blobStyle}>
-        <svg
-          viewBox="0 0 1056 344"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M692.553 273.274C834.991 166.805 1067.12 185.273 1055.09 95.7201C1044.7 18.4531 382.414 -27.4718 259.28 20.5836C144.282 65.4637 82.5093 82.6956 20.5314 184.331C-35.1913 275.709 37.0658 300.949 99.3671 322.635C175.328 349.075 566.737 367.318 692.553 273.274Z"
-            fill="#E8D1FF"
-            fill-opacity="0.4"
-          />
-
-          <foreignObject
-            x="434"
-            y="17"
-            width="140"
-            height="44"
-            className={classes.headerText}
+    <>
+      <Grid className={classes.container}>
+        <Grid className={classes.handsStyle}>
+          <SVGLoad image={Hands} alt="sponsorStars" />
+        </Grid>
+        <Grid className={classes.blobContainer}>
+          <svg
+            viewBox="0 0 1050 579"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={classes.backgroundBlob}
           >
-            Thank you!
-          </foreignObject>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M521 488C567.5 253.5 1061.55 184.328 1049.51 94.775C1039.12 17.508 376.834 -28.4169 253.7 19.6385C138.702 64.5186 76.93 81.7505 14.9521 183.386C-40.7705 274.764 73.6986 509.815 136 531.5C211.961 557.94 343.526 641.671 521 488Z"
+              fill="#E8D1FF"
+              fill-opacity="0.4"
+            />
+            <foreignObject
+              x="130"
+              y="67"
+              width="140"
+              height="42"
+              className={classes.headerText}
+            >
+              Thank you!
+            </foreignObject>
 
-          <foreignObject
-            x="168"
-            y="76"
-            className={classes.bodyText}
-            width="672"
-            height="70"
-          >
-            <p className={classes.alignBodyText}>
+            <foreignObject
+              x="130"
+              y="120"
+              width="672"
+              height="53"
+              className={classes.bodyText}
+            >
               We are exceedingly grateful to our sponsors, who allow us to
-              continue to{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              offer life-changing tech mentoring through our program.{" "}
-            </p>
-          </foreignObject>
+              continue to offer life- changing tech mentoring through our
+              program.
+            </foreignObject>
 
-          <foreignObject
-            x="168"
-            y="155"
-            className={classes.bodyText}
-            width="719"
-            height="120"
+            <foreignObject
+              x="130"
+              y="199"
+              width="672"
+              height="111"
+              className={classes.bodyText}
+            >
+              Our work would not have been possible without the overwhelmingly
+              positive and creative community of Civitech Toronto. Thank you to
+              the amazing volunteers, sponsors and community partners who help
+              make this space a reality so projects like ours can begin.
+            </foreignObject>
+
+            <foreignObject
+              x="130"
+              y="383"
+              width="298"
+              height="42"
+              className={classes.headerText}
+            >
+              Help promote our work
+            </foreignObject>
+
+            <foreignObject
+              x="130"
+              y="425"
+              width="463"
+              height="27"
+              className={classes.bodyText}
+            >
+              Follow us for updates and share with your networks.
+            </foreignObject>
+
+            {Instagram}
+            {Twitter}
+            {Linkedin}
+          </svg>
+
+          <svg
+            viewBox="0 0 360 619"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={classes.backgroundBlobMobile}
           >
-            <p className={classes.alignBodyText}>
-              Our work would not have been possible without the overwhelming
-              positive{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              and creative community of Civictech Toronto. Thank you to the
-              amazing{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              volunteers, sponsors, and community partners who help make this
-              space a{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              reality so projects like ours can begin.{" "}
-            </p>
-          </foreignObject>
-        </svg>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M223.36 522.536C248.833 271.44 519.477 197.373 512.881 101.482C507.191 18.7471 144.384 -30.4279 76.9297 21.0283C13.9325 69.0846 -19.9071 87.5359 -53.8594 196.364C-84.3849 294.209 -21.6773 545.894 12.452 569.114C54.0642 597.425 126.137 687.082 223.36 522.536Z"
+              fill="#E8D1FF"
+              fill-opacity="0.4"
+            />
+            <foreignObject
+              x="20"
+              y="47"
+              width="140"
+              height="42"
+              className={classes.headerText}
+            >
+              Thank you!
+            </foreignObject>
 
-        <svg
-          className={classes.mobileBlobStyle}
-          height="360"
-          viewBox="0 0 360 185"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M281.222 146.894C358.047 89.4647 483.251 99.4261 476.757 51.1214C471.154 9.44378 113.946 -15.328 47.5323 10.593C-14.4929 34.8012 -47.8104 44.096 -81.2387 98.9181C-111.293 148.207 -72.3207 161.822 -38.7179 173.519C2.25214 187.78 213.362 197.621 281.222 146.894Z"
-            fill="#E8D1FF"
-            fill-opacity="0.4"
-          />
+            <foreignObject
+              x="20"
+              y="90"
+              width="672"
+              height="53"
+              className={classes.bodyText}
+            >
+              We are exceedingly grateful to our sponsors, who allow us to
+              continue to offer life- changing tech mentoring through our
+              program.
+            </foreignObject>
 
-          <foreignObject
-            x="120"
-            y="-50"
-            width="140"
-            height="300"
-            className={classes.headerText}
-          >
-            Thank you!
-          </foreignObject>
+            <foreignObject
+              x="20"
+              y="168"
+              width="672"
+              height="111"
+              className={classes.bodyText}
+            >
+              Our work would not have been possible without the overwhelmingly
+              positive and creative community of Civitech Toronto. Thank you to
+              the amazing volunteers, sponsors and community partners who help
+              make this space a reality so projects like ours can begin.
+            </foreignObject>
 
-          <foreignObject
-            x="15"
-            y="-10"
-            className={classes.bodyText}
-            width="330"
-            height="200"
-          >
-            <p className={classes.alignBodyText}>
-              We are exceedingly grateful to our sponsors,{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              who allow us to continue to offer life-changing{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              tech mentoring through our program.{" "}
-            </p>
-          </foreignObject>
+            <foreignObject
+              x="20"
+              y="414"
+              width="298"
+              height="42"
+              className={classes.headerText}
+            >
+              Help promote our work
+            </foreignObject>
 
-          <foreignObject
-            x="15"
-            y="80"
-            className={classes.bodyText}
-            width="330"
-            height="300"
-          >
-            <p className={classes.alignBodyText}>
-              Our work would not have been possible{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              creative community of Civictech Toronto.{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              Thank you to the amazing volunteers,{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              sponsors, and community partners who help{" "}
-            </p>
-            <p className={classes.alignBodyText}>
-              make this space a reality so projects like ours{" "}
-            </p>
-            <p className={classes.alignBodyText}>can begin.</p>
-          </foreignObject>
-        </svg>
+            <foreignObject
+              x="20"
+              y="451"
+              width="463"
+              height="27"
+              className={classes.bodyText}
+              style={{ width: "259px" }}
+            >
+              Follow us for updates and share with your networks.
+            </foreignObject>
+
+            {InstagramMobile}
+            {TwitterMobile}
+            {LinkedinMobile}
+          </svg>
+        </Grid>
       </Grid>
-    </Grid>
+
+      <SkylineFooter />
+    </>
   )
 }
