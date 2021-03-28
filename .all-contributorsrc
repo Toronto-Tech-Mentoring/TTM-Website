@@ -1,5 +1,5 @@
 {
-  "projectName": "TTM-Gatsby",
+  "projectName": "TTM-Website",
   "projectOwner": "Toronto-Tech-Mentoring",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -85,6 +85,15 @@
       "name": "Harsh Chawla",
       "avatar_url": "https://avatars1.githubusercontent.com/u/6857593?v=4",
       "profile": "http://Linkedin.com/in/harshvchawla",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "leeroyp",
+      "name": "leeroyp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59719170?v=4",
+      "profile": "https://leeroyp.github.io/A8-Responsive-portfolio.io/",
       "contributions": [
         "code"
       ]
