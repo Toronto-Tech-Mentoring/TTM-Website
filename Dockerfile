@@ -9,5 +9,4 @@ WORKDIR /myapp
 COPY ./package.json /myapp
 COPY ./yarn.lock /myapp
 RUN yarn install && yarn cache clean
-COPY . /myapp
 CMD ["gatsby", "develop", "-H", "0.0.0.0" ]
