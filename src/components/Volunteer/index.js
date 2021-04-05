@@ -4,6 +4,7 @@ import VolunteerWithUs from "./VolunteerWithUs"
 import PositiveDifferenceSection from "./PositiveDifferenceSection"
 import WhatDoVolunteersDo from "./WhatDoVolunteersDo"
 import SkillSet from "./SkillSet"
+import WhatToKnow from "./WhatToKnow"
 import Process from "./Process"
 
 export default function Volunteer() {
@@ -13,6 +14,7 @@ export default function Volunteer() {
       <PositiveDifferenceSection />
       <WhatDoVolunteersDo />
       <SkillSet />
+      <WhatToKnow />
       <Process />
     </div>
   )
