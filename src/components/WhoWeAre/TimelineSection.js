@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1",
     fontFamily: "Josefin Sans",
     fontWeight: 600,
-    fontSize: "calc(1.3vw + 9.33px)",
+    fontSize: "calc(1.2vw + 12px)",
     lineHeight: "calc(1.67vw + 18px)",
     textAlign: "left",
     width: "calc(37.5vw + 117px)",
