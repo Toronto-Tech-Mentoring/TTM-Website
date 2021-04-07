@@ -79,6 +79,9 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "24px",
     },
   },
+  disabledLink: {
+    pointerEvents: "none"
+  },
   footerLinks: {
     float: "right",
     [theme.breakpoints.down(761)]: {
@@ -214,6 +217,7 @@ export default function Footer() {
         <Link
           to={item.path}
           className={classes.linkText}
+          activeClassName={classes.disabledLink}
           activeStyle={{ color: "#873FE2" }}
         >
           {item.title}
