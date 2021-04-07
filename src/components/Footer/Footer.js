@@ -182,9 +182,9 @@ export default function Footer() {
 
   const linkList = [
     {
-      id: "client",
-      path: "/client/",
-      title: "Client",
+      id: "how-it-works",
+      path: "/how-it-works/",
+      title: "How it works",
     },
     {
       id: "volunteer",
@@ -194,7 +194,7 @@ export default function Footer() {
     {
       id: "partners",
       path: "/partners/",
-      title: "Partner",
+      title: "Partners",
     },
     {
       id: "sponsors",

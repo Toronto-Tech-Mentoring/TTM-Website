@@ -35,7 +35,7 @@ export default function VolunteerRunOrg() {
         />
         <Content
           content={content}
-          style={{ "text-align": "left", "margin-top": "-5px" }}
+          style={{ "text-align": "left", "margin-top": "-5px", "font-family": "Poppins" }}
           hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
         />
         <CheetoRight
