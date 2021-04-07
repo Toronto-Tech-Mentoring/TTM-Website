@@ -52,7 +52,7 @@ export default function NavTabs() {
     {
       id: "sponsors",
       path: "/sponsors/",
-      title: "Sponsors us",
+      title: "Sponsor us",
     }]
   //   {
   //     id: "home",
@@ -173,7 +173,9 @@ export default function NavTabs() {
           ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
-          onClick={handleToggle}
+            // onClick={handleToggle}
+            onMouseEnter={handleToggle}
+            onMouseLeave={() => setTimeout(handleToggle, 2000)}
           disableRipple="true"
           style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
         >

@@ -28,7 +28,6 @@ export default function BurgerMenu(props) {
       width: "60vw",
       minWidth: "104px",
       fontSize: "1.15em",
-      boxShadow: "none",
       paddingTop: "40px",
     },
     bmMorphShape: {
