@@ -217,8 +217,9 @@ const useStyles = makeStyles(theme => ({
   bottomText: {
     fontFamily: "Josefin Sans",
     fontWeight: "600",
-    fontSize: "22px",
-    width: "calc(42vw + 59.7px)",
+    fontSize: "calc(0.926vw + 14.7px)",
+    lineHeight: "calc(1.3vw + 23.3px)",
+    width: "calc(48vw + 156px)",
   },
   contactButton: {
     backgroundColor: "#873FE2",
@@ -227,23 +228,15 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Poppins",
     fontWeight: 400,
     fontStyle: "normal",
-    fontSize: "18px",
-    height: "50px",
-    width: "180px",
+    lineHeight: "27px",
 
     // Screen size: Mobile to Tablet
-    [theme.breakpoints.between("xs", "sm")]: {
-      fontSize: "16px",
-      height: "40px",
-      width: "153px",
-    },
-
-    // Screen size: Mobile below
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
+      textAlign: "center",
+      lineHeight: "24px",
       height: "32px",
       width: "120px",
-      paddingBottom: "10px",
     },
   },
 }))
@@ -507,7 +500,7 @@ export default function TimelineSection() {
             Inspired by our journey? Excited by our future? Help us get there:{" "}
           </h2>
         </Grid>
-        <Grid className={classes.bodyTextCenter} style={{ paddingTop: "40px" }}>
+        <Grid style={{ paddingTop: "40px" }}>
           <a href="/contact/">
             <CustomButton
               text={"Contact Us"}
