@@ -8,12 +8,9 @@ import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "381px",
+    height: "100%",
     width: "100%",
     background: "#FFF",
-    "@media screen and (max-width: 900px)": {
-      height: "calc(4.63vw + 47.3)",
-    },
   },
   contactButton: {
     backgroundColor: "#873FE2",
@@ -48,35 +45,30 @@ const useStyles = makeStyles(theme => ({
     fontSize: "28px",
     fontWeight: 600,
     fontStyle: "normal",
-    paddingTop: "123px",
-    lineHeight: "44px",
+    marginTop: "123px",
+    lineHeight: "42px",
     margin: "0 auto",
     letterSpacing: "0em",
 
     [theme.breakpoints.up("md")]: {
-      // display: 'none'
       fontSize: "28px",
       maxWidth: "600px",
     },
 
     // Screen size: Tablet To Laptop
     [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "28px",
+      marginTop: "96px",
+      fontSize: "22px",
       fontWeight: 600,
       lineHeight: "38px",
     },
 
-    // Screen size: Mobile to Tablet
-    [theme.breakpoints.between("xs", "sm")]: {
-      fontSize: "22px",
-      maxWidth: "490px",
-      lineHeight: "38px",
-    },
-
     // Screen size: Mobile below
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("601")]: {
+      marginTop: "64px",
       fontSize: "18px",
       maxWidth: "240px",
+      lineHeight: "28px",
     },
   },
   bodyText: {
@@ -88,12 +80,11 @@ const useStyles = makeStyles(theme => ({
     width: "809px",
     height: "59px",
     textAlign: "center",
-    color: "#000",
-    marginTop: "calc(2vw - 10px)",
+    color: "#000000",
+    paddingTop: "20px",
     "@media screen and (max-width: 900px)": {
       fontSize: "16px",
       lineHeight: "27px",
-      marginTop: "calc(4.35vw - 0.33px)",
       width: "534px",
       height: "80px",
     },
@@ -109,19 +100,18 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
   },
   cheetohLeft: {
+    marginTop: "-40px",
     "@media screen and (max-width: 900px)": {
       marginRight: "-55px",
-      marginTop: "-50px",
-
     },
     "@media screen and (max-width: 550px)": {
       marginRight: "-50px",
     },
   },
   cheetohRight: {
+    marginTop: "-40px",
     "@media screen and (max-width: 900px)": {
       marginLeft: "-55px",
-      marginTop: "-50px",
     },
     "@media screen and (max-width: 550px)": {
       marginLeft: "-50px",
@@ -147,18 +137,14 @@ export default function ContactUsSection() {
 
       <Grid className={classes.bodyTextCenter}>
         <CheetoLeft className={`${classes.cheetohLeft} `} />
-        <p
-          className={classes.bodyText}
-        >
+        <p className={classes.bodyText}>
           Reach out to our team to find out how you can be a part of the
           project!
         </p>
         <CheetoRight className={`${classes.cheetohRight} `} />
       </Grid>
 
-      <div
-        style={{ textAlign: "center", marginBottom: "90px" }}
-      >
+      <div style={{ textAlign: "center", marginBottom: "90px" }}>
         <a href="/contact/">
           <CustomButton
             text={"Contact Us"}
