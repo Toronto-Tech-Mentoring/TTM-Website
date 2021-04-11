@@ -97,10 +97,12 @@ const Testmonials = () => {
           }
           name={"Tiana"}
         />
-        <TestimonialButton
-          buttonText={"Join our program"}
-          className={classes.button}
-        />
+        <a href="how-it-works">
+          <TestimonialButton
+            buttonText={"Join our program"}
+            className={classes.button}
+          />
+        </a>
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -119,10 +121,12 @@ const Testmonials = () => {
           }
           name={"Enzo"}
         />
-        <TestimonialButton
-          buttonText={"Volunteer with us"}
-          className={classes.button}
-        />
+        <a href="/volunteer/">
+          <TestimonialButton
+            buttonText={"Volunteer with us"}
+            className={classes.button}
+          />
+        </a>
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -140,10 +144,12 @@ const Testmonials = () => {
           }
           name={"Rahim"}
         />
-        <TestimonialButton
-          buttonText={"Partner with us"}
-          className={classes.button}
-        />
+        <a href="/partners/">
+          <TestimonialButton
+            buttonText={"Partner with us"}
+            className={classes.button}
+          />
+        </a>
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -161,10 +167,12 @@ const Testmonials = () => {
           }
           name={"Sam"}
         />
-        <TestimonialButton
-          buttonText={"Sponsor us"}
-          className={classes.button}
-        />
+        <a href="/sponsors/">
+          <TestimonialButton
+            buttonText={"Sponsor us"}
+            className={classes.button}
+          />
+        </a>
       </div>
     </>
   )
