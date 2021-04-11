@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
+const LINES_TO_SHOW = 3;
+
 const useStyles = makeStyles(theme => ({
   expanding: {
     background: "#F2E9FF",
@@ -87,6 +89,13 @@ const useStyles = makeStyles(theme => ({
   space: {
     color: "#F2E9FF",
   },
+  multiLineEllipsis: {
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    display: "-webkit-box",
+    "-webkit-line-clamp": LINES_TO_SHOW,
+    "-webkit-box-orient": "vertical"
+  },
   nameTag: {
     fontFamily: "Poppins",
     fontStyle: "normal",
@@ -97,6 +106,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     color: "#000000",
     marginLeft: "15px",
+    textDecoration: "underline",
+
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
     },
@@ -109,14 +120,30 @@ function ReadMore({ children, maxCharacterCount = 100 }) {
   const text = children
   const classes = useStyles()
   const [isTruncated, setIsTruncated] = useState(true)
-  const resultString = isTruncated ? text.slice(0, 241) : text
+  const resultString = isTruncated ? text.slice(0, 400) : text
 
   function toggleIsTruncated() {
     setIsTruncated(!isTruncated)
   }
+
+  let content
+  if(isTruncated){
+   
+    content=(<p className={classes.multiLineEllipsis} >
+      {resultString}
+      </p>)
+      }else {
+      content=( <p >
+        {resultString}
+        </p>)
+      }
+
   return (
     <p className={classes.content}>
+      {/* <p >
       {resultString}
+      </p> */}
+      {content}
       <p className={classes.bottomText}>
         *Note: names and identifying details have been changed to protect the
         privacy of individuals.
@@ -136,7 +163,7 @@ function ReadMoreDemo({ mainText, name }) {
   return (
     <div className={classes.expanding}>
       <p className={classes.nameTag}>Meet {name}</p>
-      <ReadMore maxCharacterCount={300}>{mainText}</ReadMore>
+      <ReadMore  >{mainText}</ReadMore>
     </div>
   )
 }
