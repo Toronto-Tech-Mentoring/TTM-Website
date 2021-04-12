@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-const LINES_TO_SHOW = 3;
+const LINES_TO_SHOW = 4;
 
 const useStyles = makeStyles(theme => ({
   expanding: {
@@ -33,10 +33,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: "18px",
     lineHeight: "27px",
     color: "#4529AE",
-    marginLeft: "95vw",
+    marginBottom: "44px",
+
+    // marginLeft: "95vw",
    
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
+      margin: "6px",
+      lineHeight: "22px",
     },
     [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "14px",
@@ -71,10 +75,11 @@ const useStyles = makeStyles(theme => ({
     fontSize: "14px",
     lineHeight: "31px",
     color: "#000000",
-    marginBottom: "24px",
+    marginBottom: "0px",
     textAlign: "left",
     marginLeft: "15px",
     width: "75vw",
+   
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "12px",
       width: "65vw",
@@ -107,6 +112,10 @@ const useStyles = makeStyles(theme => ({
     color: "#000000",
     marginLeft: "15px",
     textDecoration: "underline",
+    textDecorationColor: "#FF7500",
+    textUnderlinePosition: "under",
+
+
 
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
@@ -120,7 +129,7 @@ function ReadMore({ children, maxCharacterCount = 100 }) {
   const text = children
   const classes = useStyles()
   const [isTruncated, setIsTruncated] = useState(true)
-  const resultString = isTruncated ? text.slice(0, 400) : text
+  const resultString = isTruncated ? text.slice(0, 500) : text
 
   function toggleIsTruncated() {
     setIsTruncated(!isTruncated)
