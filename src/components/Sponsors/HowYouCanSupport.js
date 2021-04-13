@@ -227,7 +227,6 @@ export default function HowYouCanSupport() {
   const inKind = "2. Donate in-kind"
   const inKindInfo =
     "Toronto Tech Mentoring has a need for essential resources that will help us offer our program which in turn contributes to helping the LGBTQ homeless youth community."
-  const needHeader = "In particular, we are generally in need of..."
   const volunteer = "3. Volunteer Your Time"
   const volunteerInfo =
     "If you are a company or organization interested in donating staff time to support our program, or have other ideas, please get in touch."

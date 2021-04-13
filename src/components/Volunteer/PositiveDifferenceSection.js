@@ -1,37 +1,37 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
 import Grid from "@material-ui/core/Grid"
+import Hidden from "@material-ui/core/Hidden"
 
 import VolunteeringIconsGroup from "./VolunteeringIcons"
 import CustomButton from "../CustomButton"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    // height: "calc(40vw + 134px)",
     height: "auto",
     width: "100%",
     maxWidth: "100%",
-    padding: "0",
-    margin: "0",
-    [theme.breakpoints.down("sm")]: {
-      // height: "calc(5.6vw + 405px)",
+    paddingLeft: "calc(5.28vw + 6px)",
+    paddingTop: "calc(5.19vw + 53.3px)",
+    paddingBottom: "calc(5.19vw + 53.3px)",
+     [theme.breakpoints.down("1022")]: {
+      paddingLeft: "0"
     },
   },
 
   textBox: {
     position: "relative",
-    top: "calc(7vw + 90px)",
-    left: "calc(19vw - 41px)",
-    width: "calc(27vw + 190px)",
-    [theme.breakpoints.down("md")]: {
-      width: "calc(27vw + 105px)",
+    width: "calc(26.2vw + 222px)",
+    [theme.breakpoints.down("960")]: {
+      width: "calc(94.6vw - 18.6px)",
     },
-    [theme.breakpoints.down("542")]: {
-      width: "calc(71vw + 35px)",
-    },
-    [theme.breakpoints.down("442")]: {
-      width: "calc(71vw + 20px)",
-    },
+
+  },
+
+  textItem: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: 'center',
+    }
   },
 
   title: {
@@ -52,7 +52,6 @@ const useStyles = makeStyles(theme => ({
   },
 
   title2: {
-    paddingTop: "104px",
     fontFamily: "Josefin Sans",
     color: "black",
     fontSize: "28px",
@@ -60,7 +59,6 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "600",
     marginBottom: "16px",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: "42px",
       fontSize: "22px",
       marginBottom: "8px",
     },
@@ -75,12 +73,12 @@ const useStyles = makeStyles(theme => ({
     fontSize: "16px",
     lineHeight: "27px",
     fontWeight: "400",
+    paddingBottom: "calc(12.5vw - 76px)",
     [theme.breakpoints.down("542")]: {
       fontSize: "14px",
       lineHeight: "24px",
     },
   },
-
   contactButton: {
     backgroundColor: "#873FE2",
     cursor: "pointer",
@@ -110,7 +108,6 @@ const useStyles = makeStyles(theme => ({
   DonateButton: {
     marginTop: "calc(2.4vw - 2px)",
     marginLeft: "0px",
-    width: "calc(4vw + 122px)",
     minWidth: "120px",
     height: "calc(1.5vw + 28px)",
     minHeight: "24px",
@@ -140,16 +137,27 @@ export default function PositiveDifferenceSection() {
   const title2 = "If this sounds like you, join our team!"
 
   return (
-    <Grid container className={classes.container}>
-      <div className={classes.container}>
+    <Grid
+  container
+  direction="row"
+  justify="space-evenly"
+  alignItems="center"
+  className={classes.container}
+>
+      <Grid item className={classes.textItem}>
         <div className={classes.textBox}>
           <div className={classes.title}>{title}</div>
           <div className={classes.text}>{content}</div>
+          <div>
+            <Hidden only={['md', 'lg', 'xl']} >
+            <VolunteeringIconsGroup />
+          </Hidden>
+          </div>
+
           <div className={classes.title2}>{title2}</div>
           <div className={classes.DonateButton}>
             <div
               style={{
-                textAlign: "center",
                 marginTop: "45px",
                 marginBottom: "90px",
               }}
@@ -161,8 +169,14 @@ export default function PositiveDifferenceSection() {
             </div>
           </div>
         </div>
-        <VolunteeringIconsGroup />
-      </div>
+        </Grid>
+                <Hidden only={['xs', 'sm']}>
+
+        <Grid item >
+          <VolunteeringIconsGroup />
+        </Grid>
+                </Hidden>
+
     </Grid>
   )
 }
