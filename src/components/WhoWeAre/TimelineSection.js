@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   yearTag: {
     filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
     position: "relative",
-    bottom: "340px",
+    bottom: "400px",
     marginRight: "20px",
     backgroundColor: "#873FE2",
     borderRadius: "300px",
@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1",
     fontFamily: "Josefin Sans",
     fontWeight: 600,
-    fontSize: "calc(1.3vw + 9.33px)",
+    fontSize: "calc(1.2vw + 12px)",
     lineHeight: "calc(1.67vw + 18px)",
     textAlign: "left",
     width: "calc(37.5vw + 117px)",
