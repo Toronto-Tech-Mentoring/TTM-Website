@@ -31,11 +31,10 @@ const useStyles = makeStyles(theme => ({
     },
 
     // Screen size: Mobile below
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("601")]: {
       fontSize: "14px",
       height: "32px",
       width: "120px",
-      paddingBotton: "10px",
     },
   },
 

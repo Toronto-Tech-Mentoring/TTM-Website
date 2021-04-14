@@ -9,10 +9,11 @@ import ProcessBlob1 from "../../images/volunteers/process/process1.svg"
 import ProcessBlob2 from "../../images/volunteers/process/process2.svg"
 import ProcessBlob3 from "../../images/volunteers/process/process3.svg"
 import ProcessBlob4 from "../../images/volunteers/process/process4.svg"
+import SkylineFooter from "../SkylineSVG/SkylineFooter"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "auto",
+    height: "100%",
     width: "100%",
     background: "#FFF",
     "@media screen and (max-width: 900px)": {
@@ -25,8 +26,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "fill",
     height: "auto",
     marginBottom: "50px",
-    // maxHeight: "calc(3.61vw + 161px)",
-    // justifyContent: "center"
   },
   contactButton: {
     backgroundColor: "#873FE2",
@@ -38,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "18px",
     height: "50px",
     width: "180px",
+    marginTop: "24px",
 
     // Screen size: Mobile to Tablet
     [theme.breakpoints.between("xs", "sm")]: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: "14px",
       height: "32px",
       width: "120px",
-      paddingBotton: "10px",
+      marginTop: "16px",
     },
   },
 
@@ -65,32 +65,6 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "44px",
     margin: "0 auto",
     letterSpacing: "0em",
-
-    [theme.breakpoints.up("md")]: {
-      // display: 'none'
-      //   fontSize: "28px",
-      //   maxWidth: "600px",
-    },
-
-    // Screen size: Tablet To Laptop
-    [theme.breakpoints.between("sm", "md")]: {
-      //   fontSize: "28px",
-      fontWeight: 600,
-      //   lineHeight: "38px",
-    },
-
-    // Screen size: Mobile to Tablet
-    [theme.breakpoints.between("xs", "sm")]: {
-      //   fontSize: "22px",
-      //   maxWidth: "490px",
-      //   lineHeight: "38px",
-    },
-
-    // Screen size: Mobile below
-    [theme.breakpoints.down("xs")]: {
-      //   fontSize: "18px",
-      //   maxWidth: "240px",
-    },
   },
   bodyText: {
     fontFamily: "Poppins",
@@ -105,16 +79,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: "calc(2vw - 10px)",
     "@media screen and (max-width: 900px)": {
       fontSize: "16px",
-      //   lineHeight: "27px",
-      //   marginTop: "calc(4.35vw - 0.33px)",
-      //   width: "534px",
-      //   height: "80px",
     },
     "@media screen and (max-width: 600px)": {
       fontSize: "14px",
-      //   lineHeight: "24px",
-      //   width: "328px",
-      //   paddingTop: "30px",
     },
   },
   bodyTextCenter: {
@@ -123,22 +90,10 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "40px",
   },
   cheetohLeft: {
-    "@media screen and (max-width: 900px)": {
-    //   marginRight: "calc(-36vw - 105px)",
-    //   marginTop: "-50px",
-    },
-    "@media screen and (max-width: 370px)": {
-    //   marginRight: "calc(-36vw - 105px)",
-    },
+    marginTop: "98px",
   },
   cheetohRight: {
-    "@media screen and (max-width: 900px)": {
-    //   marginLeft: "calc(-36vw - 105px)",
-    //   marginTop: "-50px",
-    },
-    "@media screen and (max-width: 370px)": {
-    //   marginLeft: "calc(-36vw - 105px)",
-    },
+    marginTop: "98px",
   },
   noDisplayOnBigScreen: {
     [theme.breakpoints.up("md")]: {
@@ -157,11 +112,11 @@ export default function ProcessSectopm() {
         <h2
           className={classes.h2Text}
           style={{
-            marginBottom: "60px",
+            marginTop: "98px",
             marginLeft: "calc(0.556vw + 9px)",
             marginRight: "calc(0.556vw + 9px)",
             paddingTop: "0px",
-            width: "calc(24.8vw + 124px)"
+            width: "calc(24.8vw + 124px)",
           }}
         >
           What’s the process for volunteering?
@@ -243,17 +198,20 @@ export default function ProcessSectopm() {
         <h2 className={classes.h2Text} style={{ color: "#4529AE" }}>
           Sounds good? Send us an email.
         </h2>
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <a href="/contact/">
+            <CustomButton
+              text={"Volunteer"}
+              customClass={classes.contactButton}
+            />
+          </a>
+        </div>
       </Grid>
-      <div
-        style={{ textAlign: "center", marginBottom: "90px", marginTop: "40px" }}
-      >
-        <a href="/contact/">
-          <CustomButton
-            text={"Volunteer"}
-            customClass={classes.contactButton}
-          />
-        </a>
-      </div>
+      <SkylineFooter />
     </Grid>
   )
 }
