@@ -79,6 +79,9 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "24px",
     },
   },
+  disabledLink: {
+    pointerEvents: "none"
+  },
   footerLinks: {
     float: "right",
     [theme.breakpoints.down(761)]: {
@@ -182,9 +185,9 @@ export default function Footer() {
 
   const linkList = [
     {
-      id: "client",
-      path: "/client/",
-      title: "Client",
+      id: "how-it-works",
+      path: "/how-it-works/",
+      title: "How it works",
     },
     {
       id: "volunteer",
@@ -194,7 +197,7 @@ export default function Footer() {
     {
       id: "partners",
       path: "/partners/",
-      title: "Partner",
+      title: "Partners",
     },
     {
       id: "sponsors",
@@ -214,6 +217,7 @@ export default function Footer() {
         <Link
           to={item.path}
           className={classes.linkText}
+          activeClassName={classes.disabledLink}
           activeStyle={{ color: "#873FE2" }}
         >
           {item.title}
