@@ -229,6 +229,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     fontStyle: "normal",
     lineHeight: "27px",
+    // marginTop: "24px",
 
     // Screen size: Mobile to Tablet
     [theme.breakpoints.down("sm")]: {
@@ -237,6 +238,9 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "24px",
       height: "32px",
       width: "120px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "16px",
     },
   },
 }))
@@ -500,7 +504,7 @@ export default function TimelineSection() {
             Inspired by our journey? Excited by our future? Help us get there:{" "}
           </h2>
         </Grid>
-        <Grid style={{ paddingTop: "40px" }}>
+        <Grid>
           <a href="/contact/">
             <CustomButton
               text={"Contact Us"}
