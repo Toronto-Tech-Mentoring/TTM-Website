@@ -165,6 +165,7 @@ export default function PositiveDifferenceSection() {
               <CustomButton
                 text={"Contact Us"}
                 customClass={classes.contactButton}
+                link="/contact"
               />
             </div>
           </div>
