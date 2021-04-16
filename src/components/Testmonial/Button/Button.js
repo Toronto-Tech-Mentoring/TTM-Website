@@ -24,8 +24,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function TestimonialButton({ buttonText }) {
+export default function TestimonialButton({ buttonText, link }) {
   const classes = useStyles()
 
-  return <button className={classes.testimonialButton}>{buttonText}</button>
+  return (
+    <a href={link}>
+      <button className={classes.testimonialButton}>{buttonText}</button>
+    </a>
+  )
 }
