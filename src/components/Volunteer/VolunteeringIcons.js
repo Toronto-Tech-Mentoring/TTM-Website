@@ -5,19 +5,7 @@ import VolunteeringIcons from "../../images/volunteers/watering-can.svg"
 const useStyles = makeStyles(theme => ({
   imageWrapper: {
     position: "relative",
-    width: "calc(36vw - 57px)",
-    top: "calc(-240px - 1%)",
-    left: "calc(61vw - 26px)",
-    height: "calc(28.9vw + 39px)",
-    paddingTop: "130px",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: "160px",
-      height: "calc(5.6vw + 205px)",
-    },
-    [theme.breakpoints.down("542")]: {
-      paddingTop: "295px",
-      width: "calc(21vw + 58px)",
-    },
+    top: "0",
   },
   image: {
     width: "100%",
@@ -34,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function VolunteeringIconsGroup() {
+export default function VolunteeringIconsGroup(props) {
   const classes = useStyles()
   return (
     <div className={classes.imageWrapper}>
