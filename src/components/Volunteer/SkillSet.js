@@ -144,12 +144,11 @@ export default function ContactUsSection() {
       </Grid>
 
       <div style={{ textAlign: "center", marginBottom: "90px" }}>
-        <a href="/contact/">
-          <CustomButton
-            text={"Contact Us"}
-            customClass={classes.contactButton}
-          />
-        </a>
+        <CustomButton
+          text={"Contact Us"}
+          customClass={classes.contactButton}
+          link="/contact"
+        />
       </div>
     </Grid>
   )

@@ -501,12 +501,11 @@ export default function TimelineSection() {
           </h2>
         </Grid>
         <Grid style={{ paddingTop: "40px" }}>
-          <a href="/contact/">
-            <CustomButton
-              text={"Contact Us"}
-              customClass={classes.contactButton}
-            />
-          </a>
+          <CustomButton
+            text={"Contact Us"}
+            customClass={classes.contactButton}
+            link="/contact"
+          />
         </Grid>
       </Grid>
     </Grid>

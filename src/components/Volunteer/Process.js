@@ -203,12 +203,11 @@ export default function ProcessSectopm() {
             textAlign: "center",
           }}
         >
-          <a href="/contact/">
-            <CustomButton
-              text={"Volunteer"}
-              customClass={classes.contactButton}
-            />
-          </a>
+          <CustomButton
+            text={"Volunteer"}
+            customClass={classes.contactButton}
+            link="/contact"
+          />
         </div>
       </Grid>
       <SkylineFooter />
