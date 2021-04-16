@@ -19,15 +19,16 @@ const useStyles = makeStyles(theme => ({
  * 3) customStyle - Use this prop to override some changes to classes
  */
 
-export default function CustomButton({ text, customClass, customStyles }) {
+export default function CustomButton({ text, customClass, customStyles, link }) {
   const classes = useStyles()
 
   return (
+    <a href={link}>
     <button
       style={customStyles}
       className={`${classes.contactButton} ${customClass}`}
     >
       {text}
-    </button>
+    </button></a>
   )
 }
