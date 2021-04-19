@@ -211,7 +211,7 @@ export default function NavTabs() {
           )}
         </Popper>
         </li>
-        <li class={classes.navitem}>
+        <li className={classes.navitem}>
           <Link
           to="/contact"
           id="contact"
@@ -221,7 +221,7 @@ export default function NavTabs() {
           Contact Us
         </Link>
         </li>
-        <div class="ui vertical divider" style={{paddingRight:"16px", color:"#c4c4c4"}}>|</div>
+        <div className={classes.verticalDivider + " ui vertical divider"}>|</div>
         <DonateBtn />
       </ul>
       <div className={classes.burgerMenu}>
