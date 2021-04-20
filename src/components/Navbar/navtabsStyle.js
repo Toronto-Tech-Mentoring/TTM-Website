@@ -86,8 +86,7 @@ const useStyles = makeStyles(theme => ({
         color: "#873FE2",
         boxShadow: "0px 2px 0px #873FE2",
         [theme.breakpoints.down("1080")]: {
-            boxShadow: "3px 0px 0px #873FE2",
-            marginRight: "2.5px",
+            boxShadow: "2px 0px 0px #873FE2",
         },
     },
     burgerMenu: {

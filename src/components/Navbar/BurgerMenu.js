@@ -25,28 +25,28 @@ export default function BurgerMenu(props) {
     },
     bmMenu: {
       background: "#FFFFFF",
-      width: "60vw",
-      minWidth: "104px",
+      width: "calc(7.5vw + 119px)",
       fontSize: "1.15em",
       boxShadow: "4px 0px 4px rgba(0, 0, 0, 0.2)",
       paddingTop: "40px",
+      marginRight:"3px"
     },
     bmMorphShape: {
       fill: "#373a47",
     },
     bmItemList: {
       color: "#b8b7ad",
+       position: "absolute", 
       padding: "0",
       margin: "0",
-      display: "block",
+      display: "listItem",
     },
-    bmItem: {
-      width: "60vw",
-      marginRight: "2px",
-      outline: "none",
+      bmItem: {
+          width: "calc(7.5vw + 119px)",
+          outline: "none",
     },
     bmOverlay: {
-      background: "rgba(0, 0, 0, 0.2)",
+        background: "rgba(0, 0, 0, 0.1)",
     },
   }
 
