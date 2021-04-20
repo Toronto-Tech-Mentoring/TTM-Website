@@ -102,7 +102,6 @@ const useStyles = makeStyles(theme => ({
             borderLeft: "3px solid #873FE2",
             borderRight: "3px solid #873FE2",
             margin: "0 -1px 0 -1px"
-
         },
     },
     burgerMenu: {
