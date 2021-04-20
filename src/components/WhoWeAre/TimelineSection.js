@@ -240,7 +240,7 @@ const useStyles = makeStyles(theme => ({
       marginTop: "16px",
     },
   },
-}))
+}}))
 
 export default function TimelineSection() {
   const classes = useStyles()
