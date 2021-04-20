@@ -172,7 +172,7 @@ export default function NavTabs() {
           ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
-          onClick={handleToggle}
+          onMouseOver={handleToggle}
           disableRipple="true"
           style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
         >
