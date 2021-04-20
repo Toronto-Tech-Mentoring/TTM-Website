@@ -37,7 +37,12 @@ export default function WhatiIsTTM() {
         <Content
           content={content}
           extra={<RainbowHeart style={{ "margin-left": "15px" }} />}
-          style={{ "text-align": "left", "margin-top": "-5px" }}
+          style={{
+            "font-family": "Poppins",
+            "font-size": "calc(0.37vw + 12.7px)",
+            "text-align": "left",
+            "margin-top": "-5px",
+          }}
           hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
         />
         <CheetoRight
