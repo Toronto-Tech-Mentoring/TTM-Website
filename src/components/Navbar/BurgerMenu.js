@@ -25,11 +25,11 @@ export default function BurgerMenu(props) {
     },
     bmMenu: {
       background: "#FFFFFF",
-      width: "calc(7.5vw + 130px)",
+      width: "calc(8.5vw + 130px)",
       fontSize: "1.15em",
       boxShadow: "4px 0px 4px rgba(0, 0, 0, 0.2)",
       paddingTop: "40px",
-      marginRight:"5px"
+      marginRight:"3px"
     },
     bmMorphShape: {
       fill: "#373a47",
@@ -42,7 +42,7 @@ export default function BurgerMenu(props) {
       display: "listItem",
     },
       bmItem: {
-          width: "calc(7.5vw + 130px)",
+          width: "calc(8.5vw + 130px)",
           outline: "none",
     },
     bmOverlay: {
