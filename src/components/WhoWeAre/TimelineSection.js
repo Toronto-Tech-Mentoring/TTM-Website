@@ -229,8 +229,6 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     fontStyle: "normal",
     lineHeight: "27px",
-    // marginTop: "24px",
-
     // Screen size: Mobile to Tablet
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
@@ -238,12 +236,11 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "24px",
       height: "32px",
       width: "120px",
-    },
     [theme.breakpoints.down("xs")]: {
       marginTop: "16px",
     },
   },
-}))
+}}))
 
 export default function TimelineSection() {
   const classes = useStyles()
@@ -504,13 +501,12 @@ export default function TimelineSection() {
             Inspired by our journey? Excited by our future? Help us get there:{" "}
           </h2>
         </Grid>
-        <Grid>
-          <a href="/contact/">
-            <CustomButton
-              text={"Contact Us"}
-              customClass={classes.contactButton}
-            />
-          </a>
+        <Grid style={{ paddingTop: "40px" }}>
+          <CustomButton
+            text={"Contact Us"}
+            customClass={classes.contactButton}
+            link="/contact"
+          />
         </Grid>
       </Grid>
     </Grid>
