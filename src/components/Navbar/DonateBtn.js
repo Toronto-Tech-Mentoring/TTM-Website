@@ -21,6 +21,9 @@ const StyledButton = styled.button`
     border-color: #873fe2;
     color: #873fe2;
   }
+  @media (max-width: 1200px) {
+    width: calc(22vw - 114px);
+  }
   @media (max-width: 1040px) {
     font-size: 14px;
     height: 40px;

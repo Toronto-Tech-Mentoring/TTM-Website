@@ -229,7 +229,6 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     fontStyle: "normal",
     lineHeight: "27px",
-
     // Screen size: Mobile to Tablet
     [theme.breakpoints.down("sm")]: {
       fontSize: "14px",
@@ -237,6 +236,8 @@ const useStyles = makeStyles(theme => ({
       lineHeight: "24px",
       height: "32px",
       width: "120px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "16px",
     },
   },
 }))
