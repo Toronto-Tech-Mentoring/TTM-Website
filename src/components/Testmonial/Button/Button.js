@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     borderStyle: "none",
     fontFamily: "Poppins",
-    marginLeft: "14vw",
+    marginLeft: "15vw",
     cursor: "pointer",
     [theme.breakpoints.between("sm", "md")]: {
       marginLeft: "3vw",
@@ -24,8 +24,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function TestimonialButton({ buttonText }) {
+export default function TestimonialButton({ buttonText, link }) {
   const classes = useStyles()
 
-  return <button className={classes.testimonialButton}>{buttonText}</button>
+  return (
+    <a href={link}>
+      <button className={classes.testimonialButton}>{buttonText}</button>
+    </a>
+  )
 }
