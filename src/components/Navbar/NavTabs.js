@@ -92,13 +92,12 @@ export default function NavTabs() {
 
   const renderDropdownListItems = () => {
     return dropdownListItems.map(item => (
-      <li className={classes.navitem} key={item.id}>
+      <li className={classes.navitem+ " "+classes.dropDownList} key={item.id}>
         <Link
           to={item.path}
           id={item.id}
           className={classes.navlink}
           activeClassName={classes.active}
-          style={{ boxShadow:"0px 0px 0px" , fontSize:"0.8rem"}}
         >
           {item.title}
         </Link>
@@ -173,7 +172,7 @@ export default function NavTabs() {
           ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
-          onClick={handleToggle}
+          onMouseOver={handleToggle}
           disableRipple="true"
           style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
         >
@@ -188,22 +187,19 @@ export default function NavTabs() {
             >
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontFamily:'Poppins', letterSpacing: 0, paddingBottom: 0}}>
+                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{letterSpacing: 0, paddingBottom: 0}}>
                       <Link to="/volunteer" id="volunteer"
-                        className={classes.navlink}
-                        activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Volunteer with us</MenuItem></Link>
+                        className={classes.navlink  + " "+classes.dropDownList}
+                        activeClassName={classes.dropDownItemActive}
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px', fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Volunteer with us</MenuItem></Link>
                     <Link to="/partners" id="partners"
-                        className={classes.navlink}
-                        activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Partner with us</MenuItem></Link>
+                        className={classes.navlink + " "+classes.dropDownList}
+                        activeClassName={classes.dropDownItemActive}
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px', fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Partner with us</MenuItem></Link>
                     <Link to="/sponsors" id="sponsors"
-                        className={classes.navlink}
-                        activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Sponsor us</MenuItem></Link>
+                        className={classes.navlink + " "+classes.dropDownList}
+                        activeClassName={classes.dropDownItemActive}
+                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px',fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Sponsor us</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

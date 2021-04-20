@@ -86,8 +86,22 @@ const useStyles = makeStyles(theme => ({
         color: "#873FE2",
         boxShadow: "0px 2px 0px #873FE2",
         [theme.breakpoints.down("1080")]: {
-            boxShadow: "3px 0px 0px #873FE2",
-            marginRight: "2.5px",
+            boxShadow: "2px 0px 0px #873FE2",
+        },
+    },
+    dropDownList: {
+        minWidth: "172px",
+        [theme.breakpoints.up("1080")]: {
+            boxShadow: "none",
+        },
+    },
+    dropDownItemActive: {
+        boxShadow: "2px 0px 0px #873FE2",
+        [theme.breakpoints.up("1080")]: {
+            boxShadow: "none",
+            borderLeft: "3px solid #873FE2",
+            borderRight: "3px solid #873FE2",
+            margin: "0 -1px 0 -1px"
         },
     },
     burgerMenu: {
