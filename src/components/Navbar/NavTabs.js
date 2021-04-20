@@ -98,7 +98,6 @@ export default function NavTabs() {
           id={item.id}
           className={classes.navlink}
           activeClassName={classes.active}
-          style={{ boxShadow:"0px 0px 0px" , fontSize:"0.8rem"}}
         >
           {item.title}
         </Link>
@@ -192,18 +191,15 @@ export default function NavTabs() {
                       <Link to="/volunteer" id="volunteer"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Volunteer with us</MenuItem></Link>
+                      ><MenuItem onClick={handleClose} className={classes.dropDownList} disableRipple="true">Volunteer with us</MenuItem></Link>
                     <Link to="/partners" id="partners"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Partner with us</MenuItem></Link>
+                      ><MenuItem onClick={handleClose} className={classes.dropDownList} disableRipple="true">Partner with us</MenuItem></Link>
                     <Link to="/sponsors" id="sponsors"
                         className={classes.navlink}
                         activeClassName={classes.active}
-                        style={{ boxShadow:"0px 0px 0px"}}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '0.9rem' }} disableRipple="true">Sponsor us</MenuItem></Link>
+                      ><MenuItem onClick={handleClose} className={classes.dropDownList} disableRipple="true">Sponsor us</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

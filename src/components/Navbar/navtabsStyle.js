@@ -89,6 +89,13 @@ const useStyles = makeStyles(theme => ({
             boxShadow: "2px 0px 0px #873FE2",
         },
     },
+    dropDownList: {
+        fontFamily: "Poppins !important",
+        fontSize: "16px !important",
+        [theme.breakpoints.up("1080")]: {
+            boxShadow: "0px 0px 0px",
+        },
+    },
     burgerMenu: {
         display: "none",
         [theme.breakpoints.down("1080")]: {
