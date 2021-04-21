@@ -3,10 +3,9 @@ import ExpandingTextBox from "../ExpandingTextBox/ExpandingTextBox"
 import TestimonialButton from "../Testmonial/Button/Button"
 import { makeStyles } from "@material-ui/core/styles"
 
-const LINES_TO_SHOW = 3;
+const LINES_TO_SHOW = 3
 
 const useStyles = makeStyles(theme => ({
-  
   divStyle: {
     backgroundColor: "#FFFFFF",
     minHeight: "600px",
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     textOverflow: "ellipsis",
     display: "-webkit-box",
     "-webkit-line-clamp": LINES_TO_SHOW,
-    "-webkit-box-orient": "vertical"
+    "-webkit-box-orient": "vertical",
   },
   header: {
     fontFamily: "Josefin Sans",
@@ -107,12 +106,11 @@ const Testmonials = () => {
           }
           name={"Tiana"}
         />
-        <a href="how-it-works">
-          <TestimonialButton
-            buttonText={"Join our program"}
-            className={classes.button}
-          />
-        </a>
+        <TestimonialButton
+          buttonText={"Join our program"}
+          className={classes.button}
+          link="/how-it-works"
+        />
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -131,12 +129,11 @@ const Testmonials = () => {
           }
           name={"Enzo"}
         />
-        <a href="/volunteer/">
-          <TestimonialButton
-            buttonText={"Volunteer with us"}
-            className={classes.button}
-          />
-        </a>
+        <TestimonialButton
+          buttonText={"Volunteer with us"}
+          className={classes.button}
+          link="/volunteer"
+        />
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -154,12 +151,11 @@ const Testmonials = () => {
           }
           name={"Rahim"}
         />
-        <a href="/partners/">
-          <TestimonialButton
-            buttonText={"Partner with us"}
-            className={classes.button}
-          />
-        </a>
+        <TestimonialButton
+          buttonText={"Partner with us"}
+          className={classes.button}
+          link="/partners"
+        />
       </div>
       <div className={classes.div}>
         <h2 className={classes.header}>
@@ -177,12 +173,11 @@ const Testmonials = () => {
           }
           name={"Sam"}
         />
-        <a href="/sponsors/">
-          <TestimonialButton
-            buttonText={"Sponsor us"}
-            className={classes.button}
-          />
-        </a>
+        <TestimonialButton
+          buttonText={"Sponsor us"}
+          className={classes.button}
+          link="/sponsors"
+        />
       </div>
     </>
   )

@@ -41,14 +41,9 @@ const useStyles = makeStyles(theme => ({
     paddingRight: "calc(36.6vw - 102px)",
     paddingBottom: "calc(2.96vw + 53.5px)",
 
-    // Large screen up
-    [theme.breakpoints.up(2560)]: {
-      // padding: "0 800px 96px 800px",
-      fontSize: "25px",
-    },
 
     // Tablet Above to Desktop to large screen
-    [theme.breakpoints.between("lg", 2560)]: {
+    [theme.breakpoints.up(1440)]: {
       // padding: "0 550px 96px 550px",
       fontSize: "20px",
     },

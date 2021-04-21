@@ -90,9 +90,9 @@ const useStyles = makeStyles(theme => ({
         },
     },
     dropDownList: {
-        minWidth: "172px",
         [theme.breakpoints.up("1080")]: {
             boxShadow: "none",
+            minWidth: "172px",
         },
     },
     dropDownItemActive: {
