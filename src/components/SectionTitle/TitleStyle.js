@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: "20px",
       marginLeft: "0",
     },
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "28px",
+    },
   },
 }))
 

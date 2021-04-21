@@ -10,6 +10,15 @@ import RightPerson from "../../images/who-we-are/right_person.svg"
 import LeftPerson from "../../images/who-we-are/left_person.svg"
 
 const useStyles = makeStyles(theme => ({
+  sectionTitle: {
+    fontSize: "calc(0.926vw + 14.7px)",
+    paddingLeft: "32px",
+    paddingTop: "4px",
+    marginTop: "0px",
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "28px",
+    },
+  },
   leftPerson: {
     marginBottom: "-220px",
     marginLeft: "-68px",
@@ -29,6 +38,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "400",
     fontSize: "calc(0.37vw + 12.7px)",
     lineHeight: "calc(0.648vw + 21.7px)",
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "18px",
+  },
   },
   paper: {
     width: "calc(63.3vw + 132px)",
@@ -38,7 +50,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function SecondSection() {
-  const classes = useStyles()
+  const classes = useStyles();
+
 
   return (
     <GridContainer
@@ -49,16 +62,11 @@ export default function SecondSection() {
         marginBottom: "96px",
       }}
     >
-      <Grid>
+      <Grid item >
         <Paper className={classes.paper}>
           <SectionTitle
             title="We focus on empowerment"
-            style={{
-              fontSize: "calc(0.926vw + 14.7px)",
-              paddingLeft: "32px",
-              paddingTop: "4px",
-              marginTop: "0px",
-            }}
+            class={classes.sectionTitle}
           />
           <TextBox
             style={{
@@ -78,14 +86,14 @@ export default function SecondSection() {
         </Paper>
         <RightPerson className={classes.rightPerson} />
       </Grid>
-      <Grid>
+      <Grid item>
         <Paper
           className={classes.paper}
           style={{ background: "rgba(129, 166, 255, 0.2)" }}
         >
           <SectionTitle
             title="We do things differently"
-            style={{ paddingLeft: "32px", paddingTop: "4px", marginTop: "0px" }}
+            class={classes.sectionTitle}
           />
           <TextBox
             style={{
@@ -103,12 +111,12 @@ export default function SecondSection() {
           </TextBox>
         </Paper>
       </Grid>
-      <Grid>
+      <Grid item>
         <LeftPerson className={classes.leftPerson} />
         <Paper className={classes.paper}>
           <SectionTitle
             title="We are a values-driven organization"
-            style={{ paddingLeft: "32px", paddingTop: "4px", marginTop: "0px" }}
+            class={classes.sectionTitle}
           />
           <TextBox
             style={{
