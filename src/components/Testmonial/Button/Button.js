@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     borderStyle: "none",
     fontFamily: "Poppins",
-    marginLeft: "14vw",
+    marginLeft: "15vw",
     cursor: "pointer",
     [theme.breakpoints.between("sm", "md")]: {
       marginLeft: "3vw",
