@@ -6,7 +6,7 @@ export default function Title(props) {
   const classes = useStyles()
 
   return (
-    <div style={props.style}>
+    <div style={props.style} className={props.class}>
       <p className={classes.title}>{props.title}</p>
     </div>
   )

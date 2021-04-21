@@ -64,15 +64,21 @@ const useStyles = makeStyles(theme => ({
     marginRight: "20px",
     backgroundColor: "#873FE2",
     borderRadius: "300px",
-    padding: "5px 30px",
+    padding: "5px 9%",
     fontSize: "25px",
     color: "white",
     borderStyle: "none",
     fontFamily: "Josefin Sans",
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "22px",
+    [theme.breakpoints.down(1358)]: {
+      fontSize: "20px",
       lineHeight: "38px",
+    },
+    [theme.breakpoints.down(1257)]: {
+      fontSize: "18px",
+    },
+    [theme.breakpoints.down(1190)]: {
+      fontSize: "16px",
     },
     // Moboile
     [theme.breakpoints.down("sm")]: {
@@ -116,6 +122,9 @@ const useStyles = makeStyles(theme => ({
     width: "calc(37.5vw + 117px)",
     height: "auto",
     marginBottom: "calc(18.7px - 0.741vw)",
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "28px",
+    },
   },
   eventContent: {
     marginTop: "0px",
@@ -126,9 +135,11 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "calc(0.648vw + 21.7px)",
     width: "calc(52vw + 101px)",
     zIndex: 2,
-    [theme.breakpoints.up(1921)]: {
-      width: "720px",
-      marginRight: "calc(100% - 710px)",
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "28px",
+    },
+    [theme.breakpoints.up(1440)]: {
+      marginRight: "10vw",
     },
   },
   center: {
@@ -147,14 +158,15 @@ const useStyles = makeStyles(theme => ({
   },
   picDiv: {
     width: "calc(52vw + 101px)",
+    maxWidth: "820px",
     display: "flex",
     justifyContent: "center",
-    [theme.breakpoints.up(1921)]: {
-      width: "720px",
-    },
+    // [theme.breakpoints.up(1921)]: {
+    //   width: "720px",
+    // },
   },
   gridContainer: {
-    marginTop: "50px",
+    marginTop: "5vw",
     justifyContent: "center",
   },
   title2019: {
@@ -220,6 +232,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: "calc(0.926vw + 14.7px)",
     lineHeight: "calc(1.3vw + 23.3px)",
     width: "calc(48vw + 156px)",
+    [theme.breakpoints.up(1440)]: {
+      fontSize: "28px",
+    },
   },
   contactButton: {
     backgroundColor: "#873FE2",
@@ -268,7 +283,7 @@ export default function TimelineSection() {
         <TitleRight />
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <span className={classes.yearTag}>2018</span>
           <Pin className={classes.pinStyle} />
         </Grid>
@@ -300,7 +315,7 @@ export default function TimelineSection() {
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <span className={classes.yearTag}>2019</span>
           <Pin className={classes.pinStyle} />
         </Grid>
@@ -342,7 +357,7 @@ export default function TimelineSection() {
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid
@@ -372,7 +387,7 @@ export default function TimelineSection() {
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2}  className={classes.yearCol}>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid
@@ -411,7 +426,7 @@ export default function TimelineSection() {
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <span className={classes.yearTag}>2020</span>
           <Pin className={classes.pinStyle} />
         </Grid>
@@ -452,7 +467,7 @@ export default function TimelineSection() {
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container xs={12}>
-        <Grid item xs={2} md={3} lg={3} xl={4} className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <span className={classes.yearTag}>Onwards</span>
           <Pin className={classes.pinStyle} />
         </Grid>
