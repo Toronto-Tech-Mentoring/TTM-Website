@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core"
 import Hands from "../../images/sponsors/how-you-can-support/hands.svg"
 import DonateIcons from "./DonateIcons"
 import PaypalImg from "../../images/sponsors/how-you-can-support/paypal.svg"
+import CustomButton from "../CustomButton"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -208,11 +209,19 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "27px",
     color: "#873FE2",
     textAlign: "center",
+    cursor: "pointer",
     [theme.breakpoints.down("1001")]: {
       margin: "1577px 0px 0px 15%",
+      width: "153px",
+      height: "40px",
+      fontSize: "16px",
     },
     [theme.breakpoints.down("550")]: {
-      margin: "1342px 0px 0px 4%",
+      margin: "1326px 0px 0px 4%",
+      width: "120px",
+      height: "32px",
+      fontSize: "14px",
+      lineHeight: "24px",
     },
   },
 }))
@@ -264,7 +273,11 @@ export default function HowYouCanSupport() {
         <p className={`${classes.textStyle} ${classes.volunteerInfoStyle}`}>
           {volunteerInfo}
         </p>
-        <button className={classes.contactButton}>Contact Us</button>
+        <CustomButton
+          text={"Contact Us"}
+          customClass={classes.contactButton}
+          link="/contact"
+        />
       </div>
     </div>
   )
