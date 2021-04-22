@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import GroupedCards from "../shared/GroupedCards"
-import background1 from "../../images/partners/partner-organization/background1.svg"
-import background2 from "../../images/partners/partner-organization/background2.svg"
-import background3 from "../../images/partners/partner-organization/background3.svg"
-import HelpingSVG from "../../images/partners/partner-organization/helping.svg"
-import HouseSVG from "../../images/partners/partner-organization/house.svg"
-import TrainingSVG from "../../images/partners/partner-organization/training.svg"
+import background1 from "../../images/partners/partnerOrganization/background1.svg"
+import background2 from "../../images/partners/partnerOrganization/background2.svg"
+import background3 from "../../images/partners/partnerOrganization/background3.svg"
+import HelpingSVG from "../../images/partners/partnerOrganization/helping.svg"
+import HouseSVG from "../../images/partners/partnerOrganization/house.svg"
+import TrainingSVG from "../../images/partners/partnerOrganization/training.svg"
 import CustomButton from "../../components/CustomButton.js"
 
 const useStyles = makeStyles(theme => ({
