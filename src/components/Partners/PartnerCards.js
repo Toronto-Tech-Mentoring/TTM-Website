@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import GroupedCards from "../shared/GroupedCards"
-import background1 from "../../images/partners/partnerOrganization/background1.svg"
-import background2 from "../../images/partners/partnerOrganization/background2.svg"
-import background3 from "../../images/partners/partnerOrganization/background3.svg"
-import HelpingSVG from "../../images/partners/partnerOrganization/helping.svg"
-import HouseSVG from "../../images/partners/partnerOrganization/house.svg"
-import TrainingSVG from "../../images/partners/partnerOrganization/training.svg"
+import Background1 from "../../images/partners/organization/background1.svg"
+import Background2 from "../../images/partners/organization/background2.svg"
+import Background3 from "../../images/partners/organization/background3.svg"
+import HelpingSVG from "../../images/partners/organization/helping.svg"
+import HouseSVG from "../../images/partners/organization/house.svg"
+import TrainingSVG from "../../images/partners/organization/training.svg"
 import CustomButton from "../../components/CustomButton.js"
 
 const useStyles = makeStyles(theme => ({
@@ -101,7 +101,7 @@ const cardsJson = [
           height: "125px",
           backgroundRepeat: `no-repeat`,
           backgroundPosition: "center",
-          backgroundImage: `url(${background1}`,
+          backgroundImage: `url(${Background1}`,
         }}
       >
         <img src={HelpingSVG} alt="helping"></img>
@@ -158,7 +158,7 @@ const cardsJson = [
           height: "110px",
           backgroundRepeat: `no-repeat`,
           backgroundPosition: "center",
-          backgroundImage: `url(${background2}`,
+          backgroundImage: `url(${Background2}`,
         }}
       >
         <img src={HouseSVG} alt="house"></img>
@@ -218,7 +218,7 @@ const cardsJson = [
           height: "134px",
           backgroundRepeat: `no-repeat`,
           backgroundPosition: "center",
-          backgroundImage: `url(${background3}`,
+          backgroundImage: `url(${Background3}`,
         }}
       >
         <img src={TrainingSVG} alt="training"></img>
