@@ -4,7 +4,7 @@ import Skylinefooter from "../../images/skyline/skylinefooter.svg"
 export default function SkylineFooterSVG() {
   return (
     <div>
-      <Skylinefooter style={{ width: "100%", height: "auto" }} />
+      <Skylinefooter style={{ width: "100%", height: "auto" }}/>
     </div>
   )
 }

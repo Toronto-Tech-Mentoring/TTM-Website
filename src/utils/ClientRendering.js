@@ -26,7 +26,7 @@ function ClientSideRendering({ children, ...delegated }) {
     return null
   }
 
-  return <div {...delegated}>{children}</div>
+  return <div style={{width:"100vw", overflow:"hidden"}} {...delegated}>{children}</div>
 }
 
 export default ClientSideRendering

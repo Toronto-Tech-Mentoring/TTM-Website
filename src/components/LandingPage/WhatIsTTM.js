@@ -3,26 +3,37 @@ import React from "react"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
-// import styles from "./HeroText.module.css"
 import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+import SkylineTop from "../../components/SkylineTop"
+
+
 
 export default function WhatiIsTTM() {
   const classes = useStyles()
+  const styles = {
+    container: {
+      width: "100vw",
+      position: "relative",
+      left: "0px",
+      height: "calc(100vh - 80px)",
+      maxHeight:"700px",
+      overflow: "hidden",
+      margin: "0px",
+      padding: "0px"
+    }
+}
+
+
   const headerText = "What is Toronto Tech Mentoring?"
   const content =
     "We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)."
 
   return (
-    <div >
-      <CheetoLeft
-        className={classes.cheetohLeftMirrored}
-        style={{ "margin-top": "-1.6em" }}
-        alt="cheetohLeft"
-      />
+    <div style={styles.container} >
+     
       <TextBox
         style={{
           "margin-top": "135px",
@@ -30,6 +41,11 @@ export default function WhatiIsTTM() {
           "padding-right": "0",
         }}
       >
+         <CheetoLeft
+        className={classes.cheetohLeftMirrored}
+        style={{ "margin-top": "-1.6em" }}
+        alt="cheetohLeft"
+      />
         <BoldedHeader
           headerText={headerText}
           style={{ "font-size": "calc(1.3vw + 1em)" }}
@@ -51,7 +67,7 @@ export default function WhatiIsTTM() {
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
+      <SkylineTop />
     </div>
   )
 }
