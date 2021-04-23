@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme => ({
         left: "0",
         width: "100vw",
         height: "calc(14vw + 151px)",
+        maxHeight: "700px",
          [theme.breakpoints.down("768")]: {
               height: "calc(16vw + 136px)",
         },
@@ -16,6 +17,7 @@ const useStyles = makeStyles(theme => ({
     skyline: {
         height: "calc(14vw + 151px)",
         width: "auto",
+        maxHeight: "700px",
         marginLeft:"calc(22vw  - 313px)",
         [theme.breakpoints.down("768")]: {
            height: "calc(16vw + 136px)",
