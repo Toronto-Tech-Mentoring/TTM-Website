@@ -22,8 +22,31 @@ export default function WhatiIsTTM() {
       maxHeight:"700px",
       overflow: "hidden",
       margin: "0px",
-      padding: "0px"
+      paddingTop: "calc(6vw + 47px)",
+      paddingLeft: "calc(19vw - 45px)",
+      boxSizing: "border-box",
+       '@media (max-width: 768px)': {
+         paddingTop: "calc(7vw + 37px)",
+         height: "calc(100vh - 56px)",
+      },
+       '@media (max-width: 360px)': {
+         height: "calc(100vh - 48px)",
+      },
+   
+
+    },
+    boldedText: {
+      fontSize: "36px",
+      position: "relative",
+      left: "-10px",
+       '@media (max-width: 768px)': {
+          fontSize: "24px",
+      },
+       '@media (max-width: 360px)': {
+          fontSize: "20px",
+      }
     }
+
 }
 
 
@@ -33,22 +56,22 @@ export default function WhatiIsTTM() {
 
   return (
     <div style={styles.container} >
-     
+        <CheetoLeft
+        className={classes.cheetohLeftMirrored}
+        style={{ marginTop: "-20", marginLeft: "- 10px",  }}
+        alt="cheetohLeft"
+      />
       <TextBox
         style={{
-          "margin-top": "135px",
+          "margin-left": "10px",
           "margin-right": "calc(46.5vw - 151px)",
           "padding-right": "0",
         }}
       >
-         <CheetoLeft
-        className={classes.cheetohLeftMirrored}
-        style={{ "margin-top": "-1.6em" }}
-        alt="cheetohLeft"
-      />
+      
         <BoldedHeader
           headerText={headerText}
-          style={{ "font-size": "calc(1.3vw + 1em)" }}
+          className={classes.boldedText}
         />
         <Content
           content={content}
