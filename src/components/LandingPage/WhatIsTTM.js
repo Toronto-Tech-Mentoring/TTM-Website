@@ -45,10 +45,13 @@ export default function WhatiIsTTM() {
        '@media (max-width: 360px)': {
           fontSize: "20px",
       }
-    }
-
+    },
 }
 
+  const contentStyle = {
+            textAlign: "left",
+            marginTop: "-5px",
+    }
 
   const headerText = "What is Toronto Tech Mentoring?"
   const content =
@@ -76,12 +79,7 @@ export default function WhatiIsTTM() {
         <Content
           content={content}
           extra={<RainbowHeart style={{ "margin-left": "15px" }} />}
-          style={{
-            "font-family": "Poppins",
-            "font-size": "calc(0.37vw + 12.7px)",
-            "text-align": "left",
-            "margin-top": "-5px",
-          }}
+          style={contentStyle}
           hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
         />
         <CheetoRight
