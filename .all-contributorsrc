@@ -97,6 +97,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "danunder",
+      "name": "Daniel Robertson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69923261?v=4",
+      "profile": "http://danunder.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
