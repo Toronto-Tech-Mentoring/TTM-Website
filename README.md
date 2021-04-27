@@ -1,7 +1,7 @@
 # <img src="./src/images/navbar/logo-ttm.svg"> Toronto Tech Mentoring
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.torontotechmentoring.live%2F)![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Toronto-Tech-Mentoring/TTM-Gatsby?include_prereleases)![Netlify](https://img.shields.io/netlify/129ddafb-ec6d-4002-83e5-ce05c55ca1a1?style=plastic)<br/>![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Toronto-Tech-Mentoring/TTM-Gatsby?style=plastic)![Lines of code](https://img.shields.io/tokei/lines/github/Toronto-Tech-Mentoring/TTM-Gatsby)![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Toronto-Tech-Mentoring/TTM-gatsby)![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/Toronto-Tech-Mentoring/TTM-gatsby/latest?include_prereleases)
@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://Linkedin.com/in/harshvchawla"><img src="https://avatars1.githubusercontent.com/u/6857593?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Harsh Chawla</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Website/commits?author=harshvchawla" title="Code">💻</a></td>
     <td align="center"><a href="https://leeroyp.github.io/A8-Responsive-portfolio.io/"><img src="https://avatars.githubusercontent.com/u/59719170?v=4?s=100" width="100px;" alt=""/><br /><sub><b>leeroyp</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Website/commits?author=leeroyp" title="Code">💻</a></td>
+    <td align="center"><a href="http://danunder.github.io"><img src="https://avatars.githubusercontent.com/u/69923261?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Robertson</b></sub></a><br /><a href="https://github.com/Toronto-Tech-Mentoring/TTM-Website/commits?author=danunder" title="Code">💻</a></td>
   </tr>
 </table>
 
