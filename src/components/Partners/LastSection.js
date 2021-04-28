@@ -62,7 +62,6 @@ const useStyles = makeStyles(theme => ({
     bottom: "25px",
     left: "35px",
     fontSize: "15px",
-
     //  // Screen size: Mobile to Tablet
     [theme.breakpoints.between("xs", "sm")]: {
       fontSize: "13px",
@@ -103,6 +102,9 @@ const useStyles = makeStyles(theme => ({
       marginTop: "15px",
     },
   },
+  link: {
+    textDecoration: "none",
+  },
 }))
 
 export default function LastSection() {
@@ -112,7 +114,7 @@ export default function LastSection() {
       <p className={classes.title}>Our Partners</p>
       <Grid container justify="center">
           <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
-            <Link to={"http://civictech.ca/"}>
+            <Link to={"http://civictech.ca/"} className={classes.link}>
             <div className={`${classes.paper} ${classes.leftDiv}`}>
               <img
                 alt=""
@@ -124,7 +126,7 @@ export default function LastSection() {
             </Link>
           </Grid>
         <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
-          <Link to={"https://ymcagta.org/find-a-y/ymca-sprott-house"}>
+          <Link to={"https://ymcagta.org/find-a-y/ymca-sprott-house"} className={classes.link}>
           <div className={`${classes.paper} ${classes.RightDiv}`}>
             <img
               alt=""
