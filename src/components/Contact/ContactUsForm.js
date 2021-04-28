@@ -192,7 +192,7 @@ const Other = new styled(Radio)`
 
 const StyledGrid = new styled(Grid)`
     padding-bottom: 50px;
-    padding-left: calc(19.2vw - 52px);
+    position: relative
 `
 
 const StyledDropDown = new styled(Select)`
@@ -366,8 +366,6 @@ export default function ContactUsForm() {
           Send
         </StyledButton>
       </StyledGrid>
-            <SkylineHeaderSVG />
-
     </>
   )
 }
