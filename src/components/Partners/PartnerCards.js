@@ -101,7 +101,7 @@ const cardsJson = [
           height: "125px",
           backgroundRepeat: `no-repeat`,
           backgroundPosition: "center",
-          backgroundImage: `url(${Background1}`,
+          backgroundImage: `url(${Background1})`,
         }}
       >
         <img src={HelpingSVG} alt="helping"></img>
@@ -158,7 +158,7 @@ const cardsJson = [
           height: "110px",
           backgroundRepeat: `no-repeat`,
           backgroundPosition: "center",
-          backgroundImage: `url(${Background2}`,
+          backgroundImage: `url(${Background2})`,
         }}
       >
         <img src={HouseSVG} alt="house"></img>
