@@ -483,7 +483,7 @@ export default function TimelineSection() {
             height: "calc(-2.17vw + 402px)",
           }}
         >
-          <button className={classes.yearTagSm}>onwards</button>
+          <button className={classes.yearTagSm}>Onward</button>
           <span className={classes.eventTitle} style={{ paddingLeft: "0px" }}>
             We’re excited to continue to expand our impact on people’s lives,
             through:
