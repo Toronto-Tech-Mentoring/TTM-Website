@@ -18,7 +18,10 @@ const useStyles = makeStyles(theme => ({
         height: "calc(14vw + 151px)",
         width: "auto",
         maxHeight: "700px",
-        marginLeft:"calc(22vw  - 313px)",
+        marginLeft: "0px",
+        [theme.breakpoints.down("1435")]: {
+         marginLeft: "calc(22vw  - 313px)",
+        },
         [theme.breakpoints.down("768")]: {
            height: "calc(16vw + 136px)",
            marginLeft:"calc(27.5vw  - 392px)"
