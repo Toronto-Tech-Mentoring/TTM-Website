@@ -3,20 +3,21 @@ import React from "react"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
-// import styles from "./HeroText.module.css"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+import { firstSectionStyles } from "../../styles/firstSectionStyles"
+import SkylineTop from "../../components/SkylineTop"
 
 export default function WhatiIsTTM() {
   const classes = useStyles()
+  const styles = firstSectionStyles
   const headerText = "Thank you for partnering with us"
   const content =
     "The Accelerator Project is part of an ecosystem of programs aimed at addressing homelessness in Toronto. Our delivery partners help facilitate our programs, and provide wrap-around support to allow our clients to focus on learning tech skills and building their futures."
 
   return (
-    <div>
+    <div style={styles.container}>
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
         style={{ "margin-top": "-1.6em" }}
@@ -24,7 +25,7 @@ export default function WhatiIsTTM() {
       />
       <TextBox
         style={{
-          "margin-top": "135px",
+          "margin-left": "10px",
           "margin-right": "calc(46.5vw - 151px)",
           "padding-right": "0",
         }}
@@ -44,7 +45,7 @@ export default function WhatiIsTTM() {
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
+      <SkylineTop />
     </div>
   )
 }
