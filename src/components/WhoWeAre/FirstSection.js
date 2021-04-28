@@ -3,29 +3,30 @@ import React from "react"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
-// import styles from "./HeroText.module.css"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+import { firstSectionStyles } from "../../styles/firstSectionStyles"
+import SkylineTop from "../../components/SkylineTop"
 
 export default function VolunteerRunOrg() {
   const classes = useStyles()
+  const styles = firstSectionStyles
   const headerText = "We are an entirely volunteer run organization."
   const content =
     "Our diverse team includes talented technologists, educators, program managers, and activists. We come from different professional backgrounds and many different walks of life — all tied together by our common goal: to help young people and adults that are underhoused, face barriers and adversity to write their own stories."
 
   return (
-    <div>
+    <div style={styles.container}>
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
-        style={{ "margin-top": "-1.6em" }}
+         style={{ marginTop: "-20", marginLeft: "- 10px",  }}
         alt="cheetohLeft"
       />
       <TextBox
-        style={{
-          "margin-top": "135px",
-          "margin-right": "calc(39.5vw - 125px)",
+       style={{
+          "margin-left": "10px",
+          "margin-right": "calc(45.5vw - 145px)",
           "padding-right": "0",
         }}
       >
@@ -44,7 +45,7 @@ export default function VolunteerRunOrg() {
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
+      <SkylineTop />
     </div>
   )
 }
