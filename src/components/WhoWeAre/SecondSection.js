@@ -105,7 +105,7 @@ export default function SecondSection() {
             <p className={classes.text}>
               {" "}
               We understand each person has their own journey. That is why our
-              program is uniquely focused on delivering high impact value for
+              program is uniquely focused on delivering high-impact value for
               every participant.{" "}
             </p>
           </TextBox>

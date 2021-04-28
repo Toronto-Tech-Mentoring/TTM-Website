@@ -11,7 +11,7 @@ import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 
 export default function VolunteerRunOrg() {
   const classes = useStyles()
-  const headerText = "We are an entirely volunteer run organization."
+  const headerText = "We are an entirely volunteer-run organization."
   const content =
     "Our diverse team includes talented technologists, educators, program managers, and activists. We come from different professional backgrounds and many different walks of life — all tied together by our common goal: to help young people and adults that are underhoused, face barriers and adversity to write their own stories."
 
