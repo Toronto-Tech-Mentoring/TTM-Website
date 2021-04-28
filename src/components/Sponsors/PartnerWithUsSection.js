@@ -32,7 +32,7 @@ const cardsJson = [
         alt="laptops for accessibility"
       />
     ),
-    footer: "Laptops for accessability",
+    footer: "Laptops for accessibility",
     style: {
       cardContainer: {
         maxWidth: "170px",

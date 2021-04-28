@@ -10,8 +10,8 @@ import workshops from "../../images/sponsors/how-you-can-support/workshops.svg"
 const cardsJson = [
   {
     header: "",
-    body: <img src={laptops} alt="laptops for accessability" />,
-    footer: "Laptops for accessability",
+    body: <img src={laptops} alt="laptops for accessibility" />,
+    footer: "Laptops for accessibility",
     style: {
       cardContainer: {},
       bodyWrapper: {
