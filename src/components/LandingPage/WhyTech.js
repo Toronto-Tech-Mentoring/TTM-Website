@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down("465")]: {
       margin: "20px 5px 0px 4%",
-      width: "325px",
+      maxWidth: "325px",
     },
   },
   whyHeader: {
