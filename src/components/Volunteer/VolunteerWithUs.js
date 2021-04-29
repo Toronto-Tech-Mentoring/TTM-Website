@@ -6,16 +6,18 @@ import Content from "../DecoratedText/DecoratedText"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+import { firstSectionStyles } from "../../styles/firstSectionStyles"
+import SkylineTop from "../../components/SkylineTop"
 
 export default function VolunteerWithUs() {
   const classes = useStyles()
+  const styles = firstSectionStyles
   const headerText = "Volunteer With Us"
   const content =
     "Toronto Tech Mentoring is a group of dedicated volunteers who want to help vulnerable young people access tech skills. Our volunteer team comes from a wide range of backgrounds, bringing a myriad of different life experiences and skill sets. "
 
   return (
-    <div>
+    <div style={styles.container}> 
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
         style={{ "margin-top": "-1em" }}
@@ -23,8 +25,8 @@ export default function VolunteerWithUs() {
       />
       <TextBox
         style={{
-          "margin-top": "135px",
-          "margin-right": "calc(37vw - 138px)",
+          "margin-left": "10px",
+          "margin-right": "calc(46.5vw - 151px)",
           "padding-right": "0",
         }}
       >
@@ -42,7 +44,7 @@ export default function VolunteerWithUs() {
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
+      <SkylineTop />
     </div>
   )
 }
