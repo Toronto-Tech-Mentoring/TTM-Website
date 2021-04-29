@@ -31,13 +31,12 @@ export default function GetInTouch() {
         />
         <TextBox
           style={{
-            "margin-right": "calc(-86.3px + 52.3vw)",
-            "padding-right": "0",
+            "width": "calc(25.5vw + 248px)", "position": "relative"
           }}
         >
           <BoldedHeader
-            headerText={headerText}
-            style={{ "font-size": "calc(1.3vw + 1em)" }}
+          headerText={headerText}
+            style={{ "font-size": "calc(1.3vw + 1em)", "margin-left": "5px" }}
           />
           <Content
             content={content}

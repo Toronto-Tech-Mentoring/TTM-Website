@@ -168,6 +168,7 @@ const StyledQuestion = new styled(InputLabel)`
     font-size: 14px !important;
     line-height: 31px !important;
     color: #404040 !important;
+    width: calc(25.5vw + 258px) !important;
 `
 
 const SheHer = new styled(Radio)`
@@ -192,11 +193,11 @@ const Other = new styled(Radio)`
 
 const StyledGrid = new styled(Grid)`
     padding-bottom: 50px;
-    position: relative
+    width: calc(25.5vw + 248px) !important;
 `
 
 const StyledDropDown = new styled(Select)`
-    width: 50% !important;
+    width: 70% !important;
     font-family: Poppins !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -306,7 +307,6 @@ export default function ContactUsForm() {
   const [reason, setReason] = React.useState("")
 
   return (
-    <>
       <StyledGrid justify="left" alignItems="center">
         <FirstName label="First Name"></FirstName>
         <LastName label="Last Name"></LastName>
@@ -366,6 +366,5 @@ export default function ContactUsForm() {
           Send
         </StyledButton>
       </StyledGrid>
-    </>
   )
 }

@@ -9,6 +9,7 @@
           margin: "0px",
           paddingTop: "calc(6vw + 47px)",
           paddingLeft: "calc(19vw - 45px)",
+          boxSizing: "border-box",
           '@media (max-width: 768px)': {
               paddingTop: "calc(7vw + 37px)",
               height: "calc(100vh - 56px)",
