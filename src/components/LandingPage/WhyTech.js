@@ -61,13 +61,14 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "150%",
     width: "71%",
     height: "170px",
-    margin: "20px 5px 0px 27%",
+    margin: "20px 12px 0px 27%",
     [theme.breakpoints.down("901")]: {
-      margin: "20px 5px 0px 15%",
+      margin: "20px 12px 0px 15%",
     },
     [theme.breakpoints.down("465")]: {
       margin: "20px 5px 0px 4%",
-      maxWidth: "325px",
+      // maxWidth: "325px",
+      width: "90%",
     },
   },
   whyHeader: {
