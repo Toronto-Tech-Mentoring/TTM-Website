@@ -61,13 +61,14 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "150%",
     width: "71%",
     height: "170px",
-    margin: "20px 5px 0px 27%",
+    margin: "20px 12px 0px 27%",
     [theme.breakpoints.down("901")]: {
-      margin: "20px 5px 0px 15%",
+      margin: "20px 12px 0px 15%",
     },
     [theme.breakpoints.down("465")]: {
       margin: "20px 5px 0px 4%",
-      width: "325px",
+      // maxWidth: "325px",
+      width: "90%",
     },
   },
   whyHeader: {
@@ -142,10 +143,10 @@ export default function WhyTech() {
   const classes = useStyles()
   const header = "Why Tech?"
   const body =
-    "Our world is increasingly driven by technology - it's all around us, and it changes how we interact with the world and each other. Technical literacy is widely considered one of the most important 21st century skills, and it is a passport into participation in the modern economy. Tech skills are consistently one of the most in- demand skill sets."
+    "Our world is increasingly driven by technology - it's all around us, and it changes how we interact with the world and each other. Technical literacy is widely considered one of the most important 21st century skills, and it is a passport into participation in the modern economy. Tech skills are consistently one of the most in-demand skill sets."
   const header2 = "Our Impact"
-  const subHeader = "365"
-  const body2 = "Hours of mentoring through our program"
+  const subHeader = "100+"
+  const body2 = "hours of mentoring through our program"
   return (
     <Grid className={classes.containerStyle} spacing={1}>
       <Grid container>

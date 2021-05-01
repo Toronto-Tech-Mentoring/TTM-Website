@@ -233,7 +233,7 @@ export default function HowYouCanSupport() {
   const paypal = "1. Donate through our PayPal"
   const paypalInfo =
     "Monetary donations provide us the most flexibility to deliver our services to meet the exact needs of our participants how and when they need it."
-  const inKind = "2. Donate in-kind"
+  const inKind = "2. Donate in kind"
   const inKindInfo =
     "Toronto Tech Mentoring has a need for essential resources that will help us offer our program which in turn contributes to helping the LGBTQ homeless youth community."
   const volunteer = "3. Volunteer Your Time"

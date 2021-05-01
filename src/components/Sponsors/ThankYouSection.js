@@ -173,7 +173,7 @@ export default function ThankYou() {
               className={classes.bodyText}
             >
               We are exceedingly grateful to our sponsors, who allow us to
-              continue to offer life- changing tech mentoring through our
+              continue to offer life-changing tech mentoring through our
               program.
             </foreignObject>
 
@@ -246,7 +246,7 @@ export default function ThankYou() {
               className={classes.bodyText}
             >
               We are exceedingly grateful to our sponsors, who allow us to
-              continue to offer life- changing tech mentoring through our
+              continue to offer life-changing tech mentoring through our
               program.
             </foreignObject>
 

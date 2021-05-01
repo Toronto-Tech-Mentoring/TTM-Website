@@ -338,7 +338,7 @@ export default function TimelineSection() {
           <p className={classes.eventContent}>
             With social services and tech sector partners, we identified and
             brainstormed ideas to address potential challenges and barriers for
-            the program, such as tech hiring practices, social isolation among
+            the program, such as tech hiring practices and social isolation among
             homeless youth.
           </p>
           <div className={classes.picDiv}>
@@ -378,7 +378,7 @@ export default function TimelineSection() {
           <p className={classes.eventContent}>
             We conducted user research and conducted demos at drop-in programs
             at shelters to test our program assumptions. Based on our insights,
-            we refined our mentoring program to a highly tailored one-on-one
+            we refined our mentoring program to a highly tailored, one-on-one
             model.
           </p>
           <div className={classes.picDiv} style={{ justifyContent: "center" }}>
@@ -468,7 +468,7 @@ export default function TimelineSection() {
       </Grid>
       <Grid className={classes.gridContainer} container xs={12}>
         <Grid item xs={2} className={classes.yearCol}>
-          <span className={classes.yearTag}>Onwards</span>
+          <span className={classes.yearTag}>Onward</span>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid
@@ -483,7 +483,7 @@ export default function TimelineSection() {
             height: "calc(-2.17vw + 402px)",
           }}
         >
-          <button className={classes.yearTagSm}>onwards</button>
+          <button className={classes.yearTagSm}>Onward</button>
           <span className={classes.eventTitle} style={{ paddingLeft: "0px" }}>
             We’re excited to continue to expand our impact on people’s lives,
             through:
