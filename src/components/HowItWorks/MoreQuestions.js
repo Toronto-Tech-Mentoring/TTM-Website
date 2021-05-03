@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "Josefin Sans",
         fontWeight: "600",
         fontSize: "22px",
-        width: "calc(42vw + 59.7px)",
+        // width: "calc(42vw + 59.7px)",
     },
     text: {
         fontFamily: "Poppins",
@@ -35,7 +35,7 @@ export default function MoreQuestions() {
     return (
         <GridContainer>
             <Grid item xs={12}>
-                <TextBox>
+                <TextBox style={{ paddingRight: "calc(19vw - 51.3px)" }}>
                     <div>
                         <h2 className={classes.title}>Have more questions?</h2>
                     </div>

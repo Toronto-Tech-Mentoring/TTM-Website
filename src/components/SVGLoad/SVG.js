@@ -6,5 +6,5 @@ export default function SVGLoad(props) {
   const PicSVG = props.image
   const classes = useStyles()
 
-  return <PicSVG className={classes.svgSettings} />
+  return <PicSVG className={classes.svgSettings} style={props.style} />
 }

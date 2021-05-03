@@ -3,15 +3,33 @@ import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
+import Box from "@material-ui/core/Box"
+import { makeStyles } from "@material-ui/core"
+
 
 import GridContainer from "../GridContainer/GridContainer"
-import TextBox from "../TextBox/TextBox"
 import Title from "../SectionTitle/Title"
 import PContent from "../DecoratedText/DecoratedText"
 import SVGLoad from "../SVGLoad/SVG"
 import Group from "../../images/how-it-works/Group99.svg"
 
+const useStyles = makeStyles(theme => ({
+  textBox: {
+    paddingRight: "0",
+    paddingLeft: "calc(19.4vw - 53.7px)",
+    [theme.breakpoints.down("960")]: {
+      paddingRight: "calc(36.3vw - 115px)",
+      fontSize: "calc(0.49vw + 12.2px)",
+      lineHeight: "calc(0.98vw + 20.5px)"
+    },
+  },
+  pcontent: {
+    fontSize: "calc(0.37vw + 12.7px)"
+  }
+}))
+
 export default function VitalRole() {
+  const styles = useStyles()
   const title = "Who do we serve?"
     const title2 = "What you can expect to get out of it?"
   const content1 =
@@ -21,16 +39,9 @@ export default function VitalRole() {
 
   return (
     <GridContainer>
-      <Grid item xs={12}>
-        {/* This is whitespace container which can be adjusted */}
-        <Container maxWidth="large">
-          <Typography component="div" style={{ height: "10vh" }} />
-        </Container>
-      </Grid>
       <Grid item xs={12} md={6}>
-        <TextBox
+        <Box className={styles.textBox}
           style={{
-            "padding-right": "calc(1.96vw + 8.94px)",
             "padding-left": "calc(19.4vw - 53.7px)",
             "padding-bottom": "30px"
 
@@ -38,18 +49,17 @@ export default function VitalRole() {
         >
           <Title
             title={title}
-            style={{ "text-align": "left" }}
+            style={{ "text-align": "left"}}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
           <PContent
             content={content1}
-            style={{ "text-align": "left" }}
+            style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
 
-        </TextBox>
-        <TextBox  style={{
-            "padding-right": "calc(1.96vw + 8.94px)",
+        </Box>
+        <Box  className={styles.textBox} style={{
             "padding-left": "calc(19.4vw - 53.7px)",
             "padding-top": "30px"
           }}>
@@ -61,7 +71,7 @@ export default function VitalRole() {
           <Hidden smDown>
             <PContent
               content={content2}
-              style={{ "text-align": "left" }}
+              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
           </Hidden>
@@ -69,15 +79,15 @@ export default function VitalRole() {
             <SVGLoad image={Group} alt="group 99 svg" />
             <PContent
               content={content2}
-              style={{ "text-align": "left" }}
+              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
           </Hidden>
-        </TextBox>
+        </Box>
       </Grid>
       <Hidden smDown>
         <Grid item xs={12} md={6}>
-          <SVGLoad image={Group} alt="group 99 svg" />
+          <SVGLoad image={Group} alt="group 99 svg" style={{ paddingTop: "0", marginTop: "138px" }}/>
         </Grid>
       </Hidden>
       <Grid item xs={12}>
