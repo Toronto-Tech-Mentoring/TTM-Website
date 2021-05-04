@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   sectionBox: {
     margin: "calc(2.41vw + 23.3px) 0",
+    textAlign: "left",
   },
   textBox: {
       margin: "calc(2.41vw + 23.3px) calc(25.5vw - 75.5px)",
@@ -95,7 +96,7 @@ export default function Applying() {
 
         <h1 className={styles.headerStyle}>{header2}</h1>
         <p className={styles.normalText}>Our program is hands-on, so you’ll have the chance to work on a tech-related project of your choosing. You’ll have one or more mentors who will work with you individually to teach you the skills that you need to complete your project, and help you along the way. They can also provide guidance on tech careers, and connect you with tech networks or communities if you’re interested. </p>
-        <p className={styles.normalText}>Everything is on your own terms. We can accommodate your schedule, a wide range of interests and projects, and work with your learning style</p>
+        <p className={styles.normalText}>Everything is on your own terms. We can accommodate your schedule, a wide range of interests and projects, and work with your learning style.</p>
         </Box>
     </Grid>
         </Box>

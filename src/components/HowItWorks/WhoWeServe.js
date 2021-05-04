@@ -49,12 +49,13 @@ export default function VitalRole() {
         >
           <Title
             title={title}
-            style={{ "text-align": "left"}}
+            divstyle={{ "text-align": "left", }}
+            pstyle={{ "marginBottom":"0" }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
           <PContent
             content={content1}
-            style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
+            style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)", "marginTop":"0"  }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
 
@@ -65,23 +66,25 @@ export default function VitalRole() {
           }}>
           <Title
             title={title2}
-            style={{ "text-align": "left" }}
+            divstyle={{ "text-align": "left" }}
+            pstyle={{ "marginBottom":"0", "marginTop" : "0" }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
           <Hidden smDown>
             <PContent
               content={content2}
-              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
+              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)", "marginTop":"0"   }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
           </Hidden>
           <Hidden mdUp>
-            <SVGLoad image={Group} alt="group 99 svg" />
             <PContent
               content={content2}
-              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)"  }}
+              style={{ "text-align": "left", "fontSize": "calc(0.37vw + 12.7px)", "marginTop":"0"   }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
+            <SVGLoad image={Group} alt="group 99 svg" style={{ width: "100%" }}/>
+
           </Hidden>
         </Box>
       </Grid>
@@ -92,7 +95,7 @@ export default function VitalRole() {
       </Hidden>
       <Grid item xs={12}>
         <Container maxWidth="large">
-          <Typography component="div" style={{ height: "10vh" }} />
+          <Typography component="div" style={{ height: "5vh" }} />
         </Container>
       </Grid>
     </GridContainer>
