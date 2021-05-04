@@ -13,14 +13,9 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "100%",
     paddingLeft: "calc(5.28vw + 6px)",
     paddingTop: "calc(5.19vw + 53.3px)",
-    marginLeft: "30px",
+    paddingBottom: "calc(5.19vw + 53.3px)",
      [theme.breakpoints.down("1022")]: {
-      paddingLeft: "0",
-
-    },
-    [theme.breakpoints.down("960")]: {
-    marginLeft: "0",
-
+      paddingLeft: "0"
     },
   },
 
@@ -161,6 +156,18 @@ export default function PositiveDifferenceSection() {
 
           <div className={classes.title2}>{title2}</div>
           <div className={classes.DonateButton}>
+            <div
+              style={{
+                marginTop: "45px",
+                marginBottom: "90px",
+              }}
+            >
+              <CustomButton
+                text={"Contact Us"}
+                customClass={classes.contactButton}
+                link="/contact"
+              />
+            </div>
           </div>
         </div>
         </Grid>

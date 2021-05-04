@@ -7,9 +7,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       marginTop: "0",
     },
-    "@media screen and (max-width: 360px)": {
-      width: "100%",
-    },
   },
 }))
 

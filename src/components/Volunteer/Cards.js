@@ -32,7 +32,7 @@ const cardsJson = [
         borderRadius: "30px",
         backgroundColor: "white",
         display: "inline-block",
-        "@media screen and (max-width: 1080px)": {
+        "@media screen and (max-width: 990px)": {
           margin: "-48px auto 0px auto",
         },
         "@media screen and (max-width: 350px)": {
@@ -92,10 +92,10 @@ const cardsJson = [
         backgroundColor: "white",
         display: "inline-block",
         margin: "0px 100px",
-        "@media screen and (max-width: 1270px)": {
+        "@media screen and (max-width: 1200px)": {
           margin: "0 auto 0px auto",
         },
-        "@media screen and (max-width: 1080px)": {
+        "@media screen and (max-width: 990px)": {
           margin: "48px auto 0px auto",
         },
         "@media screen and (max-width: 350px)": {
@@ -154,7 +154,7 @@ const cardsJson = [
         borderRadius: "30px",
         backgroundColor: "white",
         display: "inline-block",
-        "@media screen and (max-width: 1080px)": {
+        "@media screen and (max-width: 990px)": {
           margin: "48px auto 0px auto",
         },
         "@media screen and (max-width: 350px)": {
@@ -197,9 +197,7 @@ const cardsContainerStyle = {
   display: "flex",
   justifyContent: "center",
   paddingTop: "80px",
-  marginLeft: "3%",
-  marginRight: "3%",
-  "@media screen and (max-width: 1080px)": {
+  "@media screen and (max-width: 990px)": {
     flexDirection: "column",
   },
 }
