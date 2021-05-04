@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core"
 import Hands from "../../images/sponsors/how-you-can-support/hands.svg"
 import DonateIcons from "./DonateIcons"
 import PaypalImg from "../../images/sponsors/how-you-can-support/paypal.svg"
+import DonateButton from "../../components/Navbar/DonateBtn"
 import CustomButton from "../CustomButton"
 
 const useStyles = makeStyles(theme => ({
@@ -127,18 +128,7 @@ const useStyles = makeStyles(theme => ({
   },
   donateStyle: {
     position: "absolute",
-    width: "180px",
-    height: "50px",
-    borderRadius: "30px",
-    borderWidth: "0px",
-    backgroundColor: "#FF7500",
     margin: "467px 0px 0px 65%",
-    fontFamily: "Poppins",
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "18px",
-    lineHeight: "27px",
-    color: "#FFFFFF",
     [theme.breakpoints.down("1001")]: {
       margin: "418px 0px 0px 15%",
     },
@@ -251,7 +241,7 @@ export default function HowYouCanSupport() {
           {paypalInfo}
         </p>
         <img src={Hands} alt="handsSVG" className={classes.handsStyle} />
-        <button className={classes.donateStyle}>Donate</button>
+        <div className={classes.donateStyle}><DonateButton/></div>
         <img src={PaypalImg} alt="paypalSVG" className={classes.paypalImage} />
       </div>
 
