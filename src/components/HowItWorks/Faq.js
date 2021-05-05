@@ -5,7 +5,6 @@ import GridContainer from '../GridContainer/GridContainer';
 import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core"
 import TextBox from "../TextBox/TextBox"
-import Chevron from "../../images/how-it-works/chevron-down.svg"
 
 
 const useStyles = makeStyles(theme => ({
