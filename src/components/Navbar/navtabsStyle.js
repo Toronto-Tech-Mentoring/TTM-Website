@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down("1080")]: {
             height: "56px",
             marginRight: "calc(2.22vw + 7px)",
+
         },
         [theme.breakpoints.down("400")]: {
             height: "48px",
@@ -46,6 +47,7 @@ const useStyles = makeStyles(theme => ({
         display: "inline-block",
         [theme.breakpoints.down("1080")]: {
             display: "none",
+
         },
     },
     navlink: {
@@ -63,13 +65,33 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down("1080")]: {
             width: "auto",
             lineHeight: "56px",
+            textAlign: "left",
             maxWidth: "100%",
             minWidth: "104px",
+            width: "100vw",
+            maxWidth: "100vw",
+            borderTopWidth: "1px",
+            borderLeft: 0,
+            borderRight: 0,
+            borderColor: '#C4C4C4',
+            borderStyle: 'solid',
+            textIndent: "16px",
+
         },
         [theme.breakpoints.down("400")]: {
             lineHeight: "48px",
             maxWidth: "100%",
+            textAlign: "left",
             minWidth: "104px",
+            width: "100vw",
+            maxWidth: "100vw",
+            borderTopWidth: "1px",
+            borderLeft: 0,
+            borderRight: 0,
+            borderColor: '#C4C4C4',
+            borderStyle: 'solid',
+            textIndent: "16px",
+
         },
         "&:hover": {
             color: "#873FE2",
@@ -86,7 +108,12 @@ const useStyles = makeStyles(theme => ({
         color: "#873FE2",
         boxShadow: "0px 2px 0px #873FE2",
         [theme.breakpoints.down("1080")]: {
-            boxShadow: "2px 0px 0px #873FE2",
+            boxShadow: "0px 0px 0px #873FE2",
+            borderTopWidth: "2px",
+            borderLeft: 0,
+            borderRight: 0,
+            borderColor: '#873FE2',
+            borderStyle: 'solid'
         },
     },
     dropDownList: {

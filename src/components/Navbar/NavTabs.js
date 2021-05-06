@@ -52,7 +52,7 @@ export default function NavTabs() {
     {
       id: "sponsors",
       path: "/sponsors/",
-      title: "Sponsors us",
+      title: "Sponsor us",
     }]
   //   {
   //     id: "home",
@@ -98,6 +98,7 @@ export default function NavTabs() {
           id={item.id}
           className={classes.navlink}
           activeClassName={classes.active}
+          style={{ textIndent:"32px" }}
         >
           {item.title}
         </Link>
@@ -229,7 +230,7 @@ export default function NavTabs() {
           activeClassName={classes.active}
           style={{ color:"black" }}
         >
-         How to help<FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
+         How to help
         </Link>
       </li>
        {renderDropdownListItems()}
