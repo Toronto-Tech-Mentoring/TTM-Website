@@ -11,7 +11,8 @@
         "start": "npm run develop",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+        "deploy": "npx -n \"-r dotenv/config\" gatsby-plugin-s3 deploy"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -26,6 +27,7 @@
         "gatsby-plugin-google-fonts": "^1.0.1",
         "gatsby-plugin-react-svg": "^3.0.0",
         "gatsby-plugin-sharp": "^2.6.42",
+        "gatsby-plugin-s3":"^0.3.8",
         "gatsby-source-filesystem": "^2.3.34",
         "gatsby-transformer-sharp": "^2.5.17",
         "react": "^16.12.0",

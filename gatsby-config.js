@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+require("dotenv").config();
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -32,5 +32,13 @@ module.exports = {
         path: `${__dirname}/src/images/nonsvgs`,
       },
     },
+      {
+    resolve: `gatsby-plugin-s3`,
+    options: {
+      bucketName: "ttm-website",
+      protocol: "https",
+      hostname: "torontotechmentoring.ca",
+    },
+  },
   ],
 }

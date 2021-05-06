@@ -6,7 +6,8 @@ RUN yarn global add gatsby-cli
 # The port gatsby runs on
 EXPOSE 8000
 WORKDIR /myapp
-COPY ./package.json /myapp
-COPY ./yarn.lock /myapp
+COPY ./package.json .
+COPY ./yarn.lock .
+COPY ./.env .
 RUN yarn install && yarn cache clean
 CMD ["gatsby", "develop", "-H", "0.0.0.0" ]
