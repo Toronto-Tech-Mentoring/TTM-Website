@@ -1,6 +1,9 @@
 import React from "react"
 import { slide as Menu } from "react-burger-menu"
+
+
 export default function BurgerMenu(props) {
+
   var styles = {
     bmBurgerButton: {
       position: "fixed",
@@ -22,6 +25,7 @@ export default function BurgerMenu(props) {
     bmMenuWrap: {
       position: "fixed",
       width: "fit-content",
+      top: "56px",
     },
     bmMenu: {
       background: "#FFFFFF",
@@ -51,5 +55,21 @@ export default function BurgerMenu(props) {
     },
   }
 
-  return <Menu styles={styles}>{props.children}</Menu>
+  var isMenuOpen = function(state) {
+    const body = document.body;
+    if (state.isOpen){
+      const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollY}`;
+    }
+    else {
+      const scrollY = body.style.top;
+      body.style.position = '';
+      body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+
+  }
+
+  return <Menu onStateChange={ isMenuOpen } styles={styles}>{props.children}</Menu>
 }

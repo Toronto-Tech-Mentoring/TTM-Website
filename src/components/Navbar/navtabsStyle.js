@@ -17,9 +17,11 @@ const useStyles = makeStyles(theme => ({
         zIndex: 2000,
         [theme.breakpoints.down("1080")]: {
             height: "56px",
+            position: "fixed",
         },
         [theme.breakpoints.down("400")]: {
             height: "48px",
+            position: "fixed",
         },
     },
     navtabs: {
