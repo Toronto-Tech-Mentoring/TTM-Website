@@ -25,7 +25,9 @@ function ClientSideRendering({ children, ...delegated }) {
   if (!hasMounted) {
     return null
   }
-
+   window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });
   return <div {...delegated}>{children}</div>
 }
 
