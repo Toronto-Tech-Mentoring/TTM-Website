@@ -35,7 +35,7 @@ module.exports = {
       {
     resolve: `gatsby-plugin-s3`,
     options: {
-      bucketName: "ttm-website",
+      bucketName: "torontotechmentoring.ca",
       protocol: "https",
       hostname: "torontotechmentoring.ca",
     },
