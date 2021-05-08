@@ -1,5 +1,6 @@
 import React from "react"
 
+import FirstSectionContainer from "../shared/FirstSectionContainer"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
@@ -8,7 +9,8 @@ import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
 import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
 import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+// import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+
 
 export default function WhatiIsTTM() {
   const classes = useStyles()
@@ -17,7 +19,7 @@ export default function WhatiIsTTM() {
     "We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+)."
 
   return (
-    <div>
+    <FirstSectionContainer>
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
         style={{ "margin-top": "-1.6em" }}
@@ -51,7 +53,7 @@ export default function WhatiIsTTM() {
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
-    </div>
+      {/* <SkylineHeaderSVG /> */}
+    </FirstSectionContainer>
   )
 }
