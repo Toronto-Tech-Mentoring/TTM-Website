@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     height: "852px",
     width: "100%",
     background: "#4529AE",
-    "@media screen and (max-width: 990px)": {
+    "@media screen and (max-width: 1080px)": {
       height: "1534px",
     },
   },
@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "600",
     fontSize: "36px",
     lineHeight: "57px",
+    textDecoration: "underline",
+    textDecorationColor: "#FF7500",
+    textUnderlinePosition: "under",
     display: "flex",
     align: "center",
     color: "#FFFFFF",
@@ -71,6 +74,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "600",
     fontSize: "36px",
     lineHeight: "57px",
+    textDecoration: "underline",
+    textDecorationColor: "#FF7500",
+    textUnderlinePosition: "under",
     display: "flex",
     textAlign: "center",
     color: "#FFFFFF",
@@ -89,6 +95,8 @@ const useStyles = makeStyles(theme => ({
   },
   cheetohLeft: {
     paddingRight: "27px",
+    marginRight: "-70px",
+      marginTop: "-70px",
     "@media screen and (max-width: 900px)": {
       marginRight: "-125px",
       marginTop: "-50px",
@@ -99,6 +107,8 @@ const useStyles = makeStyles(theme => ({
   },
   cheetohRight: {
     paddingLeft: "27px",
+    marginLeft: "-70px",
+      marginTop: "-70px",
     "@media screen and (max-width: 900px)": {
       marginLeft: "-125px",
       marginTop: "-50px",
