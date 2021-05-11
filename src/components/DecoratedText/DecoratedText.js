@@ -6,7 +6,7 @@ export default function DecoratedText(props) {
 
   return (
     <div>
-      <PText content={props.content} extra={extra} style={props.style} />
+      <PText className={props.className} content={props.content} extra={extra} style={props.style} />
     </div>
   )
 }

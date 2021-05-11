@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "28px",
     fontWeight: 600,
     fontStyle: "normal",
-    marginTop: "123px",
+    marginTop: "100px",
     lineHeight: "42px",
     margin: "0 auto",
     letterSpacing: "0em",
@@ -81,6 +81,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     color: "#000000",
     paddingTop: "20px",
+    marginBottom: "60px",
     "@media screen and (max-width: 900px)": {
       fontSize: "16px",
       lineHeight: "27px",
@@ -91,6 +92,12 @@ const useStyles = makeStyles(theme => ({
       fontSize: "14px",
       lineHeight: "24px",
       width: "328px",
+      paddingTop: "30px",
+    },
+    "@media screen and (max-width: 360px)": {
+      fontSize: "14px",
+      lineHeight: "24px",
+      width: "80%",
       paddingTop: "30px",
     },
   },
@@ -142,14 +149,6 @@ export default function ContactUsSection() {
         </p>
         <CheetoRight className={`${classes.cheetohRight} `} />
       </Grid>
-
-      <div style={{ textAlign: "center", marginBottom: "90px" }}>
-        <CustomButton
-          text={"Contact Us"}
-          customClass={classes.contactButton}
-          link="/contact"
-        />
-      </div>
     </Grid>
   )
 }
