@@ -21,9 +21,7 @@ const LastName = new styled(TextField)`
     && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
     }
-    .MuiInput-underline:after {
-        border-bottom: 2px solid #873FE2;
-    }
+
     .MuiInputBase-root{
         font-family: Poppins;
         font-style: normal;
@@ -59,9 +57,7 @@ const FirstName = new styled(TextField)`
     && .MuiInput-underline:hover:before {
         border-bottom: 2px solid #873FE2;
     }
-    .MuiInput-underline:after {
-        border-bottom: 2px solid #873FE2;
-    }
+
 
     .MuiInputBase-root{
         font-family: Poppins;
@@ -91,10 +87,6 @@ const PhoneNumber = new styled(TextField)`
     }
 
     && .MuiInput-underline:hover:before {
-        border-bottom: 2px solid #873FE2;
-    }
-
-    .MuiInput-underline:after {
         border-bottom: 2px solid #873FE2;
     }
 
@@ -275,6 +267,9 @@ const StyledButton = new styled(Button)`
           background-color: #FFFFFF;
           color: #873FE2;
         }
+        &:disabled {
+          background-color: #C4C4C4;
+        }
       }
 `
 
@@ -304,15 +299,88 @@ export default function ContactUsForm() {
 
   const [pronoun, setPronoun] = React.useState("")
   const [reason, setReason] = React.useState("")
+  const [errorState, setErrorState] = React.useState({error: {}, errorMessage:{}})
+  const messages = {first: "Enter a name more than 1 character",
+                    last: "Enter a name more than 1 character",
+                  email: "Enter a valid email address",
+                  number: "Enter a valid phone number"}
+
+  var phonePattern = new RegExp(/^[0-9\b]+$/);
+  var emailPattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+
+  const updateStates = (isError, fieldName) => {
+      if (isError){
+        setErrorState({
+            error: {...errorState.error, [fieldName]: true},
+            errorMessage: {...errorState.errorMessage, [fieldName]: messages[ fieldName ]}
+          });
+      }
+      else {
+        setErrorState({
+              error: {...errorState.error, [fieldName]: false},
+              errorMessage: {...errorState.errorMessage, [fieldName]: ""}
+            });
+      }
+  }
+
+  const handleChange = event => {
+    const fieldName = event.target.name;
+    if (event.target.name == "first" || event.target.name == "last"){
+      var isError = false
+      if (event.target.value.length < 2) {
+        isError = true
+    }
+    updateStates(isError, fieldName)
+  }
+    if (event.target.name == "number"){
+      var isError = false
+      if (event.target.value.length < 10 || !phonePattern.test(event.target.value)){
+          isError = true
+    }
+      updateStates(isError, fieldName)
+  }
+   if (event.target.name == "email"){
+      var isError = false
+      if (event.target.value.length < 6 || !emailPattern.test(event.target.value)){
+          isError = true
+    }
+      updateStates(isError, fieldName)
+  }
+}
 
   return (
     <>
       <StyledGrid justify="left" alignItems="center">
-        <FirstName label="First Name"></FirstName>
-        <LastName label="Last Name"></LastName>
+        <FirstName  error={errorState.error.first}
+          onChange = {handleChange}
+          required
+          id="filled-error-helper-text"
+          label="First Name"
+          name="first"
+          helperText={errorState.errorMessage.first}
+          ></FirstName>
+        <LastName error={errorState.error.last}
+          onChange = {handleChange}
+          required
+          id="filled-error-helper-text"
+          label="Last Name"
+          name="last"
+          helperText={errorState.errorMessage.last}></LastName>
         <br></br>
-        <PhoneNumber label="Phone Number"></PhoneNumber>
-        <EmailAddress label="Email" ></EmailAddress>
+        <PhoneNumber error={errorState.error.number}
+          onChange = {handleChange}
+          required
+          id="filled-error-helper-text"
+          label="Phone Number"
+          name="number"
+          helperText={errorState.errorMessage.number}></PhoneNumber>
+        <EmailAddress error={errorState.error.email}
+          onChange = {handleChange}
+          required
+          id="filled-error-helper-text"
+          label="Email"
+          name="email"
+          helperText={errorState.errorMessage.email}></EmailAddress>
         <br></br>
         <StyledQuestion>What's Your Preferred Pronoun?</StyledQuestion>
         <PreferredPronouns checked="false">
@@ -362,7 +430,7 @@ export default function ContactUsForm() {
           disableUnderline
         ></StyledInput>
         <br></br>
-        <StyledButton size="medium" color="primary">
+        <StyledButton size="medium" disabled={errorState.error.first}>
           Send
         </StyledButton>
       </StyledGrid>
