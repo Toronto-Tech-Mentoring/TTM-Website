@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "none",
         color: "black",
         position: "relative",
+        paddingRight: "30px",
         "&::after": {
             fontFamily: 'Font Awesome\\ 5 Free',
             fontWeight: "900",
@@ -49,7 +50,9 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "underline",
         textDecorationColor: "#FF7500",
         textUnderlinePosition: "under",
+        fontWeight: "600",
         position: "relative",
+        paddingRight: "30px",
         "&::after": {
             fontFamily: 'Font Awesome\\ 5 Free',
             fontWeight: "900",
@@ -61,6 +64,7 @@ const useStyles = makeStyles(theme => ({
             color: "#4529AE",
     }
 }
+
 }))
 
 export default function Faq() {
