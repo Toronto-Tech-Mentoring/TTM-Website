@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect} from "react"
 
 import { Grid } from "@material-ui/core"
 import { TextField } from "@material-ui/core"
@@ -300,6 +300,7 @@ export default function ContactUsForm() {
   const [pronoun, setPronoun] = React.useState("")
   const [reason, setReason] = React.useState("")
   const [errorState, setErrorState] = React.useState({error: {}, errorMessage:{}})
+  const [errorBeforeSubmit, setErrorBeforeSubmit] = React.useState("")
   const messages = {first: "Enter a name more than 1 character",
                     last: "Enter a name more than 1 character",
                   email: "Enter a valid email address",
@@ -309,6 +310,7 @@ export default function ContactUsForm() {
   var emailPattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
   const updateStates = (isError, fieldName) => {
+    setErrorBeforeSubmit(false)
       if (isError){
         setErrorState({
             error: {...errorState.error, [fieldName]: true},
@@ -323,7 +325,7 @@ export default function ContactUsForm() {
       }
   }
 
-  const handleChange = event => {
+  const handleNext = event => {
     const fieldName = event.target.name;
     if (event.target.name == "first" || event.target.name == "last"){
       var isError = false
@@ -348,11 +350,20 @@ export default function ContactUsForm() {
   }
 }
 
+for (var key in errorState.error){
+        if (errorState.error[key]){
+          useEffect(() => {
+            errorBeforeSubmit
+          },[errorBeforeSubmit])
+        }
+      }
+      console.log(errorBeforeSubmit)
+
   return (
     <>
       <StyledGrid justify="left" alignItems="center">
         <FirstName  error={errorState.error.first}
-          onChange = {handleChange}
+          onChange = {handleNext}
           required
           id="filled-error-helper-text"
           label="First Name"
@@ -360,7 +371,7 @@ export default function ContactUsForm() {
           helperText={errorState.errorMessage.first}
           ></FirstName>
         <LastName error={errorState.error.last}
-          onChange = {handleChange}
+          onChange = {handleNext}
           required
           id="filled-error-helper-text"
           label="Last Name"
@@ -368,14 +379,14 @@ export default function ContactUsForm() {
           helperText={errorState.errorMessage.last}></LastName>
         <br></br>
         <PhoneNumber error={errorState.error.number}
-          onChange = {handleChange}
+          onChange = {handleNext}
           required
           id="filled-error-helper-text"
           label="Phone Number"
           name="number"
           helperText={errorState.errorMessage.number}></PhoneNumber>
         <EmailAddress error={errorState.error.email}
-          onChange = {handleChange}
+          onChange = {handleNext}
           required
           id="filled-error-helper-text"
           label="Email"
@@ -430,7 +441,7 @@ export default function ContactUsForm() {
           disableUnderline
         ></StyledInput>
         <br></br>
-        <StyledButton size="medium" disabled={errorState.error.first}>
+        <StyledButton size="medium" disabled={errorBeforeSubmit}>
           Send
         </StyledButton>
       </StyledGrid>
