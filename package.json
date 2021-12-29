@@ -27,6 +27,7 @@
         "gatsby-plugin-google-fonts": "^1.0.1",
         "gatsby-plugin-react-svg": "^3.0.0",
         "gatsby-plugin-sharp": "^4.4.0",
+        "gatsby-plugin-web-font-loader": "^1.0.4",
         "gatsby-react-router-scroll": "^5.4.0",
         "gatsby-source-filesystem": "^4.4.0",
         "gatsby-transformer-sharp": "^4.4.0",
@@ -35,8 +36,7 @@
         "react-collapsible": "2.8.3",
         "react-dom": "^16.12.0",
         "styled-components": "^5.2.1",
-        "url-loader": "^4.1.1",
-        "webfontloader": "^1.6.28"
+        "url-loader": "^4.1.1"
     },
     "devDependencies": {
         "all-contributors-cli": "^6.19.0",
