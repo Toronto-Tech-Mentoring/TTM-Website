@@ -1,11 +1,11 @@
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
+exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+  if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /webfontloader/,
-            use: loaders.null(),
+            loader: loaders.null(),
           },
         ],
       },
