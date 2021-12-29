@@ -5,7 +5,7 @@ exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
         rules: [
           {
             test: /webfontloader/,
-            loader: loaders.null(),
+            use: loaders.null(),
           },
         ],
       },
