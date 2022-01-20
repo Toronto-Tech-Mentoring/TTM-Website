@@ -25,6 +25,7 @@
         "gatsby-link": "^4.4.0",
         "gatsby-plugin-fontawesome-css": "1.2.0",
         "gatsby-plugin-google-fonts": "^1.0.1",
+        "gatsby-plugin-netlify": "^4.0.0",
         "gatsby-plugin-sharp": "^4.4.0",
         "gatsby-plugin-svgr": "^3.0.0-beta.0",
         "gatsby-plugin-web-font-loader": "^1.0.4",
