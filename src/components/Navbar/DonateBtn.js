@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import Box from "@material-ui/core/Box"
 
-import HeartWhite from "../../images/navbar/heart-white.svg"
-import HeartPurple from "../../images/navbar/heart-purple.svg"
+import { ReactComponent as HeartWhite } from "../../images/navbar/heart-white.svg"
+import { ReactComponent as HeartPurple } from "../../images/navbar/heart-purple.svg"
 
 // The style components were used as an easy way to change the button color on hover
 const StyledButton = styled.button`
@@ -54,7 +55,7 @@ const StyledFont = styled.a`
     font-size: 12px;
   }
 `
-const StyledImg = styled.img`
+const StyledImg = styled(Box)`
   transition: transform 300ms ease-in-out;
   width: 17px;
   @media (max-width: 1040px) {
@@ -93,7 +94,9 @@ class DonateBtn extends React.Component {
       >
         <span style={{ width: "fit-content", margin: "auto" }}>
           <StyledFont>Donate</StyledFont>
-          <StyledImg src={this.state.imgSrc} alt="heart color" />
+          <StyledImg alt="heart color">
+            {this.state.imgSrc}
+            </StyledImg>
         </span>
       </StyledButton>
     )

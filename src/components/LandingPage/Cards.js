@@ -4,14 +4,14 @@ import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
 import Grid from "@material-ui/core/Grid"
 
-import Background1 from "../../images/aboutUsBackground/background1.svg"
-import Background2 from "../../images/aboutUsBackground/background2.svg"
-import Background3 from "../../images/aboutUsBackground/background3.svg"
-import GoalSVG from "../../images/about-us/How-are-we-different-section/goals.svg"
-import SkillSVG from "../../images/about-us/How-are-we-different-section/conversation.svg"
-import SupportSVG from "../../images/about-us/How-are-we-different-section/support.svg"
-import Shiny1SVG from "../../images/about-us/How-are-we-different-section/shiny.svg"
-import Shiny2SVG from "../../images/about-us/How-are-we-different-section/shiny2.svg"
+import { ReactComponent as Background1 } from "../../images/aboutUsBackground/background1.svg"
+import { ReactComponent as Background2 } from "../../images/aboutUsBackground/background2.svg"
+import { ReactComponent as Background3 } from "../../images/aboutUsBackground/background3.svg"
+import { ReactComponent as GoalSVG } from "../../images/about-us/How-are-we-different-section/goals.svg"
+import { ReactComponent as SkillSVG } from "../../images/about-us/How-are-we-different-section/conversation.svg"
+import { ReactComponent as SupportSVG } from "../../images/about-us/How-are-we-different-section/support.svg"
+import { ReactComponent as Shiny1SVG } from "../../images/about-us/How-are-we-different-section/shiny.svg"
+import { ReactComponent as Shiny2SVG } from "../../images/about-us/How-are-we-different-section/shiny2.svg"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -71,7 +71,7 @@ export default function Cards() {
   const classes = useStyles()
 
   return (
-    <Grid container alignItems="center" justify="center">
+    <Grid container alignItems="center" justifyContent="center">
       <Grid className={classes.stack}>
         <Card className={classes.root}>
           <p className={classes.title}>Client-determined goals</p>

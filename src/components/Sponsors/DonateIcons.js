@@ -2,15 +2,16 @@ import React from "react"
 import { makeStyles } from "@material-ui/core"
 
 import GroupedCards from "../shared/GroupedCards"
-import laptops from "../../images/sponsors/how-you-can-support/laptops.svg"
-import software from "../../images/sponsors/how-you-can-support/software.svg"
-import sessions from "../../images/sponsors/how-you-can-support/sessions.svg"
-import workshops from "../../images/sponsors/how-you-can-support/workshops.svg"
+import { ReactComponent as Laptops } from "../../images/sponsors/how-you-can-support/laptops.svg"
+import { ReactComponent as Software } from "../../images/sponsors/how-you-can-support/software.svg"
+import { ReactComponent as Sessions } from "../../images/sponsors/how-you-can-support/sessions.svg"
+import { ReactComponent as Workshops } from "../../images/sponsors/how-you-can-support/workshops.svg"
 
 const cardsJson = [
   {
+    pos: 1,
     header: "",
-    body: <img src={laptops} alt="laptops for accessibility" />,
+    body: <Laptops alt="laptops for accessibility" />,
     footer: "Laptops for accessibility",
     style: {
       cardContainer: {},
@@ -68,8 +69,9 @@ const cardsJson = [
     },
   },
   {
+    pos: 2,
     header: "",
-    body: <img src={software} alt="server subscriptions" />,
+    body: <Software alt="server subscriptions" />,
     footer: "Software or server subscriptions",
     style: {
       cardContainer: {},
@@ -118,8 +120,9 @@ const cardsJson = [
     },
   },
   {
+    pos: 3,
     header: "",
-    body: <img src={sessions} alt="workspaces to host sessions" />,
+    body: <Sessions alt="workspaces to host sessions" />,
     footer: "Workspaces where we can host our sessions",
     style: {
       cardContainer: {},
@@ -182,8 +185,9 @@ const cardsJson = [
     },
   },
   {
+    pos: 4,
     header: "",
-    body: <img src={workshops} alt="additional workshops" />,
+    body: <Workshops alt="additional workshops" />,
     footer: "Access to additional training and workshops",
     style: {
       cardContainer: {},

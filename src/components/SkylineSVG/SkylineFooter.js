@@ -1,10 +1,12 @@
 import React from "react"
-import Skylinefooter from "../../images/skyline/skylinefooter.svg"
+import { ReactComponent as Skylinefooter } from "../../images/skyline/skylinefooter.svg"
+import { skylineFooterContainer, skylineFooterImg } from "./skyline.module.css"
+
 
 export default function SkylineFooterSVG() {
   return (
-    <div>
-      <Skylinefooter style={{ width: "100%", height: "auto" }} />
+    <div className={skylineFooterContainer}>
+      <Skylinefooter className={skylineFooterImg}/>
     </div>
   )
 }

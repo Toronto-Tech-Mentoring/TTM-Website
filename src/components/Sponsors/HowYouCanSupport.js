@@ -1,9 +1,9 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
 
-import Hands from "../../images/sponsors/how-you-can-support/hands.svg"
+import { ReactComponent as Hands } from "../../images/sponsors/how-you-can-support/hands.svg"
 import DonateIcons from "./DonateIcons"
-import PaypalImg from "../../images/sponsors/how-you-can-support/paypal.svg"
+import { ReactComponent as PaypalImg } from "../../images/sponsors/how-you-can-support/paypal.svg"
 import DonateButton from "../../components/Navbar/DonateBtn"
 import CustomButton from "../CustomButton"
 
@@ -240,9 +240,9 @@ export default function HowYouCanSupport() {
         <p className={`${classes.textStyle} ${classes.paypalInfoStyle}`}>
           {paypalInfo}
         </p>
-        <img src={Hands} alt="handsSVG" className={classes.handsStyle} />
+        <Hands alt="handsSVG" className={classes.handsStyle} />
         <div className={classes.donateStyle}><DonateButton/></div>
-        <img src={PaypalImg} alt="paypalSVG" className={classes.paypalImage} />
+        <PaypalImg alt="paypalSVG" className={classes.paypalImage} />
       </div>
 
       <div>

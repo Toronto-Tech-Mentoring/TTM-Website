@@ -3,8 +3,8 @@ import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 
 import VolunteerCards from "./Cards"
-import CheetohLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetohRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetohLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetohRight } from "../../images/cheetohs/cheetohRight.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {

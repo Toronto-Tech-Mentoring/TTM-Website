@@ -9,7 +9,7 @@ import TextBox from "../TextBox/TextBox"
 import Title from "../SectionTitle/Title"
 import PContent from "../DecoratedText/DecoratedText"
 import SVGLoad from "../SVGLoad/SVG"
-import DataAnalyse from "../../images/partners/vital-role/data_analyse.svg"
+import { ReactComponent as DataAnalyse } from "../../images/partners/vital-role/data_analyse.svg"
 
 export default function VitalRole() {
   const title = "The vital role our partners play:"
@@ -22,31 +22,31 @@ export default function VitalRole() {
     <GridContainer>
       <Grid item xs={12}>
         {/* This is whitespace container which can be adjusted */}
-        <Container maxWidth="large">
+        <Container maxWidth="lg">
           <Typography component="div" style={{ height: "10vh" }} />
         </Container>
       </Grid>
       <Grid item xs={12} md={6}>
         <TextBox
           style={{
-            "padding-right": "calc(1.96vw + 8.94px)",
-            "padding-left": "calc(19.4vw - 53.7px)",
+            paddingRight: "calc(1.96vw + 8.94px)",
+            paddingLeft: "calc(19.4vw - 53.7px)",
           }}
         >
           <Title
             title={title}
-            style={{ "text-align": "left" }}
+            style={{ textAlign: "left" }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
           <PContent
             content={content1}
-            style={{ "text-align": "left" }}
+            style={{ textAlign: "left" }}
             hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
           />
           <Hidden smDown>
             <PContent
               content={content2}
-              style={{ "text-align": "left" }}
+              style={{ textAlign: "left" }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
           </Hidden>
@@ -54,7 +54,7 @@ export default function VitalRole() {
             <SVGLoad image={DataAnalyse} alt="dataAnalyseSVG" />
             <PContent
               content={content2}
-              style={{ "text-align": "left" }}
+              style={{ textAlign: "left" }}
               hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
             />
           </Hidden>
@@ -66,7 +66,7 @@ export default function VitalRole() {
         </Grid>
       </Hidden>
       <Grid item xs={12}>
-        <Container maxWidth="large">
+        <Container maxWidth="lg">
           <Typography component="div" style={{ height: "10vh" }} />
         </Container>
       </Grid>

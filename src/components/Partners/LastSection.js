@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
-import Logo from "../../images/delivery-partner/our-partner/logo.svg"
-import Logo2 from "../../images/delivery-partner/our-partner/logo2.svg"
+import { ReactComponent as Logo } from "../../images/delivery-partner/our-partner/logo.svg"
+import { ReactComponent as Logo2 } from "../../images/delivery-partner/our-partner/logo2.svg"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -112,30 +112,27 @@ export default function LastSection() {
   return (
     <div className={classes.root}>
       <p className={classes.title}>Our Partners</p>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
           <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
-            <Link to={"http://civictech.ca/"} className={classes.link}>
+            <a href="http://civictech.ca/" target="_blank" className={classes.link}>
             <div className={`${classes.paper} ${classes.leftDiv}`}>
-              <img
-                alt=""
+              <Logo
+                alt="logo1"
                 className={`${classes.logo} ${classes.logo1}`}
-                src={Logo}
               />
               <span className={classes.text1}>Civic Tech Toronto</span>
             </div>
-            </Link>
+            </a>
           </Grid>
         <Grid item xs={7} sm={5} md={4} lg={3} xl={2}>
-          <Link to={"https://ymcagta.org/find-a-y/ymca-sprott-house"} className={classes.link}>
+          <a href="https://ymcagta.org/find-a-y/ymca-sprott-house" className={classes.link} target="_blank">
           <div className={`${classes.paper} ${classes.RightDiv}`}>
-            <img
-              alt=""
-              className={`${classes.logo} ${classes.logo2}`}
-              src={Logo2}
+            <Logo2
+              alt="logo2" className={`${classes.logo} ${classes.logo2}`}
             />
             <span className={classes.text2}>The Sprott House</span>
           </div>
-          </Link>
+          </a>
         </Grid>
       </Grid>
     </div>

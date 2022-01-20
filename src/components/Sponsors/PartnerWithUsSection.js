@@ -1,13 +1,13 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
 
-import Cheetoh from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as Cheetoh } from "../../images/cheetohs/cheetohRight.svg"
 
 // Images
-import ImageOne from "../../images/sponsors/partner/laptop.svg"
-import ImageTwo from "../../images/sponsors/partner/software.svg"
-import ImageThree from "../../images/sponsors/partner/workspaces.svg"
-import ImageFour from "../../images/sponsors/partner/training.svg"
+import { ReactComponent as ImageOne } from "../../images/sponsors/partner/laptop.svg"
+import { ReactComponent as ImageTwo } from "../../images/sponsors/partner/software.svg"
+import { ReactComponent as ImageThree } from "../../images/sponsors/partner/workspaces.svg"
+import { ReactComponent as ImageFour } from "../../images/sponsors/partner/training.svg"
 
 //  Cards flex container
 import GroupedCards from "../shared/GroupedCards"
@@ -15,7 +15,7 @@ import GroupedCards from "../shared/GroupedCards"
 // Cards JSON
 /*********************************************************************
     Each card object contains 4 propersties ( all required for the reusable component):
-    - header: for the card header 
+    - header: for the card header
     - body: for the card body
     - footer for the card footer
     - style: object to style each of the s sections

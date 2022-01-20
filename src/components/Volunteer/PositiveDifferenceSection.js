@@ -145,7 +145,7 @@ export default function PositiveDifferenceSection() {
     <Grid
   container
   direction="row"
-  justify="space-evenly"
+  justifyContent="space-evenly"
   alignItems="center"
   className={classes.container}
 >

@@ -17,21 +17,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Droid Sans', 'Droid Serif']
-        }
-      }
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /(about-us|skyline|timeline|bottom-line|vital-role|cheetohs|thankyou|who-we-are|how-it-works)/,
+          families: ["Droid Sans", "Droid Serif"],
         },
       },
     },
+    `gatsby-plugin-svgr`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

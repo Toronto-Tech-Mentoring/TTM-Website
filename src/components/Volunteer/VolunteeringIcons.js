@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import VolunteeringIcons from "../../images/volunteers/watering-can.svg"
+import { ReactComponent as VolunteeringIcons } from "../../images/volunteers/watering-can.svg"
 
 const useStyles = makeStyles(theme => ({
   imageWrapper: {
@@ -26,11 +26,7 @@ export default function VolunteeringIconsGroup(props) {
   const classes = useStyles()
   return (
     <div className={classes.imageWrapper}>
-      <img
-        src={VolunteeringIcons}
-        className={classes.image}
-        alt="Volunteering icons"
-      />
+      <VolunteeringIcons className={classes.image} alt="Volunteering Icons"/>
     </div>
   )
 }

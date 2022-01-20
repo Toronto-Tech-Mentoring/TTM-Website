@@ -1,2 +1,5 @@
-export { default as SkylineHeader } from "./SkylineHeader"
-export { default as SkylineFooter } from "./SkylineFooter"
+import  { default as SkylineHeader } from "./SkylineHeader"
+import { default as SkylineFooter } from "./SkylineFooter"
+
+
+export {  SkylineHeader, SkylineFooter }

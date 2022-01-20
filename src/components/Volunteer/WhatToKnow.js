@@ -2,14 +2,14 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
-import Star1 from "../../images/sponsors/what-to-know/star1.svg"
-import Star2 from "../../images/sponsors/what-to-know/star2.svg"
-import Star3 from "../../images/sponsors/what-to-know/star3.svg"
-import Star4 from "../../images/sponsors/what-to-know/star4.svg"
-import Star5 from "../../images/sponsors/what-to-know/star5.svg"
-import Star6 from "../../images/sponsors/what-to-know/star6.svg"
-import Star7 from "../../images/sponsors/what-to-know/star7.svg"
-import Star8 from "../../images/sponsors/what-to-know/star8.svg"
+import { ReactComponent as Star1 } from "../../images/sponsors/what-to-know/star1.svg"
+import { ReactComponent as Star2 } from "../../images/sponsors/what-to-know/star2.svg"
+import { ReactComponent as Star3 } from "../../images/sponsors/what-to-know/star3.svg"
+import { ReactComponent as Star4 } from "../../images/sponsors/what-to-know/star4.svg"
+import { ReactComponent as Star5 } from "../../images/sponsors/what-to-know/star5.svg"
+import { ReactComponent as Star6 } from "../../images/sponsors/what-to-know/star6.svg"
+import { ReactComponent as Star7 } from "../../images/sponsors/what-to-know/star7.svg"
+import { ReactComponent as Star8 } from "../../images/sponsors/what-to-know/star8.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -253,14 +253,14 @@ export default function WhatToKnow() {
         <h1 className={classes.headerText}>{header}</h1>
       </Grid>
 
-      <img src={Star1} className={classes.star1} alt="StarImage" />
-      <img src={Star2} className={classes.star2} alt="StarImage" />
-      <img src={Star3} className={classes.star3} alt="StarImage" />
-      <img src={Star4} className={classes.star4} alt="StarImage" />
-      <img src={Star5} className={classes.star5} alt="StarImage" />
-      <img src={Star6} className={classes.star6} alt="StarImage" />
-      <img src={Star7} className={classes.star7} alt="StarImage" />
-      <img src={Star8} className={classes.star8} alt="StarImage" />
+      <Star1 className={classes.star1} alt="StarImage" />
+      <Star2 className={classes.star2} alt="StarImage" />
+      <Star3 className={classes.star3} alt="StarImage" />
+      <Star4 className={classes.star4} alt="StarImage" />
+      <Star5 className={classes.star5} alt="StarImage" />
+      <Star6 className={classes.star6} alt="StarImage" />
+      <Star7 className={classes.star7} alt="StarImage" />
+      <Star8 className={classes.star8} alt="StarImage" />
 
       <Grid
         className={`${classes.rectangleContainer} ${classes.leftRectangle}`}

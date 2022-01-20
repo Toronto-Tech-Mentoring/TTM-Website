@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import CustomButton from "../CustomButton"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
-import ProcessBlob1 from "../../images/volunteers/process/process1.svg"
-import ProcessBlob2 from "../../images/volunteers/process/process2.svg"
-import ProcessBlob3 from "../../images/volunteers/process/process3.svg"
-import ProcessBlob4 from "../../images/volunteers/process/process4.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as ProcessBlob1 } from "../../images/volunteers/process/process1.svg"
+import { ReactComponent as ProcessBlob2 } from "../../images/volunteers/process/process2.svg"
+import { ReactComponent as ProcessBlob3 } from "../../images/volunteers/process/process3.svg"
+import { ReactComponent as ProcessBlob4 } from "../../images/volunteers/process/process4.svg"
 import SkylineFooter from "../SkylineSVG/SkylineFooter"
 
 const useStyles = makeStyles(theme => ({
@@ -123,12 +123,19 @@ export default function ProcessSectopm() {
         </h2>
         <CheetoRight className={`${classes.cheetohRight} `} />
       </Grid>
-      <Grid
-        className={classes.stepBox}
-        style={{
-          backgroundImage: `url(${ProcessBlob1})`,
-        }}
-      >
+      <Grid className={classes.stepBox}>
+        <div
+          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+        >
+          <ProcessBlob1
+            style={{
+              position: "absolute",
+              display: "block",
+              zIndex: "1",
+            }}
+            alt="step 1 blob"
+          />
+        </div>
         <Grid>
           <h2 className={classes.h2Text}>Step 1: Apply</h2>
         </Grid>
@@ -140,12 +147,19 @@ export default function ProcessSectopm() {
           </p>
         </Grid>
       </Grid>
-      <Grid
-        className={classes.stepBox}
-        style={{
-          backgroundImage: `url(${ProcessBlob2})`,
-        }}
-      >
+      <Grid className={classes.stepBox}>
+        <div
+          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+        >
+          <ProcessBlob2
+            style={{
+              position: "absolute",
+              display: "block",
+              zIndex: "1",
+            }}
+            alt="step 2 blob"
+          />
+        </div>
         <Grid>
           <h2 className={classes.h2Text}>Step 2: Interview</h2>
         </Grid>
@@ -158,12 +172,19 @@ export default function ProcessSectopm() {
           </p>
         </Grid>
       </Grid>
-      <Grid
-        className={classes.stepBox}
-        style={{
-          backgroundImage: `url(${ProcessBlob3})`,
-        }}
-      >
+      <Grid className={classes.stepBox}>
+        <div
+          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+        >
+          <ProcessBlob3
+            style={{
+              position: "absolute",
+              display: "block",
+              zIndex: "1",
+            }}
+            alt="step 3 blob"
+          />
+        </div>
         <Grid>
           <h2 className={classes.h2Text}>Step 3: Training</h2>
         </Grid>
@@ -176,12 +197,19 @@ export default function ProcessSectopm() {
           </p>
         </Grid>
       </Grid>
-      <Grid
-        className={classes.stepBox}
-        style={{
-          backgroundImage: `url(${ProcessBlob4})`,
-        }}
-      >
+      <Grid className={classes.stepBox}>
+        <div
+          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+        >
+          <ProcessBlob4
+            style={{
+              position: "absolute",
+              display: "block",
+              zIndex: "1",
+            }}
+            alt="step 4 blob"
+          />
+        </div>
         <Grid>
           <h2 className={classes.h2Text}>Step 4: Volunteer</h2>
         </Grid>

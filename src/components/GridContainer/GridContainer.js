@@ -11,7 +11,7 @@ export default function GridContainer(props) {
       container
       className={classes.root}
       direction={props.direction}
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       style={props.style}
     >

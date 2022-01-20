@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 
 import SVGLoad from "../SVGLoad/SVG"
-import Hands from "../../images/sponsors/thankyou/hands.svg"
+import { ReactComponent as Hands } from "../../images/sponsors/thankyou/hands.svg"
 import SkylineFooter from "../../components/SkylineSVG/SkylineFooter"
 import Instagram from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/Instagram"
 import InstagramMobile from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/InstagramMobile"
@@ -149,11 +149,11 @@ export default function ThankYou() {
             className={classes.backgroundBlob}
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M521 488C567.5 253.5 1061.55 184.328 1049.51 94.775C1039.12 17.508 376.834 -28.4169 253.7 19.6385C138.702 64.5186 76.93 81.7505 14.9521 183.386C-40.7705 274.764 73.6986 509.815 136 531.5C211.961 557.94 343.526 641.671 521 488Z"
               fill="#E8D1FF"
-              fill-opacity="0.4"
+              fillOpacity="0.4"
             />
             <foreignObject
               x="130"
@@ -222,11 +222,11 @@ export default function ThankYou() {
             className={classes.backgroundBlobMobile}
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M223.36 522.536C248.833 271.44 519.477 197.373 512.881 101.482C507.191 18.7471 144.384 -30.4279 76.9297 21.0283C13.9325 69.0846 -19.9071 87.5359 -53.8594 196.364C-84.3849 294.209 -21.6773 545.894 12.452 569.114C54.0642 597.425 126.137 687.082 223.36 522.536Z"
               fill="#E8D1FF"
-              fill-opacity="0.4"
+              fillOpacity="0.4"
             />
             <foreignObject
               x="20"

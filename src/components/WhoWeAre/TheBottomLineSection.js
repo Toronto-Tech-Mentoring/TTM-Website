@@ -8,10 +8,10 @@ import Title from "../SectionTitle/Title"
 import PContent from "../DecoratedText/DecoratedText"
 import Question from "../BoldedHeaderText/BoldedHeader"
 import ContactButton from "../Button/ContactButton"
-import People from "../../images/about-us/bottom-line/people.svg"
+import { ReactComponent as People } from "../../images/about-us/bottom-line/people.svg"
 import SVGLoad from "../SVGLoad/SVG"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
 
 export default function TheBottomLineSection() {

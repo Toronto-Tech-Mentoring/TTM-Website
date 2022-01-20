@@ -6,8 +6,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import GridContainer from "../GridContainer/GridContainer"
 import SectionTitle from "../SectionTitle/Title"
 import TextBox from "../TextBox/TextBox"
-import RightPerson from "../../images/who-we-are/right_person.svg"
-import LeftPerson from "../../images/who-we-are/left_person.svg"
+import { ReactComponent as RightPerson } from "../../images/who-we-are/right_person.svg"
+import { ReactComponent as LeftPerson } from "../../images/who-we-are/left_person.svg"
 
 const useStyles = makeStyles(theme => ({
   sectionTitle: {

@@ -69,7 +69,7 @@ export default function HowAreWeDifferentSection() {
   return (
     <Grid
       container
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       style={{
         backgroundColor: "#4529AE",

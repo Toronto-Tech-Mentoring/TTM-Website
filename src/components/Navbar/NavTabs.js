@@ -1,21 +1,22 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faCaretDown
-} from '@fortawesome/free-solid-svg-icons'
+import Button from "@material-ui/core/Button"
+import ClickAwayListener from "@material-ui/core/ClickAwayListener"
+import Grow from "@material-ui/core/Grow"
+import Paper from "@material-ui/core/Paper"
+import Popper from "@material-ui/core/Popper"
+import MenuItem from "@material-ui/core/MenuItem"
+import MenuList from "@material-ui/core/MenuList"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import DonateBtn from "./DonateBtn"
 import BurgerMenu from "./BurgerMenu"
 import Logo from "./Logo"
 import "./NavAccessibility.css"
 import { useStyles } from "./navtabsStyle"
+import styled from "styled-components"
+import { withTheme } from "@material-ui/core/styles"
+
 
 /** sizing  navbar padding based on viewport**/
 
@@ -24,12 +25,12 @@ export default function NavTabs() {
     {
       id: "who_we_are",
       path: "/who-we-are/",
-      title: "Who we are"
+      title: "Who we are",
     },
     {
       id: "how_it_works",
       path: "/how-it-works/",
-      title: "How it works"
+      title: "How it works",
     },
   ]
   // const listItems = [
@@ -38,8 +39,8 @@ export default function NavTabs() {
   //     path: "/client/",
   //     title: "Client",
   //   },
-    const dropdownListItems = [
-      {
+  const dropdownListItems = [
+    {
       id: "volunteer",
       path: "/volunteer/",
       title: "Volunteer with us",
@@ -53,7 +54,8 @@ export default function NavTabs() {
       id: "sponsors",
       path: "/sponsors/",
       title: "Sponsor us",
-    }]
+    },
+  ]
   //   {
   //     id: "home",
   //     path: "/",
@@ -92,13 +94,16 @@ export default function NavTabs() {
 
   const renderDropdownListItems = () => {
     return dropdownListItems.map(item => (
-      <li className={classes.navitem+ " "+classes.dropDownList} key={item.id}>
+      <li
+        className={classes.navitem + " " + classes.dropDownList}
+        key={item.id}
+      >
         <Link
           to={item.path}
           id={item.id}
           className={classes.navlink}
           activeClassName={classes.active}
-          style={{ textIndent:"32px" }}
+          style={{ textIndent: "32px" }}
         >
           {item.title}
         </Link>
@@ -126,126 +131,208 @@ export default function NavTabs() {
     window.addEventListener("keydown", handleFirstTab)
   })
 
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
+  const [open, setOpen] = React.useState(false)
+  const anchorRef = React.useRef(null)
 
   const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+    setOpen(prevOpen => !prevOpen)
+  }
 
-  const handleClose = (event) => {
+  const handleClose = event => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
+      return
     }
 
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
+    if (event.key === "Tab") {
+      event.preventDefault()
+      setOpen(false)
     }
   }
 
   // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open);
+  const prevOpen = React.useRef(open)
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
+      anchorRef.current.focus()
     }
 
-    prevOpen.current = open;
-  }, [open]);
-
+    prevOpen.current = open
+  }, [open])
 
   return (
     <div className={classes.navbar}>
       <Logo />
       <ul className={classes.navtabs}>
         {renderListItems()}
-        <li class={classes.navitem}>
-         <Button
-          // to={item.path}
-          // id={item.id}
-          className={classes.navlink}
-          activeClassName={classes.active}
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onMouseOver={handleToggle}
-          disableRipple="true"
-          style={{ textTransform : 'none', fontFamily: 'Poppins', fontWeight: '400'}}
-        >
-          How to help
-          <FontAwesomeIcon style={{ paddingLeft: '5px'}} icon={faCaretDown} size="1x" />
-        </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{letterSpacing: 0, paddingBottom: 0}}>
-                      <Link to="/volunteer" id="volunteer"
-                        className={classes.navlink  + " "+classes.dropDownList}
+        <li className={classes.navitem}>
+          <StyledButton
+            // to={item.path}
+            // id={item.id}
+            className={classes.navlink}
+            ref={anchorRef}
+            aria-controls={open ? "menu-list-grow" : undefined}
+            aria-haspopup="true"
+            onMouseOver={handleToggle}
+            disableRipple={true}
+          >
+            How to help
+            <FontAwesomeIcon
+              style={{ paddingLeft: "5px" }}
+              icon={faCaretDown}
+              size="1x"
+            />
+          </StyledButton>
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin:
+                    placement === "bottom" ? "center top" : "center bottom",
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList
+                      autoFocusItem={open}
+                      id="menu-list-grow"
+                      onKeyDown={handleListKeyDown}
+                      style={{ letterSpacing: 0, paddingBottom: 0 }}
+                    >
+                      <Link
+                        to="/volunteer"
+                        id="volunteer"
+                        className={classes.navlink + " " + classes.dropDownList}
                         activeClassName={classes.dropDownItemActive}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px', fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Volunteer with us</MenuItem></Link>
-                    <Link to="/partners" id="partners"
-                        className={classes.navlink + " "+classes.dropDownList}
+                      >
+                        <MenuItem
+                          onClick={handleClose}
+                          style={{
+                            fontSize: "16px",
+                            fontFamily: "Poppins",
+                            width: "fit-content",
+                            minWidth: "172px",
+                          }}
+                          disableRipple={true}
+                        >
+                          Volunteer with us
+                        </MenuItem>
+                      </Link>
+                      <Link
+                        to="/partners"
+                        id="partners"
+                        className={classes.navlink + " " + classes.dropDownList}
                         activeClassName={classes.dropDownItemActive}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px', fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Partner with us</MenuItem></Link>
-                    <Link to="/sponsors" id="sponsors"
-                        className={classes.navlink + " "+classes.dropDownList}
+                      >
+                        <MenuItem
+                          onClick={handleClose}
+                          style={{
+                            fontSize: "16px",
+                            fontFamily: "Poppins",
+                            width: "fit-content",
+                            minWidth: "172px",
+                          }}
+                          disableRipple={true}
+                        >
+                          Partner with us
+                        </MenuItem>
+                      </Link>
+                      <Link
+                        to="/sponsors"
+                        id="sponsors"
+                        className={classes.navlink + " " + classes.dropDownList}
                         activeClassName={classes.dropDownItemActive}
-                      ><MenuItem onClick={handleClose} style={{ fontSize: '16px',fontFamily:'Poppins', width: "fit-content", minWidth:"172px"}} disableRipple="true">Sponsor us</MenuItem></Link>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
+                      >
+                        <MenuItem
+                          onClick={handleClose}
+                          style={{
+                            fontSize: "16px",
+                            fontFamily: "Poppins",
+                            width: "fit-content",
+                            minWidth: "172px",
+                          }}
+                          disableRipple={true}
+                        >
+                          Sponsor us
+                        </MenuItem>
+                      </Link>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
         </li>
         <li className={classes.navitem}>
           <Link
-          to="/contact"
-          id="contact"
-          className={classes.navlink}
-          activeClassName={classes.active}
-        >
-          Contact Us
-        </Link>
+            to="/contact"
+            id="contact"
+            className={classes.navlink}
+            activeClassName={classes.active}
+          >
+            Contact Us
+          </Link>
         </li>
-        <div className={classes.verticalDivider + " ui vertical divider"}>|</div>
+        <div className={classes.verticalDivider + " ui vertical divider"}>
+          |
+        </div>
         <DonateBtn />
       </ul>
       <div className={classes.burgerMenu}>
         <BurgerMenu>
-        {renderListItems()}
-        <li className={classes.navitem}>
-        <Link
-          className={classes.navlink}
-          activeClassName={classes.active}
-          style={{ color:"black" }}
-        >
-         How to help
-        </Link>
-      </li>
-       {renderDropdownListItems()}
-       <li className={classes.navitem}>
-        <Link
-        to="/contact"
-          id="contact"
-          className={classes.navlink}
-          activeClassName={classes.active}
-        >
-         Contact Us
-        </Link>
-      </li>
+          {renderListItems()}
+          <li className={classes.navitem}>
+            <Link
+              to="#"
+              className={classes.navlink}
+              activeClassName={classes.active}
+              style={{ color: "black" }}
+            >
+              How to help
+            </Link>
+          </li>
+          {renderDropdownListItems()}
+          <li className={classes.navitem}>
+            <Link
+              to="/contact"
+              id="contact"
+              className={classes.navlink}
+              activeClassName={classes.active}
+            >
+              Contact Us
+            </Link>
+          </li>
         </BurgerMenu>
       </div>
     </div>
   )
 }
+
+const StyledButton = withTheme(
+  styled(Button)(({ theme }) => ({
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    "&.Mui-active": {
+      color: "#873FE2",
+      boxShadow: "0px 2px 0px #873FE2",
+      [theme.breakpoints.down("1080")]: {
+        boxShadow: "0px 0px 0px #873FE2",
+        borderTopWidth: "2px",
+        borderLeft: 0,
+        borderRight: 0,
+        borderColor: "#873FE2",
+        borderStyle: "solid",
+      },
+    },
+  }))
+)

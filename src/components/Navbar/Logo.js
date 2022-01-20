@@ -3,7 +3,8 @@ import { Box } from "@material-ui/core"
 import { Link } from "gatsby"
 
 import { makeStyles } from "@material-ui/core/styles"
-import LogoTtm from "../../images/navbar/logo-ttm.svg"
+import { ReactComponent as LogoTtm } from "../../images/navbar/logo-ttm.svg"
+
 export default function Logo() {
   const useStyles = makeStyles(theme => ({
     root: {
@@ -45,14 +46,12 @@ export default function Logo() {
 
   return (
     <div className={classes.root}>
-      <Box
-        component="img"
-        src={LogoTtm}
-        className={classes.logo}
-        alt="TTM logo"
-      />
-      <Link to="/landing" id="landing" style={{ textDecoration: 'none' }}>
-      <Box className={classes.text}>Toronto Tech Mentoring</Box></Link>
+      <Box className={classes.logo}>
+        <LogoTtm alt="TTM logo" />
+        </Box>
+      <Link to="/landing" id="landing" style={{ textDecoration: "none" }}>
+        <Box className={classes.text}>Toronto Tech Mentoring</Box>
+      </Link>
     </div>
   )
 }

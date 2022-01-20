@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import CustomButton from "../CustomButton"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -80,7 +80,6 @@ const useStyles = makeStyles(theme => ({
     height: "59px",
     textAlign: "center",
     color: "#000000",
-    paddingTop: "20px",
     marginBottom: "60px",
     "@media screen and (max-width: 900px)": {
       fontSize: "16px",
@@ -106,21 +105,25 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
   },
   cheetohLeft: {
-    marginTop: "-40px",
+    marginTop: "-20px",
     "@media screen and (max-width: 900px)": {
       marginRight: "-55px",
+      marginTop: "-40px",
     },
     "@media screen and (max-width: 550px)": {
       marginRight: "-50px",
+      marginTop: "-40px",
     },
   },
   cheetohRight: {
-    marginTop: "-40px",
+    marginTop: "-20px",
     "@media screen and (max-width: 900px)": {
       marginLeft: "-55px",
+      marginTop: "-40px",
     },
     "@media screen and (max-width: 550px)": {
       marginLeft: "-50px",
+      marginTop: "-40px",
     },
   },
   noDisplayOnBigScreen: {

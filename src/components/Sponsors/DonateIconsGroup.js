@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import DonateIcons from "../../images/sponsors/donateIcons.svg"
+import { ReactComponent as DonateIcons } from "../../images/sponsors/donateIcons.svg"
 
 const useStyles = makeStyles(theme => ({
   imageWrapper: {
@@ -38,7 +38,7 @@ export default function DonateIconsGroup() {
   const classes = useStyles()
   return (
     <div className={classes.imageWrapper}>
-      <img src={DonateIcons} className={classes.image} alt="Donate icons" />
+      <DonateIcons className={classes.image} alt="Donate icons" />
     </div>
   )
 }

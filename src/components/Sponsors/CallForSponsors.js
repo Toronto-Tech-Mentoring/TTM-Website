@@ -3,8 +3,8 @@ import React from "react"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
 import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 
@@ -18,27 +18,27 @@ export default function CallForSponsors() {
     <div>
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
-        style={{ "margin-top": "-1em" }}
+        style={{ marginTop: "-1em" }}
         alt="cheetohLeft"
       />
       <TextBox
         style={{
-          "margin-top": "135px",
-          "margin-right": "calc(37vw - 100px)",
-          "padding-right": "0",
+          marginTop: "135px",
+          marginRight: "calc(37vw - 100px)",
+          paddingRight: "0",
         }}
       >
         <BoldedHeader
           headerText={headerText}
-          style={{ "font-size": "calc(1.3vw + 1em)" }}
+          style={{ fontSize: "calc(1.3vw + 1em)" }}
         />
         <Content
           content={content}
-          style={{ "text-align": "left", "margin-top": "-5px" }}
+          style={{ textAlign: "left", marginTop: "-5px" }}
         />
         <CheetoRight
           className={classes.cheetohRightMirrored}
-          style={{ "margin-top": "calc(1vh + 1px)", "margin-right": "auto" }}
+          style={{ marginTop: "calc(1vh + 1px)", marginRight: "auto" }}
           alt="cheetohRight"
         />
       </TextBox>

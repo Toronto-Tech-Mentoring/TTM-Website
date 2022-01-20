@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "./HeroText.module.css"
-import rainbowHeart from "../../images/about-us/rainbowHeart.svg"
-import cheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import cheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as rainbowHeart } from "../../images/about-us/rainbowHeart.svg"
+import { ReactComponent as cheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as cheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 
 export default function HeroText(props) {
   return (

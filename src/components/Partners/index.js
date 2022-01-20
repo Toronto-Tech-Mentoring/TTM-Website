@@ -4,11 +4,11 @@ import ThankYou from "./ThankYou"
 import VitalRole from "./VitalRole"
 import PartnerCards from "./PartnerCards"
 import LastSection from "./LastSection"
-import styles from "./Partners.module.css"
+import { rainbowImgHack } from "./Partners.module.css"
 
 export default function Partners() {
   return (
-    <div className={styles.rainbowImgHack}>
+    <div className={rainbowImgHack}>
       <ThankYou />
       <VitalRole />
       <PartnerCards />

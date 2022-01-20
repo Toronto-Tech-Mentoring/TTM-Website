@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import GroupedCards from "../shared/GroupedCards"
-import Background1 from "../../images/partners/organization/background1.svg"
-import Background2 from "../../images/partners/organization/background2.svg"
-import Background3 from "../../images/partners/organization/background3.svg"
-import HelpingSVG from "../../images/partners/organization/helping.svg"
-import HouseSVG from "../../images/partners/organization/house.svg"
-import TrainingSVG from "../../images/partners/organization/training.svg"
+import { ReactComponent as Background1 } from "../../images/partners/organization/background1.svg"
+import { ReactComponent as Background2 } from "../../images/partners/organization/background2.svg"
+import { ReactComponent as Background3 } from "../../images/partners/organization/background3.svg"
+import { ReactComponent as HelpingSVG } from "../../images/partners/organization/helping.svg"
+import { ReactComponent as HouseSVG } from "../../images/partners/organization/house.svg"
+import { ReactComponent as TrainingSVG } from "../../images/partners/organization/training.svg"
 import CustomButton from "../../components/CustomButton.js"
 
 const useStyles = makeStyles(theme => ({
@@ -94,17 +94,30 @@ const useStyles = makeStyles(theme => ({
 
 const cardsJson = [
   {
+    pos: 1,
     body: (
       <div
         style={{
           width: "150px",
           height: "125px",
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${Background1})`,
         }}
       >
-        <img src={HelpingSVG} alt="helping"></img>
+        <Background1
+          style={{
+            position: "absolute",
+            display: "block",
+            zIndex: "1",
+          }}
+          alt="background 3"
+        />
+        <HelpingSVG
+          style={{
+            display: "fixed",
+            position: "relative",
+            zIndex: "2",
+          }}
+          alt="helping"
+        />
       </div>
     ),
     footer: "Working to help vulnerable youth and young adults",
@@ -151,17 +164,30 @@ const cardsJson = [
     },
   },
   {
+    pos: 2,
     body: (
       <div
         style={{
           width: "189px",
           height: "110px",
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${Background2})`,
         }}
       >
-        <img src={HouseSVG} alt="house"></img>
+        <Background2
+          style={{
+            position: "absolute",
+            display: "block",
+            zIndex: "1",
+          }}
+          alt="background 2"
+        />
+        <HouseSVG
+          style={{
+            display: "fixed",
+            position: "relative",
+            zIndex: "2",
+          }}
+          alt="house"
+        />
       </div>
     ),
     footer: "Tackling homelesness or providing shelter",
@@ -211,17 +237,30 @@ const cardsJson = [
     },
   },
   {
+    pos: 3,
     body: (
       <div
         style={{
           width: "132px",
           height: "134px",
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${Background3}`,
         }}
       >
-        <img src={TrainingSVG} alt="training"></img>
+        <Background3
+          style={{
+            position: "absolute",
+            display: "block",
+            zIndex: "1",
+          }}
+          alt="background 3"
+        />
+        <TrainingSVG
+          style={{
+            display: "fixed",
+            position: "relative",
+            zIndex: "2",
+          }}
+          alt="Training"
+        />
       </div>
     ),
     footer:
@@ -279,7 +318,7 @@ const cardsContainerStyle = {
   },
 }
 
-export default function Cards() {
+export default function PartnerCards() {
   const classes = useStyles()
 
   return (

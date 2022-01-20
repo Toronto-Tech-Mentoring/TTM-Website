@@ -2,26 +2,42 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 
 import GroupedCards from "../shared/GroupedCards"
-import BlobOne from "../../images/volunteers/WhatDoVolunteersDo/blob1.svg"
-import BlobTwo from "../../images/volunteers/WhatDoVolunteersDo/blob2.svg"
-import BlobThree from "../../images/volunteers/WhatDoVolunteersDo/blob3.svg"
-import ImageOne from "../../images/volunteers/WhatDoVolunteersDo/highFive.svg"
-import ImageTwo from "../../images/volunteers/WhatDoVolunteersDo/group.svg"
-import ImageThree from "../../images/volunteers/WhatDoVolunteersDo/meeting.svg"
+import { ReactComponent as BlobOne } from "../../images/volunteers/WhatDoVolunteersDo/blob1.svg"
+import { ReactComponent as BlobTwo } from "../../images/volunteers/WhatDoVolunteersDo/blob2.svg"
+import { ReactComponent as BlobThree } from "../../images/volunteers/WhatDoVolunteersDo/blob3.svg"
+import { ReactComponent as ImageOne } from "../../images/volunteers/WhatDoVolunteersDo/highFive.svg"
+import { ReactComponent as ImageTwo } from "../../images/volunteers/WhatDoVolunteersDo/group.svg"
+import { ReactComponent as ImageThree } from "../../images/volunteers/WhatDoVolunteersDo/meeting.svg"
 
 const cardsJson = [
   {
+    pos: 1,
     header: "Mentors",
     body: (
-      <div
-        style={{
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${BlobOne}`,
-        }}
-      >
-        <img src={ImageOne} alt="high five"></img>
-      </div>
+      <>
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
+          <BlobOne
+            style={{
+              position: "absolute",
+              display: "block",
+              zIndex: "1",
+            }}
+            alt="blob One"
+          />
+          <ImageOne
+            style={{
+              display: "fixed",
+              position: "relative",
+              zIndex: "2",
+            }}
+            alt="High Five"
+          />
+        </div>
+      </>
     ),
     footer:
       "Our mentors work directly with our clients to help them achieve their own goals in learning tech skills.",
@@ -70,16 +86,30 @@ const cardsJson = [
     },
   },
   {
+    pos: 2,
     header: "Program Development",
     body: (
       <div
         style={{
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${BlobTwo}`,
+          position: "relative",
         }}
       >
-        <img src={ImageTwo} alt="group"></img>
+        <BlobTwo
+          style={{
+            position: "absolute",
+            display: "block",
+            zIndex: "1",
+          }}
+          alt="blob Two"
+        />
+        <ImageTwo
+          style={{
+            display: "fixed",
+            position: "relative",
+            zIndex: "2",
+          }}
+          alt="program development"
+        />
       </div>
     ),
     footer:
@@ -133,16 +163,30 @@ const cardsJson = [
     },
   },
   {
+    pos: 3,
     header: "External Outreach",
     body: (
       <div
         style={{
-          backgroundRepeat: `no-repeat`,
-          backgroundPosition: "center",
-          backgroundImage: `url(${BlobThree}`,
+          position: "relative",
         }}
       >
-        <img src={ImageThree} alt="laptops for accessibility"></img>
+        <BlobThree
+          style={{
+            position: "absolute",
+            display: "block",
+            zIndex: "1",
+          }}
+          alt="blob Two"
+        />
+        <ImageThree
+          style={{
+            display: "fixed",
+            position: "relative",
+            zIndex: "2",
+          }}
+          alt="Laptops for accessibility"
+        />
       </div>
     ),
     footer:

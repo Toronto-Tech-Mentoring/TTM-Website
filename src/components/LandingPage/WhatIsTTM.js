@@ -4,11 +4,11 @@ import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
 // import styles from "./HeroText.module.css"
-import RainbowHeart from "../../images/about-us/rainbowHeart.svg"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as RainbowHeart } from "../../images/about-us/rainbowHeart.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
-import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
+import { SkylineHeader }from "../SkylineSVG"
 
 export default function WhatiIsTTM() {
   const classes = useStyles()
@@ -20,38 +20,38 @@ export default function WhatiIsTTM() {
     <div>
       <CheetoLeft
         className={classes.cheetohLeftMirrored}
-        style={{ "margin-top": "-1.6em" }}
+        style={{ marginTop: "-1.6em" }}
         alt="cheetohLeft"
       />
       <TextBox
         style={{
-          "margin-top": "135px",
-          "margin-right": "calc(46.5vw - 151px)",
-          "padding-right": "0",
+          marginTop: "135px",
+          marginRight: "calc(46.5vw - 151px)",
+          paddingRight: "0",
         }}
       >
         <BoldedHeader
           headerText={headerText}
-          style={{ "font-size": "calc(1.3vw + 1em)" }}
+          style={{ fontSize: "calc(1.3vw + 1em)" }}
         />
         <Content
           content={content}
-          extra={<RainbowHeart style={{ "margin-left": "15px" }} />}
+          extra={<RainbowHeart style={{ marginLeft: "15px" }} />}
           style={{
-            "font-family": "Poppins",
-            "font-size": "calc(0.37vw + 12.7px)",
-            "text-align": "left",
-            "margin-top": "-5px",
+            fontFamily: "Poppins",
+            fontSize: "calc(0.37vw + 12.7px)",
+            textAlign: "left",
+            marginTop: "-5px",
           }}
           hideCheetohs={["sm", "xs", "lg", "md", "xl"]}
         />
         <CheetoRight
           className={classes.cheetohRightMirrored}
-          style={{ "margin-top": "calc(1vh + 1px)" }}
+          style={{ marginTop: "calc(1vh + 1px)" }}
           alt="cheetohRight"
         />
       </TextBox>
-      <SkylineHeaderSVG />
+      <SkylineHeader />
     </div>
   )
 }

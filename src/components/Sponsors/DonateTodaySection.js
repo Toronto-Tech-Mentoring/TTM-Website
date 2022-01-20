@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core"
 import DonateIconsGroup from "./DonateIconsGroup"
 import DonateButton from "../shared/AnimatedPurpleButton"
 
-import CheetohLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetohRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetohLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetohRight } from "../../images/cheetohs/cheetohRight.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {

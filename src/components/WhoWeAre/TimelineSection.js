@@ -2,15 +2,15 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
-import TitleRight from "../../images/about-us/bottom-line/titleRight.svg"
-import TitleLeft from "../../images/about-us/bottom-line/titleLeft.svg"
-import Pin from "../../images/about-us/timeline/pin.svg"
+import { ReactComponent as TitleRight } from "../../images/about-us/bottom-line/titleRight.svg"
+import { ReactComponent as TitleLeft } from "../../images/about-us/bottom-line/titleLeft.svg"
+import { ReactComponent as Pin } from "../../images/about-us/timeline/pin.svg"
 import ImgOpt from "../../utils/ImageOptimise.js"
-import LeftBlob from "../../images/about-us/timeline/leftblob.svg"
+import { ReactComponent as LeftBlob } from "../../images/about-us/timeline/leftblob.svg"
 import CustomButton from "../CustomButton"
-import Hiring from "../../images/who-we-are/hiring.svg"
-import DataAnalyse from "../../images/who-we-are/data_analyse.svg"
-import Group from "../../images/who-we-are/Group.svg"
+import { ReactComponent as Hiring } from "../../images/who-we-are/hiring.svg"
+import { ReactComponent as DataAnalyse } from "../../images/who-we-are/data_analyse.svg"
+import { ReactComponent as Group } from "../../images/who-we-are/Group.svg"
 
 const useStyles = makeStyles(theme => ({
   titleContainer: {

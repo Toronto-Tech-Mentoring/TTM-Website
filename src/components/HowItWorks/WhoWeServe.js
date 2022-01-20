@@ -11,7 +11,7 @@ import GridContainer from "../GridContainer/GridContainer"
 import Title from "../SectionTitle/Title"
 import PContent from "../DecoratedText/DecoratedText"
 import SVGLoad from "../SVGLoad/SVG"
-import Group from "../../images/how-it-works/Group99.svg"
+import { ReactComponent as Group } from "../../images/how-it-works/Group99.svg"
 
 const useStyles = makeStyles(theme => ({
   textBox: {

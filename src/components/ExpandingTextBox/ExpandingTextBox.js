@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "44px",
 
     // marginLeft: "95vw",
-   
+
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "16px",
       margin: "6px",
@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     marginLeft: "15px",
     width: "75vw",
-   
+
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "12px",
       width: "65vw",
@@ -137,32 +137,34 @@ function ReadMore({ children, maxCharacterCount = 100 }) {
 
   let content
   if(isTruncated){
-   
-    content=(<p className={classes.multiLineEllipsis} >
+
+    content=(<span className={classes.multiLineEllipsis} >
       {resultString}
-      </p>)
+      </span>)
       }else {
-      content=( <p >
+      content=( <span >
         {resultString}
-        </p>)
+        </span>)
       }
 
   return (
-    <p className={classes.content}>
-      {/* <p >
+    <>
+      <p className={classes.content}>
+        {/* <p >
       {resultString}
       </p> */}
-      {content}
+        {content}
+      </p>
       <p className={classes.bottomText}>
         *Note: names and identifying details have been changed to protect the
         privacy of individuals.
       </p>
       <div className={classes.newDIv}>
-      <p onClick={toggleIsTruncated} className={classes.read}>
-        {isTruncated ? "Read More" : "Read Less"}
-      </p>
+        <p onClick={toggleIsTruncated} className={classes.read}>
+          {isTruncated ? "Read More" : "Read Less"}
+        </p>
       </div>
-    </p>
+    </>
   )
 }
 

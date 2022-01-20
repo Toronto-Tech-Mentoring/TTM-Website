@@ -148,7 +148,7 @@ export default function WhyTech() {
   const subHeader = "100+"
   const body2 = "hours of mentoring through our program"
   return (
-    <Grid className={classes.containerStyle} spacing={1}>
+    // <Grid className={classes.containerStyle} spacing={1}>
       <Grid container>
         <Grid className={classes.whyBackground}>
           <p className={`${classes.header} ${classes.whyHeader}`}>{header}</p>
@@ -162,6 +162,6 @@ export default function WhyTech() {
           <p className={`${classes.body} ${classes.impactBody}`}>{body2}</p>
         </Grid>
       </Grid>
-    </Grid>
+    // </Grid>
   )
 }

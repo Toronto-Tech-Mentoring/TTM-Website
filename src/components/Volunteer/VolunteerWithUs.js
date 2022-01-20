@@ -5,16 +5,21 @@ import { makeStyles } from "@material-ui/core/styles"
 import BoldedHeader from "../BoldedHeaderText/BoldedHeader"
 import TextBox from "../TextBox/TextBox"
 import Content from "../DecoratedText/DecoratedText"
-import CheetoLeft from "../../images/cheetohs/cheetohLeft.svg"
-import CheetoRight from "../../images/cheetohs/cheetohRight.svg"
+import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
+import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
 import { useStyles } from "../Cheetos/cheetohStyle"
 import { SkylineHeader as SkylineHeaderSVG } from "../SkylineSVG"
 
 const useGenericStyles = makeStyles(theme => ({
-  textContent:{
+  textBox: {
+    marginTop: "135px",
+    marginRight: "calc(37vw - 138px)",
+    paddingRight: "0",
+  },
+  textContent: {
     textAlign: "left",
     marginTop: "-5px",
-  }
+  },
 }))
 
 export default function VolunteerWithUs() {
@@ -28,28 +33,24 @@ export default function VolunteerWithUs() {
     <div>
       <CheetoLeft
         className={cheetohclasses.cheetohLeftMirrored}
-        style={{ "margin-top": "-1em" }}
+        style={{ marginTop: "-1em" }}
         alt="cheetohLeft"
       />
       <TextBox
-        style={{
-          "margin-top": "135px",
-          "margin-right": "calc(37vw - 138px)",
-          "padding-right": "0",
-        }}
+        className={classes.textBox}
       >
         <BoldedHeader
           headerText={headerText}
-          style={{ "font-size": "calc(1.3vw + 1em)" }}
+          style={{ fontSize: "calc(1.3vw + 1em)" }}
         />
         <Content
           content={content}
           className={classes.textContent}
-          style={{ "text-align": "left", "margin-top": "-5px" }}
+          style={{ textAlign: "left", marginTop: "-5px" }}
         />
         <CheetoRight
           className={cheetohclasses.cheetohRightMirrored}
-          style={{ "margin-top": "calc(1vh + 1px)", "margin-right": "auto" }}
+          style={{ marginTop: "calc(1vh + 1px)", marginRight: "auto" }}
           alt="cheetohRight"
         />
       </TextBox>
