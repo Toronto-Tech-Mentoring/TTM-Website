@@ -15,10 +15,6 @@ The website is being developed by volunteers sharing a passion to teach one anot
 
 <br/>
 
-## :construction: Architecture
-
-<img src="./TTM-Arch.svg">
-
 ## Contributions
 
 If you would like to get involved with the project reach out to hello@acceleratorproject.xyz or join attend one of the CivicTechTO meetup sessions every tuesday night [here](https://www.meetup.com/Civic-Tech-Toronto/)
