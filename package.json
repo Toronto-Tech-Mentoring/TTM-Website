@@ -42,7 +42,10 @@
     },
     "devDependencies": {
         "all-contributors-cli": "^6.19.0",
-        "prettier": "2.1.1"
+        "eslint-config-airbnb": "^19.0.4",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.3",
+        "prettier": "^2.1.1"
     },
     "repository": {
         "type": "git",
@@ -50,5 +53,11 @@
     },
     "bugs": {
         "url": "https://github.com/gatsbyjs/gatsby/issues"
-    }
+    },
+    "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+}
 }
