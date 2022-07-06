@@ -1,12 +1,12 @@
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "500px",
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
+    minHeight: '500px',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
     },
   },
-}))
+}));
 
-export { useStyles }
+export { useStyles };

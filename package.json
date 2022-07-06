@@ -8,8 +8,7 @@
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
+        "serve": "gatsby serve --port 9001",
         "clean": "gatsby clean",
         "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
     },
@@ -21,30 +20,35 @@
         "@material-ui/icons": "^4.9.1",
         "@mdx-js/mdx": "^1.6.16",
         "@svgr/webpack": "^6.2.0",
+        "dotenv": "^16.0.0",
         "gatsby": "^4.4.0",
-        "gatsby-image": "^2.4.21",
         "gatsby-link": "^4.4.0",
         "gatsby-plugin-fontawesome-css": "1.2.0",
         "gatsby-plugin-google-fonts": "^1.0.1",
+        "gatsby-plugin-image": "^2.7.0",
         "gatsby-plugin-netlify": "^4.0.0",
-        "gatsby-plugin-sharp": "^4.4.0",
+        "gatsby-plugin-sharp": "^4.7.0",
         "gatsby-plugin-svgr": "^3.0.0-beta.0",
         "gatsby-plugin-web-font-loader": "^1.0.4",
         "gatsby-react-router-scroll": "^5.4.0",
-        "gatsby-source-filesystem": "^4.4.0",
-        "gatsby-transformer-sharp": "^4.4.0",
+        "gatsby-source-filesystem": "^4.7.0",
+        "gatsby-transformer-sharp": "^4.7.0",
+        "prop-types": "^15.8.1",
         "react": "^16.12.0",
         "react-burger-menu": "^2.8.0",
         "react-collapsible": "2.8.3",
         "react-dom": "^16.12.0",
+        "react-imask": "^6.4.0",
         "styled-components": "^5.2.1",
-        "url-loader": "^4.1.1"
+        "url-loader": "^4.1.1",
+        "validator": "^13.7.0"
     },
     "devDependencies": {
         "all-contributors-cli": "^6.19.0",
         "eslint-config-airbnb": "^19.0.4",
         "husky": "^7.0.4",
         "lint-staged": "^12.3.3",
+        "npm-run-all": "^4.1.5",
         "prettier": "^2.1.1"
     },
     "repository": {
@@ -55,9 +59,9 @@
         "url": "https://github.com/gatsbyjs/gatsby/issues"
     },
     "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
-}
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ]
+    }
 }

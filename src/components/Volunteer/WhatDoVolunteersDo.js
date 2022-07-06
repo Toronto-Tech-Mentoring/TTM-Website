@@ -1,126 +1,126 @@
-import React from "react"
-import Grid from "@material-ui/core/Grid"
-import { makeStyles } from "@material-ui/core/styles"
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
-import VolunteerCards from "./Cards"
-import { ReactComponent as CheetohLeft } from "../../images/cheetohs/cheetohLeft.svg"
-import { ReactComponent as CheetohRight } from "../../images/cheetohs/cheetohRight.svg"
+import VolunteerCards from './Cards';
+import { ReactComponent as CheetohLeft } from '../../images/cheetohs/cheetohLeft.svg';
+import { ReactComponent as CheetohRight } from '../../images/cheetohs/cheetohRight.svg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   container: {
-    height: "852px",
-    width: "100%",
-    background: "#4529AE",
-    "@media screen and (max-width: 1080px)": {
-      height: "1534px",
+    height: '852px',
+    width: '100%',
+    background: '#4529AE',
+    '@media screen and (max-width: 1080px)': {
+      height: '1534px',
     },
   },
   headerText: {
-    fontFamily: "Josefin Sans",
-    fontStyle: "normal",
-    fontWeight: "600",
-    fontSize: "36px",
-    lineHeight: "57px",
-    textDecoration: "underline",
-    textDecorationColor: "#FF7500",
-    textUnderlinePosition: "under",
-    display: "flex",
-    align: "center",
-    color: "#FFFFFF",
-    justifyContent: "center",
-    paddingTop: "96px",
-    "@media screen and (max-width: 900px)": {
-      fontSize: "24px",
-      lineHeight: "41px",
+    fontFamily: 'Josefin Sans',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: '36px',
+    lineHeight: '57px',
+    textDecoration: 'underline',
+    textDecorationColor: '#FF7500',
+    textUnderlinePosition: 'under',
+    display: 'flex',
+    align: 'center',
+    color: '#FFFFFF',
+    justifyContent: 'center',
+    paddingTop: '96px',
+    '@media screen and (max-width: 900px)': {
+      fontSize: '24px',
+      lineHeight: '41px',
     },
-    "@media screen and (max-width: 550px)": {
-      fontSize: "20px",
-      lineHeight: "32px",
+    '@media screen and (max-width: 550px)': {
+      fontSize: '20px',
+      lineHeight: '32px',
     },
   },
   bodyText: {
-    fontFamily: "Poppins",
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "18px",
-    lineHeight: "27px",
-    width: "809px",
-    height: "59px",
-    textAlign: "center",
-    color: "#FFFFFF",
-    marginTop: "calc(2vw - 50px)",
-    "@media screen and (max-width: 900px)": {
-      fontSize: "16px",
-      lineHeight: "27px",
-      marginTop: "calc(2vw - 25px)",
-      width: "534px",
-      height: "80px",
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '18px',
+    lineHeight: '27px',
+    width: '809px',
+    height: '59px',
+    textAlign: 'center',
+    color: '#FFFFFF',
+    marginTop: 'calc(2vw - 50px)',
+    '@media screen and (max-width: 900px)': {
+      fontSize: '16px',
+      lineHeight: '27px',
+      marginTop: 'calc(2vw - 25px)',
+      width: '534px',
+      height: '80px',
     },
-    "@media screen and (max-width: 550px)": {
-      fontSize: "14px",
-      lineHeight: "24px",
-      width: "328px",
-      height: "93px",
-      paddingTop: "10px",
+    '@media screen and (max-width: 550px)': {
+      fontSize: '14px',
+      lineHeight: '24px',
+      width: '328px',
+      height: '93px',
+      paddingTop: '10px',
     },
   },
   bodyTextCenter: {
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
   },
   subtitleText: {
-    fontFamily: "Josefin Sans",
-    fontStyle: "normal",
-    fontWeight: "600",
-    fontSize: "36px",
-    lineHeight: "57px",
-    textDecoration: "underline",
-    textDecorationColor: "#FF7500",
-    textUnderlinePosition: "under",
-    display: "flex",
-    textAlign: "center",
-    color: "#FFFFFF",
-    justifyContent: "center",
-    paddingTop: "30px",
-    height: "34px",
-    "@media screen and (max-width: 900px)": {
-      fontSize: "22px",
-      lineHeight: "38px",
+    fontFamily: 'Josefin Sans',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: '36px',
+    lineHeight: '57px',
+    textDecoration: 'underline',
+    textDecorationColor: '#FF7500',
+    textUnderlinePosition: 'under',
+    display: 'flex',
+    textAlign: 'center',
+    color: '#FFFFFF',
+    justifyContent: 'center',
+    paddingTop: '30px',
+    height: '34px',
+    '@media screen and (max-width: 900px)': {
+      fontSize: '22px',
+      lineHeight: '38px',
     },
-    "@media screen and (max-width: 550px)": {
-      fontSize: "18px",
-      lineHeight: "29px",
-      paddingBottom: "10px",
+    '@media screen and (max-width: 550px)': {
+      fontSize: '18px',
+      lineHeight: '29px',
+      paddingBottom: '10px',
     },
   },
   cheetohLeft: {
-    paddingRight: "27px",
-    marginRight: "-70px",
-      marginTop: "-70px",
-    "@media screen and (max-width: 900px)": {
-      marginRight: "-125px",
-      marginTop: "-50px",
+    paddingRight: '27px',
+    marginRight: '-70px',
+    marginTop: '-70px',
+    '@media screen and (max-width: 900px)': {
+      marginRight: '-125px',
+      marginTop: '-50px',
     },
-    "@media screen and (max-width: 550px)": {
-      marginRight: "-50px",
+    '@media screen and (max-width: 550px)': {
+      marginRight: '-50px',
     },
   },
   cheetohRight: {
-    paddingLeft: "27px",
-    marginLeft: "-70px",
-      marginTop: "-70px",
-    "@media screen and (max-width: 900px)": {
-      marginLeft: "-125px",
-      marginTop: "-50px",
+    paddingLeft: '27px',
+    marginLeft: '-70px',
+    marginTop: '-70px',
+    '@media screen and (max-width: 900px)': {
+      marginLeft: '-125px',
+      marginTop: '-50px',
     },
-    "@media screen and (max-width: 550px)": {
-      marginLeft: "-50px",
+    '@media screen and (max-width: 550px)': {
+      marginLeft: '-50px',
     },
   },
-}))
+}));
 
 export default function WhatDoVolunteersDo() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Grid className={classes.container}>
@@ -139,10 +139,11 @@ export default function WhatDoVolunteersDo() {
       </Grid>
 
       <h2 className={classes.subtitleText}>
-        Here are some examples of roles our volunteers have:{" "}
+        Here are some examples of roles our volunteers have:
+        {' '}
       </h2>
 
       <VolunteerCards />
     </Grid>
-  )
+  );
 }

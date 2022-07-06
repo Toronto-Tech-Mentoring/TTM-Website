@@ -1,44 +1,25 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import PropTypes from 'prop-types';
+import useNonSvgData from '../hooks/queries/nonsvgs';
 
-const Image = props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        images: allFile {
-          edges {
-            node {
-              relativePath
-              name
-              childImageSharp {
-                fluid(maxWidth: 350) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename)
-      })
-      if (!image) {
-        return null
-      }
+function Image(props) {
+  const { filename, alt, className } = props;
+  const { edges } = useNonSvgData();
 
-      //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-      return (
-        <Img
-          alt={props.alt}
-          fluid={image.node.childImageSharp.fluid}
-          className={props.className}
-        />
-      )
-    }}
-  />
-)
+  const node = edges.find((n) => n.node.name.includes(filename));
 
-export default Image
+  if (!node.node) {
+    return null;
+  }
+  const image = getImage(node.node);
+  return <GatsbyImage alt={alt} image={image} className={className} />;
+}
+
+export default Image;
+
+Image.propTypes = {
+  filename: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+};

@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import GetInTouch from "../Contact/GetInTouch"
-import ContactUsForm from "../Contact/ContactUsForm"
+import GetInTouch from './GetInTouch';
+import ContactUsForm from './ContactUsForm';
 
 export default function Contact() {
   return (
@@ -9,5 +9,5 @@ export default function Contact() {
       <GetInTouch />
       <ContactUsForm />
     </div>
-  )
+  );
 }

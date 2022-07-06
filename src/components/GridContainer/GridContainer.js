@@ -1,21 +1,32 @@
-import React from "react"
-import Grid from "@material-ui/core/Grid"
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
-import { useStyles } from "./GridContainerStyle"
+import { useStyles } from './GridContainerStyle';
 
-export default function GridContainer(props) {
-  const classes = useStyles()
+export default function GridContainer({ direction, style, children }) {
+  const classes = useStyles();
 
   return (
     <Grid
       container
       className={classes.root}
-      direction={props.direction}
+      direction={direction}
       justifyContent="center"
       alignItems="center"
-      style={props.style}
+      style={style}
     >
-      {props.children}
+      {children}
     </Grid>
-  )
+  );
 }
+
+GridContainer.propTypes = {
+  direction: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  style: PropTypes.objectOf(PropTypes.string),
+};
+
+GridContainer.defaultProps = {
+  style: {},
+};

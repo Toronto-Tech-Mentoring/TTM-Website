@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react';
 
-import CallForSponsorsSection from "./CallForSponsors"
-import ThankYouSection from "./ThankYouSection"
-import HowYouCanSupport from "./HowYouCanSupport"
+import CallForSponsorsSection from './CallForSponsors';
+import ThankYouSection from './ThankYouSection';
+import HowYouCanSupport from './HowYouCanSupport';
 
 export default function Sponsors() {
   return (
@@ -15,5 +15,5 @@ export default function Sponsors() {
       {/* <SupportUsSection /> */}
       <ThankYouSection />
     </div>
-  )
+  );
 }

@@ -1,7 +1,9 @@
 # <img src="./src/images/navbar/logo-ttm.svg"> Toronto Tech Mentoring
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.torontotechmentoring.live%2F)![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Toronto-Tech-Mentoring/TTM-Gatsby?include_prereleases)![Netlify](https://img.shields.io/netlify/8a377caa-99cc-46dd-816e-b0d669ad085a?style=plastic)<br/>![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Toronto-Tech-Mentoring/TTM-Gatsby?style=plastic)![Lines of code](https://img.shields.io/tokei/lines/github/Toronto-Tech-Mentoring/TTM-Gatsby)![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Toronto-Tech-Mentoring/TTM-gatsby)![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/Toronto-Tech-Mentoring/TTM-gatsby/latest?include_prereleases)

@@ -1,13 +1,18 @@
-import React from "react"
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-import { useStyles } from "./TitleStyle.js"
+import { useStyles } from './TitleStyle';
 
-export default function Title(props) {
-  const classes = useStyles()
+export default function Title({
+  divstyle, className, title, pstyle,
+}) {
+  const classes = useStyles();
 
   return (
-    <div style={props.divstyle} className={props.class}>
-      <p className={classes.title} style={props.pstyle}>{props.title}</p>
+    <div style={divstyle} className={className}>
+      <p className={classes.title} style={pstyle}>
+        {title}
+      </p>
     </div>
-  )
+  );
 }

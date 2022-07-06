@@ -1,74 +1,74 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Card from "@material-ui/core/Card"
-import CardContent from "@material-ui/core/CardContent"
-import Grid from "@material-ui/core/Grid"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
 
-import { ReactComponent as Background1 } from "../../images/aboutUsBackground/background1.svg"
-import { ReactComponent as Background2 } from "../../images/aboutUsBackground/background2.svg"
-import { ReactComponent as Background3 } from "../../images/aboutUsBackground/background3.svg"
-import { ReactComponent as GoalSVG } from "../../images/about-us/How-are-we-different-section/goals.svg"
-import { ReactComponent as SkillSVG } from "../../images/about-us/How-are-we-different-section/conversation.svg"
-import { ReactComponent as SupportSVG } from "../../images/about-us/How-are-we-different-section/support.svg"
-import { ReactComponent as Shiny1SVG } from "../../images/about-us/How-are-we-different-section/shiny.svg"
-import { ReactComponent as Shiny2SVG } from "../../images/about-us/How-are-we-different-section/shiny2.svg"
+import { ReactComponent as Background1 } from '../../images/aboutUsBackground/background1.svg';
+import { ReactComponent as Background2 } from '../../images/aboutUsBackground/background2.svg';
+import { ReactComponent as Background3 } from '../../images/aboutUsBackground/background3.svg';
+import { ReactComponent as GoalSVG } from '../../images/about-us/How-are-we-different-section/goals.svg';
+import { ReactComponent as SkillSVG } from '../../images/about-us/How-are-we-different-section/conversation.svg';
+import { ReactComponent as SupportSVG } from '../../images/about-us/How-are-we-different-section/support.svg';
+import { ReactComponent as Shiny1SVG } from '../../images/about-us/How-are-we-different-section/shiny.svg';
+import { ReactComponent as Shiny2SVG } from '../../images/about-us/How-are-we-different-section/shiny2.svg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: "350px",
-    height: "360px",
-    display: "inline-block",
-    borderRadius: "30px",
-    margin: "0px 25px",
-    marginTop: "-5px",
-    [theme.breakpoints.down("1201")]: {
-      margin: "25px 15px",
+    width: '350px',
+    height: '360px',
+    display: 'inline-block',
+    borderRadius: '30px',
+    margin: '0px 25px',
+    marginTop: '-5px',
+    [theme.breakpoints.down('1201')]: {
+      margin: '25px 15px',
     },
-    [theme.breakpoints.down("1140")]: {
-      margin: "25px 5px",
-      width: "328px",
+    [theme.breakpoints.down('1140')]: {
+      margin: '25px 5px',
+      width: '328px',
     },
   },
   title: {
-    fontFamily: "Poppins",
-    marginTop: "30px",
-    textAlign: "center",
-    color: "#873FE2",
-    fontSize: "20px",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "18px",
+    fontFamily: 'Poppins',
+    marginTop: '30px',
+    textAlign: 'center',
+    color: '#873FE2',
+    fontSize: '20px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '18px',
     },
-    [theme.breakpoints.down("md")]: {
-      fontSize: "18px",
+    [theme.breakpoints.down('md')]: {
+      fontSize: '18px',
       fontWeight: 600,
     },
   },
   contents: {
-    fontFamily: "Poppins",
-    textAlign: "center",
-    color: "black",
-    fontSize: "16px",
-    lineHeight: "31px",
-    margin: "0px auto 50px auto",
+    fontFamily: 'Poppins',
+    textAlign: 'center',
+    color: 'black',
+    fontSize: '16px',
+    lineHeight: '31px',
+    margin: '0px auto 50px auto',
   },
   imgDiv: {
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: "center",
-    textAlign: "center",
-    height: "130px",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    textAlign: 'center',
+    height: '130px',
   },
   innerImage: {
-    position: "relative",
+    position: 'relative',
   },
   stack: {
-    [theme.breakpoints.between("676", "1014")]: {
-      margin: "0px 170px 0px 170px",
+    [theme.breakpoints.between('676', '1014')]: {
+      margin: '0px 170px 0px 170px',
     },
   },
-}))
+}));
 
 export default function Cards() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Grid container alignItems="center" justifyContent="center">
@@ -81,7 +81,7 @@ export default function Cards() {
           >
             <GoalSVG
               className={classes.innerImage}
-              style={{ top: "35px" }}
+              style={{ top: '35px' }}
               alt="skill_development"
             />
           </div>
@@ -102,12 +102,12 @@ export default function Cards() {
           >
             <SkillSVG
               className={classes.innerImage}
-              style={{ top: "15px", zIndex: "3", left: "60px" }}
+              style={{ top: '15px', zIndex: '3', left: '60px' }}
               alt="skill_development"
             />
             <Shiny1SVG
               className={classes.innerImage}
-              style={{ top: "30px", zIndex: "2", right: "55px" }}
+              style={{ top: '30px', zIndex: '2', right: '55px' }}
               alt="shiny"
             />
           </div>
@@ -128,12 +128,12 @@ export default function Cards() {
           >
             <SupportSVG
               className={classes.innerImage}
-              style={{ top: "15px", zIndex: "3", left: "60px" }}
+              style={{ top: '15px', zIndex: '3', left: '60px' }}
               alt="supports"
             />
             <Shiny2SVG
               className={classes.innerImage}
-              style={{ top: "31px", zIndex: "2", right: "60px" }}
+              style={{ top: '31px', zIndex: '2', right: '60px' }}
               alt="shiny"
             />
           </div>
@@ -146,5 +146,5 @@ export default function Cards() {
         </Card>
       </Grid>
     </Grid>
-  )
+  );
 }

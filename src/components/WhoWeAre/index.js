@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import FirstSection from "./FirstSection"
-import OurRootsSection from "./OurRootsSection"
-import TimelineSection from "./TimelineSection"
-import { SkylineFooter as SkylineFooterSVG } from "../SkylineSVG"
-import SecondSection from "./SecondSection"
+import FirstSection from './FirstSection';
+import OurRootsSection from './OurRootsSection';
+import TimelineSection from './TimelineSection';
+import { SkylineFooter as SkylineFooterSVG } from '../SkylineSVG';
+import SecondSection from './SecondSection';
 
 export default function AboutUs() {
   return (
@@ -15,5 +15,5 @@ export default function AboutUs() {
       <TimelineSection />
       <SkylineFooterSVG />
     </div>
-  )
+  );
 }

@@ -1,13 +1,22 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStyles } from './BoldedHeaderStyle';
 
-import { useStyles } from "./BoldedHeaderStyle"
-
-export default function BoldedHeaderText(props) {
-  const classes = useStyles()
+export default function BoldedHeaderText({ style, headerText }) {
+  const classes = useStyles();
 
   return (
-    <p className={classes.headerText} style={props.style}>
-      {props.headerText}
+    <p className={classes.headerText} style={style}>
+      {headerText}
     </p>
-  )
+  );
 }
+
+BoldedHeaderText.propTypes = {
+  style: PropTypes.objectOf(PropTypes.string),
+  headerText: PropTypes.string.isRequired,
+};
+
+BoldedHeaderText.defaultProps = {
+  style: {},
+};

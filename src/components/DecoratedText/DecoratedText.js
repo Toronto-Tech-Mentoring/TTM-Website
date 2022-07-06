@@ -1,12 +1,33 @@
-import React from "react"
-import PText from "../ParagraphedText/ParagraphedText"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function DecoratedText(props) {
-  const extra = props.extra
+import PText from '../ParagraphedText/ParagraphedText';
 
+export default function DecoratedText({
+  extra, className, content, style,
+}) {
+  const extraText = extra;
   return (
     <div>
-      <PText className={props.className} content={props.content} extra={extra} style={props.style} />
+      <PText
+        content={content}
+        extra={extraText}
+        style={style}
+        className={className}
+      />
     </div>
-  )
+  );
 }
+
+DecoratedText.propTypes = {
+  extra: PropTypes.string,
+  content: PropTypes.string.isRequired,
+  style: PropTypes.objectOf(PropTypes.string),
+  className: PropTypes.objectOf(PropTypes.string),
+};
+
+DecoratedText.defaultProps = {
+  extra: '',
+  style: {},
+  className: {},
+};

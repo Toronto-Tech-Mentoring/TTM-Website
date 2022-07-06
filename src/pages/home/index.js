@@ -1,8 +1,8 @@
 import React from 'react';
 import { MainLayout } from '../../layout';
-import PageBody from '../../components/Client';
+import PageBody from '../../components/LandingPage';
 
-export default function ContactPage() {
+export default function Landing() {
   return (
     <MainLayout>
       <PageBody />

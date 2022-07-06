@@ -1,8 +1,9 @@
-import React from "react"
+/* eslint-disable no-undef */
+import React from 'react';
 
 const redirect = () => {
-  window.open("https://twitter.com/CivicTechTO")
-}
+  window.open('https://twitter.com/CivicTechTO');
+};
 
 const Twitter = (
   <svg
@@ -20,6 +21,6 @@ const Twitter = (
       fill="#4529AE"
     />
   </svg>
-)
+);
 
-export default Twitter
+export default Twitter;

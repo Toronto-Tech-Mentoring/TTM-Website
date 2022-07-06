@@ -1,10 +1,11 @@
-import React from "react"
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-import { useStyles } from "./SVGStyle"
+import { useStyles } from './SVGStyle';
 
-export default function SVGLoad(props) {
-  const PicSVG = props.image
-  const classes = useStyles()
+export default function SVGLoad({ image, style }) {
+  const PicSVG = image;
+  const classes = useStyles();
 
-  return <PicSVG className={classes.svgSettings} style={props.style} />
+  return <PicSVG className={classes.svgSettings} style={style} />;
 }

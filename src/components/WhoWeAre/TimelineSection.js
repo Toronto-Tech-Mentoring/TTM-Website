@@ -1,270 +1,271 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
-import { ReactComponent as TitleRight } from "../../images/about-us/bottom-line/titleRight.svg"
-import { ReactComponent as TitleLeft } from "../../images/about-us/bottom-line/titleLeft.svg"
-import { ReactComponent as Pin } from "../../images/about-us/timeline/pin.svg"
-import ImgOpt from "../../utils/ImageOptimise.js"
-import { ReactComponent as LeftBlob } from "../../images/about-us/timeline/leftblob.svg"
-import CustomButton from "../CustomButton"
-import { ReactComponent as Hiring } from "../../images/who-we-are/hiring.svg"
-import { ReactComponent as DataAnalyse } from "../../images/who-we-are/data_analyse.svg"
-import { ReactComponent as Group } from "../../images/who-we-are/Group.svg"
+import { ReactComponent as TitleRight } from '../../images/about-us/bottom-line/titleRight.svg';
+import { ReactComponent as TitleLeft } from '../../images/about-us/bottom-line/titleLeft.svg';
+import { ReactComponent as Pin } from '../../images/about-us/timeline/pin.svg';
+import ImgOpt from '../../utils/ImageOptimise';
+import { ReactComponent as LeftBlob } from '../../images/about-us/timeline/leftblob.svg';
+import CustomButton from '../CustomButton';
+import { ReactComponent as Hiring } from '../../images/who-we-are/hiring.svg';
+import { ReactComponent as DataAnalyse } from '../../images/who-we-are/data_analyse.svg';
+import { ReactComponent as Group } from '../../images/who-we-are/Group.svg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   titleContainer: {
-    marginTop: "160px",
+    marginTop: '160px',
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      marginTop: "96px",
+    [theme.breakpoints.between('sm', 'md')]: {
+      marginTop: '96px',
     },
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "69px",
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '69px',
     },
   },
   tealBackground: {
-    background: "linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)",
-    padding: "50px 20px 0px 0px",
+    background: 'linear-gradient(180deg, #F5FDFD 0%, #FFFFFF 50%)',
+    padding: '50px 20px 0px 0px',
   },
   title: {
-    fontFamily: "Josefin Sans",
+    fontFamily: 'Josefin Sans',
     fontWeight: 600,
-    fontSize: "32px",
-    lineHeight: "57px",
-    padding: "0px 20px",
+    fontSize: '32px',
+    lineHeight: '57px',
+    padding: '0px 20px',
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "28px",
-      lineHeight: "38px",
+    [theme.breakpoints.between('sm', 'md')]: {
+      fontSize: '28px',
+      lineHeight: '38px',
     },
     // Tablet below to Mobile
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "18px",
-      lineHeight: "29px",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      lineHeight: '29px',
     },
   },
   yearCol: {
-    textAlign: "right",
-    marginRight: "30px",
-    [theme.breakpoints.up("lg")]: {
-      marginRight: "69px",
-      textAlign: "right",
+    textAlign: 'right',
+    marginRight: '30px',
+    [theme.breakpoints.up('lg')]: {
+      marginRight: '69px',
+      textAlign: 'right',
     },
     // Moboile
-    [theme.breakpoints.down("sm")]: {
-      marginRight: "0px",
-      textAlign: "center",
+    [theme.breakpoints.down('sm')]: {
+      marginRight: '0px',
+      textAlign: 'center',
     },
   },
   yearTag: {
-    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-    position: "relative",
-    bottom: "400px",
-    marginRight: "20px",
-    backgroundColor: "#873FE2",
-    borderRadius: "300px",
-    padding: "5px 9%",
-    fontSize: "25px",
-    color: "white",
-    borderStyle: "none",
-    fontFamily: "Josefin Sans",
+    filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+    position: 'relative',
+    bottom: '400px',
+    marginRight: '20px',
+    backgroundColor: '#873FE2',
+    borderRadius: '300px',
+    padding: '5px 9%',
+    fontSize: '25px',
+    color: 'white',
+    borderStyle: 'none',
+    fontFamily: 'Josefin Sans',
     // Tablet Above to Laptop/ Desktop
     [theme.breakpoints.down(1358)]: {
-      fontSize: "20px",
-      lineHeight: "38px",
+      fontSize: '20px',
+      lineHeight: '38px',
     },
     [theme.breakpoints.down(1257)]: {
-      fontSize: "18px",
+      fontSize: '18px',
     },
     [theme.breakpoints.down(1190)]: {
-      fontSize: "16px",
+      fontSize: '16px',
     },
     // Moboile
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
     },
   },
   yearTagSm: {
-    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-    backgroundColor: "#873FE2",
-    borderRadius: "300px",
-    color: "white",
-    borderStyle: "none",
-    fontFamily: "Josefin Sans",
-    display: "none",
+    filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+    backgroundColor: '#873FE2',
+    borderRadius: '300px',
+    color: 'white',
+    borderStyle: 'none',
+    fontFamily: 'Josefin Sans',
+    display: 'none',
     // Mobile
-    [theme.breakpoints.down("sm")]: {
-      display: "block",
-      fontSize: "14px",
-      height: "30px",
-      width: "86px",
-      marginRight: "calc(100% - 86px)",
-      marginBottom: "8px",
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+      fontSize: '14px',
+      height: '30px',
+      width: '86px',
+      marginRight: 'calc(100% - 86px)',
+      marginBottom: '8px',
     },
   },
   pinStyle: {
-    display: "inline-block",
+    display: 'inline-block',
     height: 425,
     // Tablet below to Mobile
-    [theme.breakpoints.down("sm")]: {
-      marginRight: "30px",
+    [theme.breakpoints.down('sm')]: {
+      marginRight: '30px',
       // height: 300,
     },
   },
   eventTitle: {
-    zIndex: "1",
-    fontFamily: "Josefin Sans",
+    zIndex: '1',
+    fontFamily: 'Josefin Sans',
     fontWeight: 600,
-    fontSize: "calc(1.2vw + 12px)",
-    lineHeight: "calc(1.67vw + 18px)",
-    textAlign: "left",
-    width: "calc(37.5vw + 117px)",
-    height: "auto",
-    marginBottom: "calc(18.7px - 0.741vw)",
+    fontSize: 'calc(1.2vw + 12px)',
+    lineHeight: 'calc(1.67vw + 18px)',
+    textAlign: 'left',
+    width: 'calc(37.5vw + 117px)',
+    height: 'auto',
+    marginBottom: 'calc(18.7px - 0.741vw)',
     [theme.breakpoints.up(1440)]: {
-      fontSize: "28px",
+      fontSize: '28px',
     },
   },
   eventContent: {
-    marginTop: "0px",
-    position: "relative",
-    fontFamily: "Poppins",
-    fontSize: "calc(0.37vw + 12.7px)",
-    fontWeight: "400",
-    lineHeight: "calc(0.648vw + 21.7px)",
-    width: "calc(52vw + 101px)",
+    marginTop: '0px',
+    position: 'relative',
+    fontFamily: 'Poppins',
+    fontSize: 'calc(0.37vw + 12.7px)',
+    fontWeight: '400',
+    lineHeight: 'calc(0.648vw + 21.7px)',
+    width: 'calc(52vw + 101px)',
     zIndex: 2,
     [theme.breakpoints.up(1440)]: {
-      fontSize: "28px",
+      fontSize: '28px',
     },
     [theme.breakpoints.up(1440)]: {
-      marginRight: "10vw",
+      marginRight: '10vw',
     },
   },
   center: {
-    textAlign: "center",
+    textAlign: 'center',
   },
   secondPic: {
-    zIndex: "1",
-    display: "inline-block",
-    width: "calc(6.57vw + 187px)",
-    borderRadius: "10px",
+    zIndex: '1',
+    display: 'inline-block',
+    width: 'calc(6.57vw + 187px)',
+    borderRadius: '10px',
   },
   firstPic: {
-    zIndex: "1",
-    display: "inline-block",
-    marginRight: "30px",
+    zIndex: '1',
+    display: 'inline-block',
+    marginRight: '30px',
   },
   picDiv: {
-    width: "calc(52vw + 101px)",
-    maxWidth: "820px",
-    display: "flex",
-    justifyContent: "center",
+    width: 'calc(52vw + 101px)',
+    maxWidth: '820px',
+    display: 'flex',
+    justifyContent: 'center',
     // [theme.breakpoints.up(1921)]: {
     //   width: "720px",
     // },
   },
   gridContainer: {
-    marginTop: "5vw",
-    justifyContent: "center",
+    marginTop: '5vw',
+    justifyContent: 'center',
   },
   title2019: {
-    height: "40px",
+    height: '40px',
   },
   content2019: {
     // Tablet to laptop/desktop
-    [theme.breakpoints.up("md")]: {
-      height: "320px",
+    [theme.breakpoints.up('md')]: {
+      height: '320px',
     },
     // Mobile
-    [theme.breakpoints.down("sm")]: {
-      height: "200px",
+    [theme.breakpoints.down('sm')]: {
+      height: '200px',
     },
   },
   bg: {
     zIndex: 1,
-    position: "relative",
-    bottom: "50px",
-    height: "370px",
+    position: 'relative',
+    bottom: '50px',
+    height: '370px',
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      width: "40%",
+    [theme.breakpoints.between('sm', 'md')]: {
+      width: '40%',
     },
     // Tablet below to Mobile
-    [theme.breakpoints.down("sm")]: {
-      width: "30%",
+    [theme.breakpoints.down('sm')]: {
+      width: '30%',
     },
   },
   bg2: {
     zIndex: 1,
-    position: "absolute",
-    right: "0",
-    height: "209px",
-    top: "20px",
+    position: 'absolute',
+    right: '0',
+    height: '209px',
+    top: '20px',
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      height: "65%",
+    [theme.breakpoints.between('sm', 'md')]: {
+      height: '65%',
     },
     // Tablet below to Mobile
-    [theme.breakpoints.down("sm")]: {
-      height: "40%",
+    [theme.breakpoints.down('sm')]: {
+      height: '40%',
     },
   },
   leftBlob: {
-    position: "absolute",
-    zIndex: "0",
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
+    position: 'absolute',
+    zIndex: '0',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
     },
   },
   rightBlob: {
-    position: "absolute",
-    zIndex: "0",
-    right: "27.56%",
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
+    position: 'absolute',
+    zIndex: '0',
+    right: '27.56%',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
     },
   },
   bottomText: {
-    fontFamily: "Josefin Sans",
-    fontWeight: "600",
-    fontSize: "calc(0.926vw + 14.7px)",
-    lineHeight: "calc(1.3vw + 23.3px)",
-    width: "calc(48vw + 156px)",
+    fontFamily: 'Josefin Sans',
+    fontWeight: '600',
+    fontSize: 'calc(0.926vw + 14.7px)',
+    lineHeight: 'calc(1.3vw + 23.3px)',
+    width: 'calc(48vw + 156px)',
     [theme.breakpoints.up(1440)]: {
-      fontSize: "28px",
+      fontSize: '28px',
     },
   },
   contactButton: {
-    backgroundColor: "#873FE2",
-    cursor: "pointer",
-    color: "#FFFFFF",
-    fontFamily: "Poppins",
+    backgroundColor: '#873FE2',
+    cursor: 'pointer',
+    color: '#FFFFFF',
+    fontFamily: 'Poppins',
     fontWeight: 400,
-    fontStyle: "normal",
-    lineHeight: "27px",
+    fontStyle: 'normal',
+    lineHeight: '27px',
     // Screen size: Mobile to Tablet
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "14px",
-      textAlign: "center",
-      lineHeight: "24px",
-      height: "32px",
-      width: "120px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "16px",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+      textAlign: 'center',
+      lineHeight: '24px',
+      height: '32px',
+      width: '120px',
+      [theme.breakpoints.down('xs')]: {
+        marginTop: '16px',
+      },
     },
   },
-}}))
+}));
 
 export default function TimelineSection() {
-  const classes = useStyles()
-  const researchSession1 = "researchSession1.jpg"
-  const researchSession2 = "ResearchSession2.jpg"
-  const programLaunch1 = "program_launch.jpg"
-  const programLaunch2 = "program_launch2.jpg"
-  const covidResponse1 = "covid1.jpg"
-  const covidResponse2 = "covid2.jpg"
+  const classes = useStyles();
+  const researchSession1 = 'researchSession1';
+  const researchSession2 = 'ResearchSession2';
+  const programLaunch1 = 'program_launch';
+  const programLaunch2 = 'program_launch2';
+  const covidResponse1 = 'covid1';
+  const covidResponse2 = 'covid2';
 
   return (
     <Grid
@@ -295,12 +296,14 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(7.22vw + 253px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(7.22vw + 253px)',
           }}
         >
-          {" "}
-          <button className={classes.yearTagSm}>2018</button>
+          {' '}
+          <button type="button" className={classes.yearTagSm}>
+            2018
+          </button>
           <span className={classes.eventTitle}>
             Initial program development
           </span>
@@ -309,7 +312,7 @@ export default function TimelineSection() {
             environmental scan and conducting consultations to better understand
             the problem space.
           </p>
-          <div className={classes.picDiv} style={{ justifyContent: "center" }}>
+          <div className={classes.picDiv} style={{ justifyContent: 'center' }}>
             <Hiring className={classes.secondPic} />
           </div>
         </Grid>
@@ -327,19 +330,21 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(6.2vw + 289px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(6.2vw + 289px)',
           }}
         >
-          <button className={classes.yearTagSm}>2019</button>
+          <button type="button" className={classes.yearTagSm}>
+            2019
+          </button>
           <span className={classes.eventTitle}>
             Co-creation research session
           </span>
           <p className={classes.eventContent}>
             With social services and tech sector partners, we identified and
             brainstormed ideas to address potential challenges and barriers for
-            the program, such as tech hiring practices and social isolation among
-            homeless youth.
+            the program, such as tech hiring practices and social isolation
+            among homeless youth.
           </p>
           <div className={classes.picDiv}>
             <ImgOpt
@@ -368,8 +373,8 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(5.74vw + 291px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(5.74vw + 291px)',
           }}
         >
           <span className={classes.eventTitle}>
@@ -381,13 +386,13 @@ export default function TimelineSection() {
             we refined our mentoring program to a highly tailored, one-on-one
             model.
           </p>
-          <div className={classes.picDiv} style={{ justifyContent: "center" }}>
+          <div className={classes.picDiv} style={{ justifyContent: 'center' }}>
             <DataAnalyse className={classes.secondPic} />
           </div>
         </Grid>
       </Grid>
       <Grid className={classes.gridContainer} container item xs={12}>
-        <Grid item xs={2}  className={classes.yearCol}>
+        <Grid item xs={2} className={classes.yearCol}>
           <Pin className={classes.pinStyle} />
         </Grid>
         <Grid
@@ -398,8 +403,8 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(2.96vw + 336px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(2.96vw + 336px)',
           }}
         >
           <span className={classes.eventTitle}>Program launch</span>
@@ -438,11 +443,13 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(-0.926vw + 392px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(-0.926vw + 392px)',
           }}
         >
-          <button className={classes.yearTagSm}>2020</button>
+          <button type="button" className={classes.yearTagSm}>
+            2020
+          </button>
           <span className={classes.eventTitle}>2020 Covid-19 response</span>
           <p className={classes.eventContent}>
             To ensure the safety and well-being of our participants and
@@ -479,12 +486,14 @@ export default function TimelineSection() {
           lg={7}
           xl={6}
           style={{
-            width: "calc(12.4vw + 207px)",
-            height: "calc(-2.17vw + 402px)",
+            width: 'calc(12.4vw + 207px)',
+            height: 'calc(-2.17vw + 402px)',
           }}
         >
-          <button className={classes.yearTagSm}>Onward</button>
-          <span className={classes.eventTitle} style={{ paddingLeft: "0px" }}>
+          <button type="button" className={classes.yearTagSm}>
+            Onward
+          </button>
+          <span className={classes.eventTitle} style={{ paddingLeft: '0px' }}>
             We’re excited to continue to expand our impact on people’s lives,
             through:
           </span>
@@ -499,7 +508,7 @@ export default function TimelineSection() {
               </li>
             </ul>
           </p>
-          <div className={classes.picDiv} style={{ justifyContent: "center" }}>
+          <div className={classes.picDiv} style={{ justifyContent: 'center' }}>
             <Group className={classes.secondPic} />
           </div>
         </Grid>
@@ -508,22 +517,23 @@ export default function TimelineSection() {
         item
         xs={12}
         className={`${classes.titleContainer} ${classes.center}`}
-        style={{ display: "grid", justifyContent: "center" }}
+        style={{ display: 'grid', justifyContent: 'center' }}
       >
-        {" "}
+        {' '}
         <Grid>
           <h2 className={classes.bottomText}>
-            Inspired by our journey? Excited by our future? Help us get there:{" "}
+            Inspired by our journey? Excited by our future? Help us get there:
+            {' '}
           </h2>
         </Grid>
-        <Grid style={{ paddingTop: "40px" }}>
+        <Grid style={{ paddingTop: '40px' }}>
           <CustomButton
-            text={"Contact Us"}
+            text="Contact Us"
             customClass={classes.contactButton}
             link="/contact"
           />
         </Grid>
       </Grid>
     </Grid>
-  )
+  );
 }

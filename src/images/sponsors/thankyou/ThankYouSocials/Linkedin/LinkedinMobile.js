@@ -1,8 +1,9 @@
-import React from "react"
+/* eslint-disable no-undef */
+import React from 'react';
 
 const redirect = () => {
-  window.open("https://www.linkedin.com/company/civictechto/")
-}
+  window.open('https://www.linkedin.com/company/civictechto/');
+};
 
 const LinkedinMobile = (
   <svg
@@ -20,6 +21,6 @@ const LinkedinMobile = (
       fill="#4529AE"
     />
   </svg>
-)
+);
 
-export default LinkedinMobile
+export default LinkedinMobile;

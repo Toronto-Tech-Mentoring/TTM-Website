@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 
-import VolunteerWithUs from "./VolunteerWithUs"
-import PositiveDifferenceSection from "./PositiveDifferenceSection"
-import WhatDoVolunteersDo from "./WhatDoVolunteersDo"
-import SkillSet from "./SkillSet"
-import WhatToKnow from "./WhatToKnow"
-import Process from "./Process"
+import VolunteerWithUs from './VolunteerWithUs';
+import PositiveDifferenceSection from './PositiveDifferenceSection';
+import WhatDoVolunteersDo from './WhatDoVolunteersDo';
+import SkillSet from './SkillSet';
+import WhatToKnow from './WhatToKnow';
+import Process from './Process';
 
 export default function Volunteer() {
   return (
@@ -17,5 +17,5 @@ export default function Volunteer() {
       <WhatToKnow />
       <Process />
     </div>
-  )
+  );
 }

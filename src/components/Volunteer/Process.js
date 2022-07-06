@@ -1,109 +1,109 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
-import CustomButton from "../CustomButton"
-import { ReactComponent as CheetoLeft } from "../../images/cheetohs/cheetohLeft.svg"
-import { ReactComponent as CheetoRight } from "../../images/cheetohs/cheetohRight.svg"
-import { ReactComponent as ProcessBlob1 } from "../../images/volunteers/process/process1.svg"
-import { ReactComponent as ProcessBlob2 } from "../../images/volunteers/process/process2.svg"
-import { ReactComponent as ProcessBlob3 } from "../../images/volunteers/process/process3.svg"
-import { ReactComponent as ProcessBlob4 } from "../../images/volunteers/process/process4.svg"
-import SkylineFooter from "../SkylineSVG/SkylineFooter"
+import CustomButton from '../CustomButton';
+import { ReactComponent as CheetoLeft } from '../../images/cheetohs/cheetohLeft.svg';
+import { ReactComponent as CheetoRight } from '../../images/cheetohs/cheetohRight.svg';
+import { ReactComponent as ProcessBlob1 } from '../../images/volunteers/process/process1.svg';
+import { ReactComponent as ProcessBlob2 } from '../../images/volunteers/process/process2.svg';
+import { ReactComponent as ProcessBlob3 } from '../../images/volunteers/process/process3.svg';
+import { ReactComponent as ProcessBlob4 } from '../../images/volunteers/process/process4.svg';
+import SkylineFooter from '../SkylineSVG/SkylineFooter';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
-    height: "100%",
-    width: "100%",
-    background: "#FFF",
-    "@media screen and (max-width: 900px)": {
-      height: "calc(4.63vw + 47.3)",
+    height: '100%',
+    width: '100%',
+    background: '#FFF',
+    '@media screen and (max-width: 900px)': {
+      height: 'calc(4.63vw + 47.3)',
     },
   },
   stepBox: {
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: "center 50%",
-    backgroundSize: "fill",
-    height: "auto",
-    marginBottom: "50px",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center 50%',
+    backgroundSize: 'fill',
+    height: 'auto',
+    marginBottom: '50px',
   },
   contactButton: {
-    backgroundColor: "#873FE2",
-    cursor: "pointer",
-    color: "#FFFFFF",
-    fontFamily: "Poppins",
+    backgroundColor: '#873FE2',
+    cursor: 'pointer',
+    color: '#FFFFFF',
+    fontFamily: 'Poppins',
     fontWeight: 400,
-    fontStyle: "normal",
-    fontSize: "18px",
-    height: "50px",
-    width: "180px",
-    marginTop: "24px",
+    fontStyle: 'normal',
+    fontSize: '18px',
+    height: '50px',
+    width: '180px',
+    marginTop: '24px',
 
     // Screen size: Mobile to Tablet
-    [theme.breakpoints.between("xs", "sm")]: {
-      fontSize: "16px",
-      height: "40px",
-      width: "153px",
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: '16px',
+      height: '40px',
+      width: '153px',
     },
 
     // Screen size: Mobile below
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "14px",
-      height: "32px",
-      width: "120px",
-      marginTop: "16px",
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '14px',
+      height: '32px',
+      width: '120px',
+      marginTop: '16px',
     },
   },
 
   h2Text: {
-    textAlign: "center",
-    fontFamily: "Josefin Sans",
-    fontSize: "calc(0.926vw + 14.7px)",
+    textAlign: 'center',
+    fontFamily: 'Josefin Sans',
+    fontSize: 'calc(0.926vw + 14.7px)',
     fontWeight: 600,
-    fontStyle: "normal",
-    paddingTop: "30px",
-    lineHeight: "44px",
-    margin: "0 auto",
-    letterSpacing: "0em",
+    fontStyle: 'normal',
+    paddingTop: '30px',
+    lineHeight: '44px',
+    margin: '0 auto',
+    letterSpacing: '0em',
   },
   bodyText: {
-    fontFamily: "Poppins",
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "18px",
-    lineHeight: "27px",
-    width: "calc(24.3vw + 197px)",
-    height: "59px",
-    textAlign: "center",
-    color: "#000",
-    marginTop: "calc(2vw - 10px)",
-    "@media screen and (max-width: 900px)": {
-      fontSize: "16px",
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '18px',
+    lineHeight: '27px',
+    width: 'calc(24.3vw + 197px)',
+    height: '59px',
+    textAlign: 'center',
+    color: '#000',
+    marginTop: 'calc(2vw - 10px)',
+    '@media screen and (max-width: 900px)': {
+      fontSize: '16px',
     },
-    "@media screen and (max-width: 600px)": {
-      fontSize: "14px",
+    '@media screen and (max-width: 600px)': {
+      fontSize: '14px',
     },
   },
   bodyTextCenter: {
-    display: "flex",
-    justifyContent: "center",
-    paddingBottom: "40px",
+    display: 'flex',
+    justifyContent: 'center',
+    paddingBottom: '40px',
   },
   cheetohLeft: {
-    marginTop: "98px",
+    marginTop: '98px',
   },
   cheetohRight: {
-    marginTop: "98px",
+    marginTop: '98px',
   },
   noDisplayOnBigScreen: {
-    [theme.breakpoints.up("md")]: {
-      display: "none",
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
     },
   },
-}))
+}));
 
 export default function ProcessSectopm() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Grid className={classes.container}>
@@ -112,11 +112,11 @@ export default function ProcessSectopm() {
         <h2
           className={classes.h2Text}
           style={{
-            marginTop: "98px",
-            marginLeft: "calc(0.556vw + 9px)",
-            marginRight: "calc(0.556vw + 9px)",
-            paddingTop: "0px",
-            width: "calc(24.8vw + 124px)",
+            marginTop: '98px',
+            marginLeft: 'calc(0.556vw + 9px)',
+            marginRight: 'calc(0.556vw + 9px)',
+            paddingTop: '0px',
+            width: 'calc(24.8vw + 124px)',
           }}
         >
           What’s the process for volunteering?
@@ -125,13 +125,13 @@ export default function ProcessSectopm() {
       </Grid>
       <Grid className={classes.stepBox}>
         <div
-          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
         >
           <ProcessBlob1
             style={{
-              position: "absolute",
-              display: "block",
-              zIndex: "1",
+              position: 'absolute',
+              display: 'block',
+              zIndex: '1',
             }}
             alt="step 1 blob"
           />
@@ -149,13 +149,13 @@ export default function ProcessSectopm() {
       </Grid>
       <Grid className={classes.stepBox}>
         <div
-          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
         >
           <ProcessBlob2
             style={{
-              position: "absolute",
-              display: "block",
-              zIndex: "1",
+              position: 'absolute',
+              display: 'block',
+              zIndex: '1',
             }}
             alt="step 2 blob"
           />
@@ -174,13 +174,13 @@ export default function ProcessSectopm() {
       </Grid>
       <Grid className={classes.stepBox}>
         <div
-          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
         >
           <ProcessBlob3
             style={{
-              position: "absolute",
-              display: "block",
-              zIndex: "1",
+              position: 'absolute',
+              display: 'block',
+              zIndex: '1',
             }}
             alt="step 3 blob"
           />
@@ -199,13 +199,13 @@ export default function ProcessSectopm() {
       </Grid>
       <Grid className={classes.stepBox}>
         <div
-          style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
         >
           <ProcessBlob4
             style={{
-              position: "absolute",
-              display: "block",
-              zIndex: "1",
+              position: 'absolute',
+              display: 'block',
+              zIndex: '1',
             }}
             alt="step 4 blob"
           />
@@ -223,16 +223,16 @@ export default function ProcessSectopm() {
         </Grid>
       </Grid>
       <Grid>
-        <h2 className={classes.h2Text} style={{ color: "#4529AE" }}>
+        <h2 className={classes.h2Text} style={{ color: '#4529AE' }}>
           Sounds good? Send us an email.
         </h2>
         <div
           style={{
-            textAlign: "center",
+            textAlign: 'center',
           }}
         >
           <CustomButton
-            text={"Volunteer"}
+            text="Volunteer"
             customClass={classes.contactButton}
             link="/contact"
           />
@@ -240,5 +240,5 @@ export default function ProcessSectopm() {
       </Grid>
       <SkylineFooter />
     </Grid>
-  )
+  );
 }

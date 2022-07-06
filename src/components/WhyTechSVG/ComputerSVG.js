@@ -1,16 +1,16 @@
-import React from "react"
+import React from 'react';
 
 export default function Computer() {
   return (
     <div>
       <svg viewBox="0 0 393 323" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M234.47 30.0559C316.056 31.8293 332.474 95.7497 355.224 155.933C375.787 210.329 389.608 250.535 330.707 284.635C267.861 321.02 165.769 338.694 100.281 305.168C26.8846 267.593 30.6922 205.541 57.7919 141.084C85.0376 76.2797 145.815 28.1288 234.47 30.0559Z"
           fill="#E4FFFF"
         />
-        <g clip-path="url(#clip0)">
+        <g clipPath="url(#clip0)">
           <path
             d="M268.673 48.0331L267.755 55.086L267.325 58.3811C267.185 59.4561 268.295 60.2549 269.255 59.7699L272.199 58.2837L278.5 55.1041L268.673 48.0331Z"
             fill="#DC8744"
@@ -43,18 +43,18 @@ export default function Computer() {
         <path
           d="M382.693 273.146L381.462 266.529L381.097 269.011C381.038 269.408 379.88 277.277 379.88 277.277C379.743 278.205 378.989 278.956 377.957 279.191L371.745 280.607L377.983 281.924C379.016 282.143 379.78 282.881 379.932 283.807L381.684 294.529L383.265 283.781C383.402 282.853 384.155 282.102 385.184 281.868L391.401 280.451L385.162 279.133C384.13 278.915 383.423 277.629 383.272 276.704"
           stroke="black"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M120.795 26.7388L119.139 18.1415L118.646 21.3675C118.567 21.8835 117.004 32.1087 117.004 32.1087C116.82 33.3139 115.803 34.2904 114.415 34.596L106.047 36.4377L114.448 38.1476C115.839 38.4304 116.868 39.3902 117.072 40.5927L119.427 54.5239L121.562 40.5577C121.746 39.3522 122.761 38.3761 124.146 38.0711L132.52 36.2284L124.118 34.5181C122.728 34.2351 121.776 32.564 121.573 31.3618"
           stroke="black"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M225.567 254.027H186.674V274.401H225.567V254.027Z"
@@ -204,7 +204,7 @@ export default function Computer() {
           d="M47.557 97.2624L49.7114 104.975L49.7735 105.197L49.9514 105.05L52.2901 103.117L52.5271 118.031L49.0152 108.946L48.9402 108.752L48.7797 108.884L46.3876 110.861L43.9377 100.253L47.557 97.2624Z"
           fill="white"
           stroke="black"
-          stroke-width="0.3"
+          strokeWidth="0.3"
         />
         <path
           d="M71.5992 122.29C72.0671 122.942 72.2565 123.754 72.1257 124.547C71.995 125.339 71.5549 126.047 70.9021 126.515L61.0576 133.571C60.4049 134.039 59.5931 134.228 58.8007 134.097C58.0083 133.966 57.3004 133.526 56.8325 132.874L51.5405 125.49L66.3072 114.906L71.5992 122.29Z"
@@ -217,44 +217,44 @@ export default function Computer() {
         <path
           d="M43.2094 79.0474C43.3885 79.8167 43.5665 80.5811 43.7459 81.3517"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M29.8132 83.1235C30.3375 83.7143 30.8585 84.3014 31.3837 84.8931"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M21.9015 95.3447C22.6871 95.4793 23.4678 95.6131 24.2547 95.7479"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M26.5514 115.315C27.3554 114.704 28.1542 114.096 28.9595 113.483"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M42.9387 122.348C42.8859 123.334 42.8334 124.314 42.7805 125.302"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M66.552 102.972C67.3364 102.879 68.1159 102.787 68.9015 102.694"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M62.8947 85.8003C62.3973 86.414 61.9032 87.0238 61.4051 87.6385"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <defs>
           <clipPath id="clip0">
@@ -268,5 +268,5 @@ export default function Computer() {
         </defs>
       </svg>
     </div>
-  )
+  );
 }

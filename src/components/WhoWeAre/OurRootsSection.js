@@ -1,74 +1,73 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   divStyle: {
-    backgroundColor: "#4529AE",
-    textAlign: "center",
+    backgroundColor: '#4529AE',
+    textAlign: 'center',
   },
   h1: {
-    color: "#FFFFFF",
-    paddingTop: "96px",
-    fontWeight: "600",
-    lineHeight: "44px",
-    fontFamily: "Josefin Sans",
+    color: '#FFFFFF',
+    paddingTop: '96px',
+    fontWeight: '600',
+    lineHeight: '44px',
+    fontFamily: 'Josefin Sans',
 
     // Large screen
-    [theme.breakpoints.up("xl")]: {
-      fontSize: "50px",
+    [theme.breakpoints.up('xl')]: {
+      fontSize: '50px',
     },
 
     // Tablet Above to Laptop/ Desktop
-    [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "24px",
-      lineHeight: "41px",
+    [theme.breakpoints.between('sm', 'md')]: {
+      fontSize: '24px',
+      lineHeight: '41px',
     },
 
     // Tablet below to Mobile
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "20px",
-      lineHeight: "32px",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '20px',
+      lineHeight: '32px',
     },
   },
   p: {
-    color: "#FFFFFF",
-    marginBottom: "0px",
-    fontWeight: "normal",
-    lineHeight: "30px",
-    fontFamily: "Poppins",
-    marginTop: "-20px",
-    paddingLeft:"calc(36.6vw - 102px)",
-    paddingRight: "calc(36.6vw - 102px)",
-    paddingBottom: "calc(2.96vw + 53.5px)",
-
+    color: '#FFFFFF',
+    marginBottom: '0px',
+    fontWeight: 'normal',
+    lineHeight: '30px',
+    fontFamily: 'Poppins',
+    marginTop: '-20px',
+    paddingLeft: 'calc(36.6vw - 102px)',
+    paddingRight: 'calc(36.6vw - 102px)',
+    paddingBottom: 'calc(2.96vw + 53.5px)',
 
     // Tablet Above to Desktop to large screen
     [theme.breakpoints.up(1440)]: {
       // padding: "0 550px 96px 550px",
-      fontSize: "20px",
+      fontSize: '20px',
     },
 
     // Tablet to Desktop
-    [theme.breakpoints.between("md", "lg")]: {
+    [theme.breakpoints.between('md', 'lg')]: {
       // padding: "0 500px 96px 500px",
-      fontSize: "18px",
+      fontSize: '18px',
     },
     // // Mobile to Tablet
-    [theme.breakpoints.between("sm", "md")]: {
+    [theme.breakpoints.between('sm', 'md')]: {
       // padding: "0 300px 96px 300px",
-      fontSize: "16px",
+      fontSize: '16px',
     },
 
     // Small mobile to large mobile
-    [theme.breakpoints.between("xs", "sm")]: {
+    [theme.breakpoints.between('xs', 'sm')]: {
       // padding: "0 27px 96px 27px",
-      fontSize: "14px",
+      fontSize: '14px',
     },
   },
-}))
+}));
 
 export default function OurRootsSection() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className={classes.divStyle}>
@@ -79,5 +78,5 @@ export default function OurRootsSection() {
         technology for the betterment of civic life.
       </p>
     </div>
-  )
+  );
 }

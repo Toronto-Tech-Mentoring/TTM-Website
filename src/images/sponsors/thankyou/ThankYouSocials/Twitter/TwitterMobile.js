@@ -1,8 +1,12 @@
-import React from "react"
+/* eslint-disable no-undef */
+import React from 'react';
 
 const redirect = () => {
-  window.open("https://twitter.com/CivicTechTO")
-}
+  if (typeof window !== 'undefined') {
+    // eslint-disable-next-line no-undef
+    window.open('https://twitter.com/CivicTechTO');
+  }
+};
 
 const TwitterMobile = (
   <svg
@@ -20,6 +24,6 @@ const TwitterMobile = (
       fill="#4529AE"
     />
   </svg>
-)
+);
 
-export default TwitterMobile
+export default TwitterMobile;

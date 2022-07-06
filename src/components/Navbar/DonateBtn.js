@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import Box from "@material-ui/core/Box"
+import React from 'react';
+import styled from 'styled-components';
+import Box from '@material-ui/core/Box';
 
-import { ReactComponent as HeartWhite } from "../../images/navbar/heart-white.svg"
-import { ReactComponent as HeartPurple } from "../../images/navbar/heart-purple.svg"
+import { ReactComponent as HeartWhite } from '../../images/navbar/heart-white.svg';
+import { ReactComponent as HeartPurple } from '../../images/navbar/heart-purple.svg';
 
 // The style components were used as an easy way to change the button color on hover
 const StyledButton = styled.button`
@@ -39,7 +39,7 @@ const StyledButton = styled.button`
     width: 85px;
     min-width: 85px;
   }
-`
+`;
 
 const StyledFont = styled.a`
   display: inline-block;
@@ -54,7 +54,7 @@ const StyledFont = styled.a`
   @media (max-width: 400px) {
     font-size: 12px;
   }
-`
+`;
 const StyledImg = styled(Box)`
   transition: transform 300ms ease-in-out;
   width: 17px;
@@ -67,40 +67,39 @@ const StyledImg = styled(Box)`
   ${StyledButton}:hover & {
     transform: scale(1.5);
   }
-`
+`;
 
 class DonateBtn extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { imgSrc: HeartWhite }
-    this.handleMouseOver = this.handleMouseOver.bind(this)
-    this.handleMouseOut = this.handleMouseOut.bind(this)
+    super(props);
+    this.state = { imgSrc: HeartWhite };
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
   }
 
   handleMouseOver() {
-    this.setState({ imgSrc: HeartPurple, buttonHovered: true })
+    this.setState({ imgSrc: HeartPurple });
   }
 
   handleMouseOut() {
-    this.setState({ imgSrc: HeartWhite, buttonHovered: false })
+    this.setState({ imgSrc: HeartWhite });
   }
 
   // The mouse over events need to be placed on the button tag to update the heart as well
   render() {
+    const { imgSrc } = this.state;
     return (
       <StyledButton
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
       >
-        <span style={{ width: "fit-content", margin: "auto" }}>
+        <span style={{ width: 'fit-content', margin: 'auto' }}>
           <StyledFont>Donate</StyledFont>
-          <StyledImg alt="heart color">
-            {this.state.imgSrc}
-            </StyledImg>
+          <StyledImg alt="heart color">{imgSrc}</StyledImg>
         </span>
       </StyledButton>
-    )
+    );
   }
 }
 
-export default DonateBtn
+export default DonateBtn;

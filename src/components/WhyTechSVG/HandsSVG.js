@@ -1,16 +1,16 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.up("md")]: {
-      padding: "0px 30px",
+    [theme.breakpoints.up('md')]: {
+      padding: '0px 30px',
     },
   },
-}))
+}));
 
 export default function HandsSVG() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -230,5 +230,5 @@ export default function HandsSVG() {
         />
       </svg>
     </div>
-  )
+  );
 }

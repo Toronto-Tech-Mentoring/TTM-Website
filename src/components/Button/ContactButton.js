@@ -1,13 +1,23 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { useStyles } from "./ContactButtonStyle"
+import { useStyles } from './ContactButtonStyle';
 
-export default function ContactButton(props) {
-  const classes = useStyles()
+export default function ContactButton({ style, buttonText }) {
+  const classes = useStyles();
 
   return (
-    <button className={classes.contactButton} style={props.style}>
-      {props.buttonText}
+    <button type="button" className={classes.contactButton} style={style}>
+      {buttonText}
     </button>
-  )
+  );
 }
+
+ContactButton.propTypes = {
+  style: PropTypes.objectOf(PropTypes.string),
+  buttonText: PropTypes.string.isRequired,
+};
+
+ContactButton.defaultProps = {
+  style: {},
+};

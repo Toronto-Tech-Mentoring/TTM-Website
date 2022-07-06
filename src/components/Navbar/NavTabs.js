@@ -1,38 +1,42 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
-import Button from "@material-ui/core/Button"
-import ClickAwayListener from "@material-ui/core/ClickAwayListener"
-import Grow from "@material-ui/core/Grow"
-import Paper from "@material-ui/core/Paper"
-import Popper from "@material-ui/core/Popper"
-import MenuItem from "@material-ui/core/MenuItem"
-import MenuList from "@material-ui/core/MenuList"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
-import DonateBtn from "./DonateBtn"
-import BurgerMenu from "./BurgerMenu"
-import Logo from "./Logo"
-import "./NavAccessibility.css"
-import { useStyles } from "./navtabsStyle"
-import styled from "styled-components"
-import { withTheme } from "@material-ui/core/styles"
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect } from 'react';
+import { Link } from 'gatsby';
+import { withTheme } from '@material-ui/core/styles';
+import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Grow from '@material-ui/core/Grow';
+import Paper from '@material-ui/core/Paper';
+import Popper from '@material-ui/core/Popper';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import DonateBtn from './DonateBtn';
+import BurgerMenu from './BurgerMenu';
+import Logo from './Logo';
+import './NavAccessibility.css';
+import { useStyles } from './navtabsStyle';
 
-
-/** sizing  navbar padding based on viewport**/
+/** sizing  navbar padding based on viewport* */
 
 export default function NavTabs() {
   const listItems = [
     {
-      id: "who_we_are",
-      path: "/who-we-are/",
-      title: "Who we are",
+      id: 'who_we_are',
+      path: '/who-we-are/',
+      title: 'Who we are',
     },
     {
-      id: "how_it_works",
-      path: "/how-it-works/",
-      title: "How it works",
+      id: 'how_it_works',
+      path: '/how-it-works/',
+      title: 'How it works',
     },
-  ]
+  ];
   // const listItems = [
   //   {
   //     id: "client",
@@ -41,21 +45,21 @@ export default function NavTabs() {
   //   },
   const dropdownListItems = [
     {
-      id: "volunteer",
-      path: "/volunteer/",
-      title: "Volunteer with us",
+      id: 'volunteer',
+      path: '/volunteer/',
+      title: 'Volunteer with us',
     },
     {
-      id: "partners",
-      path: "/partners/",
-      title: "Partner with us",
+      id: 'partners',
+      path: '/partners/',
+      title: 'Partner with us',
     },
     {
-      id: "sponsors",
-      path: "/sponsors/",
-      title: "Sponsor us",
+      id: 'sponsors',
+      path: '/sponsors/',
+      title: 'Sponsor us',
     },
-  ]
+  ];
   //   {
   //     id: "home",
   //     path: "/",
@@ -75,93 +79,89 @@ export default function NavTabs() {
   /** @function
    * @name renderListItems */
 
-  const classes = useStyles()
+  const classes = useStyles();
 
-  const renderListItems = () => {
-    return listItems.map(item => (
-      <li className={classes.navitem} key={item.id}>
-        <Link
-          to={item.path}
-          id={item.id}
-          className={classes.navlink}
-          activeClassName={classes.active}
-        >
-          {item.title}
-        </Link>
-      </li>
-    ))
-  }
-
-  const renderDropdownListItems = () => {
-    return dropdownListItems.map(item => (
-      <li
-        className={classes.navitem + " " + classes.dropDownList}
-        key={item.id}
+  const renderListItems = () => listItems.map((item) => (
+    <li className={classes.navitem} key={item.id}>
+      <Link
+        to={item.path}
+        id={item.id}
+        className={classes.navlink}
+        activeClassName={classes.active}
       >
-        <Link
-          to={item.path}
-          id={item.id}
-          className={classes.navlink}
-          activeClassName={classes.active}
-          style={{ textIndent: "32px" }}
-        >
-          {item.title}
-        </Link>
-      </li>
-    ))
-  }
+        {item.title}
+      </Link>
+    </li>
+  ));
+
+  const renderDropdownListItems = () => dropdownListItems.map((item) => (
+    <li
+      className={`${classes.navitem} ${classes.dropDownList}`}
+      key={item.id}
+    >
+      <Link
+        to={item.path}
+        id={item.id}
+        className={classes.navlink}
+        activeClassName={classes.active}
+        style={{ textIndent: '32px' }}
+      >
+        {item.title}
+      </Link>
+    </li>
+  ));
 
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
-      document.body.classList.add("user-is-tabbing")
+      document.body.classList.add('user-is-tabbing');
 
-      window.removeEventListener("keydown", handleFirstTab)
-      window.addEventListener("mousedown", handleMouseDownOnce)
+      window.removeEventListener('keydown', handleFirstTab);
+      window.addEventListener('mousedown', handleMouseDownOnce);
     }
   }
 
   function handleMouseDownOnce() {
-    document.body.classList.remove("user-is-tabbing")
+    document.body.classList.remove('user-is-tabbing');
 
-    window.removeEventListener("mousedown", handleMouseDownOnce)
-    window.addEventListener("keydown", handleFirstTab)
+    window.removeEventListener('mousedown', handleMouseDownOnce);
+    window.addEventListener('keydown', handleFirstTab);
   }
 
   useEffect(() => {
-    window.addEventListener("keydown", handleFirstTab)
-  })
+    window.addEventListener('keydown', handleFirstTab);
+  });
 
-  const [open, setOpen] = React.useState(false)
-  const anchorRef = React.useRef(null)
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen)
-  }
+    setOpen((prevOpen) => !prevOpen);
+  };
 
-  const handleClose = event => {
+  const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return
+      return;
     }
 
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault()
-      setOpen(false)
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpen(false);
     }
   }
 
   // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open)
+  const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus()
+      anchorRef.current.focus();
     }
 
-    prevOpen.current = open
-  }, [open])
+    prevOpen.current = open;
+  }, [open]);
 
   return (
     <div className={classes.navbar}>
@@ -174,14 +174,14 @@ export default function NavTabs() {
             // id={item.id}
             className={classes.navlink}
             ref={anchorRef}
-            aria-controls={open ? "menu-list-grow" : undefined}
+            aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onMouseOver={handleToggle}
-            disableRipple={true}
+            disableRipple
           >
             How to help
             <FontAwesomeIcon
-              style={{ paddingLeft: "5px" }}
+              style={{ paddingLeft: '5px' }}
               icon={faCaretDown}
               size="1x"
             />
@@ -198,7 +198,7 @@ export default function NavTabs() {
                 {...TransitionProps}
                 style={{
                   transformOrigin:
-                    placement === "bottom" ? "center top" : "center bottom",
+                    placement === 'bottom' ? 'center top' : 'center bottom',
                 }}
               >
                 <Paper>
@@ -212,18 +212,18 @@ export default function NavTabs() {
                       <Link
                         to="/volunteer"
                         id="volunteer"
-                        className={classes.navlink + " " + classes.dropDownList}
+                        className={`${classes.navlink} ${classes.dropDownList}`}
                         activeClassName={classes.dropDownItemActive}
                       >
                         <MenuItem
                           onClick={handleClose}
                           style={{
-                            fontSize: "16px",
-                            fontFamily: "Poppins",
-                            width: "fit-content",
-                            minWidth: "172px",
+                            fontSize: '16px',
+                            fontFamily: 'Poppins',
+                            width: 'fit-content',
+                            minWidth: '172px',
                           }}
-                          disableRipple={true}
+                          disableRipple
                         >
                           Volunteer with us
                         </MenuItem>
@@ -231,18 +231,18 @@ export default function NavTabs() {
                       <Link
                         to="/partners"
                         id="partners"
-                        className={classes.navlink + " " + classes.dropDownList}
+                        className={`${classes.navlink} ${classes.dropDownList}`}
                         activeClassName={classes.dropDownItemActive}
                       >
                         <MenuItem
                           onClick={handleClose}
                           style={{
-                            fontSize: "16px",
-                            fontFamily: "Poppins",
-                            width: "fit-content",
-                            minWidth: "172px",
+                            fontSize: '16px',
+                            fontFamily: 'Poppins',
+                            width: 'fit-content',
+                            minWidth: '172px',
                           }}
-                          disableRipple={true}
+                          disableRipple
                         >
                           Partner with us
                         </MenuItem>
@@ -250,18 +250,18 @@ export default function NavTabs() {
                       <Link
                         to="/sponsors"
                         id="sponsors"
-                        className={classes.navlink + " " + classes.dropDownList}
+                        className={`${classes.navlink} ${classes.dropDownList}`}
                         activeClassName={classes.dropDownItemActive}
                       >
                         <MenuItem
                           onClick={handleClose}
                           style={{
-                            fontSize: "16px",
-                            fontFamily: "Poppins",
-                            width: "fit-content",
-                            minWidth: "172px",
+                            fontSize: '16px',
+                            fontFamily: 'Poppins',
+                            width: 'fit-content',
+                            minWidth: '172px',
                           }}
-                          disableRipple={true}
+                          disableRipple
                         >
                           Sponsor us
                         </MenuItem>
@@ -283,7 +283,7 @@ export default function NavTabs() {
             Contact Us
           </Link>
         </li>
-        <div className={classes.verticalDivider + " ui vertical divider"}>
+        <div className={`${classes.verticalDivider} ui vertical divider`}>
           |
         </div>
         <DonateBtn />
@@ -296,7 +296,7 @@ export default function NavTabs() {
               to="#"
               className={classes.navlink}
               activeClassName={classes.active}
-              style={{ color: "black" }}
+              style={{ color: 'black' }}
             >
               How to help
             </Link>
@@ -315,24 +315,24 @@ export default function NavTabs() {
         </BurgerMenu>
       </div>
     </div>
-  )
+  );
 }
 
 const StyledButton = withTheme(
   styled(Button)(({ theme }) => ({
-    fontFamily: "Poppins",
-    fontWeight: "400",
-    "&.Mui-active": {
-      color: "#873FE2",
-      boxShadow: "0px 2px 0px #873FE2",
-      [theme.breakpoints.down("1080")]: {
-        boxShadow: "0px 0px 0px #873FE2",
-        borderTopWidth: "2px",
+    fontFamily: 'Poppins',
+    fontWeight: '400',
+    '&.Mui-active': {
+      color: '#873FE2',
+      boxShadow: '0px 2px 0px #873FE2',
+      [theme.breakpoints.down('1080')]: {
+        boxShadow: '0px 0px 0px #873FE2',
+        borderTopWidth: '2px',
         borderLeft: 0,
         borderRight: 0,
-        borderColor: "#873FE2",
-        borderStyle: "solid",
+        borderColor: '#873FE2',
+        borderStyle: 'solid',
       },
     },
-  }))
-)
+  })),
+);

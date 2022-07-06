@@ -1,139 +1,139 @@
-import React from "react"
-import Grid from "@material-ui/core/Grid"
-import { makeStyles } from "@material-ui/core/styles"
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
-import SVGLoad from "../SVGLoad/SVG"
-import { ReactComponent as Hands } from "../../images/sponsors/thankyou/hands.svg"
-import SkylineFooter from "../../components/SkylineSVG/SkylineFooter"
-import Instagram from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/Instagram"
-import InstagramMobile from "../../images/sponsors/thankyou/ThankYouSocials/Instagram/InstagramMobile"
-import Twitter from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/Twitter"
-import TwitterMobile from "../../images/sponsors/thankyou/ThankYouSocials/Twitter/TwitterMobile"
-import Linkedin from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/Linkedin"
-import LinkedinMobile from "../../images/sponsors/thankyou/ThankYouSocials/Linkedin/LinkedinMobile"
+import SVGLoad from '../SVGLoad/SVG';
+import { ReactComponent as Hands } from '../../images/sponsors/thankyou/hands.svg';
+import SkylineFooter from '../SkylineSVG/SkylineFooter';
+import Instagram from '../../images/sponsors/thankyou/ThankYouSocials/Instagram/Instagram';
+import InstagramMobile from '../../images/sponsors/thankyou/ThankYouSocials/Instagram/InstagramMobile';
+import Twitter from '../../images/sponsors/thankyou/ThankYouSocials/Twitter/Twitter';
+import TwitterMobile from '../../images/sponsors/thankyou/ThankYouSocials/Twitter/TwitterMobile';
+import Linkedin from '../../images/sponsors/thankyou/ThankYouSocials/Linkedin/Linkedin';
+import LinkedinMobile from '../../images/sponsors/thankyou/ThankYouSocials/Linkedin/LinkedinMobile';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
-    height: "488px",
-    width: "100%",
-    [theme.breakpoints.down("769")]: {
-      height: "400px",
+    height: '488px',
+    width: '100%',
+    [theme.breakpoints.down('769')]: {
+      height: '400px',
     },
-    [theme.breakpoints.down("600")]: {
-      height: "600px",
+    [theme.breakpoints.down('600')]: {
+      height: '600px',
     },
   },
   backgroundBlob: {
-    marginLeft: "5%",
-    marginTop: "4%",
-    height: "579px",
-    width: "73%",
-    [theme.breakpoints.down("1025")]: {
-      marginTop: "0%",
+    marginLeft: '5%',
+    marginTop: '4%',
+    height: '579px',
+    width: '73%',
+    [theme.breakpoints.down('1025')]: {
+      marginTop: '0%',
     },
-    [theme.breakpoints.down("769")]: {
-      marginTop: "33px",
-      width: "100%",
-      marginLeft: "0px",
+    [theme.breakpoints.down('769')]: {
+      marginTop: '33px',
+      width: '100%',
+      marginLeft: '0px',
     },
-    [theme.breakpoints.down("600")]: {
-      visibility: "hidden",
-      height: "0px",
-      width: "0px",
+    [theme.breakpoints.down('600')]: {
+      visibility: 'hidden',
+      height: '0px',
+      width: '0px',
     },
   },
   backgroundBlobMobile: {
-    visibility: "hidden",
-    margin: "0px 0px 0px 0px",
-    height: "0",
-    width: "0",
-    [theme.breakpoints.down("600")]: {
-      width: "100%",
-      marginTop: "50%",
-      height: "580px",
-      visibility: "visible",
-      position: "relative",
+    visibility: 'hidden',
+    margin: '0px 0px 0px 0px',
+    height: '0',
+    width: '0',
+    [theme.breakpoints.down('600')]: {
+      width: '100%',
+      marginTop: '50%',
+      height: '580px',
+      visibility: 'visible',
+      position: 'relative',
     },
-    [theme.breakpoints.down("361")]: {
-      width: "100%",
-      height: "619px",
-      marginTop: "60%",
+    [theme.breakpoints.down('361')]: {
+      width: '100%',
+      height: '619px',
+      marginTop: '60%',
     },
   },
   blobContainer: {
-    [theme.breakpoints.down("769")]: {
-      height: "450px",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+    [theme.breakpoints.down('769')]: {
+      height: '450px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   },
   headerText: {
-    fontFamily: "Josefin Sans",
-    fontStyle: "normal",
-    fontWeight: "600",
-    fontSize: "28px",
-    lineHeight: "42px",
-    display: "flex",
-    alignItems: "center",
-    color: "#000000",
-    [theme.breakpoints.down("769")]: {
-      width: "245px",
-      height: "38px",
-      fontSize: "22px",
+    fontFamily: 'Josefin Sans',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: '28px',
+    lineHeight: '42px',
+    display: 'flex',
+    alignItems: 'center',
+    color: '#000000',
+    [theme.breakpoints.down('769')]: {
+      width: '245px',
+      height: '38px',
+      fontSize: '22px',
     },
-    [theme.breakpoints.down("600")]: {
-      width: "245px",
-      fontSize: "20px",
-      lineHeight: "32px",
+    [theme.breakpoints.down('600')]: {
+      width: '245px',
+      fontSize: '20px',
+      lineHeight: '32px',
     },
   },
   bodyText: {
-    fontFamily: "Poppins",
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "18px",
-    lineHeight: "27px",
-    display: "flex",
-    align: "center",
-    color: "#000000",
-    [theme.breakpoints.down("769")]: {
-      width: "534px",
-      height: "138px",
-      fontSize: "16px",
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '18px',
+    lineHeight: '27px',
+    display: 'flex',
+    align: 'center',
+    color: '#000000',
+    [theme.breakpoints.down('769')]: {
+      width: '534px',
+      height: '138px',
+      fontSize: '16px',
     },
-    [theme.breakpoints.down("600")]: {
-      width: "330px",
-      height: "169px",
-      fontSize: "14px",
-      lineHeight: "24px",
+    [theme.breakpoints.down('600')]: {
+      width: '330px',
+      height: '169px',
+      fontSize: '14px',
+      lineHeight: '24px',
     },
   },
   handsStyle: {
-    position: "absolute",
-    marginLeft: "50%",
-    marginTop: "22%",
+    position: 'absolute',
+    marginLeft: '50%',
+    marginTop: '22%',
     // width: "500px",
-    width: "35%",
-    height: "287px",
-    [theme.breakpoints.down("1200")]: {
-      marginTop: "30%",
+    width: '35%',
+    height: '287px',
+    [theme.breakpoints.down('1200')]: {
+      marginTop: '30%',
     },
-    [theme.breakpoints.down("769")]: {
-      width: "40%",
-      marginLeft: "60%",
-      marginTop: "35%",
+    [theme.breakpoints.down('769')]: {
+      width: '40%',
+      marginLeft: '60%',
+      marginTop: '35%',
     },
-    [theme.breakpoints.down("600")]: {
-      width: "0",
-      height: "0",
-      visibility: "hidden",
+    [theme.breakpoints.down('600')]: {
+      width: '0',
+      height: '0',
+      visibility: 'hidden',
     },
   },
-}))
+}));
 
 export default function ThankYou() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <>
@@ -279,7 +279,7 @@ export default function ThankYou() {
               width="463"
               height="27"
               className={classes.bodyText}
-              style={{ width: "259px" }}
+              style={{ width: '259px' }}
             >
               Follow us for updates and share with your networks.
             </foreignObject>
@@ -293,5 +293,5 @@ export default function ThankYou() {
 
       <SkylineFooter />
     </>
-  )
+  );
 }

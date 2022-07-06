@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import ThankYou from "./ThankYou"
-import VitalRole from "./VitalRole"
-import PartnerCards from "./PartnerCards"
-import LastSection from "./LastSection"
-import { rainbowImgHack } from "./Partners.module.css"
+import ThankYou from './ThankYou';
+import VitalRole from './VitalRole';
+import PartnerCards from './PartnerCards';
+import LastSection from './LastSection';
+import { rainbowImgHack } from './Partners.module.css';
 
 export default function Partners() {
   return (
@@ -14,5 +14,5 @@ export default function Partners() {
       <PartnerCards />
       <LastSection />
     </div>
-  )
+  );
 }

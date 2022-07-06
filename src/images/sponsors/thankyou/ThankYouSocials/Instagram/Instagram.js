@@ -1,8 +1,9 @@
-import React from "react"
+/* eslint-disable no-undef */
+import React from 'react';
 
 const redirect = () => {
-  window.open("https://www.instagram.com/civictechto")
-}
+  window.open('https://www.instagram.com/civictechto');
+};
 
 const Instagram = (
   <svg
@@ -28,6 +29,6 @@ const Instagram = (
       fill="#4529AE"
     />
   </svg>
-)
+);
 
-export default Instagram
+export default Instagram;

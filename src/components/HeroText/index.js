@@ -1,1 +1,1 @@
-export { default as HeroText } from "./HeroText"
+export { default as HeroText } from './HeroText';
