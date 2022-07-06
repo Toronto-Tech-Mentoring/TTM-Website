@@ -497,149 +497,147 @@ export default function ContactUsForm() {
   }, [values, error]);
 
   return (
-    <>
+    <form
+      name="contact-us"
+      data-netlify="true"
+      method="POST"
+      action="/home"
+      netlify-honeypot="bot-field"
+    >
+      {/* This is needed when using gatsby to generate the form submissions https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#form-handling-with-static-site-generators */}
+      <input type="hidden" name="form-name" value="contact-us" />
       <StyledGrid justify="left" alignItems="center">
-        <form
-          name="contact-us"
-          data-netlify="true"
-          method="POST"
-          action="/home"
-          netlify-honeypot="bot-field"
+        <FirstName
+          label="First Name"
+          name="first_name"
+          id="first_name_input"
+          onChange={handleFieldChange}
+          error={error.first.errorState}
+          helperText={error.first.helperText}
+        />
+        <LastName
+          label="Last Name"
+          name="last_name"
+          id="last_name_input"
+          onChange={handleFieldChange}
+          error={error.last.errorState}
+          helperText={error.last.helperText}
+        />
+        <br />
+
+        <PhoneNumber
+          label="Phone Number"
+          name="phone"
+          id="phone_number"
+          value={values.phone}
+          onChange={handlePhoneChange}
+          error={error.phone.errorState}
+          helperText={error.phone.helperText}
+          InputProps={{
+            inputComponent: TextMaskCustom,
+          }}
+        />
+        <EmailAddress
+          label="Email"
+          name="email"
+          id="email_address"
+          onChange={handleFieldChange}
+          error={error.email.errorState}
+          helperText={error.email.helperText}
+        />
+        <br />
+        <StyledQuestion>Your Preferred Pronoun?`</StyledQuestion>
+        <PreferredPronouns checked="false">
+          <StyledDiv>
+            <SheHer
+              checked={values.pronoun === 'sheher'}
+              type="radio"
+              value="sheher"
+              id="sheher"
+              name="sheher_pronoun"
+              color="primary"
+              onChange={handleFieldChange}
+            />
+            <StyledInputLabel for="sheher">She/Her</StyledInputLabel>
+          </StyledDiv>
+
+          <StyledDiv>
+            <HeHim
+              checked={values.pronoun === 'hehim'}
+              type="radio"
+              value="hehim"
+              id="hehim"
+              name="hehim_pronoun"
+              color="primary"
+              onChange={handleFieldChange}
+            />
+            <StyledInputLabel for="hehim">He/Him</StyledInputLabel>
+          </StyledDiv>
+
+          <StyledDiv>
+            <TheyThem
+              checked={values.pronoun === 'theythem'}
+              type="radio"
+              value="theythem"
+              id="theythem"
+              name="theythem_pronoun"
+              color="primary"
+              onChange={handleFieldChange}
+            />
+            <StyledInputLabel for="theythem">They/Them</StyledInputLabel>
+          </StyledDiv>
+
+          <StyledDiv>
+            <Other
+              checked={values.pronoun === 'other'}
+              type="radio"
+              value="other"
+              id="other"
+              name="other_pronoun"
+              color="primary"
+              onChange={handleFieldChange}
+            />
+            <StyledInputLabel for="other">Other</StyledInputLabel>
+          </StyledDiv>
+        </PreferredPronouns>
+        <br />
+        <StyledQuestion>What Are You Interested In?</StyledQuestion>
+        <StyledDropDown
+          onChange={handleInterestChange}
+          value={values.interests}
+          name="interests"
+          id="interests"
         >
-          {/* This is needed when using gatsby to generate the form submissions https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#form-handling-with-static-site-generators */}
-          <input type="hidden" name="form-name" value="contact-us" />
-          <FirstName
-            label="First Name"
-            name="first_name"
-            id="first_name_input"
-            onChange={handleFieldChange}
-            error={error.first.errorState}
-            helperText={error.first.helperText}
-          />
-          <LastName
-            label="Last Name"
-            name="last_name"
-            id="last_name_input"
-            onChange={handleFieldChange}
-            error={error.last.errorState}
-            helperText={error.last.helperText}
-          />
-          <br />
-
-          <PhoneNumber
-            label="Phone Number"
-            name="phone"
-            id="phone_number"
-            value={values.phone}
-            onChange={handlePhoneChange}
-            error={error.phone.errorState}
-            helperText={error.phone.helperText}
-            InputProps={{
-              inputComponent: TextMaskCustom,
-            }}
-          />
-          <EmailAddress
-            label="Email"
-            name="email"
-            id="email_address"
-            onChange={handleFieldChange}
-            error={error.email.errorState}
-            helperText={error.email.helperText}
-          />
-          <br />
-          <StyledQuestion>Your Preferred Pronoun?`</StyledQuestion>
-          <PreferredPronouns checked="false">
-            <StyledDiv>
-              <SheHer
-                checked={values.pronoun === 'sheher'}
-                type="radio"
-                value="sheher"
-                id="sheher"
-                name="sheher_pronoun"
-                color="primary"
-                onChange={handleFieldChange}
-              />
-              <StyledInputLabel for="sheher">She/Her</StyledInputLabel>
-            </StyledDiv>
-
-            <StyledDiv>
-              <HeHim
-                checked={values.pronoun === 'hehim'}
-                type="radio"
-                value="hehim"
-                id="hehim"
-                name="hehim_pronoun"
-                color="primary"
-                onChange={handleFieldChange}
-              />
-              <StyledInputLabel for="hehim">He/Him</StyledInputLabel>
-            </StyledDiv>
-
-            <StyledDiv>
-              <TheyThem
-                checked={values.pronoun === 'theythem'}
-                type="radio"
-                value="theythem"
-                id="theythem"
-                name="theythem_pronoun"
-                color="primary"
-                onChange={handleFieldChange}
-              />
-              <StyledInputLabel for="theythem">They/Them</StyledInputLabel>
-            </StyledDiv>
-
-            <StyledDiv>
-              <Other
-                checked={values.pronoun === 'other'}
-                type="radio"
-                value="other"
-                id="other"
-                name="other_pronoun"
-                color="primary"
-                onChange={handleFieldChange}
-              />
-              <StyledInputLabel for="other">Other</StyledInputLabel>
-            </StyledDiv>
-          </PreferredPronouns>
-          <br />
-          <StyledQuestion>What Are You Interested In?</StyledQuestion>
-          <StyledDropDown
-            onChange={handleInterestChange}
-            value={values.interests}
-            name="interests"
-            id="interests"
-          >
-            {Interests.map((interest) => (
-              <StyledMenuItem key={interest} value={interest}>
-                {interest}
-              </StyledMenuItem>
-            ))}
-          </StyledDropDown>
-          <StyledQuestion>Message</StyledQuestion>
-          <StyledInput
-            multiline
-            id="message"
-            variant="outlined"
-            rows={8}
-            placeholder="Enter additional information here"
-            disableUnderline
-            onChange={handleFieldChange}
-            name="message"
-            value={values.message}
-          />
-          <br />
-          {submitErrors ? (
-            <StyledButton type="submit" size="medium">
-              Send
-            </StyledButton>
-          ) : (
-            <StyledButton disabled size="medium">
-              Send
-            </StyledButton>
-          )}
-        </form>
+          {Interests.map((interest) => (
+            <StyledMenuItem key={interest} value={interest}>
+              {interest}
+            </StyledMenuItem>
+          ))}
+        </StyledDropDown>
+        <StyledQuestion>Message</StyledQuestion>
+        <StyledInput
+          multiline
+          id="message"
+          variant="outlined"
+          rows={8}
+          placeholder="Enter additional information here"
+          disableUnderline
+          onChange={handleFieldChange}
+          name="message"
+          value={values.message}
+        />
+        <br />
+        {submitErrors ? (
+          <StyledButton type="submit" size="medium">
+            Send
+          </StyledButton>
+        ) : (
+          <StyledButton disabled size="medium">
+            Send
+          </StyledButton>
+        )}
       </StyledGrid>
       <SkylineHeaderSVG />
-    </>
+    </form>
   );
 }
