@@ -498,20 +498,19 @@ export default function ContactUsForm() {
 
   return (
     <>
-      <form
-        name="contact-form"
-        data-netlify="true"
-        method="POST"
-        action="/home"
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact-form" />
-
-        <StyledGrid justify="left" alignItems="center">
+      <StyledGrid justify="left" alignItems="center">
+        <form
+          name="contact-form"
+          data-netlify="true"
+          method="POST"
+          action="/home"
+          netlify-honeypot="bot-field"
+        >
           {/* This is needed when using gatsby to generate the form submissions https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#form-handling-with-static-site-generators */}
+          <input type="hidden" name="form-name" value="contact-form" />
           <FirstName
             label="First Name"
-            name="first"
+            name="first_name"
             id="first_name_input"
             onChange={handleFieldChange}
             error={error.first.errorState}
@@ -519,7 +518,7 @@ export default function ContactUsForm() {
           />
           <LastName
             label="Last Name"
-            name="last"
+            name="last_name"
             id="last_name_input"
             onChange={handleFieldChange}
             error={error.last.errorState}
@@ -556,7 +555,7 @@ export default function ContactUsForm() {
                 type="radio"
                 value="sheher"
                 id="sheher"
-                name="pronoun"
+                name="sheher_pronoun"
                 color="primary"
                 onChange={handleFieldChange}
               />
@@ -569,7 +568,7 @@ export default function ContactUsForm() {
                 type="radio"
                 value="hehim"
                 id="hehim"
-                name="pronoun"
+                name="hehim_pronoun"
                 color="primary"
                 onChange={handleFieldChange}
               />
@@ -582,7 +581,7 @@ export default function ContactUsForm() {
                 type="radio"
                 value="theythem"
                 id="theythem"
-                name="pronoun"
+                name="theythem_pronoun"
                 color="primary"
                 onChange={handleFieldChange}
               />
@@ -595,7 +594,7 @@ export default function ContactUsForm() {
                 type="radio"
                 value="other"
                 id="other"
-                name="pronoun"
+                name="other_pronoun"
                 color="primary"
                 onChange={handleFieldChange}
               />
@@ -608,6 +607,7 @@ export default function ContactUsForm() {
             onChange={handleInterestChange}
             value={values.interests}
             name="interests"
+            id="interests"
           >
             {Interests.map((interest) => (
               <StyledMenuItem key={interest} value={interest}>
@@ -637,8 +637,8 @@ export default function ContactUsForm() {
               Send
             </StyledButton>
           )}
-        </StyledGrid>
-      </form>
+        </form>
+      </StyledGrid>
       <SkylineHeaderSVG />
     </>
   );
