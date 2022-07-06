@@ -498,16 +498,17 @@ export default function ContactUsForm() {
 
   return (
     <>
-      <StyledGrid justify="left" alignItems="center">
-        <form
-          name="contact-form"
-          data-netlify="true"
-          method="POST"
-          action="/home"
-          netlify-honeypot="bot-field"
-        >
+      <form
+        name="contact-form"
+        data-netlify="true"
+        method="POST"
+        action="/home"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact-form" />
+
+        <StyledGrid justify="left" alignItems="center">
           {/* This is needed when using gatsby to generate the form submissions https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#form-handling-with-static-site-generators */}
-          <input type="hidden" name="form-name" value="contact-form" />
           <FirstName
             label="First Name"
             name="first"
@@ -636,8 +637,8 @@ export default function ContactUsForm() {
               Send
             </StyledButton>
           )}
-        </form>
-      </StyledGrid>
+        </StyledGrid>
+      </form>
       <SkylineHeaderSVG />
     </>
   );
