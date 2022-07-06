@@ -511,6 +511,7 @@ export default function ContactUsForm() {
           <FirstName
             label="First Name"
             name="first"
+            id="first_name_input"
             onChange={handleFieldChange}
             error={error.first.errorState}
             helperText={error.first.helperText}
@@ -518,6 +519,7 @@ export default function ContactUsForm() {
           <LastName
             label="Last Name"
             name="last"
+            id="last_name_input"
             onChange={handleFieldChange}
             error={error.last.errorState}
             helperText={error.last.helperText}
@@ -527,6 +529,7 @@ export default function ContactUsForm() {
           <PhoneNumber
             label="Phone Number"
             name="phone"
+            id="phone_number"
             value={values.phone}
             onChange={handlePhoneChange}
             error={error.phone.errorState}
@@ -538,6 +541,7 @@ export default function ContactUsForm() {
           <EmailAddress
             label="Email"
             name="email"
+            id="email_address"
             onChange={handleFieldChange}
             error={error.email.errorState}
             helperText={error.email.helperText}
@@ -613,6 +617,7 @@ export default function ContactUsForm() {
           <StyledQuestion>Message</StyledQuestion>
           <StyledInput
             multiline
+            id="message"
             variant="outlined"
             rows={8}
             placeholder="Enter additional information here"
