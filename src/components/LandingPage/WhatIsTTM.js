@@ -10,7 +10,7 @@ import { ReactComponent as CheetoRight } from '../../images/cheetohs/cheetohRigh
 import { useStyles } from '../Cheetos/cheetohStyle';
 import { SkylineHeader } from '../SkylineSVG';
 
-export default function WhatiIsTTM() {
+const WhatiIsTTM = () => {
   const classes = useStyles();
   const headerText = 'What is Toronto Tech Mentoring?';
   const content = 'We aim to empower homeless and underhoused individuals in Toronto through technology skills, mentorship and other learning supports to achieve professional, entrepreneurial or personal goals. Our core program delivers mentorship for marginalized young people (including LGBTQ+).';
@@ -53,4 +53,6 @@ export default function WhatiIsTTM() {
       <SkylineHeader />
     </div>
   );
-}
+};
+
+export default WhatiIsTTM;

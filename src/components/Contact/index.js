@@ -3,7 +3,7 @@ import React from 'react';
 import GetInTouch from './GetInTouch';
 import ContactUsForm from './ContactUsForm';
 
-export default function Contact() {
+function Contact() {
   return (
     <div>
       <GetInTouch />
@@ -11,3 +11,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;

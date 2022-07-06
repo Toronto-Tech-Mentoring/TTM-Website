@@ -24,7 +24,7 @@ import { useStyles } from './navtabsStyle';
 
 /** sizing  navbar padding based on viewport* */
 
-export default function NavTabs() {
+const NavTabs = () => {
   const listItems = [
     {
       id: 'who_we_are',
@@ -316,7 +316,9 @@ export default function NavTabs() {
       </div>
     </div>
   );
-}
+};
+
+export default NavTabs;
 
 const StyledButton = withTheme(
   styled(Button)(({ theme }) => ({

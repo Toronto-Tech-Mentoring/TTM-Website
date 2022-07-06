@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HowAreWeDifferentSection() {
+const HowAreWeDifferentSection = () => {
   const classes = useStyles();
 
   return (
@@ -94,4 +94,6 @@ export default function HowAreWeDifferentSection() {
       <Cards />
     </Grid>
   );
-}
+};
+
+export default HowAreWeDifferentSection;

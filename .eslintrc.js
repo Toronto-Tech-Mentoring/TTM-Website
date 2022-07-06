@@ -8,5 +8,6 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     // You can override any rules you want
     'import/prefer-default-export': 'off',
+    'react/function-component-definition': 'off',
   },
 };

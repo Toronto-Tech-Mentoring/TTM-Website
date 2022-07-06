@@ -3,14 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 const useNonSvgData = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile {
+      allFile(filter: { sourceInstanceName: { eq: "nonsvgs" } }) {
         edges {
           node {
             id
+            publicURL
             name
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, formats: JPG, quality: 90)
-            }
           }
         }
       }

@@ -262,7 +262,7 @@ export default function TimelineSection() {
   const classes = useStyles();
   const researchSession1 = 'researchSession1';
   const researchSession2 = 'ResearchSession2';
-  const programLaunch1 = 'program_launch';
+  // const programLaunch1 = 'program_launch.jpg';
   const programLaunch2 = 'program_launch2';
   const covidResponse1 = 'covid1';
   const covidResponse2 = 'covid2';
@@ -419,7 +419,7 @@ export default function TimelineSection() {
             <ImgOpt
               className={`${classes.firstPic} ${classes.secondPic}`}
               alt="Program launch pic 1"
-              filename={programLaunch1}
+              filename={programLaunch2}
             />
             <LeftBlob className={classes.leftBlob} />
             <ImgOpt

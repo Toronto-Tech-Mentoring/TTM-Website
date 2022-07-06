@@ -25,7 +25,17 @@ module.exports = {
     },
     'gatsby-plugin-svgr',
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          formats: ['auto', 'jpg'],
+          placeholder: 'dominantColor',
+          quality: 100,
+          backgroundColor: 'transparent',
+        },
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',

@@ -5,14 +5,14 @@ import WhyTech from './WhyTech';
 import Testmonials from './Testmonials';
 import { SkylineFooter as SkylineFooterSVG } from '../SkylineSVG';
 
-export default function LandingPage() {
-  return (
-    <>
-      <WhatIsTTM />
-      <HowAreWeDifferentSection />
-      <WhyTech />
-      <Testmonials />
-      <SkylineFooterSVG />
-    </>
-  );
-}
+const LandingPage = () => (
+  <>
+    <WhatIsTTM />
+    <HowAreWeDifferentSection />
+    <WhyTech />
+    <Testmonials />
+    <SkylineFooterSVG />
+  </>
+);
+
+export default LandingPage;

@@ -180,7 +180,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Footer() {
+const Footer = () => {
   const classes = useStyles();
 
   const linkList = [
@@ -272,6 +272,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

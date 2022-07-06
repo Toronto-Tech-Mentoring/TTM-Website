@@ -342,7 +342,7 @@ const StyledInputLabel = styled(InputLabel)`
 //   contact: '/.netlify/functions/sendEmail',
 // };
 
-export default function ContactUsForm() {
+function ContactUsForm() {
   const errorDict = {
     first: { errorState: false, helperText: '' },
     last: { errorState: false, helperText: '' },
@@ -641,3 +641,5 @@ export default function ContactUsForm() {
     </form>
   );
 }
+
+export default ContactUsForm;

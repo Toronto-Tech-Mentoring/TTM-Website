@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Testmonials() {
+const Testmonials = () => {
   const classes = useStyles();
   return (
     <>
@@ -175,6 +175,6 @@ function Testmonials() {
       </div>
     </>
   );
-}
+};
 
 export default Testmonials;
